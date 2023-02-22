@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-
+use App\Http\Controllers\InternalStakeHolderController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -46,3 +46,17 @@ Route::get('/tvetcollegetimes', function()
 {
     return view('tvetcollegetimes');
 });
+
+Route::get('/registration', function()
+{
+    return view('registration');
+});
+
+/*Route::get('/internalStakeholderList', function()
+{
+    return view('internalStakeholderList','InternalStakeHolderController@getInternalStakeHolders');
+});
+*/
+
+Route::get('/internalStakeholderList', [InternalStakeHolderController::class, 'setInternalStakeHolder']);
+Route::post('/insertInternalStakeHolder', [InternalStakeHolderController::class, 'insertInternalStakeHolder']);
