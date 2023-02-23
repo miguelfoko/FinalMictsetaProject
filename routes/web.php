@@ -52,11 +52,11 @@ Route::get('/registration', function()
     return view('registration');
 });
 
-/*Route::get('/internalStakeholderList', function()
+Route::get('/internalStakeholderList', function()
 {
-    return view('internalStakeholderList','InternalStakeHolderController@getInternalStakeHolders');
+    return view('internalStakeholderList',[InternalStakeHolderController::class, 'getInternalStakeHolder']);
 });
-*/
 
-Route::get('/internalStakeholderList', [InternalStakeHolderController::class, 'setInternalStakeHolder']);
+
+//Route::get('/internalStakeholderList', [InternalStakeHolderController::class, 'getInternalStakeHolder']);
 Route::post('/insertInternalStakeHolder', [InternalStakeHolderController::class, 'insertInternalStakeHolder']);

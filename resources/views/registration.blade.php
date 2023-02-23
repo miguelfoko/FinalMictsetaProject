@@ -88,7 +88,7 @@
       <div class="container" data-aos="fade-up">
 
         <div class="row mt-5">
-        <form action="{{url('insertInternalStakeHolder')}}" method="post" role="form" class="php-email-form">
+        <form action="{{url('insertInternalStakeHolder')}}" method="post" role="form" >
         @csrf
           <div class="col-lg-4">
             <div class="info">
