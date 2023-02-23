@@ -14,7 +14,7 @@ use App\Http\Controllers\InternalStakeHolderController;
 */
 
 Route::get('/', function () {
-    return view('index');
+    return view('/index');
 });
 
 Route::get('/abouttvet', function()
@@ -52,6 +52,8 @@ Route::get('/registration', function()
     return view('registration');
 });
 
+
+
 /*Route::get('/internalStakeholderList', function()
 {
     return view('internalStakeholderList','InternalStakeHolderController@getInternalStakeHolders');
@@ -60,3 +62,10 @@ Route::get('/registration', function()
 
 Route::get('/internalStakeholderList', [InternalStakeHolderController::class, 'setInternalStakeHolder']);
 Route::post('/insertInternalStakeHolder', [InternalStakeHolderController::class, 'insertInternalStakeHolder']);
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
