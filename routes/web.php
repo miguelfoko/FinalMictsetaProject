@@ -60,3 +60,11 @@ Route::get('/internalStakeholderList', function()
 
 //Route::get('/internalStakeholderList', [InternalStakeHolderController::class, 'getInternalStakeHolder']);
 Route::post('/insertInternalStakeHolder', [InternalStakeHolderController::class, 'insertInternalStakeHolder']);
+
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
