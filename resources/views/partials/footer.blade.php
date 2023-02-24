@@ -34,7 +34,7 @@
               <li><i class="bx bx-chevron-right"></i> <a href="#">Web Development</a></li>
               <li><i class="bx bx-chevron-right"></i> <a href="#">Product Management</a></li>
               <li><i class="bx bx-chevron-right"></i> <a href="#">Marketing</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="login">Login as administrator</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="home">Login as administrator</a></li>
             </ul>
           </div>
 
