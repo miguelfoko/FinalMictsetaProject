@@ -36,6 +36,15 @@
                 </div>
                 <div class="col-xs-12 col-sm-12 col-md-12">
                     <div class="form-group">
+                        <strong>News Subtitle:</strong>
+                        <input type="text" name="subtitle" class="form-control" placeholder="News Subtitle">
+                        @error('subtitle')
+                        <div class="alert alert-danger mt-1 mb-1">{{ $message }}</div>
+                        @enderror
+                    </div>
+                </div>
+                <div class="col-xs-12 col-sm-12 col-md-12">
+                    <div class="form-group">
                         <strong>News Content:</strong>
                         <textarea name="content" class="form-control"  rows="10"> News Content</textarea>
                         @error('content')

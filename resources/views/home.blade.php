@@ -25,7 +25,7 @@
 
                 <div class="card-body">
                     <div class="card-body"><a href="updateContactUs">Update contact information</a></div>
-                    <div class="card-body"><a href="updateNews">Update News</a></div>
+                    <div class="card-body"><a href="news">Access News</a></div>
                     <div class="card-body"><a href="updateExamination">Update Examination information</a></div>
                     <div class="card-body"><a href="updateAboutTvet">Update About Tvet information</a></div>
                     <div class="card-body"><a href="updateResources">Update Resources</a></div>

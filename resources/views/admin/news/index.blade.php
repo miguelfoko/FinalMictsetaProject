@@ -3,7 +3,7 @@
 @section('content')
     <div class="container">
         <div class="pull-right">
-            <a class="btn btn-success" href="updateNews"> Back</a>
+            <a class="btn btn-success" href="home"> Back</a>
         </div>
     </div> 
 
@@ -30,6 +30,7 @@
                 <tr>
                     <th>S.No</th>
                     <th>News title</th>
+                    <th>News Subtitle</th>
                     <th>News content</th>
                     <th>News picture</th>
                     <th width="280px">Action</th>
@@ -37,11 +38,12 @@
             </thead>
             <tbody>
                 @foreach ($news as $new)
-                    <tr>
+                    <tr heigh=100px>
                         <td width=5%>{{ $new->id }}</td>
                         <td with=15%>{{ $new->title }}</td>
-                        <td width=45%>{{ $new->content }}</td>
-                        <td width="25%"><img src="{{ asset('/images/'.$new->picture) }}" alt="" class="img-fluid"> </td>
+                        <td with=10%>{{ $new->subtitle }}</td>
+                        <td width=40%>{{ $new->content }}</td>
+                        <td width="20%"><img src="{{ asset('/images/'.$new->picture) }}" alt="" class="img-fluid"> </td>
                         <td width="10%">
                             <form action="{{ route('news.destroy',$new->id) }}" method="Post">
                                 <a class="btn btn-primary" href="{{ route('news.edit',$new->id) }}">Edit</a>
@@ -59,7 +61,7 @@
 
     <div class="container">
         <div class="pull-right">
-            <a class="btn btn-success" href="updateNews"> Back</a>
+            <a class="btn btn-success" href="home"> Back</a>
         </div>
     </div> 
 @endsection

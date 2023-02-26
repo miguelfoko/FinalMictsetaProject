@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\InternalStakeHolderController;
 use App\Http\Controllers\NewsController;
+use App\Http\Controllers\ViewNewsController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -24,7 +25,7 @@ Route::get('/examinations', function(){ return view('examinations');});
 
 Route::get('/resources', function(){ return view('resources');});
 
-Route::get('/viewNews', function(){ return view('news');});
+Route::resource('/viewNews', ViewNewsController::class);
 
 Route::resource('/news', NewsController::class);
 
@@ -45,8 +46,6 @@ Auth::routes();
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
 Route::get('/updateContactUs', [App\Http\Controllers\AdminContactUsController::class, 'index'])->name('admin.adminContact');
-
-Route::get('/updateNews', [App\Http\Controllers\AdminNewsController::class, 'index'])->name('admin.adminNews');
 
 Route::get('/updateExamination', [App\Http\Controllers\AdminExaminationController::class, 'index'])->name('admin.adminExamination');
 
