@@ -6,7 +6,7 @@
         
         <div class="col-md-8">
             <div class="card">
-                <div class="card-header">{{ __('What do you want to do?') }}</div>
+                <div class="card-header">{{ __('TVET College Time') }}</div>
 
                 <div class="card-body">
                     Nothing yet

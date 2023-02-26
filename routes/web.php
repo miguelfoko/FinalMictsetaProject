@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\InternalStakeHolderController;
+use App\Http\Controllers\NewsController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -23,7 +24,9 @@ Route::get('/examinations', function(){ return view('examinations');});
 
 Route::get('/resources', function(){ return view('resources');});
 
-Route::get('/news', function(){ return view('news');});
+Route::get('/viewNews', function(){ return view('news');});
+
+Route::resource('/news', NewsController::class);
 
 Route::get('/tvetcollegetimes', function(){ return view('tvetcollegetimes');});
 

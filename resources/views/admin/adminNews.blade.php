@@ -6,10 +6,12 @@
         
         <div class="col-md-8">
             <div class="card">
-                <div class="card-header">{{ __('What do you want to do?') }}</div>
+                <div class="card-header">{{ __('News') }}</div>
 
                 <div class="card-body">
-                    Nothing yet
+                    <div class="card-body"><a href="news">Consult News</a></div>
+
+                    <div class="card-body"><a href="{{ route('news.create') }}">Create News</a></div>
                 </div>
             </div>
         </div>

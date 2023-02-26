@@ -21,7 +21,7 @@
           <li><a href="abouttvet">About TVET</a></li>
           <li><a href="examinations">Examinations</a></li>
           <li><a href="resources">Resources</a></li>
-          <li><a href="news">News</a></li>
+          <li><a href="viewNews">News</a></li>
           <li><a href="tvetcollegetimes">TVET College Times</a></li>
           <li><a href="contactus">Contact US</a></li>
 

@@ -6,7 +6,7 @@
         
         <div class="col-md-8">
             <div class="card">
-                <div class="card-header">{{ __('What do you want to do?') }}</div>
+                <div class="card-header">{{ __('Examination') }}</div>
 
                 <div class="card-body">
                     <div class="card-body"><a href="updateExamResources">Update Examination Resources</a></div>
