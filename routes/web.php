@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\InternalStakeHolderController;
 use App\Http\Controllers\NewsController;
 use App\Http\Controllers\ViewNewsController;
+use App\Http\Controllers\SliderController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -54,3 +55,5 @@ Route::get('/updateAboutTvet', [App\Http\Controllers\AdminAboutTvetController::c
 Route::get('/updateResources', [App\Http\Controllers\AdminResourcesController::class, 'index'])->name('admin.adminResources');
 
 Route::get('/updateTvetCollegeTime', [App\Http\Controllers\AdminTvetCollegeTimeController::class, 'index'])->name('admin.adminTvetCollegeTime');
+
+Route::resource('slides', SliderController::class);
