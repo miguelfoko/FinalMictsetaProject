@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 
 use App\Models\News;
 use File;
+use Auth;
 class NewsController extends Controller
 {
     
@@ -13,7 +14,7 @@ class NewsController extends Controller
      * Create a new controller instance.
      *
      * @return void
-     */
+     */ 
     public function __construct()
     {
         $this->middleware('auth');
@@ -64,10 +65,11 @@ class NewsController extends Controller
         $news->subtitle=$request->input('subtitle');
         $news->content=$request->input('content');
         $news->picture=$imageName;
+        $news->user_id=Auth::user()->id;
         $news->save();
         return redirect()->route('news.index')->with('success','News has been created successfully.')
         ->with('image',$imageName);
-    }
+    } 
 
     /**
     * Display the specified resource.

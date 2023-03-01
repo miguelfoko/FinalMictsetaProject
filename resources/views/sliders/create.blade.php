@@ -8,12 +8,12 @@
 
   {{ Form::text('title', null, array('class' => 'form-control')) }}
 
-
+  <br><br>
   {{ Form::label('photo', 'Photo') }}
 
   {{ Form::file('photo', array('class' => 'form-control')) }}
 
-
+  <br><br>
   {{ Form::submit('Add', array('class' => 'pull-right btn btn-primary')) }}
 
 {{ Form::close() }}

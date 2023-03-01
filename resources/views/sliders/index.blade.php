@@ -4,7 +4,7 @@
 
 <div class="container">
         <div class="pull-right">
-            <a class="btn btn-success" href="home"> Back</a>
+            <a class="btn btn-success" href="updateHomePage"> Back</a>
         </div>
     </div> 
     
@@ -12,7 +12,7 @@
         <div class="row">
             <div class="col-lg-12 margin-tb">
                 <div class="pull-left">
-                    <h2>News</h2>
+                    <h2>Slider's Image</h2>
                 </div>
                 <div class="pull-right mb-2">
                     <a class="btn btn-success" href="{{ route('slides.create') }}"> Create Slide</a>
@@ -42,7 +42,7 @@
 
     <div class="container">
         <div class="pull-right">
-            <a class="btn btn-success" href="home"> Back</a>
+            <a class="btn btn-success" href="updateHomePage"> Back</a>
         </div>
     </div> 
 

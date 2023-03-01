@@ -5,15 +5,14 @@
       <div class="container">
         <div class="row">
 
-          <div class="col-lg-3 col-md-6 footer-contact">
-            <h3>Our address</h3>
-            <p>
-              A108 Adam Street <br>
-              New York, NY 535022<br>
-              United States <br><br>
-              <strong>Phone:</strong> +1 5589 55488 55<br>
-              <strong>Email:</strong> info@example.com<br>
-            </p>
+          <div class="col-lg-2 col-md-6 footer-links"> 
+            <h4>About the TVET College Times website</h4>
+            <ul>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Purpose of the website</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Content available on the website</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Additional help to access information on the website</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">List of acronyms used</a></li>
+            </ul>
           </div>
 
           <div class="col-lg-2 col-md-6 footer-links"> 
@@ -42,7 +41,7 @@
             
               <i class="bx bx-chevron-right"></i> <a href="home">Login as administrator</a></li>
             
-            <p>Tamen quem nulla quae legam multos aute sint culpa legam noster magna</p>
+            
             <form action="" method="post">
               <input type="email" name="email"><input type="submit" value="Subscribe">
             </form>

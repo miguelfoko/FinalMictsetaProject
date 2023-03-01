@@ -24,7 +24,7 @@
                 <div class="card-header">{{ __('What do you want to do?') }}</div>
 
                 <div class="card-body">
-                    <div class="card-body"><a href="slides">Manage sliders</a></div>
+                    <div class="card-body"><a href="updateHomePage">Manage Home Page content</a></div>
                     <div class="card-body"><a href="updateContactUs">Update contact information</a></div>
                     <div class="card-body"><a href="news">Access News</a></div>
                     <div class="card-body"><a href="updateExamination">Update Examination information</a></div>

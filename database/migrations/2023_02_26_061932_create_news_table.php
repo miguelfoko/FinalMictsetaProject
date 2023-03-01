@@ -20,7 +20,10 @@ class CreateNewsTable extends Migration
             $table->longText('content');
             $table->string('picture');
             $table->timestamps();
-            
+            $table->foreignId('user_id')
+                ->constrained('users')
+                ->onUpdate('cascade')
+                ->onDelete('cascade');
         });
     }
 
