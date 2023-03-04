@@ -7,6 +7,9 @@ use App\Http\Controllers\ViewNewsController;
 use App\Http\Controllers\SliderController;
 use App\Http\Controllers\FooterController;
 use App\Http\Controllers\AdminHomePageController;
+use App\Http\Controllers\FooterContentController;
+
+
 
 /*
 |--------------------------------------------------------------------------
@@ -51,7 +54,6 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 
 Route::get('/updateContactUs', [App\Http\Controllers\AdminContactUsController::class, 'index'])->name('admin.adminContact');
 Route::get('/updateHomePage', [App\Http\Controllers\AdminHomePageController::class, 'index'])->name('admin.adminHomePage');
-Route::get('/createFooterContent', [App\Http\Controllers\FooterController::class, 'createFooterContent'])->name('admin.footer.createFooterContent');
 
 Route::get('/updateExamination', [App\Http\Controllers\AdminExaminationController::class, 'index'])->name('admin.adminExamination');
 
@@ -62,5 +64,5 @@ Route::get('/updateResources', [App\Http\Controllers\AdminResourcesController::c
 Route::get('/updateTvetCollegeTime', [App\Http\Controllers\AdminTvetCollegeTimeController::class, 'index'])->name('admin.adminTvetCollegeTime');
 
 Route::resource('slides', SliderController::class);
-
 Route::resource('footer', FooterController::class);
+Route::resource('footerContent', FooterContentController::class);

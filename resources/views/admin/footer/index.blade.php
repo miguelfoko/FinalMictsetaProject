@@ -43,12 +43,14 @@
                         <td with=50%>
                             <div class="pull-right">
                                 <ul>
-                                    <li> Test 1</li>
-                                    <li> Test 1</li>
-                                    <li> Test 1</li>
+                                @foreach ($footerContent as $fc)
+                                    @if($fc->footer_id==$foot->id)
+                                        <li> {{ $fc->value }}</li>
+                                    @endif  
+                                @endforeach
 
                                 </ul>   
-                                <a class="btn btn-success" href="createFooterContent"> Add content</a>
+                                <a class="btn btn-success" href="{{ route('footerContent.create',$foot->id) }}"> Add content</a>
                             </div>
                         </td>
                         <td width="20%">

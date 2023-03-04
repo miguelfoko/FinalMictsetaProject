@@ -4,10 +4,11 @@ namespace App\Http\Controllers;
 use App\Models\Footer;
 use App\Models\FooterContent;
 use File;
-use Form; 
+use Form;
+
 use Illuminate\Http\Request;
 
-class FooterController extends Controller
+class FooterContentController extends Controller
 {
     /**
      * Create a new controller instance.
@@ -25,19 +26,20 @@ class FooterController extends Controller
      */
     public function index()
     {
-        $footer = Footer::orderby('id', 'desc')->paginate(10);
         $footerContent = FooterContent::orderby('id', 'desc')->paginate(10);
-        return view('admin.footer.index', compact('footer','footerContent'));
+        return view('admin.footer.indexFooterContent', compact('footerContent'));
     }
 
     /**
      * Show the form for creating a new resource.
      *
+     *      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
     public function create()
     {
-        return  view ('admin.footer.create');
+        $footerElement = Footer::pluck('title', 'id');
+        return  view ('admin.footer.createFooterContent', compact('footerElement'));
     }
 
     /**
@@ -49,12 +51,13 @@ class FooterController extends Controller
     public function store(Request $request)
     {
         $this->validate($request, array(
-            'title'=>'required|max:225',
+            'value'=>'required',
           ));
-          $footer = new Footer;
-          $footer->title = $request->input('title');
-          $footer->save();
-          return redirect()->route('footer.index');
+          $footerContent = new FooterContent;
+          $footerContent->value = $request->input('value');
+          $footerContent->footer_id = $request->input('footer_id');
+          $footerContent->save();
+          return redirect()->route('footerContent.index');
     }
 
     /**
@@ -76,8 +79,9 @@ class FooterController extends Controller
      */
     public function edit($id)
     {
-        $footer = Footer::findOrFail($id);
-        return view('admin.footer.edit', compact('footer'));
+        $footerContent = FooterContent::findOrFail($id);
+        $footerElement = Footer::pluck('title', 'id');
+        return view('admin.footer.editFooterContent', compact('footerContent','footerElement'));
     }
 
     /**
@@ -89,21 +93,23 @@ class FooterController extends Controller
      */
     public function update(Request $request, $id)
     {
-        $footer = Footer::find($id);
+        $footerContent = FooterContent::find($id);
        $this->validate($request, array(
-         'title'=>'required|max:225',
+         'value'=>'required',
+         'footer_id'=>'required',
       ));
 
-       $footer = Footer::where('id',$id)->first();
+       $footerContent = FooterContent::where('id',$id)->first();
 
-       $footer->title = $request->input('title');
+       $footerContent->value = $request->input('value');
+       $footerContent->footer_id = $request->input('footer_id');
 
 
-      $footer->save();
+      $footerContent->save();
 
-      return redirect()->route('footer.index',
-          $footer->id)->with('success',
-          'Footer, '. $footer->title.' updated');
+      return redirect()->route('footerContent.index',
+          $footerContent->id)->with('success',
+          'Footer, '. $footerContent->value.' updated');
     }
 
     /**
@@ -114,13 +120,12 @@ class FooterController extends Controller
      */
     public function destroy($id)
     {
-        $footer = Footer::findOrFail($id);
+        $footerContent = FooterContent::findOrFail($id);
 
-        $footer->delete();
+        $footerContent->delete();
 
-        return redirect()->route('footer.index')
+        return redirect()->route('footerContent.index')
                 ->with('success',
-                'Footer successfully deleted');
+                'Footer Content successfully deleted');
     }
-
 }
