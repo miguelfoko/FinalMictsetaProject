@@ -29,7 +29,6 @@
         <table class="table table-bordered">
             <thead>
                 <tr>
-                    <th>#</th>
                     <th>Footer element ID</th>
                     <th>Footer content</th>
                     <th width="280px">Action</th>

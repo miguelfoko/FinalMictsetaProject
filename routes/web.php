@@ -27,6 +27,8 @@ Route::get('/', function () { return view('index');});
 Route::get('/abouttvet', function(){return view('about');});
 
 Route::get('/contactus', function(){return view('contact');});
+Route::get('/test', function(){return view('testPopup');});
+
 
 Route::get('/examinations', function(){ return view('examinations');});
 

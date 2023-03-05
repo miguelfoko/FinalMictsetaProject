@@ -1,19 +1,42 @@
+<link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.js"></script>
+    <script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+    <style type="text/css">
+    #popup{
+        display: none;
+    }
+    </style>
+  
   <!-- ======= Footer ======= -->
   <footer id="footer">
 
     <div class="footer-top">
       <div class="container">
         <div class="row">
-
-          <div class="col-lg-2 col-md-6 footer-links"> 
+        <div class="col-lg-2 col-md-6 footer-links"> 
             <h4>About the TVET College Times website</h4>
-            <ul>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Purpose of the website</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Content available on the website</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Additional help to access information on the website</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">List of acronyms used</a></li>
-            </ul>
-          </div>
+          @foreach ($footerElement as $key )
+              @if($key->title!="Copyright notice" && $key->title!="Disclaimer notice")
+                
+                  <ul>                
+                      <li><i class="bx bx-chevron-right"></i> <a class="test">{{ $key->title }}</a></li>
+                    
+                        <div id="popup" title="{{ $key->title }}" class="bx bx-chevron-right">
+                            <p class="text-justify px-2">
+                                <ul>
+                                    @foreach ($footerContent as $fc)
+                                      @if($fc->footer_id==$key->id)
+                                          <li><i class="bx bx-chevron-right"></i> {{ $fc->value }}</li>
+                                      @endif
+                                    @endforeach
+                                </ul>
+                            </p>
+                        </div>
+                      </ul>
+              @endif
+            @endforeach
+        </div>
+
 
           <div class="col-lg-2 col-md-6 footer-links"> 
             <h4>Site Map</h4>
@@ -29,12 +52,46 @@
           </div>
 
           <div class="col-lg-3 col-md-6 footer-links">
-            <h4>Terms and conditions</h4>
-            <ul>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Copyright notice</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Disclaimer notice</a></li>
-            </ul>
-          </div>
+                        <h4>Terms and conditions</h4>
+              @foreach ($footerElement as $key )
+                  @if($key->title=="Copyright notice")
+                    <ul>
+                      <li><i class="bx bx-chevron-right"></i> <a class="test">{{ $key->title }}</a></li>
+                      <div id="popup" title="{{ $key->title }}" class="bx bx-chevron-right">
+                        <p class="text-justify px-2">
+                          <ul>
+                              @foreach ($footerContent as $fc)
+                                @if($fc->footer_id==$key->id)
+                                    <li><i class="bx bx-chevron-right"></i> {{ $fc->value }}</li>
+                                @endif
+                              @endforeach
+                          </ul>
+                        </p>
+                      </div>
+                    </ul>
+                  @endif
+              @endforeach
+        
+              @foreach ($footerElement as $key )
+                  @if($key->title=="Disclaimer notice")
+                    <ul>
+                      <li><i class="bx bx-chevron-right"></i> <a class="test">{{ $key->title }}</a></li>
+                      <div id="popup" title="{{ $key->title }}" class="bx bx-chevron-right">
+                        <p class="text-justify px-2">
+                          <ul>
+                              @foreach ($footerContent as $fc)
+                                @if($fc->footer_id==$key->id)
+                                    <li><i class="bx bx-chevron-right"></i> {{ $fc->value }}</li>
+                                    @endif
+                              @endforeach
+                          </ul>
+                        </p>
+                      </div>
+                    </ul>
+                  @endif
+            @endforeach
+            </div>
+        </div>
 
           <div class="col-lg-4 col-md-6 footer-newsletter">
             <h4>Intranet</h4>
@@ -63,5 +120,10 @@
       </div>
     </div>
 
+    <script type="text/javascript">
+    $(".test").click(function(){
+        $( "#popup" ).dialog();
+    });
+</script>
     
   </footer><!-- End Footer -->

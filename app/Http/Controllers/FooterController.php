@@ -5,6 +5,8 @@ use App\Models\Footer;
 use App\Models\FooterContent;
 use File;
 use Form; 
+use Illuminate\Support\Facades\Storage;
+
 use Illuminate\Http\Request;
 
 class FooterController extends Controller
@@ -20,7 +22,7 @@ class FooterController extends Controller
     }
     /**
      * Display a listing of the resource.
-     *
+     * 
      * @return \Illuminate\Http\Response
      */
     public function index()
@@ -51,6 +53,7 @@ class FooterController extends Controller
         $this->validate($request, array(
             'title'=>'required|max:225',
           ));
+          
           $footer = new Footer;
           $footer->title = $request->input('title');
           $footer->save();

@@ -11,7 +11,7 @@
                 <div class="card-body">
                     <div class="card-body"><a href="slides">Manage sliders</a></div>
                     <div class="card-body"><a href="footer">Manage footer</a></div>
-                    <div class="card-body"><a href="footerContent">Edit footer content</a></div>
+                   <!-- <div class="card-body"><a href="footerContent">Edit footer content</a></div> -->
                 </div>
             </div>
         </div>

@@ -13,7 +13,7 @@
         <div class="row">
             <div class="col-lg-12 margin-tb">
                 <div class="pull-left">
-                    <h2>Edit Footer Content</h2>
+                    <h2>Edit Footer Element</h2>
                 </div>
             </div>
         </div>
@@ -38,7 +38,11 @@
                 </div>
                 <divclass="col-xs-12 col-sm-12 col-md-12"></div>
                 <button type="submit" class="btn btn-primary ml-3">Submit</button>
+<br><br>
+                <div class="card-body"><a href="/footerContent">Edit footer element content</a></div>
             </div>
+
+            
         </form>
     </div>
 

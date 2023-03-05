@@ -15,7 +15,7 @@ class CreateFooterContentsTable extends Migration
     {
         Schema::create('footer_contents', function (Blueprint $table) {
             $table->id();
-            $table->string('value');
+            $table->longText('value');
             $table->foreignId('footer_id')
                 ->constrained('footers')
                 ->onUpdate('cascade')

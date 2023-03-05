@@ -28,14 +28,16 @@
                 <div class="form-group">
                     <select class="form-control" name="footer_id">
                         <option value="footerContent->footer_id">
-                            @if($fc->footer_id==$foot->id)
-                                        <li> {{ $fc->value }}</li> //To manage there
-                                    @endif  
-                            {{ $footerContent->value }}</option>
                             @foreach ($footerElement as $key => $title)
-                                <option value="{{ $key }}" > 
-                                            {{ $title }}    
-                                </option> 
+                                @if($footerContent->footer_id==$key)
+                                    <option value="{{ $key }}" selected> 
+                                                {{ $title }}    
+                                    </option> 
+                                @else 
+                                    <option value="{{ $key }}"> 
+                                                {{ $title }}    
+                                    </option> 
+                                @endif
                             @endforeach
                     </select>
                 </div>  
