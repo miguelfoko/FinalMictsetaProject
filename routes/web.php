@@ -8,6 +8,10 @@ use App\Http\Controllers\SliderController;
 use App\Http\Controllers\FooterController;
 use App\Http\Controllers\AdminHomePageController;
 use App\Http\Controllers\FooterContentController;
+use App\Http\Controllers\AboutTvetController;
+use App\Http\Controllers\GuestAboutTvetController;
+use App\Http\Controllers\PublicTvetController;
+use App\Http\Controllers\PrivateTvetController;
 
 
 
@@ -24,7 +28,7 @@ use App\Http\Controllers\FooterContentController;
 
 Route::get('/', function () { return view('index');});
 
-Route::get('/abouttvet', function(){return view('about');});
+
 
 Route::get('/contactus', function(){return view('contact');});
 Route::get('/test', function(){return view('testPopup');});
@@ -34,9 +38,16 @@ Route::get('/examinations', function(){ return view('examinations');});
 
 Route::get('/resources', function(){ return view('resources');});
 
+//News Pages---------------------------------------------------------------------------------
 Route::resource('/viewNews', ViewNewsController::class);
-
 Route::resource('/news', NewsController::class);
+
+//About TVET Pages---------------------------------------------------------------------------------
+Route::resource('/adminAbouttvet', AboutTvetController::class);
+Route::resource('/abouttvet',GuestAboutTvetController::class);
+Route::resource('/publicTvetCollege',PublicTvetController::class);
+Route::resource('/privateTvetCollege',PrivateTvetController::class);
+
 
 Route::get('/tvetcollegetimes', function(){ return view('tvetcollegetimes');});
 

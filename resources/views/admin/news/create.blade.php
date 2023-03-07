@@ -46,7 +46,7 @@
                 <div class="col-xs-12 col-sm-12 col-md-12">
                     <div class="form-group">
                         <strong>News Content:</strong>
-                        <textarea name="content" class="form-control"  rows="10"> News Content</textarea>
+                        <textarea name="content" class="form-control"  rows="10" style="white-space: pre-wrap; text-indent: 50px;"> News Content</textarea>
                         @error('content')
                         <div class="alert alert-danger mt-1 mb-1">{{ $message }}</div>
                         @enderror

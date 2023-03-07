@@ -58,7 +58,7 @@
                     <ul>
                       <li><i class="bx bx-chevron-right"></i> <a class="test">{{ $key->title }}</a></li>
                       <div id="popup" title="{{ $key->title }}" class="bx bx-chevron-right">
-                        <p class="text-justify px-2">
+                        
                           <ul>
                               @foreach ($footerContent as $fc)
                                 @if($fc->footer_id==$key->id)
@@ -66,18 +66,16 @@
                                 @endif
                               @endforeach
                           </ul>
-                        </p>
+                       
                       </div>
                     </ul>
                   @endif
-              @endforeach
-        
-              @foreach ($footerElement as $key )
+             
                   @if($key->title=="Disclaimer notice")
                     <ul>
                       <li><i class="bx bx-chevron-right"></i> <a class="test">{{ $key->title }}</a></li>
                       <div id="popup" title="{{ $key->title }}" class="bx bx-chevron-right">
-                        <p class="text-justify px-2">
+                        
                           <ul>
                               @foreach ($footerContent as $fc)
                                 @if($fc->footer_id==$key->id)
@@ -85,7 +83,7 @@
                                     @endif
                               @endforeach
                           </ul>
-                        </p>
+                        
                       </div>
                     </ul>
                   @endif
@@ -96,7 +94,7 @@
           <div class="col-lg-4 col-md-6 footer-newsletter">
             <h4>Intranet</h4>
             
-              <i class="bx bx-chevron-right"></i> <a href="home">Login as administrator</a></li>
+            <p> <a href="home">Login as administrator</a></p>
             
             
             <form action="" method="post">

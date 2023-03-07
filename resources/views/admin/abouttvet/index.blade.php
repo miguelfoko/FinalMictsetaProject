@@ -13,10 +13,10 @@
         <div class="row">
             <div class="col-lg-12 margin-tb">
                 <div class="pull-left">
-                    <h2>News</h2>
+                    <h2>About Tvet</h2>
                 </div>
                 <div class="pull-right mb-2">
-                    <a class="btn btn-success" href="{{ route('news.create') }}"> Create News</a>
+                    <a class="btn btn-success" href="{{ route('adminAbouttvet.create') }}"> Create About TVET</a>
                 </div>
             </div>
         </div>
@@ -29,34 +29,36 @@
             <thead>
                 <tr>
                     <th>S.No</th>
-                    <th>News title</th>
-                    <th>News Subtitle</th>
-                    <th>News content</th>
-                    <th>News picture</th>
-                    <th width="280px">Action</th>
+                    <th>What is TVET?</th>
+                    <th>TVET Overview</th>
+                    <th>Public TVET Colleges</th>
+                    <th>TVET College Administration</th>
+                    <th>Private TvetColleges</th>
+                    <th>Action</th>
                 </tr>
             </thead>
             <tbody>
-                @foreach ($news as $new)
+                @foreach ($abouttvet as $atvet)
                     <tr heigh=100px>
-                        <td width=5%>{{ $new->id }}</td>
-                        <td with=15%>{{ $new->title }}</td>
-                        <td with=10%>{{ $new->subtitle }}</td>
-                        <td width=40%>{{ $new->content }}</td>
-                        <td width="20%"><img src="{{ asset('/images/'.$new->picture) }}" alt="" class="img-fluid"> </td>
+                        <td width=5%>{{ $atvet->id }}</td>
+                        <td with=17%>{{!! $atvet->whatIsTvet !!}}</td>
+                        <td with=17%>{{!! $atvet->tvetOverview !!}}</td>
+                        <td with=17%>{{!! $atvet->publicTvetColleges !!}}</td>
+                        <td with=17%>{{!! $atvet->tvetCollegeAdministration !!}}</td>
+                        <td with=17%>{{!! $atvet->privateTvetColleges !!}}</td>
                         <td width="10%">
-                            <form action="{{ route('news.destroy',$new->id) }}" method="Post">
-                                <a class="btn btn-primary" href="{{ route('news.edit',$new->id) }}">Edit</a>
+                            <form action="{{ route('adminAbouttvet.destroy',$atvet->id) }}" method="Post">
+                                <a class="btn btn-primary" href="{{ route('adminAbouttvet.edit',$atvet->id) }}">Edit</a>
                                 @csrf
                                 @method('DELETE')
                                 <button type="submit" class="btn btn-danger">Delete</button>
                             </form>
                         </td>
                     </tr>
-                    @endforeach
+                    @endforeach 
             </tbody>
         </table>
-        { $news->links() }
+        {{ $abouttvet->links() }}
     </div>
 
     <div class="container">

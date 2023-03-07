@@ -63,7 +63,7 @@ class NewsController extends Controller
         $news=new News;
         $news->title=$request->input('title');
         $news->subtitle=$request->input('subtitle');
-        $news->content=$request->input('content');
+        $news->content=nl2br($request->input('content'));
         $news->picture=$imageName;
         $news->user_id=Auth::user()->id;
         $news->save();
@@ -120,7 +120,7 @@ class NewsController extends Controller
         //$news=new News;
         $news->title=$request->input('title');
         $news->subtitle=$request->input('subtitle');
-        $news->content=$request->input('content');
+        $news->content=nl2br($request->input('content'));
         $news->picture=$imageName;
         $news->save();
 

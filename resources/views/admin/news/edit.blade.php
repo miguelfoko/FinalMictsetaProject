@@ -49,7 +49,7 @@
                 <div class="col-xs-12 col-sm-12 col-md-12">
                     <div class="form-group">
                         <strong>News Content:</strong>
-                        <textarea name="content" class="form-control"  rows="10"> {{ $news->content }}</textarea>
+                        <textarea name="content" class="form-control"  rows="10"> {{!! $news->content!! }}</textarea>
                         @error('content')
                         <div class="alert alert-danger mt-1 mb-1">{{ $message }}</div>
                         @enderror
