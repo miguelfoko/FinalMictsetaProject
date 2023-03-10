@@ -98,7 +98,7 @@ class AboutTvetController extends Controller
      */
     public function update(Request $request, $id) 
     {
-        $abouttvet = AboutTvet::findOrFail($id);
+        $abouttvet = AboutTvet::find($id);
         $request->validate([
             'whatIsTvet' => 'required',
             'tvetOverview' => 'required',

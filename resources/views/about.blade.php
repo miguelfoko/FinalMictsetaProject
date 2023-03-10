@@ -14,18 +14,19 @@
 
     <!-- ======= About Section ======= -->
     <section id="about" class="about">
+    @foreach ($abouttvet as $attvet)
       <div class="container" data-aos="fade-up">
         <h3> ABOUT TVET  </h3> <br>
 
             <h3>1. What is TVET? </h3>
-                {{!! $abouttvet->whatIsTvet !!}}
+                {!! $attvet->whatIsTvet !!}
             <br>
 
         <h3>2. TVET Overview </h3>
-              {{!! $abouttvet->tvetOverview !!}}
+              {!! $attvet->tvetOverview !!}
               <br><br>
 <b><a href="publicTvetCollege"> Public TVET Colleges </a> </b> &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp         <b><a href="privateTvetCollege">Private Colleges </a></b>
-
+    @endforeach 
 
       </div>
     </section><!-- End About Section -->

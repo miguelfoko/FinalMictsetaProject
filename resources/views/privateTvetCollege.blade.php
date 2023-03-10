@@ -17,9 +17,9 @@
       <div class="container" data-aos="fade-up">
 	  
 <h3>Private Colleges </h3>
-
-    {{!! $abouttvet->privateTvetColleges !!}}
-
+  @foreach ($abouttvet as $attvet)
+    {!! $attvet->privateTvetColleges !!}
+    @endforeach
  
 
       </div>

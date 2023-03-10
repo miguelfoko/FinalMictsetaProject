@@ -42,7 +42,7 @@
                         <td width=5%>{{ $new->id }}</td>
                         <td with=15%>{{ $new->title }}</td>
                         <td with=10%>{{ $new->subtitle }}</td>
-                        <td width=40%>{{ $new->content }}</td>
+                        <td width=40%>{!! $new->content !!}</td>
                         <td width="20%"><img src="{{ asset('/images/'.$new->picture) }}" alt="" class="img-fluid"> </td>
                         <td width="10%">
                             <form action="{{ route('news.destroy',$new->id) }}" method="Post">
@@ -56,7 +56,7 @@
                     @endforeach
             </tbody>
         </table>
-        { $news->links() }
+        {{ $news->links() }}
     </div>
 
     <div class="container">

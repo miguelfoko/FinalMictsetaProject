@@ -32,6 +32,17 @@
                         @enderror
                     </div>
                 </div>
+                </div>  
+                    <div class="form-group">
+                        <strong>Footer Content:</strong>
+                        <textarea name="value" class="form-control"  rows="10" id="myeditorinstance" rows="10" style="white-space: pre-wrap; text-indent: 50px;"> 
+                            Content
+                        </textarea>
+                        @error('value')
+                        <div class="alert alert-danger mt-1 mb-1">{{ $message }}</div>
+                        @enderror
+                    </div>
+                </div>
                 <div>
                  <button type="submit" class="btn btn-primary ml-3">Submit</button>
                 </div>

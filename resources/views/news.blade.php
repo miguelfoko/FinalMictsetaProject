@@ -29,7 +29,7 @@
               <div class="card-body" width=200px heigh=200px>
                 <h5 class="card-title"><a href="">{{ $new->title }}</a></h5>
                 <p class="fst-italic text-center">{{ $new->subtitle }}</p>
-                <p class="card-text">{{!! $new->content !!}}</p>
+                <p class="card-text">{!! $new->content !!}</p>
               </div>
              
             </div>

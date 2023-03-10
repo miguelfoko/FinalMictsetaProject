@@ -29,7 +29,5 @@ class AppServiceProvider extends ServiceProvider
         View::share('sliders', $sliders);
         $footerElement = Footer::orderby('id', 'desc')->paginate(10);
         View::share('footerElement', $footerElement);
-        $footerContent = FooterContent::orderby('id', 'desc')->paginate(10);
-        View::share('footerContent', $footerContent);
     }
 }

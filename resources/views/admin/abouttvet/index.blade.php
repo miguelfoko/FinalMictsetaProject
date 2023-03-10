@@ -41,15 +41,15 @@
                 @foreach ($abouttvet as $atvet)
                     <tr heigh=100px>
                         <td width=5%>{{ $atvet->id }}</td>
-                        <td with=17%>{{!! $atvet->whatIsTvet !!}}</td>
-                        <td with=17%>{{!! $atvet->tvetOverview !!}}</td>
-                        <td with=17%>{{!! $atvet->publicTvetColleges !!}}</td>
-                        <td with=17%>{{!! $atvet->tvetCollegeAdministration !!}}</td>
-                        <td with=17%>{{!! $atvet->privateTvetColleges !!}}</td>
+                        <td with=17%>{!! $atvet->whatIsTvet !!}</td>
+                        <td with=17%>{!! $atvet->tvetOverview !!}</td>
+                        <td with=17%>{!! $atvet->publicTvetColleges !!}</td>
+                        <td with=17%>{!! $atvet->tvetCollegeAdministration !!}</td>
+                        <td with=17%>{!! $atvet->privateTvetColleges !!}</td>
                         <td width="10%">
                             <form action="{{ route('adminAbouttvet.destroy',$atvet->id) }}" method="Post">
                                 <a class="btn btn-primary" href="{{ route('adminAbouttvet.edit',$atvet->id) }}">Edit</a>
-                                @csrf
+                                @csrf 
                                 @method('DELETE')
                                 <button type="submit" class="btn btn-danger">Delete</button>
                             </form>

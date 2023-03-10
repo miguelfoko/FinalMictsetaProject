@@ -2,9 +2,9 @@
 
 namespace App\Http\Controllers;
 use App\Models\Footer;
-use App\Models\FooterContent;
 use File;
 use Form; 
+use Auth;
 use Illuminate\Support\Facades\Storage;
 
 use Illuminate\Http\Request;
@@ -28,8 +28,7 @@ class FooterController extends Controller
     public function index()
     {
         $footer = Footer::orderby('id', 'desc')->paginate(10);
-        $footerContent = FooterContent::orderby('id', 'desc')->paginate(10);
-        return view('admin.footer.index', compact('footer','footerContent'));
+        return view('admin.footer.index', compact('footer'));
     }
 
     /**
@@ -52,10 +51,13 @@ class FooterController extends Controller
     {
         $this->validate($request, array(
             'title'=>'required|max:225',
+            'value'=>'required',
           ));
           
           $footer = new Footer;
           $footer->title = $request->input('title');
+          $footer->value = nl2br($request->input('value')); 
+          $footer->user_id=Auth::user()->id;
           $footer->save();
           return redirect()->route('footer.index');
     }
@@ -95,12 +97,14 @@ class FooterController extends Controller
         $footer = Footer::find($id);
        $this->validate($request, array(
          'title'=>'required|max:225',
+         'value'=>'required',
       ));
 
        $footer = Footer::where('id',$id)->first();
 
        $footer->title = $request->input('title');
-
+       $footer->value = nl2br($request->input('value')); 
+       $footer->user_id=Auth::user()->id;
 
       $footer->save();
 

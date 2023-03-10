@@ -26,12 +26,24 @@
             @csrf
             @method('PUT')
             <div class="row">
-                <div class="col-xs-12 col-sm-12 col-md-12">
+                <div class="col-xs-12 col-sm-12 col-md-12"> 
                     <div class="form-group">
                         <strong>Footer Title:</strong>
                         <input type="text" name="title" value="{{ $footer->title }}" class="form-control"
                             placeholder="{{ $footer->title }}">
                         @error('title')
+                        <div class="alert alert-danger mt-1 mb-1">{{ $message }}</div>
+                        @enderror
+                    </div>
+                </div>
+
+                </div>  
+                    <div class="form-group">
+                        <strong>Footer Content:</strong>
+                        <textarea name="value" class="form-control"  rows="10" id="myeditorinstance" rows="10" style="white-space: pre-wrap; text-indent: 50px;"> 
+                        {{ $footer->value }}
+                        </textarea>
+                        @error('value')
                         <div class="alert alert-danger mt-1 mb-1">{{ $message }}</div>
                         @enderror
                     </div>

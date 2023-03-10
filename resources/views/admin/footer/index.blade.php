@@ -42,15 +42,7 @@
                         <td with=25%>{{ $foot->title }}</td>
                         <td with=50%>
                             <div class="pull-right">
-                                <ul>
-                                @foreach ($footerContent as $fc)
-                                    @if($fc->footer_id==$foot->id)
-                                        <li> {{ $fc->value }}</li>
-                                    @endif  
-                                @endforeach
-
-                                </ul>   
-                                <a class="btn btn-success" href="{{ route('footerContent.create',$foot->id) }}"> Add content</a>
+                                {!! $foot->value !!}
                             </div>
                         </td>
                         <td width="20%">
@@ -61,7 +53,6 @@
                                 <button type="submit" class="btn btn-danger">Delete</button>
                             </form>
 
-                            footerContent
                         </td>
                     </tr>
                     @endforeach

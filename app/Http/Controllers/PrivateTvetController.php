@@ -13,7 +13,7 @@ class PrivateTvetController extends Controller
      */
     public function index()
     {
-        $abouttvet = AboutTvet::findOrFail(1);//The only About TVET data in the database
+        $abouttvet = AboutTvet::orderBy('id','desc')->paginate(5);
         return view('privateTvetCollege',compact('abouttvet'));
     }
 

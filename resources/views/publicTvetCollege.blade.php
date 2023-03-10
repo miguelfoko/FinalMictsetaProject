@@ -15,32 +15,16 @@
     <!-- ======= About Section ======= -->
     <section id="about" class="about">
       <div class="container" data-aos="fade-up">
-	  
-	<h3>Public TVET Colleges </h3>
-  {{!! $abouttvet->publicTvetColleges !!}}
+      @foreach ($abouttvet as $attvet) 
+          <h3>Public TVET Colleges </h3>
+          {!! $attvet->publicTvetColleges !!}
 
- <br><br>
+          <br><br>
+          
+          <h3>TVET College Administration </h3>
+          {!! $attvet->tvetCollegeAdministration !!}
+      @endforeach
  
-<h3>TVET College Administration </h3>
-{{!! $abouttvet->tvetCollegeAdministration !!}}
-
- 
-
- 
-
- 
-
- 
-
- 
-
- 
-
- 
-
- 
-
-
       </div>
     </section><!-- End About Section -->
 

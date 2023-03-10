@@ -22,15 +22,7 @@
                       <li><i class="bx bx-chevron-right"></i> <a class="test">{{ $key->title }}</a></li>
                     
                         <div id="popup" title="{{ $key->title }}" class="bx bx-chevron-right">
-                            <p class="text-justify px-2">
-                                <ul>
-                                    @foreach ($footerContent as $fc)
-                                      @if($fc->footer_id==$key->id)
-                                          <li><i class="bx bx-chevron-right"></i> {{ $fc->value }}</li>
-                                      @endif
-                                    @endforeach
-                                </ul>
-                            </p>
+                            {!! $key->value !!}
                         </div>
                       </ul>
               @endif
@@ -59,13 +51,7 @@
                       <li><i class="bx bx-chevron-right"></i> <a class="test">{{ $key->title }}</a></li>
                       <div id="popup" title="{{ $key->title }}" class="bx bx-chevron-right">
                         
-                          <ul>
-                              @foreach ($footerContent as $fc)
-                                @if($fc->footer_id==$key->id)
-                                    <li><i class="bx bx-chevron-right"></i> {{ $fc->value }}</li>
-                                @endif
-                              @endforeach
-                          </ul>
+                          {!! $key->value !!}
                        
                       </div>
                     </ul>
@@ -76,13 +62,7 @@
                       <li><i class="bx bx-chevron-right"></i> <a class="test">{{ $key->title }}</a></li>
                       <div id="popup" title="{{ $key->title }}" class="bx bx-chevron-right">
                         
-                          <ul>
-                              @foreach ($footerContent as $fc)
-                                @if($fc->footer_id==$key->id)
-                                    <li><i class="bx bx-chevron-right"></i> {{ $fc->value }}</li>
-                                    @endif
-                              @endforeach
-                          </ul>
+                        {!! $key->value !!}
                         
                       </div>
                     </ul>
