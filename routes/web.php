@@ -11,6 +11,7 @@ use App\Http\Controllers\AboutTvetController;
 use App\Http\Controllers\GuestAboutTvetController;
 use App\Http\Controllers\PublicTvetController;
 use App\Http\Controllers\PrivateTvetController;
+use App\Http\Controllers\TvetCollegeTimesController;
 
 
 
@@ -47,6 +48,8 @@ Route::resource('/privateTvetCollege',PrivateTvetController::class);
 Route::resource('/viewNews', ViewNewsController::class);
 Route::resource('/news', NewsController::class);
 
+//TVET College Time pages---------------------------------------------------------------------------------
+Route::resource('/admintvetcollegetimes', TvetCollegeTimesController::class);
 
 
 

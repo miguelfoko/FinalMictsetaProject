@@ -35,7 +35,7 @@
             </div>
           </div>
 
-          <div class="col-lg-3 col-md-6 mt-4 mt-md-0">
+          <div class="col-lg-3 col-md-6 ">
             <div class="box featured">
               <h3>Business</h3>
               <h4><sup>$</sup>19<span> / month</span></h4>
@@ -52,7 +52,7 @@
             </div>
           </div>
 
-          <div class="col-lg-3 col-md-6 mt-4 mt-lg-0">
+          <div class="col-lg-3 col-md-6">
             <div class="box">
               <h3>Developer</h3>
               <h4><sup>$</sup>29<span> / month</span></h4>
@@ -69,7 +69,7 @@
             </div>
           </div>
 
-          <div class="col-lg-3 col-md-6 mt-4 mt-lg-0">
+          <div class="col-lg-3 col-md-6">
             <div class="box">
               <span class="advanced">Advanced</span>
               <h3>Ultimate</h3>

@@ -30,7 +30,7 @@
                     <div class="card-body"><a href="updateExamination">Update Examination information</a></div>
                     <div class="card-body"><a href="updateAboutTvet">Update About Tvet information</a></div>
                     <div class="card-body"><a href="updateResources">Update Resources</a></div>
-                    <div class="card-body"><a href="updateTvetCollegeTime">Update TVET College Time</a></div>
+                    <div class="card-body"><a href="admintvetcollegetimes">Manage TVET College Time</a></div>
 
 
                 </div>
