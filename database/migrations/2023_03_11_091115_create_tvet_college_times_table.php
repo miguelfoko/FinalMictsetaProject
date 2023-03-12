@@ -18,8 +18,8 @@ class CreateTvetCollegeTimesTable extends Migration
             $table->string('volume');
             $table->string('publicationDate');
             $table->string('title');
-            $table->float('size'); 
-            $table->float('file'); 
+            $table->string('size'); 
+            $table->string('file'); 
             $table->timestamps();
             $table->foreignId('user_id')
                 ->constrained('users')

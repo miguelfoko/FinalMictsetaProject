@@ -33,6 +33,7 @@
                     <th>Volume</th>
                     <th>Publication Date</th>
                     <th>Cover Page</th>
+                    <th>Size</th>
                     <th>Action</th>
                 </tr>
             </thead>
@@ -40,10 +41,13 @@
                 @foreach ($tvetcollegetimes as $tctimes)
                     <tr heigh=100px>
                         <td width=5%>{{ $tctimes->id }}</td>
-                        <td with=15%>{{ $tctimes->title }}</td>
+                        <td with=20%>{{ $tctimes->title }}</td>
                         <td with=10%>{{ $tctimes->volume }}</td>
-                        <td width=40%>{$tctimes->publicationDate}</td>
-                        <td width=40%><embed src="{{url('files')}}/{{$tctimes->file}}" type="text/pdf" ></td>
+                        <td width=15%>{{$tctimes->publicationDate}}</td>
+                        <td width=30% height="300">
+                            <embed src="{{url('files')}}/{{$tctimes->file}}" height="100%" width="100%"></td>
+                          
+                        <td width=10%>{{$tctimes->size}}</td>
                         <td width="10%">
                             <form action="{{ route('admintvetcollegetimes.destroy',$tctimes->id) }}" method="Post">
                                 <a class="btn btn-primary" href="{{ route('admintvetcollegetimes.edit',$tctimes->id) }}">Edit</a>

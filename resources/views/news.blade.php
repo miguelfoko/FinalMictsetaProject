@@ -18,7 +18,7 @@
       <div class="container" data-aos="fade-up">
 
         <div class="row">
-        @foreach ($news as $new)
+        @foreach ($news as $new) 
           <div class="col-md-6 d-flex align-items-stretch">
             <div class="card">
             
