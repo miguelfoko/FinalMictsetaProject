@@ -11,4 +11,10 @@ class ViewNewsController extends Controller
         $news = News::orderBy('id','desc')->paginate(5);
         return view('news', compact('news'));
     }
+
+    public function show($id)
+    {
+        $news = News::find($id);
+        return view('specificNews',compact('news'));
+    }
 }

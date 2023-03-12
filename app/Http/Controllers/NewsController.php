@@ -53,7 +53,7 @@ class NewsController extends Controller
             'title' => 'required',
             'subtitle' => 'required',
             'content' => 'required',
-            'picture' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:9000',
+            'picture' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:10240',
         ]);
 
         $imageName = time().'.'.$request->picture->extension();  
@@ -61,6 +61,7 @@ class NewsController extends Controller
         $request->picture->move(public_path('images'), $imageName);
 
         $news=new News;
+        $news->link=$request->input('link');
         $news->title=$request->input('title');
         $news->subtitle=$request->input('subtitle');
         $news->content=nl2br($request->input('content'));
@@ -119,6 +120,7 @@ class NewsController extends Controller
          
         //$news=new News;
         $news->title=$request->input('title');
+        $news->link=$request->input('link');
         $news->subtitle=$request->input('subtitle');
         $news->content=nl2br($request->input('content'));
         $news->picture=$imageName;

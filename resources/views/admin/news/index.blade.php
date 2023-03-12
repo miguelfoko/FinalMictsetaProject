@@ -32,6 +32,7 @@
                     <th>News title</th>
                     <th>News Subtitle</th>
                     <th>News content</th>
+                    <th>Youtube link</th>
                     <th>News picture</th>
                     <th width="280px">Action</th>
                 </tr>
@@ -40,9 +41,10 @@
                 @foreach ($news as $new)
                     <tr heigh=100px>
                         <td width=5%>{{ $new->id }}</td>
-                        <td with=15%>{{ $new->title }}</td>
+                        <td with=10%>{{ $new->title }}</td>
                         <td with=10%>{{ $new->subtitle }}</td>
-                        <td width=40%>{!! $new->content !!}</td>
+                        <td width=35%>{!! $new->content !!}</td>
+                        <td width=10%><a href="{!! $new->link !!}">{!! $new->link !!}</a></td>
                         <td width="20%"><img src="{{ asset('/images/'.$new->picture) }}" alt="" class="img-fluid"> </td>
                         <td width="10%">
                             <form action="{{ route('news.destroy',$new->id) }}" method="Post">

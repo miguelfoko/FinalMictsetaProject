@@ -17,26 +17,23 @@
     <section id="events" class="events">
       <div class="container" data-aos="fade-up">
 
-        <div class="row">
+      <div class="row" data-aos="zoom-in" data-aos-delay="100">
         @foreach ($news as $new) 
-          <div class="col-md-6 d-flex align-items-stretch">
-            <div class="card">
-            
-              <div class="card-img">
-              <img src="{{ asset('/images/'.$new->picture) }}" alt="" class="img-fluid" width=200px heigh=200px>
+         
+            <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
+              <div class="member">
+                <img src="{{ asset('/images/'.$new->picture) }}" class="img-fluid" alt="">
+                <div class="member-content">
+                  <h4>{{ $new->title }}</h4>
+                  <span>{{ $new->subtitle }}</span>
+                  <a class="btn btn-primary" href="{{route('viewNews.show',$new->id)}}">Read more</a> 
+                  
+                </div>
               </div>
-              
-              <div class="card-body" width=200px heigh=200px>
-                <h5 class="card-title"><a href="">{{ $new->title }}</a></h5>
-                <p class="fst-italic text-center">{{ $new->subtitle }}</p>
-                <p class="card-text">{!! $new->content !!}</p>
-              </div>
-             
             </div>
-          </div>
-          @endforeach
-        </div>
+        @endforeach
 
+        </div>
       </div>
     </section><!-- End Events Section -->
 
