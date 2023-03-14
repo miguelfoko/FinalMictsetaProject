@@ -20,6 +20,7 @@ class CreateTvetCollegeTimesTable extends Migration
             $table->string('title');
             $table->string('size'); 
             $table->string('file'); 
+            $table->string('coverPage'); 
             $table->timestamps();
             $table->foreignId('user_id')
                 ->constrained('users')

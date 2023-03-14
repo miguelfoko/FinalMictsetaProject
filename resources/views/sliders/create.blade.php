@@ -9,6 +9,13 @@
   {{ Form::text('title', null, array('class' => 'form-control')) }}
 
   <br><br>
+  <p>The image Dimensions should be as follows: 
+                            <ul>
+                                <li> Horizontal: 1900 px
+                                <li> Vertical: 400 px 
+                                <li> Size: 1 Mo Maximum
+                            </ul>
+              </p>
   {{ Form::label('photo', 'Photo') }}
 
   {{ Form::file('photo', array('class' => 'form-control')) }}

@@ -54,6 +54,7 @@ class TvetCollegeTimesController extends Controller
             'publicationMonth' => 'required',
             'publicationYear' => 'required',
             'title' => 'required',
+            'coverPage' => 'required|image',
             'file' => 'required|file|mimes:pdf',
         ]);
 
@@ -63,6 +64,16 @@ class TvetCollegeTimesController extends Controller
         $tvetcollegetimes->volume="Volume ".$request->input('volume');
         $tvetcollegetimes->title=$request->input('title');
         $tvetcollegetimes->publicationDate=$publicationDate;
+
+        if ($request->hasFile('coverPage')) {
+            $photo = $request->file('coverPage');
+            $filename = 'tvetCollegeTimes' . '-' . time() . '.' . $photo->getClientOriginalExtension();
+            $location = public_path('images/');
+            $tvetcollegetimes->coverPage=$filename;
+            $request->file('coverPage')->move($location, $filename);
+           
+        }
+
         if (request()->hasFile('file')){
             $file = $request->file('file');
             $size1=number_format((float)$file->getSize()/(1024*1024), 2, '.', '');
@@ -116,6 +127,7 @@ class TvetCollegeTimesController extends Controller
             'publicationMonth' => 'required',
             'publicationYear' => 'required',
             'title' => 'required',
+            'coverPage' => 'required|image',
             'file' => 'required|file|mimes:pdf',
         ]); 
         
@@ -123,6 +135,19 @@ class TvetCollegeTimesController extends Controller
         $tvetcollegetimes->volume="Volume ".$request->input('volume');
         $tvetcollegetimes->title=$request->input('title');
         $tvetcollegetimes->publicationDate=$publicationDate;
+
+        if ($request->hasFile('coverPage')) {
+            $fileName=$tvetcollegetimes->coverPage;
+            $file_path = "images/$fileName";
+            unlink(public_path($file_path));
+
+            $photo = $request->file('coverPage');
+            $filename = 'tvetCollegeTimes' . '-' . time() . '.' . $photo->getClientOriginalExtension();
+            $location = public_path('images/');
+            $request->file('coverPage')->move($location, $filename);
+            $tvetcollegetimes->coverPage=$fileName;
+        }
+
         if (request()->hasFile('file')){
             $fileName=$tvetcollegetimes->file;
             $file_path = "files/$fileName";
@@ -154,6 +179,11 @@ class TvetCollegeTimesController extends Controller
         $fileName=$tvetcollegetimes->file;
         $file_path = "files/$fileName"; 
         unlink(public_path($file_path));
+
+        $fileName=$tvetcollegetimes->coverPage;
+        $file_path = "images/$fileName"; 
+        unlink(public_path($file_path));
+
         $tvetcollegetimes->delete();
         return redirect()->route('admintvetcollegetimes.index')->with('success','TVET College Times has been deleted successfully');
     }

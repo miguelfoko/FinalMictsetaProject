@@ -94,6 +94,15 @@
                 </div>
                 <div class="col-xs-12 col-sm-12 col-md-12">
                     <div class="form-group">
+                        <strong>Cover page:</strong>
+                        <input type="file" name="coverPage" class="form-control" >
+                        @error('coverPage')
+                        <div class="alert alert-danger mt-1 mb-1">{{ $message }}</div>
+                        @enderror
+                    </div>
+                </div>
+                <div class="col-xs-12 col-sm-12 col-md-12">
+                    <div class="form-group">
                         <strong>File:</strong>
                         <input type="file" name="file" class="form-control" >
                         @error('file')

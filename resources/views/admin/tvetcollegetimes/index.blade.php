@@ -33,6 +33,7 @@
                     <th>Volume</th>
                     <th>Publication Date</th>
                     <th>Cover Page</th>
+                    <th>File Link</th>
                     <th>Size</th>
                     <th>Action</th>
                 </tr>
@@ -43,8 +44,12 @@
                         <td width=5%>{{ $tctimes->id }}</td>
                         <td with=20%>{{ $tctimes->title }}</td>
                         <td with=10%>{{ $tctimes->volume }}</td>
-                        <td width=15%>{{$tctimes->publicationDate}}</td>
-                        <td width=30% height="300">
+                        <td width=10%>{{$tctimes->publicationDate}}</td>
+                        <td width=15%>
+                        <img src="{{url('images')}}/{{$tctimes->coverPage}}"  width="50%" height="100%">
+                        </td>
+                        <td width=20% height="300">
+                            <a href="{{url('files')}}/{{$tctimes->file}}">View File</a>
                             <embed src="{{url('files')}}/{{$tctimes->file}}" height="100%" width="100%"></td>
                           
                         <td width=10%>{{$tctimes->size}}</td>

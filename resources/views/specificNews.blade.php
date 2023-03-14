@@ -21,10 +21,13 @@
     <img src="{{ asset('/images/'.$news->picture) }}" class="img-fluid" alt="">
     {!! $news->content !!} 
     
-    <div class="media-body">
-    {!! $news->link !!}
-       <embed url="{!!$news->link!!}" />
-   </div>
+    <div class="media">
+        <div class="media-body">
+            <iframe width="100%" height="315" src="{{ $news->link }}" frameborder="0" allowfullscreen>
+            </iframe>
+        </div>
+    </div>
+    
  
 
       </div>

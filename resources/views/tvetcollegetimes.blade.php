@@ -26,9 +26,9 @@
               <h4>{{$tctimes->volume}}</h4>
               <h5>{{$tctimes->publicationDate}}</h5>
               <h5>Size: {{$tctimes->size}} </h5>
-                <embed src="{{url('files')}}/{{$tctimes->file}}" height="250" width="200">
+                <embed src="{{url('images')}}/{{$tctimes->coverPage}}" height="250" width="200">
               <div >
-                <a href="{{url('files')}}/{{$tctimes->file}}" class="btn-buy">Download</a>
+                <a href="{{url('files')}}/{{$tctimes->file}}" target="_blank" rel="noopener" class="btn-buy">Open Document</a>
               </div>
             </div>
           </div>
