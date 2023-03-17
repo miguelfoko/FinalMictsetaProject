@@ -9,7 +9,7 @@
                 <div class="card-header">{{ __('Resources') }}</div>
 
                 <div class="card-body">
-                    <div class="card-body"><a href="updateCollegeCourseType">Update College Course Type</a></div>
+                    <div class="card-body"><a href="collegecoursetype">Update College Course Type</a></div>
                     <div class="card-body"><a href="updateCalendar">UpdateCalendar</a></div>
                     <div class="card-body"><a href="updateCarreerGuidance">Update Carreer Guidance</a></div>
                 </div>

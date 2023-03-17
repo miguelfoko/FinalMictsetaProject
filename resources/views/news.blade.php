@@ -27,7 +27,7 @@
                   <h4>{{ $new->title }}</h4>
                   <span>{{ $new->subtitle }}</span>
                   <a class="btn btn-primary" href="{{route('viewNews.show',$new->id)}}">Read more</a> 
-                  
+                   
                 </div>
               </div>
             </div>

@@ -13,6 +13,13 @@ use App\Http\Controllers\PublicTvetController;
 use App\Http\Controllers\PrivateTvetController;
 use App\Http\Controllers\TvetCollegeTimesController;
 use App\Http\Controllers\ViewTvetCollegeTimesController;
+use App\Http\Controllers\CollegeCourseTypesController;
+use App\Http\Controllers\ViewCollegeCourseTypesController;
+use App\Http\Controllers\CourseTypesController;
+
+
+
+
 
 
 
@@ -37,7 +44,13 @@ Route::get('/test', function(){return view('testPopup');});
 
 Route::get('/examinations', function(){ return view('examinations');});
 
+//Resources pages---------------------------------------------------------------------------
 Route::get('/resources', function(){ return view('resources');});
+Route::resource('/collegecoursetype',CollegeCourseTypesController::class);
+Route::resource('/viewcollegecoursetype',ViewCollegeCourseTypesController::class);
+Route::resource('/coursetype',CourseTypesController::class);
+
+
 
 //About TVET Pages---------------------------------------------------------------------------------
 Route::resource('/abouttvet',GuestAboutTvetController::class);
