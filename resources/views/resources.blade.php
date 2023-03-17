@@ -51,6 +51,20 @@
 
         </div>
 
+        <div class="row" data-aos="zoom-in" data-aos-delay="100">
+          <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
+            <div >
+            <a href="viewsuccessstories">
+               <img src="{{ asset('/img/SuccessStories.png') }}" class="img-fluid" width= "200px" width= "200px" alt="">
+            </a>
+              <div class="member-content">
+              <h4><a href="viewsuccessstories">Success Stories</a></h4>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
       </div>
     </section><!-- End Trainers Section -->
 

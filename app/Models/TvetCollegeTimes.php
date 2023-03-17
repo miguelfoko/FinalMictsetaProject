@@ -8,5 +8,5 @@ use Illuminate\Database\Eloquent\Model;
 class TvetCollegeTimes extends Model
 { 
     use HasFactory;
-    protected $fillable = ['volume','publicationDate', 'title', 'size','file','coverPage'];
+    protected $fillable = ['volume','publicationDate', 'title', 'size','file','coverPage']; 
 }

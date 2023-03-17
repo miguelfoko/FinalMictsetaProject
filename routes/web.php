@@ -16,9 +16,8 @@ use App\Http\Controllers\ViewTvetCollegeTimesController;
 use App\Http\Controllers\CollegeCourseTypesController;
 use App\Http\Controllers\ViewCollegeCourseTypesController;
 use App\Http\Controllers\CourseTypesController;
-
-
-
+use App\Http\Controllers\SuccessStoriesController;
+use App\Http\Controllers\ViewSuccessStoriesController;
 
 
 
@@ -49,6 +48,10 @@ Route::get('/resources', function(){ return view('resources');});
 Route::resource('/collegecoursetype',CollegeCourseTypesController::class);
 Route::resource('/viewcollegecoursetype',ViewCollegeCourseTypesController::class);
 Route::resource('/coursetype',CourseTypesController::class);
+Route::resource('/successstories',SuccessStoriesController::class);
+Route::resource('/viewsuccessstories',ViewSuccessStoriesController::class);
+
+
 
 
 
