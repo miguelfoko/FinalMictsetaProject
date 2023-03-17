@@ -120,7 +120,6 @@ class SuccessStoriesController extends Controller
         ]);
 
         
-        $successstories = new SuccessStories;
         $successstories->title=$request->input('title');
 
         if (request()->hasFile('file')){

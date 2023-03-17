@@ -30,11 +30,11 @@
 
           <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
             <div >
-            <a href=""> 
+            <a href="viewcollegecalendar"> 
               <img src="{{ asset('/img/tvetCallendar.png') }}" class="img-fluid" width= "200px" width= "200px" alt="">
             </a>
               <div class="member-content">
-              <h4> <a href=""> TVET College Calendar</a></h4>
+              <h4> <a href="viewcollegecalendar"> TVET College Calendar</a></h4>
               </div>
             </div>
           </div>

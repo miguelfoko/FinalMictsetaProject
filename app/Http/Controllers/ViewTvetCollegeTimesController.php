@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 use App\Models\TvetCollegeTimes;
-
+ 
 use Illuminate\Http\Request;
 
 class ViewTvetCollegeTimesController extends Controller

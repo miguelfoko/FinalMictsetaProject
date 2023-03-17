@@ -13,21 +13,21 @@
     <div class="footer-top">
       <div class="container">
         <div class="row">
-        <div class="col-lg-2 col-md-6 footer-links"> 
-            <h4>About the TVET College Times website</h4>
-          @foreach ($footerElement as $key )
-              @if($key->title!="Copyright notice" && $key->title!="Disclaimer notice")
-                
-                  <ul>                
-                      <li><i class="bx bx-chevron-right"></i> <a class="test">{{ $key->title }}</a></li>
-                    
-                        <div id="popup" title="{{ $key->title }}" class="bx bx-chevron-right">
-                            {!! $key->value !!}
-                        </div>
-                      </ul>
-              @endif
-            @endforeach
-        </div>
+          <div class="col-lg-2 col-md-6 footer-links"> 
+              <h4>About the TVET College Times website</h4>
+            @foreach ($footerElement as $key )
+                @if($key->title!="Copyright notice" && $key->title!="Disclaimer notice")
+                  
+                    <ul>                
+                        <li><i class="bx bx-chevron-right"></i> <a class="test">{{ $key->title }}</a></li>
+                      
+                          <div id="popup" title="{{ $key->title }}" class="bx bx-chevron-right">
+                              {!! $key->value !!}
+                          </div>
+                        </ul>
+                @endif
+              @endforeach
+          </div>
 
 
           <div class="col-lg-2 col-md-6 footer-links"> 
@@ -69,9 +69,8 @@
                   @endif
             @endforeach
             </div>
-        </div>
 
-          <div class="col-lg-4 col-md-6 footer-newsletter">
+            <div class="col-lg-4 col-md-6 footer-newsletter">
             <h4>Intranet</h4>
             
             <p> <a href="home">Login as administrator</a></p>
@@ -82,6 +81,9 @@
             </form>
           </div>
 
+        </div>
+
+          
         </div>
       </div>
     </div>

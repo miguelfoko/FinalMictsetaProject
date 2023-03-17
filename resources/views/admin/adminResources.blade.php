@@ -10,7 +10,7 @@
 
                 <div class="card-body">
                     <div class="card-body"><a href="collegecoursetype">Manage College Course Type</a></div>
-                    <div class="card-body"><a href="updateCalendar">Manage Calendar</a></div>
+                    <div class="card-body"><a href="collegecalendar">Manage Calendar</a></div>
                     <div class="card-body"><a href="updateCarreerGuidance">Manage Carreer Guidance</a></div>
                     <div class="card-body"><a href="successstories">Manage Success Stories</a></div>
 
