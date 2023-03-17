@@ -20,6 +20,8 @@ use App\Http\Controllers\SuccessStoriesController;
 use App\Http\Controllers\ViewSuccessStoriesController;
 use App\Http\Controllers\CollegeCalendarController;
 use App\Http\Controllers\ViewCollegeCalendarController;
+use App\Http\Controllers\CareerGuidanceController;
+use App\Http\Controllers\ViewCareerGuidanceController;
 
 
 
@@ -53,7 +55,8 @@ Route::resource('/successstories',SuccessStoriesController::class);
 Route::resource('/viewsuccessstories',ViewSuccessStoriesController::class);
 Route::resource('/collegecalendar',CollegeCalendarController::class);
 Route::resource('/viewcollegecalendar',ViewCollegeCalendarController::class);
-
+Route::resource('/careerguidance',CareerGuidanceController::class);
+Route::resource('/viewcareerguidance',ViewCareerGuidanceController::class);
 
 
 

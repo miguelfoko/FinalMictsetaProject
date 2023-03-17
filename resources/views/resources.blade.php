@@ -41,11 +41,11 @@
 
           <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
             <div >
-            <a href=""> 
+            <a href="viewcareerguidance"> 
               <img src="{{ asset('/img/creerGuidance.png') }}" class="img-fluid" width= "200px" width= "200px" alt="">
             </a>
               <div class="member-content">
-              <h4><a href="">Career Guidance</a></h4>
+              <h4><a href="viewcareerguidance">Career Guidance</a></h4>
             </div>
           </div>
 

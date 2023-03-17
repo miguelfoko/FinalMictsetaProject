@@ -163,6 +163,16 @@ class CollegeCalendarController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $collegecalendar = CollegeCalendar::find($id);
+        $fileName=$collegecalendar->file;
+        $file_path = "files/$fileName"; 
+        unlink(public_path($file_path));
+
+        $fileName=$collegecalendar->coverPage;
+        $file_path = "images/$fileName"; 
+        unlink(public_path($file_path));
+
+        $collegecalendar->delete();
+        return redirect()->route('collegecalendar.index')->with('success','College Calendar has been deleted successfully');
     }
 }
