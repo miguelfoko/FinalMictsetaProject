@@ -22,6 +22,15 @@ use App\Http\Controllers\CollegeCalendarController;
 use App\Http\Controllers\ViewCollegeCalendarController;
 use App\Http\Controllers\CareerGuidanceController;
 use App\Http\Controllers\ViewCareerGuidanceController;
+use App\Http\Controllers\ViewExamResourcesController;
+use App\Http\Controllers\IcassTrainingVideosController;
+use App\Http\Controllers\ViewIcassTrainingVideosController;
+use App\Http\Controllers\ViewCommunityCollegesController;
+use App\Http\Controllers\ViewSetasController;
+use App\Http\Controllers\ViewExamTrainingVideosController;
+
+
+
 
 
 
@@ -43,8 +52,16 @@ Route::get('/', function () { return view('index');});
 Route::get('/contactus', function(){return view('contact');});
 Route::get('/test', function(){return view('testPopup');});
 
-
+//Examination pages
+Route::get('/updateExamination', [App\Http\Controllers\AdminExaminationController::class, 'index'])->name('admin.adminExamination');
 Route::get('/examinations', function(){ return view('examinations');});
+Route::resource('/icasstrainingvideos',IcassTrainingVideosController::class);
+Route::resource('/viewexamresources',ViewExamResourcesController::class);
+Route::resource('/viewexamtrainingvideos',ViewExamTrainingVideosController::class);
+Route::resource('/viewicasstrainingvideos',ViewIcassTrainingVideosController::class);
+
+
+
 
 //Resources pages---------------------------------------------------------------------------
 Route::get('/resources', function(){ return view('resources');});
@@ -57,15 +74,22 @@ Route::resource('/collegecalendar',CollegeCalendarController::class);
 Route::resource('/viewcollegecalendar',ViewCollegeCalendarController::class);
 Route::resource('/careerguidance',CareerGuidanceController::class);
 Route::resource('/viewcareerguidance',ViewCareerGuidanceController::class);
+Route::get('/updateResources', [App\Http\Controllers\AdminResourcesController::class, 'index'])->name('admin.adminResources');
 
 
 
 
 //About TVET Pages---------------------------------------------------------------------------------
+Route::get('/updateAboutTvet', [App\Http\Controllers\AdminAboutTvetController::class, 'index'])->name('admin.adminAboutTvet');
 Route::resource('/abouttvet',GuestAboutTvetController::class);
 Route::resource('/adminAbouttvet', AboutTvetController::class);
 Route::resource('/publicTvetCollege',PublicTvetController::class);
 Route::resource('/privateTvetCollege',PrivateTvetController::class);
+Route::resource('/viewcommunitycolleges',ViewCommunityCollegesController::class);
+Route::resource('/viewsetas',ViewSetasController::class);
+
+Route::get('/aboutus', function(){ return view('aboutus');});
+
 
 //News Pages---------------------------------------------------------------------------------
 Route::resource('/viewNews', ViewNewsController::class);
@@ -74,6 +98,7 @@ Route::resource('/news', NewsController::class);
 //TVET College Time pages---------------------------------------------------------------------------------
 Route::resource('/admintvetcollegetimes', TvetCollegeTimesController::class);
 Route::resource('/tvetcollegetimes', ViewTvetCollegeTimesController::class);
+Route::get('/updateTvetCollegeTime', [App\Http\Controllers\AdminTvetCollegeTimeController::class, 'index'])->name('admin.adminTvetCollegeTime');
 
 
 Route::get('/registration', function(){ return view('registration');});
@@ -89,17 +114,12 @@ Route::post('/insertInternalStakeHolder', [InternalStakeHolderController::class,
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
-
 Route::get('/updateContactUs', [App\Http\Controllers\AdminContactUsController::class, 'index'])->name('admin.adminContact');
 Route::get('/updateHomePage', [App\Http\Controllers\AdminHomePageController::class, 'index'])->name('admin.adminHomePage');
 
-Route::get('/updateExamination', [App\Http\Controllers\AdminExaminationController::class, 'index'])->name('admin.adminExamination');
 
-Route::get('/updateAboutTvet', [App\Http\Controllers\AdminAboutTvetController::class, 'index'])->name('admin.adminAboutTvet');
 
-Route::get('/updateResources', [App\Http\Controllers\AdminResourcesController::class, 'index'])->name('admin.adminResources');
 
-Route::get('/updateTvetCollegeTime', [App\Http\Controllers\AdminTvetCollegeTimeController::class, 'index'])->name('admin.adminTvetCollegeTime');
 
 Route::resource('slides', SliderController::class);
 Route::resource('footer', FooterController::class);

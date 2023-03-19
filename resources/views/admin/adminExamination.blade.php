@@ -9,9 +9,9 @@
                 <div class="card-header">{{ __('Examination') }}</div>
 
                 <div class="card-body">
-                    <div class="card-body"><a href="updateExamResources">Update Examination Resources</a></div>
-                    <div class="card-body"><a href="updateTrainingVideos">Update Training Videos</a></div>
-                    <div class="card-body"><a href="updateIcassTrainingVideos">Update ICASS Training Videos</a></div>
+                    <div class="card-body"><a href="examResources">Update Examination Resources</a></div>
+                    <div class="card-body"><a href="examTrainingVideos">Update Training Videos</a></div>
+                    <div class="card-body"><a href="icasstrainingvideos">Update ICASS Training Videos</a></div>
                 </div>
             </div>
         </div>

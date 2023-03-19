@@ -1,7 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
-use App\Models\CollegeCalendar;
+use App\Models\CollegeCalendar; 
 
 use Illuminate\Http\Request;
 
