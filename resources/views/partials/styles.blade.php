@@ -11,6 +11,10 @@
 <link href="{{ asset('/vendor/remixicon/remixicon.css') }}" rel="stylesheet">
 <link href="{{ asset('/vendor/swiper/swiper-bundle.min.css') }}" rel="stylesheet">
 
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.2/css/all.css">
+<link href="{{ asset('vendor/file-manager/css/file-manager.css') }}" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css">
 <!-- Template Main CSS File -->
  <link href="{{ asset('/css/style.css') }}" rel="stylesheet">
 

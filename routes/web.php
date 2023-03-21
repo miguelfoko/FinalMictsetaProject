@@ -23,13 +23,13 @@ use App\Http\Controllers\ViewCollegeCalendarController;
 use App\Http\Controllers\CareerGuidanceController;
 use App\Http\Controllers\ViewCareerGuidanceController;
 use App\Http\Controllers\ViewExamResourcesController;
+//use App\Http\Controllers\ExamResourcesController;
 use App\Http\Controllers\IcassTrainingVideosController;
 use App\Http\Controllers\ExamTrainingVideosController;
 use App\Http\Controllers\ViewIcassTrainingVideosController;
 use App\Http\Controllers\ViewCommunityCollegesController;
 use App\Http\Controllers\ViewSetasController;
 use App\Http\Controllers\ViewExamTrainingVideosController;
-
 
 
 
@@ -89,7 +89,6 @@ Route::resource('/publicTvetCollege',PublicTvetController::class);
 Route::resource('/privateTvetCollege',PrivateTvetController::class);
 Route::resource('/viewcommunitycolleges',ViewCommunityCollegesController::class);
 Route::resource('/viewsetas',ViewSetasController::class);
-
 Route::get('/aboutus', function(){ return view('aboutus');});
 
 
