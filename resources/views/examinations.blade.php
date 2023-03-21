@@ -24,7 +24,7 @@
                <img src="{{ asset('/img/ExamResources.png') }}" class="img-fluid" width= "200px" width= "200px" alt="">
             </a>
               <div class="member-content">
-              <h4><a href="viewexamresources">View Resources</a></h4>
+              <a href="viewexamresources">View Resources</a>
               </div>
             </div>
           </div>
@@ -34,7 +34,7 @@
                <img src="{{ asset('/img/ExamTrainingVideos.png') }}" class="img-fluid" width= "200px" width= "200px" alt="">
             </a>
               <div class="member-content">
-              <h4><a href="viewexamtrainingvideos">View Videos</a></h4>
+              <a href="viewexamtrainingvideos">View Videos</a>
               </div>
             </div>
           </div>
@@ -45,7 +45,7 @@
                <img src="{{ asset('/img/ICASSTrainingVideos.png') }}" class="img-fluid" width= "200px" width= "200px" alt="">
             </a>
               <div class="member-content">
-              <h4><a href="viewicasstrainingvideos">View Videos</a></h4>
+              <a href="viewicasstrainingvideos">View Videos</a>
               </div>
             </div>
           </div>

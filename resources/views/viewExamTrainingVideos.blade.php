@@ -17,17 +17,20 @@
       <div class="container" data-aos="fade-up">
 
         <div class="row">
-        Exam Training Videos
         @foreach ($examtrainingvideos as $examtrainingvideo) 
 
         <div class="col-lg-3 col-md-6 ">
             <div class="box featured">
-              <h3>{{$examtrainingvideo}}</h3>
+            <h3>Module {{$examtrainingvideo->module}}-Session {{$examtrainingvideo->session}}</h3>
               
-                <!--<embed src="{{url('images')}}/{{$ccalendar->coverPage}}" height="250" width="200">-->
-              <div >
-                <!--<a href="{{url('files')}}/{{$ccalendar->file}}" target="_blank" rel="noopener" class="btn-buy">Open Document</a>-->
-              </div>
+              <h6>{{$examtrainingvideo->title}}</h6>
+                <div >
+                            <video width="320" height="240" controls>
+                                <source src="{{url('videos')}}/{{$examtrainingvideo->video}}" type="video/mp4">
+                                Your browser does not support the video tag
+                            </video>        
+                            <a href="{{url('videos')}}/{{$examtrainingvideo->video}}" download>Download</a>
+                </div>
             </div>
           </div>
         @endforeach

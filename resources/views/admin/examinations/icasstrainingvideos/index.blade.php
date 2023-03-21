@@ -40,8 +40,8 @@
                 @foreach ($icasstrainingvideos as $icasstrainingvideo)
                     <tr heigh=100px>
                         <td width=5%>{{ $icasstrainingvideo->id }}</td>
-                        <td with=10%>{{ $icasstrainingvideo->module }}</td>
-                        <td with=10%>{{ $icasstrainingvideo->session }}</td>
+                        <td with=10%>Module {{ $icasstrainingvideo->module }}</td>
+                        <td with=10%>Session {{ $icasstrainingvideo->session }}</td>
                         <td width=35%>{!! $icasstrainingvideo->title !!}</td>
                         <td width=35%>
                             <video width="320" height="240" controls>
@@ -66,7 +66,7 @@
 
     <div class="container">
         <div class="pull-right">
-            <a class="btn btn-success" href="home"> Back</a>
+            <a class="btn btn-success" href="updateExamination"> Back</a>
         </div>
     </div> 
 @endsection

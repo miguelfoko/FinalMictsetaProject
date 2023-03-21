@@ -54,8 +54,8 @@ class IcassTrainingVideosController extends Controller
         ]);
 
         
-        $module="Module ".$request->input('module');
-        $session="Session ".$request->input('session');
+        $module=$request->input('module');
+        $session=$request->input('session');
         $title=$request->input("title");
 
         $icasstrainingvideos = new IcassTrainingVideos;
@@ -120,13 +120,10 @@ class IcassTrainingVideosController extends Controller
             'video' => 'required|file|mimetypes:video/mp4,video/3gpp,video/quicktime,video/x-msvideo,video/x-ms-wmv',
         ]); 
         
-        $module="Module ".$request->input('module');
-        $session="Session ".$request->input('session');
-        $title=$request->input("title");
-
-        $icasstrainingvideos->module=$module;
-        $icasstrainingvideos->session=$session;
-        $icasstrainingvideos->title=$title;
+ 
+        $icasstrainingvideos->module=$request->input('module');
+        $icasstrainingvideos->session=$request->input('session');
+        $icasstrainingvideos->title=$request->input("title");
 
         if ($request->hasFile('video')) {
             $fileName=$icasstrainingvideos->video;

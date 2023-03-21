@@ -16,6 +16,14 @@ class CreateExamTrainingVideosTable extends Migration
         Schema::create('exam_training_videos', function (Blueprint $table) {
             $table->id();
             $table->timestamps();
+            $table->string('module');
+            $table->string('session');
+            $table->string('title');
+            $table->string('video');
+            $table->foreignId('user_id')
+            ->constrained('users')
+            ->onUpdate('cascade')
+            ->onDelete('cascade');
         });
     }
 

@@ -26,7 +26,7 @@
             @csrf
             <div class="row"> 
                 <div class="col-xs-12 col-sm-12 col-md-12">
-                    <div class="form-group">
+                    <div class="form-group"> 
                         <strong>Title:</strong>
                         <input type="text" name="title" class="form-control" placeholder="TVET College Times Title">
                         @error('title')

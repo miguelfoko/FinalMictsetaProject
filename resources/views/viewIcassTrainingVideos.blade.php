@@ -17,19 +17,20 @@
       <div class="container" data-aos="fade-up">
 
         <div class="row">
-        ICASS
         @foreach ($icasstrainingvideos as $icasstrainingvideo) 
 
         <div class="col-lg-3 col-md-6 ">
             <div class="box featured">
-              <h3>{{$icasstrainingvideo->module}}-{{$icasstrainingvideo->session}}</h3>
+              <h3>Module {{$icasstrainingvideo->module}}-Session {{$icasstrainingvideo->session}}</h3>
               
-          <h6>{{$icasstrainingvideo->title}}</h6>
-              <div >
+              <h6>{{$icasstrainingvideo->title}}</h6>
+                <div >
                             <video width="320" height="240" controls>
                                 <source src="{{url('videos')}}/{{$icasstrainingvideo->video}}" type="video/mp4">
                                 Your browser does not support the video tag
-                            </video>               </div>
+                            </video>        
+                            <a href="{{url('videos')}}/{{$icasstrainingvideo->video}}" download>Download</a>
+                </div>
             </div>
           </div>
         @endforeach

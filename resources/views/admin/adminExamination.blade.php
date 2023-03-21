@@ -10,7 +10,7 @@
 
                 <div class="card-body">
                     <div class="card-body"><a href="examResources">Update Examination Resources</a></div>
-                    <div class="card-body"><a href="examTrainingVideos">Update Training Videos</a></div>
+                    <div class="card-body"><a href="examtrainingvideos">Update Training Videos</a></div>
                     <div class="card-body"><a href="icasstrainingvideos">Update ICASS Training Videos</a></div>
                 </div>
             </div>
