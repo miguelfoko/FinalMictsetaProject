@@ -33,7 +33,61 @@
                             <span class="carousel-control-next-icon" aria-hidden="true"></span>
                             <span class="visually-hidden">Next</span>
                         </button>
+      </div>
+
+      <section id="trainers" class="trainers">
+      <div class="container" data-aos="fade-up">
+ 
+        <div class="row" data-aos="zoom-in" data-aos-delay="100">
+
+          <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
+            <div>
+                <div class="card-img">
+                  <a href="viewcollegecalendar"> <img src="{{ asset('/img/tvetCallendar.png') }}" class="img-fluid" alt="..."> </a>
+                </div>
+                <div class="member-content"> 
+                  <a href="viewcollegecalendar">Academic Calendar</a>
+                </div>
+            </div>
           </div>
+
+          <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
+            <div>
+                <div class="card-img">
+                  <a href="viewsubscribe"> <img src="{{ asset('/img/Subscribe.png') }}" class="img-fluid" alt="..."> </a>
+                </div>
+                <div class="member-content"> 
+                  <a href="viewsubscribe">Subscribe</a>
+                </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
+            <div>
+                <div class="card-img">
+                  <a href="viewfinancialaid"> <img src="{{ asset('/img/NSFAS_Icon.png') }}" class="img-fluid" alt="..."> </a>
+                </div>
+                <div class="member-content"> 
+                  <a href="viewfinancialaid">Financial Aid</a>
+                </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
+            <div>
+                <div class="card-img">
+                  <a href="viewcareerguidance"> <img src="{{ asset('/img/Careers_Icon.png') }}" class="img-fluid" alt="..."> </a>
+                </div>
+                <div class="member-content"> 
+                  <a href="viewcareerguidance">Career Guidance</a>
+                </div>
+            </div>
+          </div>
+
+
+        </div>
+      </div>
+    </section><!-- End Trainers Section -->
 
   </main><!-- End #main -->
    

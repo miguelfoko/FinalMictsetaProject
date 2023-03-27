@@ -17,13 +17,13 @@
 
       <nav id="navbar" class="navbar order-last order-lg-0">
         <ul>
-          <li><a class="active" href="/">Home</a></li>
-          <li><a href="aboutus">About US</a></li>
-          <li><a href="examinations">Examinations</a></li>
-          <li><a href="resources">Resources</a></li>
-          <li><a href="viewNews">News</a></li>
-          <li><a href="tvetcollegetimes">TVET College Times</a></li>
-          <li><a href="contactus">Contact US</a></li>
+          <li><a  href="/">Home</a></li>
+          <li><a  href="aboutus">About Us</a></li>
+          <li><a  href="examinations">Examinations</a></li>
+          <li><a  href="resources">Resources</a></li>
+          <li><a  href="viewNews">News</a></li>
+          <li><a  href="tvetcollegetimes">TVET College Times</a></li>
+          <li><a  href="contactus">Contact US</a></li>
 
     </div>
 	
