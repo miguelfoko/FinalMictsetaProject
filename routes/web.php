@@ -30,7 +30,7 @@ use App\Http\Controllers\ViewIcassTrainingVideosController;
 use App\Http\Controllers\ViewCommunityCollegesController;
 use App\Http\Controllers\ViewSetasController;
 use App\Http\Controllers\ViewExamTrainingVideosController;
-
+use App\Http\Controllers\ViewGetInTouchController;
 
 
 
@@ -49,8 +49,10 @@ use App\Http\Controllers\ViewExamTrainingVideosController;
 Route::get('/', function () { return view('index');});
 
 
-
+//Contact Us pages---------------------------------------------------------------------------
 Route::get('/contactus', function(){return view('contact');});
+Route::resource('/viewgetintouch',ViewGetInTouchController::class);
+
 Route::get('/test', function(){return view('testPopup');});
 
 //Examination pages

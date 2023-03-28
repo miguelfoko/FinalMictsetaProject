@@ -23,14 +23,15 @@
             <div class="box featured">
             <h3>Module {{$examtrainingvideo->module}}-Session {{$examtrainingvideo->session}}</h3>
               
-              <h6>{{$examtrainingvideo->title}}</h6>
                 <div >
                             <video width="320" height="240" controls>
                                 <source src="{{url('videos')}}/{{$examtrainingvideo->video}}" type="video/mp4">
                                 Your browser does not support the video tag
                             </video>        
-                            <a href="{{url('videos')}}/{{$examtrainingvideo->video}}" download>Download</a>
                 </div>
+                <h6>{{$examtrainingvideo->title}}</h6>
+                <a href="{{url('videos')}}/{{$examtrainingvideo->video}}" download>Download</a>
+
             </div>
           </div>
         @endforeach
