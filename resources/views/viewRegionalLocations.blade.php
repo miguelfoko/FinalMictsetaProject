@@ -17,15 +17,16 @@
       <div class="container" data-aos="fade-up">
 
         <div class="row">
-Success Stories
-        @foreach ($successstories as $sstory) 
+        Regional Locations
+        @foreach ($regionallocations as $regionallocation) 
 
         <div class="col-lg-3 col-md-6 ">
             <div class="box featured">
-              <h3>{{$sstory->title}}</h3>
-                <embed src="{{url('images')}}/{{$sstory->coverPage}}" height="250" width="200">
+              <h3>{{$regionallocation}}</h3>
+              
+                <!--<embed src="{{url('images')}}/{{$ccalendar->coverPage}}" height="250" width="200">-->
               <div >
-                <a href="{{url('files')}}/{{$sstory->file}}" target="_blank" rel="noopener" class="btn-buy">Open Document</a>
+                <!--<a href="{{url('files')}}/{{$ccalendar->file}}" target="_blank" rel="noopener" class="btn-buy">Open Document</a>-->
               </div>
             </div>
           </div>

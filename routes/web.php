@@ -31,6 +31,8 @@ use App\Http\Controllers\ViewCommunityCollegesController;
 use App\Http\Controllers\ViewSetasController;
 use App\Http\Controllers\ViewExamTrainingVideosController;
 use App\Http\Controllers\ViewGetInTouchController;
+use App\Http\Controllers\ViewRegionalLocationsController;
+use App\Http\Controllers\ViewFaqsController;
 
 
 
@@ -52,6 +54,9 @@ Route::get('/', function () { return view('index');});
 //Contact Us pages---------------------------------------------------------------------------
 Route::get('/contactus', function(){return view('contact');});
 Route::resource('/viewgetintouch',ViewGetInTouchController::class);
+Route::resource('/viewregionallocations',ViewRegionalLocationsController::class);
+Route::resource('/viewfaqs',ViewFaqsController::class);
+
 
 Route::get('/test', function(){return view('testPopup');});
 
@@ -91,7 +96,7 @@ Route::resource('/publicTvetCollege',PublicTvetController::class);
 Route::resource('/privateTvetCollege',PrivateTvetController::class);
 Route::resource('/viewcommunitycolleges',ViewCommunityCollegesController::class);
 Route::resource('/viewsetas',ViewSetasController::class);
-Route::get('/aboutus', function(){ return view('aboutus');});
+Route::get('/aboutus', function(){ return view('aboutus');}); 
 
 
 //News Pages---------------------------------------------------------------------------------

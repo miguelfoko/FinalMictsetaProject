@@ -28,7 +28,7 @@
                                 <source src="{{url('videos')}}/{{$examtrainingvideo->video}}" type="video/mp4">
                                 Your browser does not support the video tag
                             </video>        
-                </div>
+                </div> 
                 <h6>{{$examtrainingvideo->title}}</h6>
                 <a href="{{url('videos')}}/{{$examtrainingvideo->video}}" download>Download</a>
 

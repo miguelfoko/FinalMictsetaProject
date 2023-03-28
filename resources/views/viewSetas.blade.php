@@ -17,7 +17,7 @@
       <div class="container" data-aos="fade-up">
 
         <div class="row">
-        Rass
+        Setas
         @foreach ($setas as $seta) 
 
         <div class="col-lg-3 col-md-6 ">
