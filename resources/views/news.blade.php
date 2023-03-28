@@ -15,7 +15,7 @@
 
     <!-- ======= Events Section ======= -->
     <section id="events" class="events">
-      <div class="container" data-aos="fade-up">
+      <div class="container-fluid" data-aos="fade-up">
       @foreach ($news as $new) 
          <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
             <div class="card">

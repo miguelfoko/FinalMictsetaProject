@@ -14,10 +14,10 @@
 
     <!-- ======= trainers Section ======= -->
     <section id="events" class="events">
-      <div class="container" data-aos="fade-up">
+      <div class="container-fluid" data-aos="fade-up">
  
         <div class="row" data-aos="zoom-in" data-aos-delay="100">
-          <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
+          <div class="col-lg-3 col-md-6 d-flex align-items-stretch">
             <div class="card">
            
             <div class="card-img">
@@ -36,7 +36,7 @@
             </div>
           </div>
 
-          <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
+          <div class="col-lg-3 col-md-6 d-flex align-items-stretch">
             <div class="card">
            
             <div class="card-img">
@@ -55,7 +55,7 @@
           </div>
 
 
-          <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
+          <div class="col-lg-3 col-md-6 d-flex align-items-stretch">
             <div class="card">
            
             <div class="card-img">
@@ -75,7 +75,7 @@
           </div>
 
 
-          <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
+          <div class="col-lg-3 col-md-6 d-flex align-items-stretch">
             <div class="card">
            
             <div class="card-img">

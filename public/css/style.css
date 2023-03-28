@@ -827,7 +827,7 @@ section {
 
 /*--------------------------------------------------------------
 # Trainers
---------------------------------------------------------------*/
+--------------------------------------------------------------*/ 
 .trainers .member {
   
   text-align: center;
@@ -877,6 +877,78 @@ section {
 }
 
 .trainers .member .social i {
+  font-size: 18px;
+  margin: 0 2px;
+}
+
+/*--------------------------------------------------------------
+# WelcomeTrainer
+--------------------------------------------------------------*/ 
+.welcometrainer {
+  
+  text-align: center;
+  margin-bottom: 20px;
+  background: #144069;
+  border: 1px solid #f7931e;
+}
+
+.welcometrainer .member {
+  
+  text-align: center;
+  margin-bottom: 20px;
+  background: #fff;
+  border: 1px solid #eef0ef;
+}
+
+.welcometrainer .member1 {
+  
+  text-align: center;
+  margin-bottom: 20px;
+  background: #f7931e;
+  border: 1px solid #eef0ef;
+}
+
+.welcometrainer .member img {
+  margin: -1px -1px 30px -1px;
+}
+
+.welcometrainer .member .member-content {
+  padding: 0 20px 30px 20px;
+}
+
+.welcometrainer .member h4 {
+  font-weight: 700;
+  margin-bottom: 2px;
+  font-size: 18px;
+}
+
+.welcometrainer .member span {
+  font-style: italic;
+  display: block;
+  font-size: 13px;
+}
+
+.welcometrainer .member p {
+  padding-top: 10px;
+  font-size: 14px;
+  font-style: italic;
+  color: #aaaaaa;
+}
+
+.welcometrainer .member .social {
+  margin-top: 15px;
+}
+
+.welcometrainer .member .social a {
+  color: #7e9486;
+  transition: 0.3s;
+}
+
+.welcometrainer .member .social a:hover {
+  color: #16537e;
+}
+
+.welcometrainer .member .social i {
   font-size: 18px;
   margin: 0 2px;
 }
