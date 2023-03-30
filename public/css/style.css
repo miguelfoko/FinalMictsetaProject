@@ -900,7 +900,8 @@ section {
   border: 1px solid #eef0ef;
 }
 
-.welcometrainer .member1 {
+.welcometrainer .member1,
+.events .member1 {
   
   text-align: center;
   margin-bottom: 20px;

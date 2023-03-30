@@ -7,5 +7,6 @@ use Illuminate\Database\Eloquent\Model;
 
 class Faqs extends Model
 {
-    use HasFactory;
+    use HasFactory; 
+    protected $fillable = [ 'title', 'content']; 
 }

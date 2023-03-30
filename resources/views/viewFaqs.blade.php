@@ -12,29 +12,24 @@
       </div>
     </div><!-- End Breadcrumbs -->
 
-    <!-- ======= Pricing Section ======= -->
-    <section id="pricing" class="pricing">
+    <section id="events" class="events">
       <div class="container" data-aos="fade-up">
 
         <div class="row">
-        Faqs
         @foreach ($faqs as $faq) 
 
-        <div class="col-lg-3 col-md-6 ">
-            <div class="box featured">
-              <h3>{{$faq}}</h3>
-              
-                <!--<embed src="{{url('images')}}/{{$ccalendar->coverPage}}" height="250" width="200">-->
+        <div class="col-lg-8 col-md-6 ">
+            <div >
+              <h3>{{$faq->title}}</h3>
+                
               <div >
-                <!--<a href="{{url('files')}}/{{$ccalendar->file}}" target="_blank" rel="noopener" class="btn-buy">Open Document</a>-->
-              </div>
+              {!! $faq->content !!}           
             </div>
           </div>
         @endforeach
         </div>
 
       </div>
-    </section><!-- End Pricing Section -->
 
   </main><!-- End #main -->
 

@@ -40,6 +40,8 @@
         </div>
 
         </div>
+        {{ $news->links() }}
+
       </div>
     </section><!-- End Events Section -->
 

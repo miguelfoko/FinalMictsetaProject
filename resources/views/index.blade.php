@@ -36,7 +36,7 @@
       </div>
 
       <section id="trainers" class="trainers">
-      <div class="container-fluid" data-aos="fade-up">
+      <div class="container" data-aos="fade-up">
  
         <div class="row" data-aos="zoom-in" data-aos-delay="100">
 
@@ -46,7 +46,7 @@
                   <a href="viewcollegecalendar"> <img src="{{ asset('/img/tvetCallendar.png') }}" class="img-fluid" alt="..."> </a>
                 </div>
                 <div class="member-content"> 
-                <!--  <a href="viewcollegecalendar">Academic Calendar</a> -->
+                  <a href="viewcollegecalendar">Academic Calendar</a> 
                 </div>
             </div>
           </div>
@@ -79,7 +79,7 @@
                   <a href="viewcareerguidance"> <img src="{{ asset('/img/Careers_Icon.png') }}" class="img-fluid" alt="..."> </a>
                 </div>
                 <div class="member-content"> 
-                 <!-- <a href="viewcareerguidance">Career Guidance</a> -->
+                 <a href="viewcareerguidance">Career Guidance</a> 
                 </div>
             </div>
           </div>
@@ -99,10 +99,11 @@
             <div class="member">
               <img src="{{ asset('/img/Nashveer_Nemesar_Mokone-Mofokeng.jpg') }}" class="img-fluid" alt="">
               <div class="member-content">
-                <h4>Walter White</h4>
-                <span>Web Development</span>
+                <h4>Mokone Mofokeng</h4>
+                <span>Former student of Maluti TVET College</span>
                 <p>
-                  Magni qui quod omnis unde et eos fuga et exercitationem. Odio veritatis perspiciatis quaerat qui aut aut aut
+                  "The quality training that I got from Maluti TVET College pushed me to become my own boss. I am the 
+                  successfull owner of Monoceros Electrical company"
                 </p>
                 
               </div>
@@ -113,10 +114,12 @@
             <div class="member">
               <img src="{{ asset('/img/Nashveer-_Nemesar_Majuba.jpg') }}" class="img-fluid" alt="">
               <div class="member-content">
-                <h4>Sarah Jhinson</h4>
-                <span>Marketing</span>
+                <h4>Snethemba Mpontshane</h4>
+                <span>Former Electrical Engineering student at Majuba TVET College</span>
                 <p>
-                  Repellat fugiat adipisci nemo illum nesciunt voluptas repellendus. In architecto rerum rerum temporibus
+                  "I'm a qualified Senior Electrican at Eskom based at the Kusile Power Station in Witbank. The practical 
+                  training , advanced equipment that we were exposed to in workshops and highly skilled lecturers laid a 
+                  solid foundation for me to achieve success in my profession ."
                 </p>
                 
               </div>
@@ -127,11 +130,11 @@
             <div class="member">
               <img src="{{ asset('/img/Nashveer_Nemesar_Sue-Kelly-Maneveld.jpg') }}" class="img-fluid" alt="">
               <div class="member-content">
-                <h4>William Anderson</h4>
-                <span>Content</span>
+                <h4>Sue-Kelly Maneveld</h4>
+                <span>Former student of College of Cape Town TVET</span>
                 <p>
-                  Voluptas necessitatibus occaecati quia. Earum totam consequuntur qui porro et laborum toro des clara
-                </p>
+                  "I am the pround owner of Be-Dazzle hair and Beauty salons. All of this would not have been possible 
+                  without the College of Cape Town being a stepping stone and allowing me to fulfil my dreams."               </p>
                 
               </div>
             </div>
@@ -141,6 +144,37 @@
 
       </div>
     </section><!-- End Trainers Section -->
+    <section id="events" class="events">
+      <div class="container-fluid" data-aos="fade-up">
+      <div class="member1" >
+        LATEST NEWS
+      </div>
+      <div class="row">
+
+      @foreach ($news as $new) 
+         <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
+            <div class="card">
+           
+            <div class="card-img">
+            <a href="faqs"> <img src="{{ asset('/images/'.$new->picture) }}" alt="..."> </a>
+            </div>
+            <div class="card-body"> 
+                <h5 class="card-title"><a href="{{route('viewNews.show',$new->id)}}">{{ $new->title }}</a></h5>
+                <p class="fst-italic text-center">
+                {{ $new->subtitle }}
+                </p>
+                
+                <p class="fst-italic text-center">
+                <a href="{{route('viewNews.show',$new->id)}}">Read more</a></p>
+            </div>
+            </div>
+          </div>
+        @endforeach
+        </div>
+
+        </div>
+      </div>
+    </section><!-- End Events Section -->
 
     <section id="trainers" class="trainers">
       <div class="container-fluid" data-aos="fade-up">

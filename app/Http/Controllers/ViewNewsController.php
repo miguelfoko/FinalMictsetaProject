@@ -14,7 +14,7 @@ class ViewNewsController extends Controller
 
     public function show($id)
     {
-        $news = News::find($id);
+        $news1 = News::find($id);
         return view('specificNews',compact('news'));
     }
 }

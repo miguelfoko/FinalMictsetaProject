@@ -3,6 +3,7 @@
 namespace App\Providers;
 use App\Models\Slider;
 use App\Models\Footer;
+use App\Models\News;
 use App\Models\FooterContent;
 use Illuminate\Support\ServiceProvider;
 use View;
@@ -21,7 +22,7 @@ class AppServiceProvider extends ServiceProvider
     /**
      * Bootstrap any application services.
      *
-     * @return void
+     * @return void 
      */
     public function boot()
     {
@@ -29,5 +30,7 @@ class AppServiceProvider extends ServiceProvider
         View::share('sliders', $sliders);
         $footerElement = Footer::orderby('id', 'desc')->paginate(10);
         View::share('footerElement', $footerElement);
+        $news = News::orderBy('id','desc')->paginate(3);
+        View::share('news', $news);
     }
 }

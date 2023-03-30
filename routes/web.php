@@ -23,7 +23,7 @@ use App\Http\Controllers\ViewCollegeCalendarController;
 use App\Http\Controllers\CareerGuidanceController;
 use App\Http\Controllers\ViewCareerGuidanceController;
 use App\Http\Controllers\ViewExamResourcesController;
-//use App\Http\Controllers\ExamResourcesController;
+use App\Http\Controllers\FaqsController;
 use App\Http\Controllers\IcassTrainingVideosController;
 use App\Http\Controllers\ExamTrainingVideosController;
 use App\Http\Controllers\ViewIcassTrainingVideosController;
@@ -56,6 +56,8 @@ Route::get('/contactus', function(){return view('contact');});
 Route::resource('/viewgetintouch',ViewGetInTouchController::class);
 Route::resource('/viewregionallocations',ViewRegionalLocationsController::class);
 Route::resource('/viewfaqs',ViewFaqsController::class);
+Route::resource('/faqs',FaqsController::class);
+
 
 
 Route::get('/test', function(){return view('testPopup');});

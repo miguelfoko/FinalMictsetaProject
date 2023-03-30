@@ -6,7 +6,7 @@ use Illuminate\Http\Request;
 
 use App\Models\News;
 use File;
-use Auth;
+use Auth; 
 class NewsController extends Controller
 {
     
@@ -78,8 +78,10 @@ class NewsController extends Controller
     * @param  \App\news  $news
     * @return \Illuminate\Http\Response
     */
-    public function show(News $news)
+    public function show(News $id)
     {
+        $news = News::find($id);
+
         return view('news.show',compact('news'));
     }
 
