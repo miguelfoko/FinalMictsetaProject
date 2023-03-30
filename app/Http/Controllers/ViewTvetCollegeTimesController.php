@@ -14,7 +14,7 @@ class ViewTvetCollegeTimesController extends Controller
      */
     public function index()
     { 
-        $tvetcollegetimes = TvetCollegeTimes::orderBy('id','desc')->paginate(5);
+        $tvetcollegetimes = TvetCollegeTimes::orderBy('id','desc')->paginate(55);
         return view('tvetcollegetimes',compact('tvetcollegetimes'));
     }
 

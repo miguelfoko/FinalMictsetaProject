@@ -48,7 +48,7 @@
                 <a href="viewexamtrainingvideos"><img src="{{ asset('/img/ExamTrainingVideos.png') }}" alt="..."></a>
             </div>
             <div class="card-body">
-                <h5 class="card-title"><a href="viewexamtrainingvideos">Examination Information and Resources</a></h5>
+                <h5 class="card-title"><a href="viewexamtrainingvideos">Examination Training Videos</a></h5>
                 <p class="fst-italic text-center">This section provides comprehensive training material for all those involved 
                   in preparing, invigilating and managing of examinations at their college.
                 </p>
@@ -71,7 +71,7 @@
                 <a href="viewicasstrainingvideos"><img src="{{ asset('/img/ICASSTrainingVideos.png') }}" alt="..."></a>
             </div>
             <div class="card-body">
-                <h5 class="card-title"><a href="viewicasstrainingvideos">Examination Information and Resources</a></h5>
+                <h5 class="card-title"><a href="viewicasstrainingvideos">ICASS Training Videos</a></h5>
                 <p class="fst-italic text-center">This section provides comprehensive training material for all those involved 
                   in setting, moderating and managing of Internal Continuous Assesments (ICASS) at their college.
                 </p>

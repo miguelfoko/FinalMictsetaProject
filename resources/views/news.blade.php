@@ -16,6 +16,8 @@
     <!-- ======= Events Section ======= -->
     <section id="events" class="events">
       <div class="container-fluid" data-aos="fade-up">
+      <div class="row">
+
       @foreach ($news as $new) 
          <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
             <div class="card">
@@ -27,7 +29,6 @@
                 <h5 class="card-title"><a href="{{route('viewNews.show',$new->id)}}">{{ $new->title }}</a></h5>
                 <p class="fst-italic text-center">
                 {{ $new->subtitle }}
-                
                 </p>
                 
                 <p class="fst-italic text-center">
@@ -36,6 +37,7 @@
             </div>
           </div>
         @endforeach
+        </div>
 
         </div>
       </div>

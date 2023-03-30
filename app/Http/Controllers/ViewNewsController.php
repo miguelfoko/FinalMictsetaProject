@@ -8,7 +8,7 @@ class ViewNewsController extends Controller
 {
     public function index()
     {
-        $news = News::orderBy('id','desc')->paginate(5);
+        $news = News::orderBy('id','desc')->paginate(55);
         return view('news', compact('news'));
     }
 

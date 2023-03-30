@@ -20,6 +20,8 @@
           <li><a  href="/" class="{{ (request()->is('/')) ? 'active' : '' }}" >Home</a></li>
           <li><a  href="aboutus" class="{{ (request()->is('aboutus')||request()->is('abouttvet')
             ||request()->is('viewcommunitycolleges')
+            ||request()->is('publicTvetCollege')
+            ||request()->is('privateTvetCollege')
             ||request()->is('viewsetas')) ? 'active' : '' }}" >About Us</a></li>
           <li><a  href="examinations" class="{{ (request()->is('examinations')
             ||request()->is('viewexamresources')
