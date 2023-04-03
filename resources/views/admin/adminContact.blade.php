@@ -10,7 +10,7 @@
 
                 <div class="card-body">
                     <div class="card-body"><a href="updateContactDetails">Update Contact Details</a></div>
-                    <div class="card-body"><a href="updateregionalLocations">Update Regional Locations</a></div>
+                    <div class="card-body"><a href="regionallocations">Update Regional Locations</a></div>
                     <div class="card-body"><a href="faqs">Update FAQs</a></div>
                 </div>
             </div>

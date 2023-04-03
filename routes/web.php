@@ -33,6 +33,10 @@ use App\Http\Controllers\ViewExamTrainingVideosController;
 use App\Http\Controllers\ViewGetInTouchController;
 use App\Http\Controllers\ViewRegionalLocationsController;
 use App\Http\Controllers\ViewFaqsController;
+use App\Http\Controllers\ExamResourceController;
+use App\Http\Controllers\RegionalLocationsController;
+
+
 
 
 
@@ -57,6 +61,7 @@ Route::resource('/viewgetintouch',ViewGetInTouchController::class);
 Route::resource('/viewregionallocations',ViewRegionalLocationsController::class);
 Route::resource('/viewfaqs',ViewFaqsController::class);
 Route::resource('/faqs',FaqsController::class);
+Route::resource('/regionallocations',RegionalLocationsController::class);
 
 
 
@@ -70,6 +75,7 @@ Route::resource('/examtrainingvideos',ExamTrainingVideosController::class);
 Route::resource('/viewexamresources',ViewExamResourcesController::class);
 Route::resource('/viewexamtrainingvideos',ViewExamTrainingVideosController::class);
 Route::resource('/viewicasstrainingvideos',ViewIcassTrainingVideosController::class);
+Route::resource('/examresources',ExamResourceController::class);
 
 
 

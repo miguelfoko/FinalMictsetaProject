@@ -1,12 +1,20 @@
 <?php
 
 namespace App\Http\Controllers;
-use App\Models\RegionalLocations; 
 
 use Illuminate\Http\Request;
 
-class ViewRegionalLocationsController extends Controller
+class ExamResourceController extends Controller
 {
+     /**
+     * Create a new controller instance.
+     * 
+     * @return void
+     */ 
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
     /**
      * Display a listing of the resource.
      *
@@ -14,25 +22,8 @@ class ViewRegionalLocationsController extends Controller
      */
     public function index()
     {
-        $locations = [
- 
-            ['Mumbai', 19.0760,72.8777],
+        return view('admin.examinations.examresources.examResource');
 
-            ['Pune', 18.5204,73.8567],
-
-            ['Bhopal ', 23.2599,77.4126],
-
-            ['Agra', 27.1767,78.0081],
-
-            ['Delhi', 28.7041,77.1025],
-
-            ['Rajkot', 22.2734719,70.7512559],
-
-        ];
-
-        $regionallocations = RegionalLocations::orderBy('id','desc')->paginate(5);
-        return view('viewRegionalLocations',compact('regionallocations'));
-        //return view('viewRegionalLocations');
     }
 
     /**

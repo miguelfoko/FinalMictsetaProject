@@ -16,8 +16,18 @@ class CreateRegionalLocationsTable extends Migration
         Schema::create('regional_locations', function (Blueprint $table) {
             $table->id();
             $table->timestamps();
+            $table->longText('region');
+            $table->longText('address');
+            $table->longText('city');
+            $table->longText('phone');
+            $table->longText('latitude');
+            $table->longText('longitude');
+            $table->foreignId('user_id')
+            ->constrained('users')
+            ->onUpdate('cascade') 
+            ->onDelete('cascade');
         });
-    }
+    } 
 
     /**
      * Reverse the migrations.
