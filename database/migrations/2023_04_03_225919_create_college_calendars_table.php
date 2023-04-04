@@ -14,17 +14,18 @@ class CreateCollegeCalendarsTable extends Migration
     public function up()
     {
         Schema::create('college_calendars', function (Blueprint $table) {
-            $table->id(); 
+            $table->id();
             $table->timestamps();
-            $table->string('title');
-            $table->string('file'); 
-            $table->string('coverPage'); 
+            $table->longText('eventtitle');
+            $table->longText('startdate');
+            $table->longText('enddate');
             $table->foreignId('user_id')
             ->constrained('users')
-            ->onUpdate('cascade')
+            ->onUpdate('cascade') 
             ->onDelete('cascade');
         });
     }
+
 
     /**
      * Reverse the migrations.

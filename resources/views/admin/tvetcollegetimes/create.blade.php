@@ -107,11 +107,11 @@
                         <input type="file" name="file" class="form-control" >
                         @error('file')
                         <div class="alert alert-danger mt-1 mb-1">{{ $message }}</div>
-                        @enderror
+                        @enderror 
                     </div>
                 </div>
             </div>
-            <button type="submit" class="btn btn-primary ml-3">Submit</button>
+            <button type="submit" class="btn btn-primary ml-3">Submit</button> 
 
         </form>
     </div>

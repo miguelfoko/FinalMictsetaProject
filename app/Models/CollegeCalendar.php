@@ -7,7 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class CollegeCalendar extends Model
 {
-    use HasFactory; 
-    protected $fillable = ['title','file','coverPage'];
+    use HasFactory;
+    protected $fillable = [ 'eventtitle', 'startdate','enddate']; 
 
 }

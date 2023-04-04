@@ -14,6 +14,7 @@
 
      <!-- ======= About Section ======= -->
      <section id="about" class="about">
+      <br><br>
       <div class="container" data-aos="fade-up">
       @foreach ($collegecoursetype as $cctype) 
           <h3>Overview </h3>
@@ -31,14 +32,14 @@
       @endforeach
       @foreach ($coursetype as $ctype)
            <table class="table table-bordered">
-                <tr bg-color="cyan">
+                <tr bg-color="cyan" class="question">
                     <td><b>Course Type</b></td> 
                     <td width=80%><b>{!! $ctype->type !!}</b></td>
                 </tr>
                     <td><b>Description</b></td> 
                     <td with=17%>{!! $ctype->description !!}</td>
                 </tr>
-                    <td><b>Duration</b></td> 
+                    <td><b>Duration</b></td>  
                     <td with=17%>{!! $ctype->duration !!}</td>
                 </tr>
                     <td><b>Qualification</b></td> 
@@ -52,7 +53,7 @@
                 </tr>
         </table>
         @endforeach
-
+        {{ $coursetype->links() }}
       </div>
     </section><!-- End About Section -->
 

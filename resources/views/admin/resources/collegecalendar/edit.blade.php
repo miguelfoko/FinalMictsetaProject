@@ -26,34 +26,122 @@
             @csrf
             @method('PUT')
             <div class="row">
+                
                 <div class="col-xs-12 col-sm-12 col-md-12">
                     <div class="form-group">
-                        <strong>Title:</strong>
-                        <input type="text" name="title" value="{{ $collegecalendar->title }}" class="form-control" 
-                        placeholder="{{ $collegecalendar->title }}">
-                        @error('title')
+                        <strong>Event Title:</strong>
+                        <input type="text" name="eventtitle" value="{{ $collegecalendar->eventtitle }}" class="form-control" 
+                        placeholder="{{ $collegecalendar->eventtitle }}">
+                        @error('eventtitle')
                         <div class="alert alert-danger mt-1 mb-1">{{ $message }}</div>
                         @enderror
                     </div>
                 </div>
-               
-                <div class="col-xs-12 col-sm-12 col-md-12">
-                    <div class="form-group">
-                        <strong>Cover page:</strong>
-                        <input type="file" name="coverPage" class="form-control" >
-                        @error('coverPage')
-                        <div class="alert alert-danger mt-1 mb-1">{{ $message }}</div>
-                        @enderror
+                <div>
+                    Starting date: 
+                    <div class="col-xs-12 col-sm-12 col-md-12">
+                        <div class="form-group">
+                            <select name="startyear" >
+                                {{ $last= date('Y')-120 }}
+                                {{ $now = date('Y') }}
+                                <option >Year</option>
+                                @for ($i = $now; $i >= $last; $i--)
+                                    <option value="{{ $i }}">{{ $i }}</option>
+                                @endfor
+                            </select>
+                            @error('startyear')
+                            <div class="alert alert-danger mt-1 mb-1">{{ $message }}</div>
+                            @enderror - 
+                            <select name="startmonth" >
+                                <option >Start Month</option>
+                                <option value="01">January</option>
+                                <option value="02">February</option>
+                                <option value="03">March</option>
+                                <option value="04">April</option>
+                                <option value="05">May</option>
+                                <option value="06">June</option>
+                                <option value="07">July</option>
+                                <option value="08">August</option>
+                                <option value="09">September</option>
+                                <option value="10">October</option>
+                                <option value="11">November</option>
+                                <option value="12">December</option>                             
+                            </select>
+                            @error('startmonth')
+                            <div class="alert alert-danger mt-1 mb-1">{{ $message }}</div>
+                            @enderror -
+                            <select  name="startday" >
+                                {{ $last= 1 }}
+                                {{ $now = 31 }}
+                                <option >Start day</option>
+                                @for ($i = $last; $i <= $now; $i++)
+                                    <option value="{{ $i }}">{{ $i }}</option>
+                                @endfor
+                            </select>
+                            @error('startday')
+                            <div class="alert alert-danger mt-1 mb-1">{{ $message }}</div>
+                            @enderror
+
+                            @error('publicationYear')
+                            <div class="alert alert-danger mt-1 mb-1">{{ $message }}</div>
+                            @enderror
+                        </div>
                     </div>
                 </div>
-                <div class="col-xs-12 col-sm-12 col-md-12">
-                    <div class="form-group">
-                        <strong>File:</strong>
-                        <input type="file" name="file" class="form-control" >
-                        @error('file')
-                        <div class="alert alert-danger mt-1 mb-1">{{ $message }}</div>
-                        @enderror
+<br>
+
+<div>
+                    Ending date: 
+                    <div class="col-xs-12 col-sm-12 col-md-12">
+                        <div class="form-group">
+                            <select name="endyear" >
+                                {{ $last= date('Y')-120 }}
+                                {{ $now = date('Y') }}
+                                <option >Start Year</option>
+                                @for ($i = $now; $i >= $last; $i--)
+                                    <option value="{{ $i }}">{{ $i }}</option>
+                                @endfor
+                            </select>
+                            @error('endyear')
+                            <div class="alert alert-danger mt-1 mb-1">{{ $message }}</div>
+                            @enderror - 
+                            <select name="endmonth" >
+                                <option >End Month</option>
+                                <option value="01">January</option>
+                                <option value="02">February</option>
+                                <option value="03">March</option>
+                                <option value="04">April</option>
+                                <option value="05">May</option>
+                                <option value="06">June</option>
+                                <option value="07">July</option>
+                                <option value="08">August</option>
+                                <option value="09">September</option>
+                                <option value="10">October</option>
+                                <option value="11">November</option>
+                                <option value="12">December</option>             
+                            </select>
+                            @error('endmonth')
+                            <div class="alert alert-danger mt-1 mb-1">{{ $message }}</div>
+                            @enderror -
+                            <select  name="endday" >
+                                {{ $last= 1 }}
+                                {{ $now = 31 }}
+                                <option >End day</option>
+                                @for ($i = $last; $i <= $now; $i++)
+                                    <option value="{{ $i }}">{{ $i }}</option>
+                                @endfor
+                            </select>
+                            @error('endday')
+                            <div class="alert alert-danger mt-1 mb-1">{{ $message }}</div>
+                            @enderror
+<br><br>
+                            @error('publicationYear')
+                            <div class="alert alert-danger mt-1 mb-1">{{ $message }}</div>
+                            @enderror
+                        </div>
                     </div>
+                </div>
+
                 </div>
                 <button type="submit" class="btn btn-primary ml-3">Submit</button>
             </div>

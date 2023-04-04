@@ -38,7 +38,7 @@ class CollegeCalendarController extends Controller
         return view('admin.resources.collegecalendar.create');
 
     }
-
+ 
     /**
      * Store a newly created resource in storage.
      *
@@ -48,31 +48,24 @@ class CollegeCalendarController extends Controller
     public function store(Request $request)
     {
         $request->validate([
-            'title' => 'required',
-            'file' => 'required|file|mimes:pdf',
-            'coverPage' => 'required|image',
+            'eventtitle' => 'required',
+            'startyear' => 'required',
+            'startmonth' => 'required',
+            'startday' => 'required',
+            'endyear' => 'required',
+            'endmonth' => 'required',
+            'endday' => 'required',
+
         ]);
 
-        
+        $startdate=$request->input('startyear').'-'.$request->input('startmonth').'-'.$request->input('startday');
+        $enddate=$request->input('endyear').'-'.$request->input('endmonth').'-'.$request->input('endday');
+
         $collegecalendar = new CollegeCalendar;
-        $collegecalendar->title=$request->input('title');
+        $collegecalendar->eventtitle=$request->input('eventtitle');
+        $collegecalendar->startdate=$startdate;
+        $collegecalendar->enddate=$enddate;
 
-        if ($request->hasFile('coverPage')) {
-            $photo = $request->file('coverPage');
-            $filename = 'College_Calendar_' . '-' . time() . '.' . $photo->getClientOriginalExtension();
-            $location = public_path('images/');
-            $collegecalendar->coverPage=$filename;
-            $request->file('coverPage')->move($location, $filename);
-           
-        }
-
-        if (request()->hasFile('file')){
-            $file = $request->file('file');
-            $fileName = 'College_Calendar_' . '-' .time().'.'.$file->extension();  
-            $request->file->move(public_path('files'), $fileName);
-            
-            $collegecalendar->file=$fileName;
-        }
         $collegecalendar->user_id=Auth::user()->id;
         $collegecalendar->save();
         return redirect()->route('collegecalendar.index')->with('success','College Calendar has been created successfully.');
@@ -112,46 +105,38 @@ class CollegeCalendarController extends Controller
      */
     public function update(Request $request, $id)
     {
-        $collegecalendar = CollegeCalendar::find($id);
-        $request->validate([
-            'title' => 'required',
-            'file' => 'required|file|mimes:pdf',
-            'coverPage' => 'required|image',
-        ]);
+        
 
         
-        $collegecalendar->title=$request->input('title');
 
-        if (request()->hasFile('file')){
-            $fileName=$collegecalendar->file;
-            $file_path = "files/$fileName";
-            unlink(public_path($file_path));
+        
+        
 
-            $file = $request->file('file');
-            $fileName = 'College_Calendar_' . '-' .time().'.'.$file->extension();  
-            $request->file->move(public_path('files'), $fileName);
-            
-            $collegecalendar->file=$fileName;
-        }
 
-        if ($request->hasFile('coverPage')) {
-            $fileName=$collegecalendar->coverPage;
-            $file_path = "images/$fileName";
-            unlink(public_path($file_path));
 
-            $photo = $request->file('coverPage');
-            $filename = 'College_Calendar_' . '-' . time() . '.' . $photo->getClientOriginalExtension();
-            $location = public_path('images/');
-            $request->file('coverPage')->move($location, $filename);
-            $collegecalendar->coverPage=$fileName;
-        }
-       
+        $collegecalendar = CollegeCalendar::find($id);
+        $request->validate([
+            'eventtitle' => 'required',
+            'startyear' => 'required',
+            'startmonth' => 'required',
+            'startday' => 'required',
+            'endyear' => 'required',
+            'endmonth' => 'required',
+            'endday' => 'required',
+
+        ]);
+
+        $startdate=$request->input('startyear').'-'.$request->input('startmonth').'-'.$request->input('startday');
+        $enddate=$request->input('endyear').'-'.$request->input('endmonth').'-'.$request->input('endday');
+        $collegecalendar->eventtitle=$request->input('eventtitle');
+        $collegecalendar->startdate=$startdate;
+        $collegecalendar->enddate=$enddate;
 
         $collegecalendar->user_id=Auth::user()->id;
         $collegecalendar->save();
         
         $collegecalendar->fill($request->post())->save();
-        return redirect()->route('successstories.index')->with('success','College Calendar has been updated successfully.');
+        return redirect()->route('collegecalendar.index')->with('success','College Calendar has been updated successfully.');
     
     }
 
@@ -164,14 +149,6 @@ class CollegeCalendarController extends Controller
     public function destroy($id)
     {
         $collegecalendar = CollegeCalendar::find($id);
-        $fileName=$collegecalendar->file;
-        $file_path = "files/$fileName"; 
-        unlink(public_path($file_path));
-
-        $fileName=$collegecalendar->coverPage;
-        $file_path = "images/$fileName"; 
-        unlink(public_path($file_path));
-
         $collegecalendar->delete();
         return redirect()->route('collegecalendar.index')->with('success','College Calendar has been deleted successfully');
     }

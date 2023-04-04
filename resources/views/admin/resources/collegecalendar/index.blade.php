@@ -29,24 +29,20 @@
             <thead>
                 <tr>
                     <th>S.No</th>
-                    <th>Title</th>
-                    <th>Cover Page</th>
-                    <th>File Link</th>
+                    <th>Event Title</th>
+                    <th>Start date</th>
+                    <th>End Date</th>
                     <th>Action</th>
                 </tr>
             </thead>
             <tbody>
                 @foreach ($collegecalendar as $ccalendar)
                     <tr heigh=100px>
-                        <td width=5%>{{ $ccalendar->id }}</td>
-                        <td with=20%>{{ $ccalendar->title }}</td>
-                        <td width=15%>
-                        <img src="{{url('images')}}/{{$ccalendar->coverPage}}"  width="50%" height="100%">
-                        </td>
-                        <td width=20% height="300">
-                            <a href="{{url('files')}}/{{$ccalendar->file}}">View File</a>
-                            <embed src="{{url('files')}}/{{$ccalendar->file}}" height="100%" width="100%"></td>
-                          
+                        <td >{{ $ccalendar->id }}</td>
+                        <td >{{ $ccalendar->eventtitle }}</td>
+                        <td >{{ $ccalendar->startdate }}</td>
+                        <td >{{ $ccalendar->enddate }}</td>
+
                         <td width="10%">
                             <form action="{{ route('collegecalendar.destroy',$ccalendar->id) }}" method="Post">
                                 <a class="btn btn-primary" href="{{ route('collegecalendar.edit',$ccalendar->id) }}">Edit</a>

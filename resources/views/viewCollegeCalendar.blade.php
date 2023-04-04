@@ -13,28 +13,28 @@
     </div><!-- End Breadcrumbs -->
 
     <!-- ======= Pricing Section ======= -->
-    <section id="pricing" class="pricing">
-      <div class="container" data-aos="fade-up">
+    <br><br>
 
-        <div class="row">
+    <script>
+  $(document).ready(function() {
+    $('#calendar').fullCalendar({
+      header: {
+        left: 'prev,next today',
+        center: 'title',
+        right: 'month,basicWeek,basicDay'
+      },
+      navLinks: true, // can click day/week names to navigate views
+      editable: true,
+      eventLimit: true, // allow "more" link when too many events
+           events: <?php echo json_encode($Events); ?>
+    });
+  });
+</script>
 
-        @foreach ($collegecalendar as $ccalendar) 
 
-        <div class="col-lg-3 col-md-6 ">
-            <div class="box featured">
-              <h3>{{$ccalendar->title}}</h3>
-                <embed src="{{url('images')}}/{{$ccalendar->coverPage}}" height="250" width="200">
-              <div >
-                <a href="{{url('files')}}/{{$ccalendar->file}}" target="_blank" rel="noopener" class="btn-buy">Open Document</a>
-              </div>
-            </div>
-          </div>
-        @endforeach
-        </div>
-
-      </div>
-    </section><!-- End Pricing Section -->
-
+    <section id="events" class="priceventsing">
+    <div id='calendar'></div>
+    </section>
   </main><!-- End #main -->
 
  @endsection
