@@ -15,7 +15,11 @@
 
     <!-- ======= Events Section ======= -->
     <section id="events" class="events">
+    <br><br>
       <div class="container-fluid" data-aos="fade-up">
+      <div class="member2" >
+         Newsletter
+        </div>
       <div class="row">
 
       @foreach ($news as $new) 

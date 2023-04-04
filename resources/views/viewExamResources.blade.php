@@ -12,10 +12,13 @@
       </div>
     </div><!-- End Breadcrumbs -->
 
-
+<br><br>
     <!-- ======= Pricing Section ======= -->
     <section id="pricing" class="pricing">
       <div class="container">
+      <div class="member2" >
+         Examination Resources
+        </div>
           <div class="row">
               <div class="col-md-12" id="fm-main-block">
                   <div id="fm"></div>

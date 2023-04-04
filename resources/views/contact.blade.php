@@ -12,8 +12,11 @@
       </div>
     </div><!-- End Breadcrumbs -->
     <section id="events" class="events"> 
+    <br><br>
       <div class="container" data-aos="fade-up">
- 
+      <div class="member2" >
+         Contact 
+        </div>
         <div class="row" data-aos="zoom-in" data-aos-delay="100">
 
           

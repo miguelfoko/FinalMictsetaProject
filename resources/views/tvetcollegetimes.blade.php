@@ -14,8 +14,11 @@
 
     <!-- ======= Pricing Section ======= -->
     <section id="pricing" class="pricing">
+    <br><br>
       <div class="container-fluid" data-aos="fade-up">
-
+      <div class="member2" >
+         Tvet College Times
+        </div>
         <div class="row">
 
         @foreach ($tvetcollegetimes as $tctimes) 

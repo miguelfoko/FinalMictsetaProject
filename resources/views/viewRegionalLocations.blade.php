@@ -13,14 +13,17 @@
     </div><!-- End Breadcrumbs -->
 <br><br>
 <br>
-
+<section id="about" class="about">
+      <div class="container" data-aos="fade-up">
+        <div class="member2" >
+         Regional Locations
+        </div>
+      </div>
+</section>
 
     <div class="container mt-5">
-
-        <h2>Laravel Google Maps Multiple Markers Example - ItSolutionStuff.com</h2>
-
+      
         <div id="map"></div>
-
     </div>
 
     <script type="text/javascript"> 

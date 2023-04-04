@@ -14,10 +14,12 @@
 
 <!-- ======= Contact Section ======= -->
 <section id="contact" class="contact">
-  
-
+<br><br><br><br>
+    
   <div class="container" data-aos="fade-up">
-
+      <div class="member2" >
+         Get In Touch
+        </div>
     <div class="row mt-5">
       <div class="col-lg-8 mt-5 mt-lg-0">
       

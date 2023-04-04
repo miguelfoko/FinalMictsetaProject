@@ -11,11 +11,13 @@
         <p>Est dolorum ut non facere possimus quibusdam eligendi voluptatem. Quia id aut similique quia voluptas sit quaerat debitis. Rerum omnis ipsam aperiam consequatur laboriosam nemo harum praesentium. </p>
       </div>
     </div><!-- End Breadcrumbs -->
-
+<br><br>
     <!-- ======= Pricing Section ======= -->
     <section id="pricing" class="pricing">
       <div class="container-fluid" data-aos="fade-up">
-
+      <div class="member2" >
+         Examination Training Videos
+        </div>
         <div class="row">
         @foreach ($examtrainingvideos as $examtrainingvideo) 
 

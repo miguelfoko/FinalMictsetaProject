@@ -16,6 +16,9 @@
      <section id="about" class="about">
       <br><br>
       <div class="container" data-aos="fade-up">
+      <div class="member2" >
+         College Course Type
+        </div>
       @foreach ($collegecoursetype as $cctype) 
           <h3>Overview </h3>
           {!! $cctype->overview !!}

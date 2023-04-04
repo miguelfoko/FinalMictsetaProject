@@ -14,8 +14,11 @@
 
     <!-- ======= Trainers Section ======= --> 
     <section id="trainers" class="trainers ">
+    <br><br>
       <div class="container" data-aos="fade-up">
- 
+      <div class="member2" >
+         About Us
+        </div>
         <div class="row" data-aos="zoom-in" data-aos-delay="100">
           <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
             <div >

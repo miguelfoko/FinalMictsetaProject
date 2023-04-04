@@ -909,6 +909,14 @@ section {
   border: 1px solid #eef0ef;
 }
 
+.member2 {
+  
+  text-align: center;
+  margin-bottom: 32px;
+  background: #f7931e;
+  border: 1px solid #eef0ef;
+}
+
 .welcometrainer .member img {
   margin: -1px -1px 30px -1px;
 }
