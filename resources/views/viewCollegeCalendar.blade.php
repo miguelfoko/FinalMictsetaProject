@@ -13,7 +13,18 @@
     </div><!-- End Breadcrumbs -->
 
     <!-- ======= Pricing Section ======= -->
+    
     <br><br>
+
+    <?php $Events=[]; ?>
+    @foreach ($collegecalendar as $ccalendar) 
+      <?php
+        $a=array("title"=>$ccalendar->eventtitle,
+              "start"=>$ccalendar->startdate,
+              "end"=>$ccalendar->enddate);
+        array_push($Events,$a);
+      ?>
+    @endforeach
 
     <script>
   $(document).ready(function() {
@@ -33,7 +44,9 @@
 
 
     <section id="events" class="priceventsing">
-    <div id='calendar'></div>
+      <div class="container" data-aos="fade-up">
+        <div id='calendar'></div>
+      </div>
     </section>
   </main><!-- End #main -->
 

@@ -14,30 +14,12 @@ class ViewCollegeCalendarController extends Controller
      */
     public function index()
     {
-        $Events = array
-            (
-            "0" => array
-                        (
-                        "title" => "Event One",
-                        "start" => "2023-04-05",
-                        "end" => "2023-04-10",
-                        ),
-            "1" => array
-                        (
-                        "title" => "Event Two",
-                        "start" => "2023-04-03",
-                        )
-            );
-        $Events = [];
+        
+        
         $collegecalendar = CollegeCalendar::orderBy('id','desc')->paginate(5);
 
-        foreach($collegecalendar as $colcalendar) {
-            $Events[]=['title'=>$colcalendar->eventtitle,
-                              'start'=>$colcalendar->startdate,
-                              'end'=>$colcalendar->enddate];
-         }
 
-        return view('viewCollegeCalendar',compact('collegecalendar','Events'));
+        return view('viewCollegeCalendar',compact('collegecalendar'));
     }
 
     /**

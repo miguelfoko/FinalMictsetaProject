@@ -49,22 +49,16 @@ class CollegeCalendarController extends Controller
     {
         $request->validate([
             'eventtitle' => 'required',
-            'startyear' => 'required',
-            'startmonth' => 'required',
-            'startday' => 'required',
-            'endyear' => 'required',
-            'endmonth' => 'required',
-            'endday' => 'required',
+            'enddate' => 'required',
+            'startdate' => 'required'
 
         ]);
 
-        $startdate=$request->input('startyear').'-'.$request->input('startmonth').'-'.$request->input('startday');
-        $enddate=$request->input('endyear').'-'.$request->input('endmonth').'-'.$request->input('endday');
 
         $collegecalendar = new CollegeCalendar;
         $collegecalendar->eventtitle=$request->input('eventtitle');
-        $collegecalendar->startdate=$startdate;
-        $collegecalendar->enddate=$enddate;
+        $collegecalendar->startdate=$request->input('startdate');
+        $collegecalendar->enddate=$request->input('enddate');
 
         $collegecalendar->user_id=Auth::user()->id;
         $collegecalendar->save();
@@ -117,20 +111,13 @@ class CollegeCalendarController extends Controller
         $collegecalendar = CollegeCalendar::find($id);
         $request->validate([
             'eventtitle' => 'required',
-            'startyear' => 'required',
-            'startmonth' => 'required',
-            'startday' => 'required',
-            'endyear' => 'required',
-            'endmonth' => 'required',
-            'endday' => 'required',
-
+            'startdate' => 'required',
+            'enddate' => 'required'
         ]);
 
-        $startdate=$request->input('startyear').'-'.$request->input('startmonth').'-'.$request->input('startday');
-        $enddate=$request->input('endyear').'-'.$request->input('endmonth').'-'.$request->input('endday');
         $collegecalendar->eventtitle=$request->input('eventtitle');
-        $collegecalendar->startdate=$startdate;
-        $collegecalendar->enddate=$enddate;
+        $collegecalendar->startdate=$request->input('startdate');
+        $collegecalendar->enddate=$request->input('enddate');
 
         $collegecalendar->user_id=Auth::user()->id;
         $collegecalendar->save();
