@@ -15,8 +15,12 @@ class CreateFootersTable extends Migration
     {
         Schema::create('footers', function (Blueprint $table) {
             $table->id();
-            $table->string('title');
-            $table->longText('value');
+            $table->longText('purpose');
+            $table->longText('content');
+            $table->longText('additionalHelp');
+            $table->longText('listOfAccronyms');
+            $table->longText('copyright');
+            $table->longText('disclaimer');
             $table->foreignId('user_id')
                 ->constrained('users')
                 ->onUpdate('cascade')

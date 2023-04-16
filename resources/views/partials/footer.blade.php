@@ -16,16 +16,33 @@
           <div class="col-lg-2 col-md-6 footer-links"> 
               <h4>About the TVET College Times website</h4>
             @foreach ($footerElement as $key )
-                @if($key->title!="Copyright notice" && $key->title!="Disclaimer notice")
-                  
+                                
                     <ul>                
-                        <li><i class="bx bx-chevron-right"></i> <a class="test">{{ $key->title }}</a></li>
+                        <li><i class="bx bx-chevron-right"></i> <a class="test">Purpose of the website</a></li>
                       
-                          <div id="popup" title="{{ $key->title }}" class="bx bx-chevron-right">
-                              {!! $key->value !!}
+                          <div id="popup" title="{{ $key->purpose }}" class="bx bx-chevron-right">
+                              {!! $key->purpose !!}
                           </div>
-                        </ul>
-                @endif
+
+                        <li><i class="bx bx-chevron-right"></i> <a class="test">Content available on the website</a></li>
+                      
+                          <div id="popup" title="{{ $key->content }}" class="bx bx-chevron-right">
+                              {!! $key->content !!}
+                          </div>
+
+                        <li><i class="bx bx-chevron-right"></i> <a class="test">Additional help to access information on the website</a></li>
+                      
+                          <div id="popup" title="{{ $key->additionalHelp }}" class="bx bx-chevron-right">
+                              {!! $key->additionalHelp !!}
+                          </div>
+
+                        <li><i class="bx bx-chevron-right"></i> <a class="test">Additional help to access information on the website</a></li>
+                      
+                          <div id="popup" title="{{ $key->listOfAccronyms }}" class="bx bx-chevron-right">
+                              {!! $key->listOfAccronyms !!}
+                          </div>
+                    </ul>
+                
               @endforeach
           </div>
 
@@ -46,27 +63,26 @@
           <div class="col-lg-3 col-md-6 footer-links">
                         <h4>Terms and conditions</h4>
               @foreach ($footerElement as $key )
-                  @if($key->title=="Copyright notice")
+                  
                     <ul>
-                      <li><i class="bx bx-chevron-right"></i> <a class="test">{{ $key->title }}</a></li>
-                      <div id="popup" title="{{ $key->title }}" class="bx bx-chevron-right">
+                      <li><i class="bx bx-chevron-right"></i> <a class="test">Copyright notice</a></li>
+                      <div id="popup" title="{{ $key->copyright }}" class="bx bx-chevron-right">
                         
-                          {!! $key->value !!}
+                          {!! $key->copyright !!}
                        
                       </div>
                     </ul>
-                  @endif
+                  
              
-                  @if($key->title=="Disclaimer notice")
                     <ul>
-                      <li><i class="bx bx-chevron-right"></i> <a class="test">{{ $key->title }}</a></li>
-                      <div id="popup" title="{{ $key->title }}" class="bx bx-chevron-right">
+                      <li><i class="bx bx-chevron-right"></i> <a class="test">Disclaimer notice</a></li>
+                      <div id="popup" title="{{ $key->disclaimer }}" class="bx bx-chevron-right">
                         
-                        {!! $key->value !!}
+                        {!! $key->disclaimer !!}
                         
                       </div>
                     </ul>
-                  @endif
+                  
             @endforeach
             </div>
 

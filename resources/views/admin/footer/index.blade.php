@@ -14,7 +14,7 @@
         <div class="row">
             <div class="col-lg-12 margin-tb">
                 <div class="pull-left">
-                    <h2>Footer's Title</h2> 
+                    <h2>Footer Elements</h2> 
                 </div>
                 <div class="pull-right mb-2">
                     <a class="btn btn-success" href="{{ route('footer.create') }}"> Create Footer element</a>
@@ -30,21 +30,25 @@
             <thead>
                 <tr>
                     <th>S.No</th>
-                    <th>Footer title</th>
-                    <th>Footer content</th>
+                    <th>Purpose</th>
+                    <th>Content</th>
+                    <th>Additional Help</th>
+                    <th>List Of Accronyms</th>
+                    <th>Copyright</th>
+                    <th>Disclaimer</th>
                     <th width="280px">Action</th>
                 </tr>
             </thead>
             <tbody>
                 @foreach ($footer as $foot)
                     <tr heigh=100px>
-                        <td width=5%>{{ $foot->id }}</td>
-                        <td with=25%>{{ $foot->title }}</td>
-                        <td with=50%>
-                            <div class="pull-right">
-                                {!! $foot->value !!}
-                            </div>
-                        </td>
+                        <td >{{ $foot->id }}</td>
+                        <td >{!! $foot->purpose !!}</td>
+                        <td >{!! $foot->content !!}</td>
+                        <td >{!! $foot->additionalHelp !!}</td>
+                        <td >{!! $foot->listOfAccronyms !!}</td>
+                        <td >{!! $foot->copyright !!}</td>
+                        <td >{!! $foot->disclaimer !!}</td>
                         <td width="20%">
                             <form action="{{ route('footer.destroy',$foot->id) }}" method="Post">
                                 <a class="btn btn-primary" href="{{ route('footer.edit',$foot->id) }}">Edit</a>
@@ -58,7 +62,7 @@
                     @endforeach
             </tbody>
         </table>
-        {!! $footer->links() !!}
+        {{ $footer->links() }}
     </div>
 
     <div class="container">

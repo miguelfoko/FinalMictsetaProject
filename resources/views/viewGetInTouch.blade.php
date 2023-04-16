@@ -66,7 +66,7 @@
 
       </div>
    
-   <div style="margin-top: 30px" data-aos="fade-up">
+   <!--<div style="margin-top: 30px" data-aos="fade-up">
 
     <h2 style="color: #16537e;">Questions or Comments? Let us know how we can help you.</h2>
 
@@ -99,7 +99,7 @@
             <div class="text-center"><button type="submit">Send Message</button></div>
         </form>
     
-  </div>
+  </div>-->
 </section><!-- End Contact Section -->
 
 </main><!-- End #main -->

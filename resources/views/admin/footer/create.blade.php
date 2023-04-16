@@ -25,24 +25,82 @@
             <div class="row">
                 <div class="col-xs-12 col-sm-12 col-md-12">
                     <div class="form-group">
-                        <strong>Footer Title:</strong>
-                        <input type="text" name="title" class="form-control" placeholder="Footer Title">
-                        @error('title')
+                        <strong>Purpose:</strong>
+                        <textarea name="purpose" class="form-control"  rows="10" id="myeditorinstance" 
+                            rows="5" style="white-space: pre-wrap; text-indent: 50px;"> 
+                            Purpose
+                        </textarea>
+                        @error('purpose')
                         <div class="alert alert-danger mt-1 mb-1">{{ $message }}</div>
                         @enderror
                     </div>
                 </div>
-                </div>  
+                
+                <div class="col-xs-12 col-sm-12 col-md-12">
                     <div class="form-group">
-                        <strong>Footer Content:</strong>
-                        <textarea name="value" class="form-control"  rows="10" id="myeditorinstance" rows="10" style="white-space: pre-wrap; text-indent: 50px;"> 
+                        <strong>Content:</strong>
+                        <textarea name="content" class="form-control"  rows="10" id="myeditorinstance" 
+                            rows="5" style="white-space: pre-wrap; text-indent: 50px;"> 
                             Content
                         </textarea>
-                        @error('value')
+                        @error('content')
                         <div class="alert alert-danger mt-1 mb-1">{{ $message }}</div>
                         @enderror
                     </div>
                 </div>
+
+                <div class="col-xs-12 col-sm-12 col-md-12">
+                    <div class="form-group">
+                        <strong>Additional Help:</strong>
+                        <textarea name="additionalHelp" class="form-control"  rows="10" id="myeditorinstance" 
+                            rows="5" style="white-space: pre-wrap; text-indent: 50px;"> 
+                            Additional Help
+                        </textarea>
+                        @error('additionalHelp')
+                        <div class="alert alert-danger mt-1 mb-1">{{ $message }}</div>
+                        @enderror
+                    </div>
+                </div>
+
+                <div class="col-xs-12 col-sm-12 col-md-12">
+                    <div class="form-group">
+                        <strong>List Of Accronyms:</strong>
+                        <textarea name="listOfAccronyms" class="form-control"  rows="10" id="myeditorinstance" 
+                            rows="5" style="white-space: pre-wrap; text-indent: 50px;"> 
+                            List Of Accronyms
+                        </textarea>
+                        @error('listOfAccronyms')
+                        <div class="alert alert-danger mt-1 mb-1">{{ $message }}</div>
+                        @enderror
+                    </div>
+                </div>
+
+                <div class="col-xs-12 col-sm-12 col-md-12">
+                    <div class="form-group">
+                        <strong>Copyright:</strong>
+                        <textarea name="copyright" class="form-control"  rows="10" id="myeditorinstance" 
+                            rows="5" style="white-space: pre-wrap; text-indent: 50px;"> 
+                            Copyright
+                        </textarea>
+                        @error('copyright')
+                        <div class="alert alert-danger mt-1 mb-1">{{ $message }}</div>
+                        @enderror
+                    </div>
+                </div>
+
+                <div class="col-xs-12 col-sm-12 col-md-12">
+                    <div class="form-group">
+                        <strong>Disclaimer:</strong>
+                        <textarea name="disclaimer" class="form-control"  rows="10" id="myeditorinstance" 
+                            rows="5" style="white-space: pre-wrap; text-indent: 50px;"> 
+                            Disclaimer
+                        </textarea>
+                        @error('disclaimer')
+                        <div class="alert alert-danger mt-1 mb-1">{{ $message }}</div>
+                        @enderror
+                    </div>
+                </div>
+
                 <div>
                  <button type="submit" class="btn btn-primary ml-3">Submit</button>
                 </div>

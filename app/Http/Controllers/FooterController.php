@@ -50,13 +50,21 @@ class FooterController extends Controller
     public function store(Request $request)
     {
         $this->validate($request, array(
-            'title'=>'required|max:225',
-            'value'=>'required',
+            'purpose'=>'required',
+            'content'=>'required',
+            'additionalHelp'=>'required',
+            'listOfAccronyms'=>'required',
+            'copyright'=>'required',
+            'disclaimer'=>'required'
           ));
           
           $footer = new Footer;
-          $footer->title = $request->input('title');
-          $footer->value = nl2br($request->input('value')); 
+          $footer->purpose = nl2br($request->input('purpose'));
+          $footer->content = nl2br($request->input('content')); 
+          $footer->additionalHelp = nl2br($request->input('additionalHelp')); 
+          $footer->listOfAccronyms = nl2br($request->input('listOfAccronyms')); 
+          $footer->copyright = nl2br($request->input('copyright')); 
+          $footer->disclaimer = nl2br($request->input('disclaimer')); 
           $footer->user_id=Auth::user()->id;
           $footer->save();
           return redirect()->route('footer.index');
@@ -96,14 +104,22 @@ class FooterController extends Controller
     {
         $footer = Footer::find($id);
        $this->validate($request, array(
-         'title'=>'required|max:225',
-         'value'=>'required',
+        'purpose'=>'required',
+        'content'=>'required',
+        'additionalHelp'=>'required',
+        'listOfAccronyms'=>'required',
+        'copyright'=>'required',
+        'disclaimer'=>'required'
       ));
 
        $footer = Footer::where('id',$id)->first();
 
-       $footer->title = $request->input('title');
-       $footer->value = nl2br($request->input('value')); 
+        $footer->purpose = nl2br($request->input('purpose'));
+        $footer->content = nl2br($request->input('content')); 
+        $footer->additionalHelp = nl2br($request->input('additionalHelp')); 
+        $footer->listOfAccronyms = nl2br($request->input('listOfAccronyms')); 
+        $footer->copyright = nl2br($request->input('copyright')); 
+        $footer->disclaimer = nl2br($request->input('disclaimer')); 
        $footer->user_id=Auth::user()->id;
 
       $footer->save();

@@ -4,7 +4,6 @@ namespace App\Providers;
 use App\Models\Slider;
 use App\Models\Footer;
 use App\Models\News;
-use App\Models\FooterContent;
 use Illuminate\Support\ServiceProvider;
 use View;
 class AppServiceProvider extends ServiceProvider
