@@ -113,7 +113,7 @@ class NewsController extends Controller
         ]);
         $imageName=$news->picture;
         $file_path = "images/$imageName";
-        unlink(public_path($file_path));
+        unlink(public_path($file_path)); 
 
         
         $imageName = time().'.'.$request->picture->extension();

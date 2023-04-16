@@ -35,6 +35,10 @@ use App\Http\Controllers\ViewRegionalLocationsController;
 use App\Http\Controllers\ViewFaqsController;
 use App\Http\Controllers\ExamResourceController;
 use App\Http\Controllers\RegionalLocationsController;
+use App\Http\Controllers\ViewSubscribeController;
+use App\Http\Controllers\SubscribeController;
+
+
 
 
 
@@ -53,6 +57,10 @@ use App\Http\Controllers\RegionalLocationsController;
 */
 
 Route::get('/', function () { return view('index');});
+
+//Home pages---------------------------------------------------------------------------
+Route::resource('/viewsubscribe',ViewSubscribeController::class);
+Route::resource('/subscription',SubscribeController::class);
 
 
 //Contact Us pages---------------------------------------------------------------------------

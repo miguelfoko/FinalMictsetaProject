@@ -66,10 +66,10 @@
           <div class="col-lg-3">
             <div>
                 <div class="card-img">
-                  <a href="viewfinancialaid"> <img src="{{ asset('/img/NSFAS_Icon.png') }}" class="img-fluid" alt="..."> </a>
+                  <a href="https://www.nsfas.org.za/" target=”_blank”> <img src="{{ asset('/img/NSFAS_Icon.png') }}" class="img-fluid" alt="..."> </a>
                 </div>
                 <div class="member-content"> 
-                  <a href="viewfinancialaid">Financial Aid</a>
+                  <a href="https://www.nsfas.org.za/" target=”_blank”>Financial Aid</a>
                 </div>
             </div>
           </div>
@@ -183,7 +183,7 @@
         <div class="row" data-aos="zoom-in" data-aos-delay="100">
           <div class="col-lg-12 col-md-6 d-flex align-items-stretch">
             <div class="member">
-             <a href="#"> <img src="{{ asset('/img/NSFAS-design-Homepage.jpg') }}" class="img-fluid" alt=""></a>
+             <a href="https://www.nsfas.org.za/" target=”_blank”> <img src="{{ asset('/img/NSFAS-design-Homepage.jpg') }}" class="img-fluid" alt=""></a>
             </div>
           </div>
         </div>
