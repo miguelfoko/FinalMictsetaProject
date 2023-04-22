@@ -30,9 +30,14 @@
                 <tr>
                     <th>S.No</th>
                     <th>Region</th>
+                    <th>Principal</th>
+                    <th>Principal emails</th>
+                    <th>Principal Assistant</th>
+                    <th>Principal Assistant Emails</th>
                     <th>Address</th>
+                    <th>Website Address</th>
                     <th>City</th>
-                    <th>Phone</th>
+                    <th>Phone(s)</th>
                     <th>Latitude</th>
                     <th>Longitude</th>
                     <th>Action</th>
@@ -43,7 +48,12 @@
                     <tr heigh=100px>
                         <td >{{ $regionallocation->id }}</td>
                         <td >{{ $regionallocation->region }}</td>
+                        <td >{{ $regionallocation->principal }}</td>
+                        <td >{{ $regionallocation->principalEmails }}</td>
+                        <td >{{ $regionallocation->principalAssistant }}</td>
+                        <td >{{ $regionallocation->principalAssistantEmails }}</td>
                         <td >{{ $regionallocation->address }}</td>
+                        <td >{{ $regionallocation->websiteAddress }}</td>
                         <td >{{ $regionallocation->city }}</td>
                         <td >{{ $regionallocation->phone }}</td>
                         <td >{{ $regionallocation->latitude }}</td>

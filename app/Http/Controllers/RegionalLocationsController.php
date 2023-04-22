@@ -51,7 +51,13 @@ class RegionalLocationsController extends Controller
             'city' => 'required',
             'phone' => 'required',
             'latitude' => 'required',
-            'longitude' => 'required'
+            'longitude' => 'required',
+            //Newly added
+            'principal'=>'required',
+            'principalAssistant'=>'required',
+            'principalEmails'=>'required',
+            'principalAssistantEmails'=>'required',
+
         ]);
 
         $regionallocations = new RegionalLocations;
@@ -61,6 +67,11 @@ class RegionalLocationsController extends Controller
         $regionallocations->phone=$request->input('phone');
         $regionallocations->latitude=$request->input('latitude');
         $regionallocations->longitude=$request->input('longitude');
+        $regionallocations->principal=$request->input('principal');
+        $regionallocations->principalEmails=$request->input('principalEmails');
+        $regionallocations->principalAssistant=$request->input('principalAssistant');
+        $regionallocations->principalAssistantEmails=$request->input('principalAssistantEmails');
+        $regionallocations->websiteAddress=$request->input('websiteAddress');
         $regionallocations->user_id=Auth::user()->id;
         $regionallocations->save();
         return redirect()->route('regionallocations.index')->with('success','Regional Location has been created successfully.');
@@ -108,7 +119,12 @@ class RegionalLocationsController extends Controller
             'city' => 'required',
             'phone' => 'required',
             'latitude' => 'required',
-            'longitude' => 'required'
+            'longitude' => 'required',
+            //Newly added
+            'principal'=>'required',
+            'principalAssistant'=>'required',
+            'principalEmails'=>'required',
+            'principalAssistantEmails'=>'required',
         ]);
 
         $regionallocations = RegionalLocations::find($id);
@@ -119,6 +135,11 @@ class RegionalLocationsController extends Controller
         $regionallocations->phone=$request->input('phone');
         $regionallocations->latitude=$request->input('latitude');
         $regionallocations->longitude=$request->input('longitude');
+        $regionallocations->principal=$request->input('principal');
+        $regionallocations->principalEmails=$request->input('principalEmails');
+        $regionallocations->principalAssistant=$request->input('principalAssistant');
+        $regionallocations->principalAssistantEmails=$request->input('principalAssistantEmails');
+        $regionallocations->websiteAddress=$request->input('websiteAddress');
         $regionallocations->user_id=Auth::user()->id;
         $regionallocations->save();
         

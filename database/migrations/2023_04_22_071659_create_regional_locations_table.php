@@ -17,7 +17,12 @@ class CreateRegionalLocationsTable extends Migration
             $table->id();
             $table->timestamps();
             $table->longText('region');
+            $table->longText('principal');
+            $table->longText('principalEmails');
+            $table->longText('principalAssistant');
+            $table->longText('principalAssistantEmails');
             $table->longText('address');
+            $table->longText('websiteAddress');
             $table->longText('city');
             $table->longText('phone');
             $table->longText('latitude');

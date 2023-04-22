@@ -68,6 +68,20 @@
                       <h4>City</h4> 
                       <p>{{$regionallocation->city}}</p>
                     </div>
+                    <div class="email">
+                      <h4>Principal</h4> 
+                      <p>Name: {{$regionallocation->principal}}</p>
+                      <p>Emails: {{$regionallocation->principalEmails}}
+                    </div>
+                    <div class="email">
+                      <h4>Principal Assistant</h4> 
+                      <p>Name: {{$regionallocation->principalAssistant}}</p>
+                      <p>Emails: {{$regionallocation->principalAssistantEmails}}</p>
+                    </div>
+                    <div class="email">
+                      <h4>Website</h4> 
+                      <a href="{{$regionallocation->websiteAddress}}" target=”_blank”>{{$regionallocation->websiteAddress}}</a>
+                    </div>
                     <div class="phone">
                       <h4>Contact Number</h4>
                       <p>{{$regionallocation->phone}}</p>

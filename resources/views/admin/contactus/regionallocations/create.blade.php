@@ -27,9 +27,47 @@
             <div class="row"> 
                 <div class="col-xs-12 col-sm-12 col-md-12">
                     <div class="form-group">
-                        <strong>Region:</strong>
+                        <strong>Colleges:</strong>
                         <input type="text" name="region" class="form-control" placeholder="Enter the Region">
                         @error('region')
+                        <div class="alert alert-danger mt-1 mb-1">{{ $message }}</div>
+                        @enderror
+                    </div>
+                </div>
+                <div class="col-xs-12 col-sm-12 col-md-12">
+                    <div class="form-group">
+                        <strong>Principal:</strong>
+                        <input type="text" name="principal" class="form-control" placeholder="Enter the Principal full name">
+                        @error('principal')
+                        <div class="alert alert-danger mt-1 mb-1">{{ $message }}</div>
+                        @enderror
+                    </div>
+                </div>
+
+                <div class="col-xs-12 col-sm-12 col-md-12">
+                    <div class="form-group">
+                        <strong>Principal Emails addresses (Separated by a "/"):</strong>
+                        <input type="text" name="principalEmails" class="form-control" placeholder="Enter the Principal emails">
+                        @error('principalEmails')
+                        <div class="alert alert-danger mt-1 mb-1">{{ $message }}</div>
+                        @enderror
+                    </div>
+                </div>
+                <div class="col-xs-12 col-sm-12 col-md-12">
+                    <div class="form-group">
+                        <strong>Principal Assistant:</strong>
+                        <input type="text" name="principalAssistant" class="form-control" placeholder="Enter the Principal Assistant full name">
+                        @error('principalAssistant')
+                        <div class="alert alert-danger mt-1 mb-1">{{ $message }}</div>
+                        @enderror
+                    </div>
+                </div>
+
+                <div class="col-xs-12 col-sm-12 col-md-12">
+                    <div class="form-group">
+                        <strong>Principal Assistant Emails addresses (Separated by a "/"):</strong>
+                        <input type="text" name="principalAssistantEmails" class="form-control" placeholder="Enter the Principal Assistant emails">
+                        @error('principalAssistantEmails')
                         <div class="alert alert-danger mt-1 mb-1">{{ $message }}</div>
                         @enderror
                     </div>
@@ -54,9 +92,18 @@
                 </div>
                 <div class="col-xs-12 col-sm-12 col-md-12">
                     <div class="form-group">
-                        <strong>Phone:</strong>
-                        <input type="text" name="phone" class="form-control" placeholder="Enter the Phone number">
+                        <strong>Phones (Enter phone numbers separated by a "/"):</strong>
+                        <input type="text" name="phone" class="form-control" placeholder="Enter the Phone numbers">
                         @error('phone')
+                        <div class="alert alert-danger mt-1 mb-1">{{ $message }}</div>
+                        @enderror
+                    </div>
+                </div>
+                <div class="col-xs-12 col-sm-12 col-md-12">
+                    <div class="form-group">
+                        <strong>Website Address:</strong>
+                        <input type="text" name="websiteAddress" class="form-control" placeholder="Enter the Website Address">
+                        @error('websiteAddress')
                         <div class="alert alert-danger mt-1 mb-1">{{ $message }}</div>
                         @enderror
                     </div>
