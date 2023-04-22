@@ -11,27 +11,23 @@
         <p>Est dolorum ut non facere possimus quibusdam eligendi voluptatem. Quia id aut similique quia voluptas sit quaerat debitis. Rerum omnis ipsam aperiam consequatur laboriosam nemo harum praesentium. </p>
       </div>
     </div><!-- End Breadcrumbs -->
-<br><br>
+<br><br><br>
     <!-- ======= Pricing Section ======= -->
     <section id="pricing" class="pricing">
       <div class="container" data-aos="fade-up">
+
       <div class="member2" >
-         Community Colleges
-        </div>
+      Community Education and Training Colleges
+      </div>
+      <div class="member2" >
+      
+      </div>
         <div class="row">
-        Community Colleges
+        
         @foreach ($communitycolleges as $communitycollege) 
 
-        <div class="col-lg-3 col-md-6 ">
-            <div class="box featured">
-              <h3>{{$communitycollege}}</h3>
-              
-                <!--<embed src="{{url('images')}}/{{$ccalendar->coverPage}}" height="250" width="200">-->
-              <div >
-                <!--<a href="{{url('files')}}/{{$ccalendar->file}}" target="_blank" rel="noopener" class="btn-buy">Open Document</a>-->
-              </div>
-            </div>
-          </div>
+        {!! $communitycollege->content !!}
+
         @endforeach
         </div>
 

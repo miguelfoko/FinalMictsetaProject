@@ -13,10 +13,10 @@
         <div class="row">
             <div class="col-lg-12 margin-tb">
                 <div class="pull-left">
-                    <h2>About Tvet</h2>
+                    <h2>Setas</h2>
                 </div>
                 <div class="pull-right mb-2">
-                    <a class="btn btn-success" href="{{ route('adminAbouttvet.create') }}"> Create About TVET</a>
+                    <a class="btn btn-success" href="{{ route('setas.create') }}"> Create SETAS</a>
                 </div>
             </div>
         </div>
@@ -29,26 +29,18 @@
             <thead>
                 <tr>
                     <th>S.No</th>
-                    <th>What is TVET?</th>
-                    <th>TVET Overview</th>
-                    <th>Public TVET Colleges</th>
-                    <th>TVET College Administration</th>
-                    <th>Private TvetColleges</th>
+                    <th>Content</th>
                     <th>Action</th>
                 </tr>
             </thead>
             <tbody>
-                @foreach ($abouttvet as $atvet)
+                @foreach ($setas as $seta)
                     <tr heigh=100px>
-                        <td width=5%>{{ $atvet->id }}</td>
-                        <td with=17%>{!! $atvet->whatIsTvet !!}</td>
-                        <td with=17%>{!! $atvet->tvetOverview !!}</td>
-                        <td with=17%>{!! $atvet->publicTvetColleges !!}</td>
-                        <td with=17%>{!! $atvet->tvetCollegeAdministration !!}</td>
-                        <td with=17%>{!! $atvet->privateTvetColleges !!}</td>
-                        <td width="10%">
-                            <form action="{{ route('adminAbouttvet.destroy',$atvet->id) }}" method="Post">
-                                <a class="btn btn-primary" href="{{ route('adminAbouttvet.edit',$atvet->id) }}">Edit</a>
+                        <td >{{ $seta->id }}</td>
+                        <td >{!! $seta->content !!}</td>
+                        <td >
+                            <form action="{{ route('setas.destroy',$seta->id) }}" method="Post">
+                                <a class="btn btn-primary" href="{{ route('setas.edit',$seta->id) }}">Edit</a>
                                 @csrf 
                                 @method('DELETE')
                                 <button type="submit" class="btn btn-danger">Delete</button>
@@ -58,7 +50,7 @@
                     @endforeach 
             </tbody>
         </table>
-        {{ $abouttvet->links() }}
+        {{ $setas->links() }}
     </div>
 
     <div class="container">

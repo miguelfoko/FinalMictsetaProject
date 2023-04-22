@@ -37,6 +37,10 @@ use App\Http\Controllers\ExamResourceController;
 use App\Http\Controllers\RegionalLocationsController;
 use App\Http\Controllers\ViewSubscribeController;
 use App\Http\Controllers\SubscribeController;
+use App\Http\Controllers\CommunityCollegesController;
+use App\Http\Controllers\SetasController;
+
+
 
 
 
@@ -111,6 +115,8 @@ Route::resource('/adminAbouttvet', AboutTvetController::class);
 Route::resource('/publicTvetCollege',PublicTvetController::class);
 Route::resource('/privateTvetCollege',PrivateTvetController::class);
 Route::resource('/viewcommunitycolleges',ViewCommunityCollegesController::class);
+Route::resource('/communitycolleges',CommunityCollegesController::class);
+Route::resource('/setas',SetasController::class);
 Route::resource('/viewsetas',ViewSetasController::class);
 Route::get('/aboutus', function(){ return view('aboutus');}); 
 

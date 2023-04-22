@@ -55,6 +55,8 @@
                     <td width=17%>{!! $ctype->resources !!}</td>
                 </tr>
         </table>
+        <br><br>
+        <div>* Please contact your nearest public TVET College for further details</div>
         @endforeach
         {{ $coursetype->links() }}
       </div>

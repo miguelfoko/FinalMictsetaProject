@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateSetasTable extends Migration
+class CreateCommunityCollegesTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,9 +13,14 @@ class CreateSetasTable extends Migration
      */
     public function up()
     {
-        Schema::create('setas', function (Blueprint $table) {
+        Schema::create('community_colleges', function (Blueprint $table) {
             $table->id();
             $table->timestamps();
+            $table->longText('content');
+            $table->foreignId('user_id')
+                ->constrained('users')
+                ->onUpdate('cascade')
+                ->onDelete('cascade'); 
         });
     }
 
@@ -26,6 +31,6 @@ class CreateSetasTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('setas');
+        Schema::dropIfExists('community_colleges');
     }
 }

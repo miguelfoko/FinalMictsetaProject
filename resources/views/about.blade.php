@@ -11,12 +11,15 @@
         <p>Est dolorum ut non facere possimus quibusdam eligendi voluptatem. Quia id aut similique quia voluptas sit quaerat debitis. Rerum omnis ipsam aperiam consequatur laboriosam nemo harum praesentium. </p>
       </div>
     </div><!-- End Breadcrumbs -->
+    <br><br><br><br>
 
     <!-- ======= About Section ======= -->
     <section id="about" class="about">
     @foreach ($abouttvet as $attvet)
       <div class="container" data-aos="fade-up">
-        <h3> ABOUT TVET  </h3> <br>
+      <div class="member2" >
+         About TVET
+        </div>
 
             <h3>1. What is TVET? </h3>
                 {!! $attvet->whatIsTvet !!}

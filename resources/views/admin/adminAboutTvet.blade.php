@@ -10,8 +10,8 @@
 
                 <div class="card-body">
                     <div class="card-body"><a href="adminAbouttvet">Add about TVET</a></div>
-                    <div class="card-body"><a href="updateCommunityColleges">Update Community Colleges</a></div>
-                    <div class="card-body"><a href="updateSetas">Update SETAs</a></div>
+                    <div class="card-body"><a href="communitycolleges">Update Community Colleges</a></div>
+                    <div class="card-body"><a href="setas">Update SETAs</a></div>
                 </div>
             </div>
         </div>

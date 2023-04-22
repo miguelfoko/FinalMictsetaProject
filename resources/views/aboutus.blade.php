@@ -34,7 +34,7 @@
           <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
             <div >
             <a href="viewcommunitycolleges"> 
-              <img src="{{ asset('/img/tvetCallendar.png') }}" class="img-fluid" width= "200px" width= "200px" alt="">
+              <img src="{{ asset('/img/communityColleges.png') }}" class="img-fluid" width= "200px" width= "200px" alt="">
             </a>
               <div class="member-content">
               <h4> <a href="viewcommunitycolleges"> Community Colleges</a></h4>
@@ -45,7 +45,7 @@
           <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
             <div >
             <a href="viewsetas"> 
-              <img src="{{ asset('/img/creerGuidance.png') }}" class="img-fluid" width= "200px" width= "200px" alt="">
+              <img src="{{ asset('/img/setas.png') }}" class="img-fluid" width= "200px" width= "200px" alt="">
             </a>
               <div class="member-content">
               <h4><a href="viewsetas">SETAs</a></h4>

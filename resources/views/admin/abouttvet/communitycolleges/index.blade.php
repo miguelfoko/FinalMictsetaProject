@@ -13,10 +13,10 @@
         <div class="row">
             <div class="col-lg-12 margin-tb">
                 <div class="pull-left">
-                    <h2>About Tvet</h2>
+                    <h2>Community Education and Training</h2>
                 </div>
                 <div class="pull-right mb-2">
-                    <a class="btn btn-success" href="{{ route('adminAbouttvet.create') }}"> Create About TVET</a>
+                    <a class="btn btn-success" href="{{ route('communitycolleges.create') }}"> Create Community College</a>
                 </div>
             </div>
         </div>
@@ -29,26 +29,18 @@
             <thead>
                 <tr>
                     <th>S.No</th>
-                    <th>What is TVET?</th>
-                    <th>TVET Overview</th>
-                    <th>Public TVET Colleges</th>
-                    <th>TVET College Administration</th>
-                    <th>Private TvetColleges</th>
+                    <th>Content</th>
                     <th>Action</th>
                 </tr>
             </thead>
             <tbody>
-                @foreach ($abouttvet as $atvet)
+                @foreach ($communitycolleges as $communitycollege)
                     <tr heigh=100px>
-                        <td width=5%>{{ $atvet->id }}</td>
-                        <td with=17%>{!! $atvet->whatIsTvet !!}</td>
-                        <td with=17%>{!! $atvet->tvetOverview !!}</td>
-                        <td with=17%>{!! $atvet->publicTvetColleges !!}</td>
-                        <td with=17%>{!! $atvet->tvetCollegeAdministration !!}</td>
-                        <td with=17%>{!! $atvet->privateTvetColleges !!}</td>
-                        <td width="10%">
-                            <form action="{{ route('adminAbouttvet.destroy',$atvet->id) }}" method="Post">
-                                <a class="btn btn-primary" href="{{ route('adminAbouttvet.edit',$atvet->id) }}">Edit</a>
+                        <td >{{ $communitycollege->id }}</td>
+                        <td >{!! $communitycollege->content !!}</td>
+                        <td >
+                            <form action="{{ route('communitycolleges.destroy',$communitycollege->id) }}" method="Post">
+                                <a class="btn btn-primary" href="{{ route('communitycolleges.edit',$communitycollege->id) }}">Edit</a>
                                 @csrf 
                                 @method('DELETE')
                                 <button type="submit" class="btn btn-danger">Delete</button>
@@ -58,7 +50,7 @@
                     @endforeach 
             </tbody>
         </table>
-        {{ $abouttvet->links() }}
+        {{ $communitycolleges->links() }}
     </div>
 
     <div class="container">
