@@ -51,12 +51,12 @@
             <h4>Site Map</h4>
             <ul>
               <li><i class="bx bx-chevron-right"></i> <a href="/">Home</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="abouttvet">About TVET</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="examinations">Examinations</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="resources">Resources</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="viewNews">News</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="tvetcollegetimes">TVET College Times</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="contactus">Contact US</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="/abouttvet">About TVET</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="/examinations">Examinations</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="/resources">Resources</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="/viewNews">News</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="/tvetcollegetimes">TVET College Times</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="/contactus">Contact US</a></li>
             </ul>
           </div>
 
@@ -89,7 +89,7 @@
             <div class="col-lg-4 col-md-6 footer-newsletter">
             <h4>Intranet</h4>
             
-            <p> <a href="home">Login as administrator</a></p>
+            <p> <a href="/home">Login as administrator</a></p>
             
             
             <form action="" method="post">

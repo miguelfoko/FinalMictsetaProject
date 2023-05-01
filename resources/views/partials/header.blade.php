@@ -18,23 +18,23 @@
       <nav id="navbar" class="navbar order-last order-lg-0">
         <ul>
           <li><a  href="/" class="{{ (request()->is('/')) ? 'active' : '' }}" >Home</a></li>
-          <li><a  href="aboutus" class="{{ (request()->is('aboutus')||request()->is('abouttvet')
+          <li><a  href="/aboutus" class="{{ (request()->is('aboutus')||request()->is('abouttvet')
             ||request()->is('viewcommunitycolleges')
             ||request()->is('publicTvetCollege')
             ||request()->is('privateTvetCollege')
             ||request()->is('viewsetas')) ? 'active' : '' }}" >About Us</a></li>
-          <li><a  href="examinations" class="{{ (request()->is('examinations')
+          <li><a  href="/examinations" class="{{ (request()->is('examinations')
             ||request()->is('viewexamresources')
             ||request()->is('viewexamtrainingvideos')
             ||request()->is('viewicasstrainingvideos')) ? 'active' : '' }}">Examinations</a></li>
-          <li><a  href="resources" class="{{ (request()->is('resources')
+          <li><a  href="/resources" class="{{ (request()->is('resources')
             ||request()->is('viewcollegecoursetype')
             ||request()->is('viewsuccessstories') 
             ||request()->is('viewcollegecalendar')
             ||request()->is('viewcareerguidance')) ? 'active' : '' }}">Resources</a></li>
-          <li><a  href="viewNews" class="{{ (request()->is('viewNews')||request()->is('viewNews/*')) ? 'active' : '' }}">News</a></li>
-          <li><a  href="tvetcollegetimes" class="{{ (request()->is('tvetcollegetimes')) ? 'active' : '' }}">TVET College Times</a></li>
-          <li><a  href="contactus" class="{{ (request()->is('contactus')
+          <li><a  href="/viewNews" class="{{ (request()->is('viewNews')||request()->is('viewNews/*')) ? 'active' : '' }}">News</a></li>
+          <li><a  href="/tvetcollegetimes" class="{{ (request()->is('tvetcollegetimes')) ? 'active' : '' }}">TVET College Times</a></li>
+          <li><a  href="/contactus" class="{{ (request()->is('contactus')
             ||request()->is('viewgetintouch')
             ||request()->is('viewregionallocations')
             ||request()->is('viewfaqs')) ? 'active' : '' }}">Contact US</a></li>

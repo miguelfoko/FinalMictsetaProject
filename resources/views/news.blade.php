@@ -19,15 +19,14 @@
       <div class="container-fluid" data-aos="fade-up">
       <div class="member2" >
          Newsletter
-        </div>
-      <div class="row">
+        </div> 
 
       @foreach ($news as $new) 
          <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
             <div class="card">
            
             <div class="card-img">
-            <a href="faqs"> <img src="{{ asset('/images/'.$new->picture) }}" alt="..."> </a>
+            <a href="/viewNews/{{$new->id}}"> <img src="{{ asset('/images/'.$new->picture) }}" alt="..."> </a>
             </div>
             <div class="card-body"> 
                 <h5 class="card-title"><a href="{{route('viewNews.show',$new->id)}}">{{ $new->title }}</a></h5>

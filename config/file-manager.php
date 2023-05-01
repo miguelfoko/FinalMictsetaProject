@@ -10,7 +10,7 @@ return [
      *
      * Default - DefaultConfigRepository get config from this file
      */
-    'configRepository' => DefaultConfigRepository::class,
+    'configRepository' => DefaultConfigRepository::class, 
 
     /**
      * ACL rules repository
@@ -96,7 +96,7 @@ return [
     /**
      * Show / Hide system files and folders
      */
-    'hiddenFiles' => true,
+    'hiddenFiles' => false,
 
     /***************************************************************************
      * Middleware
@@ -111,7 +111,7 @@ return [
      *
      * default - false(OFF)
      */
-    'acl' => false,
+    'acl' => true,
 
     /**
      * Hide files and folders from file-manager if user doesn't have access
