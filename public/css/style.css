@@ -1692,24 +1692,56 @@ section {
 .faq-container {
   max-width: 1400px;
   margin: 0 auto;
+  position: relative;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  overflow-x: hidden;
+  padding-top: 20px;
+  display: inline-block;
 }
 
 .faq {
   margin-bottom: 20px;
 }
 
-.question {
+.dropdown a, .dropbtn {
   font-size: 19px;
   margin: 0;
   padding: 10px;
-  background-color: #f7931e;
+  background-color: #144069;
   border: 1px solid #ccc;
   cursor: pointer;
+  padding: 6px 8px 6px 16px;
+  text-decoration: none;
+  font-size: 20px;
+  color: #ccc;
+  width:100%;
+  text-align: left;
+  cursor: pointer;
+  outline: none;
+}
+.dropdown a:hover, .dropbtn:hover {
+  color: #f7931e;
 }
 
-.answer {
+
+.dropdown-content {
   padding: 20px;
-  border: 1px solid #ccc;
+  border: 1px solid #f7931e;
+  padding: 6px 8px 6px 16px;
+  display: none;
+  position: relative;
+  min-width: 160px;
+  overflow: auto;
+  z-index: 1;
+}
+
+.show {display:block;}
+
+.fa-caret-down {
+  float: right;
+  padding-right: 8px;
 }
 
 .question:focus {

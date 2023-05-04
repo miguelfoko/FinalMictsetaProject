@@ -3,19 +3,22 @@
   
   
   
-  <a href="/"><img src="{{ asset('/img/TVET/Header1.png') }}" alt="" class="header"></a>
+   <!--<a href="/">-->
+    <img src="{{ asset('/img/TVET/Header1.png') }}" alt="" class="header">
+   <!--</a>-->
   
   
 
   
-  
-    <div class="container d-flex align-items-center">
+   <nav class="navbar">
+    <div class="container" >
 
       
       <!-- Uncomment below if you prefer to use an image logo -->
       <!-- <a href="index.html" class="logo me-auto"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
 
-      <nav id="navbar" class="navbar order-last order-lg-0">
+      
+        
         <ul>
           <li><a  href="/" class="{{ (request()->is('/')) ? 'active' : '' }}" >Home</a></li>
           <li><a  href="/aboutus" class="{{ (request()->is('aboutus')||request()->is('abouttvet')
@@ -38,8 +41,9 @@
             ||request()->is('viewgetintouch')
             ||request()->is('viewregionallocations')
             ||request()->is('viewfaqs')) ? 'active' : '' }}">Contact US</a></li>
-
-    </div>
-	
+        </ul>
+   
+  </div>
+	</nav>
     
   </header><!-- End Header -->

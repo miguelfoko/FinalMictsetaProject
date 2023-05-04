@@ -28,7 +28,7 @@
 
     <script type="text/javascript"> 
           function initMap() {
-              const myLatLng = { lat: 22.2734719, lng: 70.7512559 };
+              const myLatLng = { lat: -25.760319754713873, lng: 28.190917968750004 };
               const map = new google.maps.Map(document.getElementById("map"), {
                   zoom: 5,
                   center: myLatLng,
@@ -52,8 +52,9 @@
           }
           window.initMap = initMap;
     </script>
-<script type="text/javascript" src="https://maps.google.com/maps/api/js?key={{ env('GOOGLE_MAP_KEY') }}&callback=initMap" ></script>
-
+<script async
+    src="https://maps.googleapis.com/maps/api/js?key={{ env('GOOGLE_MAP_KEY') }}&region=GB&callback=initMap">
+</script>
       <div style="margin-top: 60px;" class="container">
             <div class="row">
             @foreach ($regionallocations as $regionallocation) 

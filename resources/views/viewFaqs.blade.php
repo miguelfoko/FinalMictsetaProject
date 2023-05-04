@@ -22,21 +22,40 @@
             
             {{ $faqs->links() }}
 
-            @foreach ($faqs as $faq) 
-              <div class="faq-container">
+            @foreach ($faqs as $faq)        
             
-                <div class="faq">
-                    <h2 class="question">{{$faq->title}}</h2>
-                    <div class="answer">
-                      <p>{!! $faq->content !!}  </p>
+                <div class="dropdown">
+                    <button onclick="myFunction()" class="dropbtn" >{{$faq->title}} <i class="fa fa-caret-down"></i></button>
+                    <div id="myDropdown" class="dropdown-content">
+                          {!! $faq->content !!}  
                     </div>
-                  </div>
-                </div>    
+                </div>
+                
             @endforeach  
             {{ $faqs->links() }}
         </div>  
     </section><!-- End Contact Section -->
+    <script>
+        /* When the user clicks on the button, 
+        toggle between hiding and showing the dropdown content */
+        function myFunction() {
+          document.getElementById("myDropdown").classList.toggle("show");
+        }
 
+        // Close the dropdown if the user clicks outside of it
+        window.onclick = function(event) {
+          if (!event.target.matches('.dropbtn')) {
+            var dropdowns = document.getElementsByClassName("dropdown-content");
+            var i;
+            for (i = 0; i < dropdowns.length; i++) {
+              var openDropdown = dropdowns[i];
+              if (openDropdown.classList.contains('show')) {
+                openDropdown.classList.remove('show');
+              }
+            }
+          }
+        }
+    </script>
 
   </main><!-- End #main -->
 
