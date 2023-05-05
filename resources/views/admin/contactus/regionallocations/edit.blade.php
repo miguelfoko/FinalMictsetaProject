@@ -40,7 +40,7 @@
                 <div class="col-xs-12 col-sm-12 col-md-12">
                     <div class="form-group">
                         <strong>Principal:</strong>
-                        <input type="text" name="principal" value="{{ $regionallocations->principal }}
+                        <input type="text" name="principal" value="{{ $regionallocations->principal }}"
                         class="form-control">
                         @error('principal')
                         <div class="alert alert-danger mt-1 mb-1">{{ $message }}</div>
@@ -51,7 +51,7 @@
                 <div class="col-xs-12 col-sm-12 col-md-12">
                     <div class="form-group">
                         <strong>Principal Emails addresses (Separated by a "/"):</strong>
-                        <input type="text" name="principalEmails" value="{{ $regionallocations->principalEmails }} 
+                        <input type="text" name="principalEmails" value="{{ $regionallocations->principalEmails }}" 
                         class="form-control" >
                         @error('principalEmails')
                         <div class="alert alert-danger mt-1 mb-1">{{ $message }}</div>
@@ -61,7 +61,7 @@
                 <div class="col-xs-12 col-sm-12 col-md-12">
                     <div class="form-group">
                         <strong>Principal Assistant:</strong>
-                        <input type="text" name="principalAssistant" value="{{ $regionallocations->principalAssistant }}
+                        <input type="text" name="principalAssistant" value="{{ $regionallocations->principalAssistant }}"
                         class="form-control" >
                         @error('principalAssistant')
                         <div class="alert alert-danger mt-1 mb-1">{{ $message }}</div>
@@ -72,7 +72,7 @@
                 <div class="col-xs-12 col-sm-12 col-md-12">
                     <div class="form-group">
                         <strong>Principal Assistant Emails addresses (Separated by a "/"):</strong>
-                        <input type="text" name="principalAssistantEmails" value="{{ $regionallocations->principalAssistantEmails }}
+                        <input type="text" name="principalAssistantEmails" value="{{ $regionallocations->principalAssistantEmails }}"
                         class="form-control" >
                         @error('principalAssistantEmails')
                         <div class="alert alert-danger mt-1 mb-1">{{ $message }}</div>

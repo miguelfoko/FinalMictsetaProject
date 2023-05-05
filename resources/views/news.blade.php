@@ -5,14 +5,6 @@
 
   <main id="main">
 
-    <!-- ======= Breadcrumbs ======= -->
-    <div class="breadcrumbs" data-aos="fade-in">
-      <div class="container">
-        <h2>Events</h2>
-        <p>Est dolorum ut non facere possimus quibusdam eligendi voluptatem. Quia id aut similique quia voluptas sit quaerat debitis. Rerum omnis ipsam aperiam consequatur laboriosam nemo harum praesentium. </p>
-      </div>
-    </div><!-- End Breadcrumbs -->
-
     <!-- ======= Events Section ======= -->
     <section id="events" class="events">
     <br><br>
@@ -20,7 +12,7 @@
       <div class="member2" >
          Newsletter
         </div> 
-
+        <div class="row" > 
       @foreach ($news as $new) 
          <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
             <div class="card">

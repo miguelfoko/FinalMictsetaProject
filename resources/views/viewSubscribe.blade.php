@@ -4,13 +4,7 @@
 
 
   <main id="main">
-   <!-- ======= Breadcrumbs ======= -->
-   <div class="breadcrumbs" data-aos="fade-in">
-      <div class="container">
-        <h2>About Us</h2>
-        <p>Est dolorum ut non facere possimus quibusdam eligendi voluptatem. Quia id aut similique quia voluptas sit quaerat debitis. Rerum omnis ipsam aperiam consequatur laboriosam nemo harum praesentium. </p>
-      </div>
-    </div><!-- End Breadcrumbs -->
+ 
 <br><br><br>
     <!-- ======= Contact Section ======= -->
     <section id="contact" class="contact">
@@ -21,7 +15,7 @@
 
       <div style="margin-top: 30px" data-aos="fade-up">
 
-    <h2 style="color: #16537e;">Fill the form and submit it for the subscription</h2>
+    <h2 style="color: #16537e;">Complete the form for subscription</h2>
         @if(session('status'))
         <div class="alert alert-success mb-1 mt-1">
             {{ session('status') }}

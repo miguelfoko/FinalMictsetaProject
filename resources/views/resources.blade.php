@@ -2,19 +2,17 @@
 
 @section('content')
 
+ <!-- ======= Breadcrumbs ======= -->
+ 
   <main id="main" data-aos="fade-in">
-
-    <!-- ======= Breadcrumbs ======= -->
-    <div class="breadcrumbs">
-      <div class="container">
-        <h2>Trainers</h2>
-        <p>Est dolorum ut non facere possimus quibusdam eligendi voluptatem. Quia id aut similique quia voluptas sit quaerat debitis. Rerum omnis ipsam aperiam consequatur laboriosam nemo harum praesentium. </p>
-      </div>
-    </div><!-- End Breadcrumbs -->
 
     <!-- ======= trainers Section ======= -->
     <section id="events" class="events">
-      <br><br>
+    <br><br>
+      <div class="container-fluid" data-aos="fade-up">
+      <div class="member2" >
+         Resources
+        </div> 
       <div class="container-fluid" data-aos="fade-up">
  
         <div class="row" data-aos="zoom-in" data-aos-delay="100">

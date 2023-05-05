@@ -14,7 +14,7 @@ class ViewFaqsController extends Controller
      */
     public function index()
     {
-        $faqs = Faqs::orderBy('id','desc')->paginate(5);
+        $faqs = Faqs::orderBy('id','desc')->paginate(500);
         return view('viewFaqs',compact('faqs'));
         //return view('viewFaqs'); 
     }

@@ -1705,7 +1705,7 @@ section {
   margin-bottom: 20px;
 }
 
-.dropdown a, .dropbtn {
+.dropbtn {
   font-size: 19px;
   margin: 0;
   padding: 10px;
@@ -1725,6 +1725,9 @@ section {
   color: #f7931e;
 }
 
+.no {
+  display: none;
+}
 
 .dropdown-content {
   padding: 20px;
