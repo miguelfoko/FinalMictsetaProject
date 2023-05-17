@@ -5,9 +5,7 @@
 
   <main id="main">
   
-<br><br>
-    <!-- ======= Pricing Section ======= -->
-    <section id="pricing" class="pricing">
+
       <div class="container">
       <div class="member2" >
          Examination Resources
@@ -53,8 +51,7 @@
         </div>
 
       </div>
-    </section><!-- End Pricing Section -->
-
+   
   </main><!-- End #main -->
 
  @endsection

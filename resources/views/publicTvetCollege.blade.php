@@ -4,9 +4,7 @@
 
 
   <main id="main">
-    <br><br><br><br>
-    <!-- ======= About Section ======= -->
-    <section id="about" class="about">
+   
       <div class="container" data-aos="fade-up">
       <div class="member2" >
       Public TVET Colleges
@@ -23,7 +21,7 @@
       @endforeach
  
       </div>
-    </section><!-- End About Section -->
+   
 
     
 

@@ -5,8 +5,8 @@
   <main id="main" data-aos="fade-in">
 
     <!-- ======= Courses Section ======= -->
-    <section id="events" class="events">
-    <br><br>
+   
+   
       <div class="container" data-aos="fade-up">
       <div class="member2" >
          Examination
@@ -84,7 +84,7 @@
         </div>
 
       </div>
-    </section><!-- End Courses Section -->
+   
 
   </main><!-- End #main -->
   

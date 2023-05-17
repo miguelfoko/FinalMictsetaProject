@@ -4,11 +4,9 @@
 
  <!-- ======= Breadcrumbs ======= -->
  
-  <main id="main" data-aos="fade-in">
+  <main id="main" data-aos="fade-up">
 
-    <!-- ======= trainers Section ======= -->
-    <section id="events" class="events">
-    <br><br>
+   
       <div class="container-fluid" data-aos="fade-up">
       <div class="member2" >
          Resources
@@ -97,7 +95,7 @@
        
 
       </div>
-    </section><!-- End Trainers Section -->
+    
 
   </main><!-- End #main -->
   @endsection

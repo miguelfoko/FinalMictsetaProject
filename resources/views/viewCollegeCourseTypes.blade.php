@@ -5,9 +5,7 @@
   <main id="main" data-aos="fade-in">
 
 
-     <!-- ======= About Section ======= -->
-     <section id="about" class="about">
-      <br><br>
+   
       <div class="container" data-aos="fade-up">
       <div class="member2" >
          College Course Type
@@ -53,7 +51,7 @@
         @endforeach
         {{ $coursetype->links() }}
       </div>
-    </section><!-- End About Section -->
+   
 
   </main><!-- End #main -->
   @endsection

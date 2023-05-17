@@ -4,10 +4,9 @@
 
 
   <main id="main">
-  
-<br><br><br>
+
     <!-- ======= Pricing Section ======= -->
-    <section id="pricing" class="pricing">
+   
       <div class="container" data-aos="fade-up">
 
       <div class="member2" >
@@ -26,7 +25,7 @@
         </div>
 
       </div>
-    </section><!-- End Pricing Section -->
+   
 
   </main><!-- End #main -->
 

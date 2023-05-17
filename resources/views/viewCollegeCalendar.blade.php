@@ -5,9 +5,7 @@
 
   <main id="main">
       <!-- ======= Pricing Section ======= -->
-    
-    <br><br>
-
+   
     <?php $Events=[]; ?>
     @foreach ($collegecalendar as $ccalendar) 
       <?php
@@ -35,14 +33,13 @@
 </script>
 
 
-    <section id="events" class="priceventsing">
       <div class="container" data-aos="fade-up">
       <div class="member2" >
          College Calendar
         </div>
         <div id='calendar'></div>
       </div>
-    </section>
+   
   </main><!-- End #main -->
 
  @endsection

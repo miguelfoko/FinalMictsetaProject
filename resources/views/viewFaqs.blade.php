@@ -4,10 +4,7 @@
 
 
   <main id="main">
-  
-    <br> <br>
-    <br> <br>
-    <section id="contact" class="contact">
+ 
         <div class="container" data-aos="fade-up">
         <div class="member2" >
          Frequently Asked Questions
@@ -35,7 +32,7 @@
         </div>
                   <!--   {{ $faqs->links() }} -->
        <!-- </div>  -->
-    </section><!-- End Contact Section -->
+   
     <script>
         /* When the user clicks on the button, 
         toggle between hiding and showing the dropdown content */

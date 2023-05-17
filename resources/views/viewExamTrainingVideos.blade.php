@@ -5,9 +5,6 @@
 
   <main id="main">
 
-<br><br>
-    <!-- ======= Pricing Section ======= -->
-    <section id="pricing" class="pricing">
       <div class="container-fluid" data-aos="fade-up">
       <div class="member2" >
          Examination Training Videos
@@ -34,7 +31,7 @@
         </div>
 
       </div>
-    </section><!-- End Pricing Section -->
+   
 
   </main><!-- End #main -->
 

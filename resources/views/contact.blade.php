@@ -2,11 +2,10 @@
 
 @section('content')
 
-  <main id="main">
+  <main id="main" data-aos="fade-up">
 
-    <section id="events" class="events"> 
-    <br><br>
-      <div class="container" data-aos="fade-up">
+   
+      <div class="container" >
       <div class="member2" >
          Contact 
         </div>

@@ -89,7 +89,7 @@
             <div class="col-lg-4 col-md-6 footer-newsletter">
             <h4>Intranet</h4>
             
-            <p> <a href="/home">Login as administrator</a></p>
+            <p> <a href="/home" target=”_blank”>Login as administrator</a></p>
             
             
             <form action="" method="post">

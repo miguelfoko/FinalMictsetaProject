@@ -3,12 +3,11 @@
 @section('content')
 
 
-  <main id="main">
+  <main id="main" data-aos="fade-up">
 
     <!-- ======= Events Section ======= -->
-    <section id="events" class="events">
-    <br><br>
-      <div class="container-fluid" data-aos="fade-up">
+  
+      <div class="container-fluid" >
       <div class="member2" >
          Newsletter
         </div> 
@@ -38,7 +37,7 @@
         {{ $news->links() }}
 
       </div>
-    </section><!-- End Events Section -->
+   
 
   </main><!-- End #main -->
   @endsection

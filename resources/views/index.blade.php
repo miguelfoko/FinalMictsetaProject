@@ -9,7 +9,7 @@
    
   <main id="main">
 
-    <br><br>
+ <!-- <section  class="d-flex justify-content-center align-items-center">-->
     <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
                 <div class="carousel-inner ">
                             @foreach($sliders as $slider)
@@ -29,7 +29,7 @@
                             <span class="visually-hidden">Next</span>
                         </button>
       </div>
-
+ <!--</section> End Hero -->
       <section id="trainers" class="trainers">
       <div class="container" data-aos="fade-up">
  

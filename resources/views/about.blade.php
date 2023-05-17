@@ -3,17 +3,15 @@
 @section('content')
 
 
-  <main id="main">
+  <main id="main"  data-aos="fade-in">
   
-    <br><br><br><br>
 
     <!-- ======= About Section ======= -->
-    <section id="about" class="about">
-    @foreach ($abouttvet as $attvet)
-      <div class="container" data-aos="fade-up">
+  <div class="container" >
       <div class="member2" >
          About TVET
         </div>
+    @foreach ($abouttvet as $attvet)
 
             <h3>1. What is TVET? </h3>
                 {!! $attvet->whatIsTvet !!}

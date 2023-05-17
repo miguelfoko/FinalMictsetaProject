@@ -3,12 +3,11 @@
 @section('content')
 
 
-  <main id="main">
+  <main id="main" data-aos="fade-up">
 
     <!-- ======= Pricing Section ======= -->
-    <section id="pricing" class="pricing">
-    <br><br>
-      <div class="container-fluid" data-aos="fade-up">
+  
+      <div class="container-fluid" >
       <div class="member2" >
          Tvet College Times
         </div>
@@ -32,7 +31,7 @@
         </div>
 
       </div>
-    </section><!-- End Pricing Section -->
+  
 
   </main><!-- End #main -->
 

@@ -5,9 +5,6 @@
 
   <main id="main">
  
-<br><br><br>
-    <!-- ======= Contact Section ======= -->
-    <section id="contact" class="contact">
     <div class="container" data-aos="fade-up">
       <div class="member2" >
          Subscription
@@ -65,8 +62,7 @@
     
   </div>
     </div>
-    
-    </section><!-- End Contact Section -->
+  
 
     
 

@@ -3,12 +3,10 @@
 @section('content')
 
 
-  <main id="main">
+  <main id="main" data-aos="fade-up">
 
-<br><br>
-    <!-- ======= About Section ======= -->
-    <section id="about" class="about">
-      <div class="container" data-aos="fade-up">
+
+      <div class="container" >
 	  
     <h3>{{$news->title }} </h3>
     <h4>{{$news->subtitle }} </h4>
@@ -25,7 +23,7 @@
  
 
       </div>
-    </section><!-- End About Section -->
+  
 
 
   </main><!-- End #main -->

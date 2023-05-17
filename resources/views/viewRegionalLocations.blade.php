@@ -5,15 +5,13 @@
 
   <main id="main">
  
-<br><br>
-<br>
-<section id="about" class="about">
+
       <div class="container" data-aos="fade-up">
         <div class="member2" >
          Regional Locations
         </div>
       </div>
-</section>
+
 
     <div class="container mt-5">
       
