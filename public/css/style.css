@@ -14,7 +14,7 @@ body {
 }
 
 a {
-  color: #16537e;
+  color: #144069;
   text-decoration: none;
 }
 
@@ -56,7 +56,7 @@ h6 {
 }
 
 .back-to-top:hover {
-  background: #16537e;
+  background: #144069;
   color: #fff;
 }
 
@@ -156,7 +156,7 @@ h6 {
 }
 
 #header .logo a {
-  color: #16537e;
+  color: #144069;
 }
 
 #header .logo img {
@@ -179,7 +179,7 @@ h6 {
 }
 
 .get-started-btn:hover {
-  background: #16537e;
+  background: #144069;
   color: #fff;
 }
 
@@ -317,7 +317,7 @@ h6 {
 * Mobile Navigation 
 */
 .mobile-nav-toggle {
-  color: #37423b;
+  color: #144069;
   font-size: 28px;
   cursor: pointer;
   display: none;
@@ -375,7 +375,7 @@ h6 {
 .navbar-mobile a:focus {
   padding: 10px 20px;
   font-size: 15px;
-  color: #37423b;
+  color: #144069;
 }
 
 .navbar-mobile a:hover,
@@ -484,7 +484,7 @@ h6 {
 }
 
 #hero .btn-get-started:hover {
-  background: #16537e;
+  background: #144069;
   border: 2px solid #3ac162;
 }
 
@@ -686,7 +686,7 @@ section {
 }
 
 .why-us .content .more-btn:hover {
-  color: #16537e;
+  color: #144069;
   background: #fff;
 }
 
@@ -753,11 +753,11 @@ section {
 }
 
 .features .icon-box:hover {
-  border-color: #16537e;
+  border-color: #144069;
 }
 
 .features .icon-box:hover h3 a {
-  color: #16537e;
+  color: #144069;
 }
 
 /*--------------------------------------------------------------
@@ -831,66 +831,19 @@ section {
 /*--------------------------------------------------------------
 # Trainers
 --------------------------------------------------------------*/ 
-.trainers .member {
-  
+.trainers {
   text-align: center;
-  margin-bottom: 20px;
   background: #fff;
   border: 1px solid #eef0ef;
-}
-
-.trainers .member img {
-  margin: -1px -1px 30px -1px;
-}
-
-.trainers .member .member-content {
-  padding: 0 20px 30px 20px;
-}
-
-.trainers .member h4 {
-  font-weight: 700;
-  margin-bottom: 2px;
-  font-size: 18px;
-}
-
-.trainers .member span {
-  font-style: italic;
-  display: block;
-  font-size: 13px;
-}
-
-.trainers .member p {
-  padding-top: 10px;
-  font-size: 14px;
-  font-style: italic;
-  color: #aaaaaa;
-}
-
-.trainers .member .social {
-  margin-top: 15px;
-}
-
-.trainers .member .social a {
-  color: #7e9486;
-  transition: 0.3s;
-}
-
-.trainers .member .social a:hover {
-  color: #f7931e;
-}
-
-.trainers .member .social i {
-  font-size: 18px;
-  margin: 0 2px;
+  margin: -1px -1px -1px -1px;
 }
 
 /*--------------------------------------------------------------
 # WelcomeTrainer
 --------------------------------------------------------------*/ 
 .welcometrainer {
-  
+  padding: 0 0 0 0;
   text-align: center;
-  margin-bottom: 20px;
   background: #144069;
   border: 1px solid #f7931e;
 }
@@ -898,16 +851,14 @@ section {
 .welcometrainer .member {
   
   text-align: center;
-  margin-bottom: 20px;
   background: #fff;
   border: 1px solid #eef0ef;
 }
 
 .welcometrainer .member1,
 .events .member1 {
-  
+  width:100%;
   text-align: center;
-  margin-bottom: 20px;
   background: #f7931e;
   border: 1px solid #eef0ef;
 }
@@ -915,7 +866,6 @@ section {
 .member2 {
   
   text-align: center;
-  margin-bottom: 32px;
   background: #f7931e;
   border: 1px solid #eef0ef;
 }
@@ -1046,7 +996,7 @@ section {
 }
 
 .testimonials .swiper-pagination .swiper-pagination-bullet-active {
-  background-color: #16537e;
+  background-color: #144069;
 }
 
 @media (max-width: 767px) {
@@ -1149,12 +1099,12 @@ section {
 }
 
 .cource-details-tabs .nav-link:hover {
-  color: #16537e;
+  color: #144069;
 }
 
 .cource-details-tabs .nav-link.active {
-  color: #16537e;
-  border-color: #16537e;
+  color: #144069;
+  border-color: #144069;
 }
 
 .cource-details-tabs .tab-pane.active {
@@ -1192,11 +1142,21 @@ section {
 /*--------------------------------------------------------------
 # Events
 --------------------------------------------------------------*/
+.events{
+  border: 0;
+  padding: 0 0 0 0;
+  text-align: center;
+  border: 1px solid #144069;
+  position: relative;
+  background: #f7931e;
+}
+
 .events .card {
   border: 0;
   padding: 0 30px;
-  margin-bottom: 60px;
+  margin-bottom: 0px;
   position: relative;
+  border: 1px solid #144069;
 }
 
 .events .card-img {
@@ -1220,6 +1180,7 @@ section {
   box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.1);
   margin-top: -60px;
   transition: 0.3s;
+  
 }
 
 .events .card-title {
@@ -1254,11 +1215,11 @@ section {
 }
 
 .events .card:hover .card-body {
-  border-color: #16537e;
+  border-color: #144069;
 }
 
 .events .card:hover .card-body .card-title a {
-  color: #16537e;
+  color: #144069;
 }
 
 /*--------------------------------------------------------------
@@ -1273,6 +1234,7 @@ section {
   position: relative;
   overflow: hidden;
 }
+
 
 .pricing h3 {
   font-weight: 400;
@@ -1350,7 +1312,7 @@ section {
 }
 
 .pricing .btn-buy:hover {
-  background: #16537e;
+  background: #144069;
 }
 
 .pricing .featured h3 {
@@ -1420,7 +1382,7 @@ section {
 .contact .info .email:hover i,
 .contact .info .address:hover i,
 .contact .info .phone:hover i {
-  background: #16537e;
+  background: #144069;
   color: #fff;
 }
 
@@ -1505,7 +1467,7 @@ section {
 }
 
 .contact .php-email-form button[type=submit]:hover {
-  background: #16537e;
+  background: #144069;
 }
 
 @-webkit-keyframes animate-loading {
@@ -1818,3 +1780,13 @@ section {
     text-align: left;
   }
 }
+/*
+.row .col-lg-3 .card-body {
+  white-space: nowrap;
+  overflow-x: hidden;
+  text-overflow: ellipsis; 
+}
+*/
+#more {display: none;}
+#more2 {display: none;}
+#more3 {display: none;}

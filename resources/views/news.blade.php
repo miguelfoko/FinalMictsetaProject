@@ -13,7 +13,7 @@
         </div> 
         <div class="row" > 
       @foreach ($news as $new) 
-         <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
+         <div class="col-lg-4" align="center">
             <div class="card">
            
             <div class="card-img">
