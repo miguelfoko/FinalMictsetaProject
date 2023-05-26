@@ -32,7 +32,7 @@
  <!--</section> End Hero -->
       <section id="trainers" class="trainers">
       <div class="container" >
- 
+       
         <div class="row " data-aos="zoom-in" data-aos-delay="100">
 
           <div class="col-lg-3" align="center">
@@ -85,6 +85,7 @@
         <div class="member1" >
           Successful TVET Graduates
         </div>
+        <div class="new">
         <div class="row" data-aos="zoom-in" data-aos-delay="100">
           <div class="col-lg-4" align="center">
             <div class="member">
@@ -93,10 +94,10 @@
                 <h4>Mokone Mofokeng</h4>
                 <span>Former student of Maluti TVET College</span>
                 <p >
-                  "The quality training that I got from Maluti TVET College pushed   <span id="dots">...</span>
-                  <span id="more">me to become my own boss. I am the successfull owner of Monoceros Electrical company"</span>
+                  "The quality training that I got from Maluti TVET College pushed   
+                  me to become my own boss. I am the successfull owner of Monoceros Electrical company"
                 </p>
-                <button onclick="seeMoreFunction()" id="myBtn">Read more</button>
+               
               </div>
             </div>
           </div>
@@ -108,12 +109,12 @@
                 <h4>Snethemba Mpontshane</h4>
                 <span>Former Electrical Engineering student at Majuba TVET College</span>
                 <p>
-                  "I'm a qualified Senior Electrican at Eskom based at the Kusile Power <span id="dots2">...</span>
-                  <span id="more2">Station in Witbank. The practical training , advanced equipment that we were exposed to in
+                  "I'm a qualified Senior Electrican at Eskom based at the Kusile Power 
+                 Station in Witbank. The practical training , advanced equipment that we were exposed to in
                      workshops and highly skilled lecturers laid a solid foundation for me to achieve success in my 
                      profession ."</span>
                 </p>
-                <button onclick="seeMoreFunction2()" id="myBtn2">Read more</button>
+                
               </div>
             </div>
           </div>
@@ -125,15 +126,14 @@
                 <h4>Sue-Kelly Maneveld</h4>
                 <span>Former student of College of Cape Town TVET</span>
                 <p>
-                  "I am the pround owner of Be-Dazzle hair and Beauty salons. All of <span id="dots3">...</span>
-                  <span id="more3">this would  not have been possible without the College of Cape Town being a stepping stone and allowing me to fulfil 
-                  my dreams."  </span>
+                  "I am the pround owner of Be-Dazzle hair and Beauty salons. All of this would  not have been possible without the College of Cape Town being a stepping stone and allowing me to fulfil 
+                  my dreams."  
                 </p>
-                <button onclick="seeMoreFunction3()" id="myBtn3">Read more</button>
+              
               </div>
             </div>
           </div>
-
+</div>
         </div>
 
       </div>
@@ -193,86 +193,6 @@
       </div>
     </section>
     
-    <script>
-
-        function seeMoreFunction() {
-          var dots = document.getElementById("dots");
-          var moreText = document.getElementById("more");
-          
-          var btnText = document.getElementById("myBtn");
-         
-          if (dots.style.display === "none") {
-            dots.style.display = "inline";
-           
-            btnText.innerHTML = "Read more";
-            
-            moreText.style.display = "none";
-           
-          } else {
-            dots.style.display = "none";
-           
-            btnText.innerHTML = "Read less";
-           
-            moreText.style.display = "inline";
-           
-          }
-        }
-
-        function seeMoreFunction2() {
-          
-          var dots2 = document.getElementById("dots2");
-          
-          var moreText2 = document.getElementById("more2");
-
-          var btnText2 = document.getElementById("myBtn2");
-         
-          if (dots2.style.display === "none") {
-            
-            dots2.style.display = "inline";
-           
-            btnText2.innerHTML = "Read more";
-           
-            moreText2.style.display = "none";
-           
-          } else {
-          
-            dots2.style.display = "none";
-          
-            btnText2.innerHTML = "Read less";
-          
-            moreText2.style.display = "inline";
-           
-          }
-        }
-
-        function seeMoreFunction3() {
-          
-          var dots3 = document.getElementById("dots3");
-          
-          var moreText3 = document.getElementById("more3");
-
-          var btnText3 = document.getElementById("myBtn3");
-         
-          if (dots3.style.display === "none") {
-            
-            dots3.style.display = "inline";
-           
-            btnText3.innerHTML = "Read more";
-           
-            moreText3.style.display = "none";
-           
-          } else {
-          
-            dots3.style.display = "none";
-          
-            btnText3.innerHTML = "Read less";
-          
-            moreText3.style.display = "inline";
-           
-          }
-        }
-      
-    </script>
   </main><!-- End #main -->
    
   @endsection

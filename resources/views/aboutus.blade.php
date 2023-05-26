@@ -11,7 +11,7 @@
          About Us
         </div>
         
-
+        <div class="new">
         <div class="row" data-aos="zoom-in" data-aos-delay="100" >
           <div class="col-lg-4" align="center">
               <div class="card">
@@ -24,9 +24,11 @@
                     <p class="fst-italic text-center">
                     This text should be updated based on TVET Colleges comments....                
                     </p>
-                    
-                    <p class="fst-italic text-center">
-                    <a href="abouttvet">View More</a></p>
+                    <!--
+                      <p class="fst-italic text-center">
+                        <a href="abouttvet">View More</a>
+                      </p>
+                    -->
                 </div>
               </div>
           </div>
@@ -42,9 +44,11 @@
                     <p class="fst-italic text-center">
                     This text should be updated based on Community Colleges comments....                
                     </p>
-                    
-                    <p class="fst-italic text-center">
-                    <a href="viewcommunitycolleges">View More</a></p>
+                    <!--
+                      <p class="fst-italic text-center">
+                        <a href="viewcommunitycolleges">View More</a>
+                      </p>
+                    -->
                 </div>
               </div>
           </div>
@@ -60,13 +64,15 @@
                     <p class="fst-italic text-center">
                     This text should be updated based on SETAs comments....                
                     </p>
-                    
-                    <p class="fst-italic text-center">
-                    <a href="viewsetas">View More</a></p>
+                    <!--
+                      <p class="fst-italic text-center">
+                        <a href="viewsetas">View More</a>
+                      </p>
+                    -->
                 </div>
               </div>
           </div>
-
+</div>
         </div>
       </div>
    <!-- </section>--><!-- End Trainers Section -->

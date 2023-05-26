@@ -1774,19 +1774,42 @@ section {
     right: 0;
     top: 0;
   }
-  .topnav.responsive a {
+.topnav.responsive a {
     float: none;
     display: block;
     text-align: left;
   }
 }
-/*
-.row .col-lg-3 .card-body {
-  white-space: nowrap;
-  overflow-x: hidden;
-  text-overflow: ellipsis; 
-}
-*/
+
+
+
 #more {display: none;}
 #more2 {display: none;}
 #more3 {display: none;}
+
+
+.new .row .col-lg-3 {
+  display: flex;
+  
+}
+
+
+.new .row .col-lg-4 {
+  display: flex;
+}
+
+.theSiteImages {
+  display: flex;
+  justify-content: center;
+}
+.box{
+  color: #16537e;
+}
+
+.info{
+  color: #16537e;
+}
+
+.bx {
+  color: #16537e;
+}

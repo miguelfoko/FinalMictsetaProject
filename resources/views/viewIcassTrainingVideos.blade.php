@@ -9,17 +9,17 @@
       <div class="member2" >
          ICASS Training Videos
         </div>
+        <div class="new">
         <div class="row" data-aos="zoom-in" data-aos-delay="100">
           @foreach ($icasstrainingvideos as $icasstrainingvideo) 
 
             <div class="col-lg-3 col-md-6 ">
-              <div class="box featured">
+              <div class="box featured text-center">
                 <h3>Module {{$icasstrainingvideo->module}}-Session {{$icasstrainingvideo->session}}</h3>
                 
-                  <div >
+                <div class="theSiteImages">
                               <video width="320" height="240" controls>
                                   <source src="{{url('videos')}}/{{$icasstrainingvideo->video}}" type="video/mp4">
-                                  
                               </video>        
                   </div>
                   <h6>{{$icasstrainingvideo->title}}</h6>
@@ -29,7 +29,7 @@
             </div>
           @endforeach
         </div>
-
+    </div>
       </div>
     
   </main><!-- End #main -->

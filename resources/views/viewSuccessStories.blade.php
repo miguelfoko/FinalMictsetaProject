@@ -13,12 +13,14 @@
         @foreach ($successstories as $sstory) 
 
         <div class="col-lg-3 col-md-6 ">
-            <div class="box featured">
+            <div class="box featured text-center">
               <h3>{{$sstory->title}}</h3>
+           
+             <div class="theSiteImages">
                 <embed src="{{url('images')}}/{{$sstory->coverPage}}" height="250" width="200">
-              <div >
+            </div >
                 <a href="{{url('files')}}/{{$sstory->file}}" target="_blank" rel="noopener" class="btn-buy">Open Document</a>
-              </div>
+             
             </div>
           </div>
         @endforeach

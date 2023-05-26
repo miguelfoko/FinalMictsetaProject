@@ -9,14 +9,15 @@
       <div class="member2" >
          Examination Training Videos
         </div>
+        <div class="new">
         <div class="row">
         @foreach ($examtrainingvideos as $examtrainingvideo) 
 
         <div class="col-lg-3 col-md-6 ">
-            <div class="box featured">
+            <div class="box featured text-center">
             <h3>Module {{$examtrainingvideo->module}}-Session {{$examtrainingvideo->session}}</h3>
               
-                <div >
+            <div class="theSiteImages">
                             <video width="320" height="240" controls>
                                 <source src="{{url('videos')}}/{{$examtrainingvideo->video}}" type="video/mp4">
                                 Your browser does not support the video tag
@@ -29,7 +30,7 @@
           </div>
         @endforeach
         </div>
-
+</div>
       </div>
    
 

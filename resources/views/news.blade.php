@@ -11,6 +11,7 @@
       <div class="member2" >
          Newsletter
         </div> 
+        <div class="new">
         <div class="row" > 
       @foreach ($news as $new) 
          <div class="col-lg-4" align="center">
@@ -32,7 +33,7 @@
           </div>
         @endforeach
         </div>
-
+</div>
         </div>
         {{ $news->links() }}
 
