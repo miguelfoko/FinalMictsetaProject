@@ -11,32 +11,32 @@
   <footer id="footer">
 
     <div class="footer-top">
-      <div class="container">
+      <div class="container-fluid">
         <div class="row">
-          <div class="col-lg-2 col-md-6 footer-links"> 
+          <div class="col-lg-3 col-md-6 footer-links text-center"> 
               <h4>About the TVET College Times website</h4>
             @foreach ($footerElement as $key )
                                 
                     <ul>                
-                        <li><i class="bx bx-chevron-right"></i> <a class="test">Purpose of the website</a></li>
+                        <li><a class="test">Purpose of the website</a></li>
                       
                           <div id="popup" title="{{ $key->purpose }}" class="bx bx-chevron-right">
                               {!! $key->purpose !!}
                           </div>
 
-                        <li><i class="bx bx-chevron-right"></i> <a class="test">Content available on the website</a></li>
+                        <li> <a class="test">Content available on the website</a></li>
                       
                           <div id="popup" title="{{ $key->content }}" class="bx bx-chevron-right">
                               {!! $key->content !!}
                           </div>
 
-                        <li><i class="bx bx-chevron-right"></i> <a class="test">Additional help to access information on the website</a></li>
+                        <li> <a class="test">Additional help to access information on the website</a></li>
                       
                           <div id="popup" title="{{ $key->additionalHelp }}" class="bx bx-chevron-right">
                               {!! $key->additionalHelp !!}
                           </div>
 
-                        <li><i class="bx bx-chevron-right"></i> <a class="test">Additional help to access information on the website</a></li>
+                        <li> <a class="test">Additional help to access information on the website</a></li>
                       
                           <div id="popup" title="{{ $key->listOfAccronyms }}" class="bx bx-chevron-right">
                               {!! $key->listOfAccronyms !!}
@@ -47,25 +47,25 @@
           </div>
 
 
-          <div class="col-lg-2 col-md-6 footer-links"> 
+          <div class="col-lg-3 col-md-6 footer-links text-center"> 
             <h4>Site Map</h4>
             <ul>
-              <li><i class="bx bx-chevron-right"></i> <a href="/">Home</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="/abouttvet">About TVET</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="/examinations">Examinations</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="/resources">Resources</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="/viewNews">News</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="/tvetcollegetimes">TVET College Times</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="/contactus">Contact US</a></li>
+              <li> <a href="/">Home</a></li>
+              <li> <a href="/abouttvet">About TVET</a></li>
+              <li> <a href="/examinations">Examinations</a></li>
+              <li> <a href="/resources">Resources</a></li>
+              <li> <a href="/viewNews">News</a></li>
+              <li> <a href="/tvetcollegetimes">TVET College Times</a></li>
+              <li> <a href="/contactus">Contact US</a></li>
             </ul>
           </div>
 
-          <div class="col-lg-3 col-md-6 footer-links">
+          <div class="col-lg-3 col-md-6 footer-links text-center">
                         <h4>Terms and conditions</h4>
               @foreach ($footerElement as $key )
                   
                     <ul>
-                      <li><i class="bx bx-chevron-right"></i> <a class="test">Copyright notice</a></li>
+                      <li> <a class="test">Copyright notice</a></li>
                       <div id="popup" title="{{ $key->copyright }}" class="bx bx-chevron-right">
                         
                           {!! $key->copyright !!}
@@ -75,7 +75,7 @@
                   
              
                     <ul>
-                      <li><i class="bx bx-chevron-right"></i> <a class="test">Disclaimer notice</a></li>
+                      <li> <a class="test">Disclaimer notice</a></li>
                       <div id="popup" title="{{ $key->disclaimer }}" class="bx bx-chevron-right">
                         
                         {!! $key->disclaimer !!}
@@ -86,15 +86,15 @@
             @endforeach
             </div>
 
-            <div class="col-lg-4 col-md-6 footer-newsletter">
-            <h4>Intranet</h4>
-            
-            <p> <a href="/home" target=”_blank”>Login as administrator</a></p>
-            
-            
-            <form action="" method="post">
-              <input type="email" name="email"><input type="submit" value="Subscribe">
-            </form>
+            <div class="col-lg-3 col-md-6 footer-newsletter text-center">
+              <h4>Intranet</h4>
+              
+               <a href="/home" target=”_blank”>Login as administrator</a>
+              
+              
+              <form action="" method="post">
+                <input type="email" name="email"><input type="submit" value="Subscribe">
+              </form>
           </div>
 
         </div>

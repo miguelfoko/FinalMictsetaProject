@@ -5,7 +5,7 @@
 
   <main id="main">
 
-      <div class="container" data-aos="fade-up">
+      <div class="container-fluid" data-aos="fade-up">
       <div class="member2" >
          SETAs
         </div>

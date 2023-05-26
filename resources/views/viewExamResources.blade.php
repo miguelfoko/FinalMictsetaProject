@@ -6,10 +6,12 @@
   <main id="main">
   
 
-      <div class="container">
+      <div class="container-fluid">
       <div class="member2" >
          Examination Resources
         </div>
+        </div>
+        <div class="container">
           <div class="row">
               <div class="col-md-12" id="fm-main-block">
                   <div id="fm"></div>

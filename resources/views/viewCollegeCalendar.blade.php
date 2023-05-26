@@ -33,10 +33,12 @@
 </script>
 
 
-      <div class="container" data-aos="fade-up">
+      <div class="container-fluid" data-aos="fade-up">
       <div class="member2" >
          College Calendar
         </div>
+          </div>
+     <div class="container" data-aos="fade-up">
         <div id='calendar'></div>
       </div>
    

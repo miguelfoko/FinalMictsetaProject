@@ -6,11 +6,12 @@
 
     <!-- ======= Trainers Section ======= --> 
      <!-- <section id="trainers" class="trainers ">-->
-      <div class="container" >
+      <div class="container-fluid" >
         <div class="member2" >
          About Us
         </div>
-        
+      </div>
+        <div class="container" >   
         <div class="new">
         <div class="row" data-aos="zoom-in" data-aos-delay="100" >
           <div class="col-lg-4" align="center">
@@ -20,7 +21,7 @@
                   <a href="abouttvet"> <img src="{{ asset('/img/CourseType.png') }}" align="center" alt="..."> </a>
                 </div>
                 <div class="card-body"> 
-                    <h5 class="card-title"><a href="viewcollegecoursetype">TVET Colleges</a></h5>
+                    <h5 class="card-title"><a href="abouttvet">TVET Colleges</a></h5>
                     <p class="fst-italic text-center">
                     This text should be updated based on TVET Colleges comments....                
                     </p>
@@ -40,7 +41,7 @@
                   <a href="viewcommunitycolleges"> <img src="{{ asset('/img/communityColleges.png') }}" align="center" alt="..."> </a>
                 </div>
                 <div class="card-body"> 
-                    <h5 class="card-title"><a href="viewcollegecoursetype">Community Colleges</a></h5>
+                    <h5 class="card-title"><a href="viewcommunitycolleges">Community Colleges</a></h5>
                     <p class="fst-italic text-center">
                     This text should be updated based on Community Colleges comments....                
                     </p>
@@ -60,7 +61,7 @@
                   <a href="viewsetas"> <img src="{{ asset('/img/setas.png') }}" align="center" alt="..."> </a>
                 </div>
                 <div class="card-body"> 
-                    <h5 class="card-title"><a href="viewcollegecoursetype">SETAs</a></h5>
+                    <h5 class="card-title"><a href="viewsetas">SETAs</a></h5>
                     <p class="fst-italic text-center">
                     This text should be updated based on SETAs comments....                
                     </p>

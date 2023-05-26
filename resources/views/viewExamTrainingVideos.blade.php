@@ -9,6 +9,8 @@
       <div class="member2" >
          Examination Training Videos
         </div>
+         </div>
+         <div class="container" data-aos="fade-up">
         <div class="new">
         <div class="row">
         @foreach ($examtrainingvideos as $examtrainingvideo) 

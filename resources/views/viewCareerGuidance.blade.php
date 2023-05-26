@@ -5,10 +5,12 @@
 
   <main id="main">
 
-      <div class="container" data-aos="fade-up">
+      <div class="container-fluid" data-aos="fade-up">
       <div class="member2" >
          Career Guidance
         </div>
+        </div>
+        <div class="container" data-aos="fade-up">
         <div class="row">
 
         @foreach ($careerguidance as $cguidance) 

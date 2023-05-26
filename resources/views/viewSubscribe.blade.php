@@ -5,11 +5,12 @@
 
   <main id="main">
  
-    <div class="container" data-aos="fade-up">
+    <div class="container-fluid" data-aos="fade-up">
       <div class="member2" >
          Subscription
       </div>
-
+       </div>
+ <div class="container" data-aos="fade-up">
       <div style="margin-top: 30px" data-aos="fade-up">
 
     <h2 style="color: #16537e;">Complete the form for subscription</h2>

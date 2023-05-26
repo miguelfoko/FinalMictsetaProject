@@ -139,10 +139,12 @@
       </div>
     </section><!-- End Trainers Section -->
     <section id="events" class="events">
-      <div class="container" data-aos="fade-up">
+      <div class="container-fluid" data-aos="fade-up">
         <div class="member1" >
           LATEST NEWS
         </div>
+        </div>
+        <div class="container" data-aos="fade-up">
         <div class="row">
 
           @foreach ($news as $new) 

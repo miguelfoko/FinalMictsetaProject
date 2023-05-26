@@ -7,7 +7,7 @@
 
     <!-- ======= Pricing Section ======= -->
    
-      <div class="container" data-aos="fade-up">
+      <div class="container-fluid" data-aos="fade-up">
 
       <div class="member2" >
       Community Education and Training Colleges

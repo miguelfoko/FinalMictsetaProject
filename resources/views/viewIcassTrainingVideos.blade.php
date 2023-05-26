@@ -9,6 +9,8 @@
       <div class="member2" >
          ICASS Training Videos
         </div>
+        </div>
+        <div class="container" data-aos="fade-up">
         <div class="new">
         <div class="row" data-aos="zoom-in" data-aos-delay="100">
           @foreach ($icasstrainingvideos as $icasstrainingvideo) 

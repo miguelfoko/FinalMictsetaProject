@@ -11,6 +11,8 @@
       <div class="member2" >
          Tvet College Times
         </div>
+        </div>
+        <div class="container" >
         <div class="row">
 
         @foreach ($tvetcollegetimes as $tctimes) 

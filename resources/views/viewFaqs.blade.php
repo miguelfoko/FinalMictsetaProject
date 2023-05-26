@@ -5,11 +5,12 @@
 
   <main id="main">
  
-        <div class="container" data-aos="fade-up">
+        <div class="container-fluid" data-aos="fade-up">
         <div class="member2" >
          Frequently Asked Questions
         </div>
-    
+         </div>
+    <div class="container" data-aos="fade-up">
         <div style="margin-top: 60px;" class="container">
             <div class="row">
 

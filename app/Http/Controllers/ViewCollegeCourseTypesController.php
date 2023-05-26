@@ -17,7 +17,7 @@ class ViewCollegeCourseTypesController extends Controller
     public function index()
     {
         $collegecoursetype = CollegeCourseType::orderBy('id','desc')->paginate(2);
-        $coursetype = CourseType::orderBy('id','desc')->paginate(1);
+        $coursetype = CourseType::orderBy('id','desc')->paginate(100);
 
         return view('viewCollegeCourseTypes', compact('collegecoursetype','coursetype'));
     }

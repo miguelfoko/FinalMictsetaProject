@@ -5,10 +5,12 @@
   <main id="main" data-aos="fade-up">
 
    
-      <div class="container" >
+      <div class="container-fluid" >
       <div class="member2" >
          Contact 
         </div>
+        </div>
+        <div class="container" >
         <div class="new">
         <div class="row" data-aos="zoom-in" data-aos-delay="100">
 

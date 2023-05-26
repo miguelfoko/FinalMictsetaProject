@@ -31,10 +31,12 @@
     <!-- ======= Courses Section ======= -->
    
    
-      <div class="container" data-aos="fade-up">
+      <div class="container-fluid" data-aos="fade-up">
           <div class="member2" >
           Examination
           </div>
+          </div>
+          <div class="container" data-aos="fade-up">
           <div class="new">
           <div class="row" data-aos="zoom-in" data-aos-delay="100">
 

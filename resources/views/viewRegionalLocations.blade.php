@@ -6,19 +6,13 @@
   <main id="main">
  
 
-      <div class="container" data-aos="fade-up">
+      <div class="container-fluid" data-aos="fade-up">
         <div class="member2" >
          Regional Locations
         </div>
       </div>
 
-
-    <div class="container mt-5">
-      
-        <div id="map"></div>
-    </div>
-
-    <script type="text/javascript"> 
+      <script type="text/javascript"> 
           function initMap() {
               const myLatLng = { lat: -25.760319754713873, lng: 28.190917968750004 };
               const map = new google.maps.Map(document.getElementById("map"), {
@@ -44,16 +38,24 @@
           }
           window.initMap = initMap;
     </script>
-<script async
-    src="https://maps.googleapis.com/maps/api/js?key={{ env('GOOGLE_MAP_KEY') }}&region=GB&callback=initMap">
-</script>
-      <div style="margin-top: 60px;" class="container">
-            <div class="row">
-            <div class="no">
-            {{$i=0}} {{$j=0}}
-            </div>
+    <script async
+      src="https://maps.googleapis.com/maps/api/js?key={{ env('GOOGLE_MAP_KEY') }}&region=GB&callback=initMap">
+  </script>
+
+    <div class="container-fluid">
+      <div class="row mt-5">
+          
+            <div class="col-lg-6 mt-5 mt-lg-0" id="map"> </div>
+          
+         
+
+      
+           
+              <div class="no">
+              {{$i=0}} {{$j=0}}
+              </div>
             @foreach ($regionallocations as $regionallocation)        
-            <div class="col-lg-4">
+            <div class="col-lg-3">
 
             
               <div class="dropdown">
@@ -67,7 +69,7 @@
                         <p>{{$regionallocation->city}}</p>
                       </div>
                       <div class="email">
-                        <h4>Principal</h4> 
+                        <h4>Principal</h4>  
                         <p>Name: {{$regionallocation->principal}}</p>
                         <p>Emails: {{$regionallocation->principalEmails}}
                       </div>
@@ -84,12 +86,14 @@
                         <h4>Contact Number</h4>
                         <p>{{$regionallocation->phone}}</p>
                       </div>
-                  </div>
+                    </div>
               </div>
             </div>
-        @endforeach  
+           
+            @endforeach  
+          
+            </div> 
           </div>
-
           <script>
         /* When the user clicks on the button, 
         toggle between hiding and showing the dropdown content */

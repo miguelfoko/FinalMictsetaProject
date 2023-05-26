@@ -1810,6 +1810,81 @@ section {
   color: #16537e;
 }
 
-.bx {
+.col-lg-3 a {
+  color: #16537e !important;
+  justify-content: center;
+}
+
+a {
   color: #16537e;
+}
+
+
+.col-lg-3 ul li{
+  justify-content: center;
+}
+
+
+a:hover {
+  color: #f7931e!important;
+}
+
+
+.noUseOfWysiwyg {
+  color: #16537e !important;
+}
+
+.noUseOfWysiwyg {
+  color: #f7931e !important;
+  margin: 15px 0 15px 0;
+}
+
+span{
+  color: #16537e !important;
+  font-family: Arial, Helvetiva, sans-serif !important;
+  font-weight: normal !important;
+  margin: 15px 0 15px 0;
+}
+
+
+p{
+  color: #16537e !important;
+  font-family: Arial, Helvetiva, sans-serif !important;
+  font-weight: normal !important;
+  text-align: justify !important;
+}
+
+strong{
+  color: #16537e !important;
+  font-family: Arial, Helvetiva, sans-serif !important;
+  font-weight: normal !important;
+  text-align: justify !important;
+}
+
+.table .question td{
+  background-color: #f7931e;
+  color: #16537e;
+  text-align: center ;
+  font-weight: bold ;
+}
+
+.mien{
+  background-color: #f7931e;
+  color: #16537e;
+  text-align: justify ;
+  font-weight: bold ;
+  height: 100%;
+}
+
+.table{
+  width: 75%!important;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.centering {
+  height: 40% !important;
+  width: 40% !important;
+  margin-left: auto;
+  margin-right: auto;
 }

@@ -11,6 +11,8 @@
       <div class="member2" >
          Newsletter
         </div> 
+        </div> 
+        <div class="container" >
         <div class="new">
         <div class="row" > 
       @foreach ($news as $new) 

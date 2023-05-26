@@ -5,21 +5,22 @@
 
   <main id="main">
    
-      <div class="container" data-aos="fade-up">
+      <div class="container-fluid" data-aos="fade-up">
       <div class="member2" >
       Public TVET Colleges
       </div>
+   
+      <div class="noUseOfWysiwyg">
+        @foreach ($abouttvet as $attvet) 
+            <h3> </h3>
+            {!! $attvet->publicTvetColleges !!}
 
-      @foreach ($abouttvet as $attvet) 
-          <h3> </h3>
-          {!! $attvet->publicTvetColleges !!}
-
-          <br><br>
-          
-          <h3>TVET College Administration </h3>
-          {!! $attvet->tvetCollegeAdministration !!}
-      @endforeach
- 
+            <br><br>
+            
+            <h3>TVET College Administration </h3>
+            {!! $attvet->tvetCollegeAdministration !!}
+        @endforeach
+      </div>
       </div>
    
 

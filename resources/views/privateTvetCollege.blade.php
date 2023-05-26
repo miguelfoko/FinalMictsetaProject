@@ -5,14 +5,15 @@
 
   <main id="main" data-aos="fade-up">
 
-      <div class="container" >
+      <div class="container-fluid" >
       <div class="member2" >
       Private Colleges
       </div>
-  @foreach ($abouttvet as $attvet)
-    {!! $attvet->privateTvetColleges !!}
-    @endforeach
- 
+      <div class="noUseOfWysiwyg">
+        @foreach ($abouttvet as $attvet)
+        {!! $attvet->privateTvetColleges !!}
+        @endforeach
+      </div>
 
       </div>
    
