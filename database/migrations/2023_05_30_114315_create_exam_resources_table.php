@@ -7,7 +7,7 @@ use Illuminate\Support\Facades\Schema;
 class CreateExamResourcesTable extends Migration
 {
     /**
-     * Run the migrations.
+     * Run the migrations. 
      *
      * @return void
      */
@@ -16,6 +16,13 @@ class CreateExamResourcesTable extends Migration
         Schema::create('exam_resources', function (Blueprint $table) {
             $table->id();
             $table->timestamps();
+            $table->string('category');
+            $table->string('file'); 
+            $table->string('name'); 
+            $table->foreignId('user_id')
+                ->constrained('users')
+                ->onUpdate('cascade')
+                ->onDelete('cascade');
         });
     }
 

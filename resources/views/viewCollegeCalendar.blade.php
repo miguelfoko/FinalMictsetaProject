@@ -32,16 +32,16 @@
   });
 </script>
 
-
+<section id="pricing" class="pricing">
       <div class="container-fluid" data-aos="fade-up">
-      <div class="member2" >
-         College Calendar
-        </div>
-          </div>
-     <div class="container" data-aos="fade-up">
-        <div id='calendar'></div>
+            <div class="member2" >
+              College Calendar
+            </div>
       </div>
-   
+      <div class="container" data-aos="fade-up">
+        <div class="calendar" id='calendar'></div>
+      </div>
+</section>
   </main><!-- End #main -->
 
  @endsection

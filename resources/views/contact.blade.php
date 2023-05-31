@@ -2,15 +2,15 @@
 
 @section('content')
 
-  <main id="main" data-aos="fade-up">
+  <main id="main" data-aos="fade-in">
 
-   
+  <section id="events" class="events">
       <div class="container-fluid" >
       <div class="member2" >
          Contact 
         </div>
         </div>
-        <div class="container" >
+        <div class="container" data-aos="fade-up" >
         <div class="new">
         <div class="row" data-aos="zoom-in" data-aos-delay="100">
 
@@ -21,7 +21,7 @@
                 <div class="card-img">
                     <a href="viewgetintouch"><img src="{{ asset('/img/ContactUsDetails.png') }}" alt="..."></a>
                 </div>
-                <div class="card-body text-center">
+                <div class="card-body">
                     <h5 class="card-title"><a href="viewgetintouch">Contact Details</a></h5>
                     <p class="fst-italic text-center">We would love to hear from you if you would like to get more information,
                       please feel free to <a href="#">contact us</a>.
@@ -32,12 +32,11 @@
                     </p>
                     <p class="fst-italic text-center">or simply click the link below  to complete our contact form
                     </p>
-                    <!--
-                      <p class="fst-italic text-center">
-                        <a href="viewgetintouch"> Get In Touch</a>
-                      </p>
-                    -->
+                    
                 </div>
+                <p class="fst-italic text-center">
+                        <a href="viewgetintouch"> Get In Touch</a>
+                </p>
             </div>
           </div>
 
@@ -52,12 +51,13 @@
                 <p class="fst-italic text-center">
                   The technical and Vocational Education and training (TVET) branch of DHET is responsible for all things TVET does so through its 6 regional office locations
                 </p>
-                <!--
-                  <p class="fst-italic text-center">
-                    <a href="viewregionallocations">View Location Details</a>
-                  </p>
-                -->
+              
             </div>
+            
+            <p class="fst-italic text-center">
+                    <a href="viewregionallocations">View Location Details</a>
+            </p>
+              
             </div>
           </div>
 
@@ -74,12 +74,11 @@
                  <a href="#">contact us</a> with your enquiry. 
                 
                 </p>
-                <!--
-                  <p class="fst-italic text-center">
-                    <a href="viewfaqs">View FAQs</a>
-                  </p>
-                -->
+               
             </div>
+            <p class="fst-italic text-center">
+                    <a href="viewfaqs">View FAQs</a>
+            </p>
             </div>
           </div>
 
@@ -88,7 +87,7 @@
         </div>
       </div>
    
-
+</section>
   </main><!-- End #main -->
 
   @endsection

@@ -5,7 +5,7 @@
 
   <main id="main">
  
-
+  <section id="events" class="events">
       <div class="container-fluid" data-aos="fade-up">
         <div class="member2" >
          Regional Locations
@@ -46,13 +46,8 @@
       <div class="row mt-5">
           
             <div class="col-lg-6 mt-5 mt-lg-0" id="map"> </div>
-          
-         
-
-      
-           
               <div class="no">
-              {{$i=0}} {{$j=0}}
+                {{$i=0}} {{$j=0}}
               </div>
             @foreach ($regionallocations as $regionallocation)        
             <div class="col-lg-3">
@@ -131,7 +126,7 @@
 
       
     </script>
-          
+        </section>  
   </main><!-- End #main -->
 
  @endsection

@@ -4,7 +4,7 @@
 
 
   <main id="main">
-
+  <section id="pricing" class="pricing">
       <div class="container-fluid" data-aos="fade-up">
       <div class="member2" >
          Success Stories
@@ -29,7 +29,7 @@
         </div>
 
       </div>
-   
+</section>
   </main><!-- End #main -->
 
  @endsection

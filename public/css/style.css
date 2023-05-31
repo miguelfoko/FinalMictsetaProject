@@ -849,10 +849,20 @@ section {
 }
 
 .welcometrainer .member {
-  
+   margin-left: auto;
+  margin-right: auto;
   text-align: center;
   background: #fff;
   border: 1px solid #eef0ef;
+}
+
+.welcometrainer .container-fluid .new .row {
+  padding: 10px 10px 10px 10px;
+ }
+
+.welcometrainer .container-fluid .new .row .col-lg-4 .member .img-fluid {
+ margin-left: auto;
+ margin-right: auto;
 }
 
 .welcometrainer .member1,
@@ -864,10 +874,12 @@ section {
 }
 
 .member2 {
-  
+  margin: -1px -1px 10px -1px;
   text-align: center;
   background: #f7931e;
   border: 1px solid #eef0ef;
+  width: 100%;
+  padding: 0 0 0 0;
 }
 
 .welcometrainer .member img {
@@ -1145,10 +1157,10 @@ section {
 .events{
   border: 0;
   padding: 0 0 0 0;
-  text-align: center;
+  text-align: justify;
   border: 1px solid #144069;
   position: relative;
-  background: #f7931e;
+  background: #fff;
 }
 
 .events .card {
@@ -1178,7 +1190,7 @@ section {
   border-top: 4px solid #fff;
   padding: 30px;
   box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.1);
-  margin-top: -60px;
+  margin-top: 0px;
   transition: 0.3s;
   
 }
@@ -1211,11 +1223,11 @@ section {
 }
 
 .events .card:hover img {
-  transform: scale(1.1);
+  transform: scale(0.9);
 }
 
 .events .card:hover .card-body {
-  border-color: #144069;
+  border-color: #f7931e;
 }
 
 .events .card:hover .card-body .card-title a {
@@ -1225,11 +1237,15 @@ section {
 /*--------------------------------------------------------------
 # Pricing
 --------------------------------------------------------------*/
+.pricing {
+  padding: 0 0 0 0;
+  border: 1px solid #144069;
+}
 .pricing .box {
   padding: 20px;
   background: #fff;
   text-align: center;
-  border: 1px solid #eef0ef;
+  border: 1px solid #144069;
   border-radius: 0;
   position: relative;
   overflow: hidden;
@@ -1243,12 +1259,12 @@ section {
   font-size: 16px;
   font-weight: 600;
   color: #777777;
-  background: #f8f8f8;
+  background: #144069!important;
 }
 
 .pricing h4 {
   font-size: 36px;
-  color: #5fcf80;
+  color: #f7931e;
   font-weight: 600;
   font-family: "Poppins", sans-serif;
   margin-bottom: 20px;
@@ -1298,16 +1314,27 @@ section {
 }
 
 .pricing .btn-buy {
-  background: #5fcf80;
+  background: #f7931e;
   display: inline-block;
   padding: 8px 35px;
   border-radius: 50px;
-  color: #fff;
+  color: #f7931e;
   transition: none;
   font-size: 14px;
   font-weight: 400;
   font-family: "Raleway", sans-serif;
   font-weight: 600;
+  transition: 0.3s;
+}
+
+ .btn-buy1 {
+  display: inline-block;
+  padding: 1px 1px;
+  color: red!important;
+  transition: none;
+  background-color: #fff;
+
+  font-family: "Raleway", sans-serif;
   transition: 0.3s;
 }
 
@@ -1330,6 +1357,12 @@ section {
   font-size: 14px;
   padding: 1px 0 3px 0;
   background: #5fcf80;
+  color: #fff;
+}
+
+.pricing .container .calendar {
+  width: 75%;
+  height: 25%!important;
   color: #fff;
 }
 
@@ -1796,6 +1829,12 @@ section {
 
 .new .row .col-lg-4 {
   display: flex;
+}
+
+
+.theSiteFM {
+  display: flex;
+  justify-content: center;
 }
 
 .theSiteImages {

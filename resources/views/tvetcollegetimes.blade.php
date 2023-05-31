@@ -6,7 +6,7 @@
   <main id="main" data-aos="fade-up">
 
     <!-- ======= Pricing Section ======= -->
-  
+    <section id="pricing" class="pricing">
       <div class="container-fluid" >
       <div class="member2" >
          Tvet College Times
@@ -35,7 +35,13 @@
 
       </div>
   
-
+</section>
   </main><!-- End #main -->
 
+  <script>
+      jQuery('.btn-buy').click(function(){
+        var pdf = jQuery(this).attr('data-pdfurl');
+        jQuery('iframe #modal').attr('src', pdf);
+      });
+  </script>
  @endsection

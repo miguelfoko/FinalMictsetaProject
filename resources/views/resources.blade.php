@@ -6,7 +6,7 @@
  
   <main id="main" data-aos="fade-up">
 
-   
+  <section id="events" class="events">
       <div class="container-fluid" data-aos="fade-up">
         <div class="member2" >
           Resources
@@ -25,13 +25,11 @@
                       Public TVET Colleges offer a very wide range of courses/programmes that have been developed to respond 
     to the scarce skills needed by employers.
                                       
-                      </p>
-                <!--     
-                      <p class="fst-italic text-center">
+                      </p>                   
+                  </div>
+                  <p class="fst-italic text-center">
                         <a class="none" href="viewcollegecoursetype">View More</a>
                       </p>
-                  -->
-                  </div>
                 </div>
             </div>
 
@@ -47,14 +45,12 @@
                     Visit our calendar to see key dates for TVET College events.          
                     </p>
                     
+                        
                     
-                      <!-- 
-                        <p class="fst-italic text-center">
-                          <a class="none"  href="viewcollegecalendar">View Calendar</a>
-                        </p>
-                      -->
-                  
                 </div>
+                <p class="fst-italic text-center">
+                          <a class="none"  href="viewcollegecalendar">View Calendar</a>
+                </p>
               </div>
             </div>
 
@@ -70,12 +66,11 @@
                     Career Development Services (CDS) is a national initiative to bring free quality career information, advice 
       and counseling services.               
                     </p>
-                    <!-- 
-                      <p class="fst-italic text-center">
-                        <a href="viewcareerguidance">Get Guidance</a>
-                      </p>
-                    -->
+                    
                 </div>
+                <p class="fst-italic text-center">
+                        <a href="viewcareerguidance">Get Guidance</a>
+                </p>
               </div>
             </div>
           
@@ -91,18 +86,19 @@
                     <p class="fst-italic text-center">
                     Visit our calendar to see key dates for TVET College events.                
                     </p>
-                    <!-- 
-                      <p class="fst-italic text-center">
-                        <a href="viewsuccessstories">Get Stories</a>
-                      </p>
-                    -->
+                
                 </div>
+                
+                <p class="fst-italic text-center">
+                        <a href="viewsuccessstories">Get Stories</a>
+                </p>
+                   
               </div>
             </div>
           </div>
         </div>
       </div>
     
-
+</section>
   </main><!-- End #main -->
   @endsection

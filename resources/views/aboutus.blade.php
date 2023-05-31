@@ -6,8 +6,9 @@
 
     <!-- ======= Trainers Section ======= --> 
      <!-- <section id="trainers" class="trainers ">-->
+     <section id="events" class="events">
       <div class="container-fluid" >
-        <div class="member2" >
+        <div class="member2" > 
          About Us
         </div>
       </div>
@@ -25,12 +26,11 @@
                     <p class="fst-italic text-center">
                     This text should be updated based on TVET Colleges comments....                
                     </p>
-                    <!--
-                      <p class="fst-italic text-center">
-                        <a href="abouttvet">View More</a>
-                      </p>
-                    -->
+                    
                 </div>
+                <p class="fst-italic text-center">
+                        <a href="abouttvet">View More</a>
+                </p>
               </div>
           </div>
 
@@ -45,12 +45,13 @@
                     <p class="fst-italic text-center">
                     This text should be updated based on Community Colleges comments....                
                     </p>
-                    <!--
-                      <p class="fst-italic text-center">
-                        <a href="viewcommunitycolleges">View More</a>
-                      </p>
-                    -->
+                
                 </div>
+                
+                <p class="fst-italic text-center">
+                        <a href="viewcommunitycolleges">View More</a>
+                </p>
+                  
               </div>
           </div>
 
@@ -65,17 +66,19 @@
                     <p class="fst-italic text-center">
                     This text should be updated based on SETAs comments....                
                     </p>
-                    <!--
-                      <p class="fst-italic text-center">
-                        <a href="viewsetas">View More</a>
-                      </p>
-                    -->
+               
                 </div>
+                
+                <p class="fst-italic text-center">
+                        <a href="viewsetas">View More</a>
+                </p>
+                
               </div>
           </div>
 </div>
         </div>
       </div>
+      </section><!-- End Events Section -->
    <!-- </section>--><!-- End Trainers Section -->
 
   </main><!-- End #main -->

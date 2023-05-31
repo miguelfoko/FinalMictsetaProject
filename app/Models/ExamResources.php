@@ -8,4 +8,5 @@ use Illuminate\Database\Eloquent\Model;
 class ExamResources extends Model
 {
     use HasFactory;
-}
+    protected $fillable = ['category','file','name']; 
+}  

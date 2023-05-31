@@ -39,6 +39,7 @@ use App\Http\Controllers\ViewSubscribeController;
 use App\Http\Controllers\SubscribeController;
 use App\Http\Controllers\CommunityCollegesController;
 use App\Http\Controllers\SetasController;
+use App\Http\Controllers\ShowExamResourceController;
 
 
 
@@ -87,7 +88,9 @@ Route::resource('/examtrainingvideos',ExamTrainingVideosController::class);
 Route::resource('/viewexamresources',ViewExamResourcesController::class);
 Route::resource('/viewexamtrainingvideos',ViewExamTrainingVideosController::class);
 Route::resource('/viewicasstrainingvideos',ViewIcassTrainingVideosController::class);
-Route::resource('/examresources',ExamResourceController::class);
+Route::resource('/examinformationresources',ExamResourceController::class);
+Route::resource('/showexaminformationresources',ShowExamResourceController::class);
+
 
 
 
@@ -106,7 +109,7 @@ Route::resource('/viewcareerguidance',ViewCareerGuidanceController::class);
 Route::get('/updateResources', [App\Http\Controllers\AdminResourcesController::class, 'index'])->name('admin.adminResources');
 
 
-
+ 
 
 //About TVET Pages---------------------------------------------------------------------------------
 Route::get('/updateAboutTvet', [App\Http\Controllers\AdminAboutTvetController::class, 'index'])->name('admin.adminAboutTvet');

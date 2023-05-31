@@ -77,7 +77,7 @@
 
 
         </div>
-      </div>
+      </div> 
     </section>
 
     <section id="welcometrainer" class="welcometrainer">
@@ -93,7 +93,7 @@
               <div  >
                 <h4>Mokone Mofokeng</h4>
                 <span>Former student of Maluti TVET College</span>
-                <p >
+                <p class="fst-italic text-center">
                   "The quality training that I got from Maluti TVET College pushed   
                   me to become my own boss. I am the successfull owner of Monoceros Electrical company"
                 </p>
@@ -108,7 +108,7 @@
               <div >
                 <h4>Snethemba Mpontshane</h4>
                 <span>Former Electrical Engineering student at Majuba TVET College</span>
-                <p>
+                <p class="fst-italic text-center">
                   "I'm a qualified Senior Electrican at Eskom based at the Kusile Power 
                  Station in Witbank. The practical training , advanced equipment that we were exposed to in
                      workshops and highly skilled lecturers laid a solid foundation for me to achieve success in my 
@@ -125,7 +125,7 @@
               <div >
                 <h4>Sue-Kelly Maneveld</h4>
                 <span>Former student of College of Cape Town TVET</span>
-                <p>
+                <p class="fst-italic text-center">
                   "I am the pround owner of Be-Dazzle hair and Beauty salons. All of this would  not have been possible without the College of Cape Town being a stepping stone and allowing me to fulfil 
                   my dreams."  
                 </p>
@@ -160,9 +160,11 @@
                           {{ $new->subtitle }}
                           </p>
                           
-                          <p class="fst-italic text-center">
-                          <a href="{{route('viewNews.show',$new->id)}}">Read more</a></p>
                       </div>
+                      
+                      <p class="fst-italic text-center">
+                          <a href="{{route('viewNews.show',$new->id)}}">Read more</a>
+                      </p>
                     </div>
                 </div>
               

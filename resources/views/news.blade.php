@@ -6,17 +6,17 @@
   <main id="main" data-aos="fade-up">
 
     <!-- ======= Events Section ======= -->
-  
+    <section id="events" class="events">
       <div class="container-fluid" >
       <div class="member2" >
          Newsletter
         </div> 
-        </div> 
-        <div class="container" >
-        <div class="new">
+      </div> 
+        <div class="container" data-aos="fade-up">
+       
         <div class="row" > 
       @foreach ($news as $new) 
-         <div class="col-lg-4" align="center">
+         <div class="col-lg-4 col-md-6 d-flex align-items-stretch" align="center">
             <div class="card">
            
             <div class="card-img">
@@ -27,20 +27,21 @@
                 <p class="fst-italic text-center">
                 {{ $new->subtitle }}
                 </p>
-                
-                <p class="fst-italic text-center">
-                <a href="{{route('viewNews.show',$new->id)}}">Read more</a></p>
+
             </div>
+            <p class="fst-italic text-center">
+              <a href="{{route('viewNews.show',$new->id)}}">Read more</a>
+            </p>
             </div>
           </div>
         @endforeach
         </div>
-</div>
+
         </div>
         {{ $news->links() }}
 
       </div>
-   
+      </section><!-- End Events Section -->
 
   </main><!-- End #main -->
   @endsection

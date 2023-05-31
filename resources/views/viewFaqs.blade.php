@@ -11,14 +11,15 @@
         </div>
          </div>
     <div class="container" data-aos="fade-up">
-        <div style="margin-top: 60px;" class="container">
-            <div class="row">
+    <div class="new">
+            <div class="row  mt-5">
 
-            <div class="no">
-            {{$i=0}} {{$j=0}}
-            </div>
+              <div class="no">
+              {{$i=0}} {{$j=0}}
+              </div>
+          
             @foreach ($faqs as $faq)   
-                
+            
               
                 <div class="dropdown" >
                       <button id="toggle{{$j=$j+1}}" onclick="myFunction()" class="dropbtn" >{{$faq->title}} <i class="fa fa-caret-down"></i></button>
@@ -26,9 +27,9 @@
                             {!! $faq->content !!}  
                       </div>
                   </div>
-                         
+                  
               @endforeach  
-  
+            </div>
           </div>
         </div>
                   <!--   {{ $faqs->links() }} -->

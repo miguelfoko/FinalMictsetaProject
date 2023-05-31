@@ -9,7 +9,7 @@
                 <div class="card-header">{{ __('Examination') }}</div>
 
                 <div class="card-body">
-                    <div class="card-body"><a href="examresources">Manage Examination Resources</a></div>
+                    <div class="card-body"><a href="examinformationresources">Manage Examination Resources</a></div>
                     <div class="card-body"><a href="examtrainingvideos">Update Training Videos</a></div>
                     <div class="card-body"><a href="icasstrainingvideos">Update ICASS Training Videos</a></div>
                 </div>

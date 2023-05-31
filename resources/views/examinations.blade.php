@@ -29,14 +29,15 @@
   <main id="main" data-aos="fade-in">
 
     <!-- ======= Courses Section ======= -->
-   
+    
+    <section id="events" class="events">
    
       <div class="container-fluid" data-aos="fade-up">
           <div class="member2" >
-          Examination
+           Examination
           </div>
-          </div>
-          <div class="container" data-aos="fade-up">
+      </div>
+      <div class="container" data-aos="fade-up">
           <div class="new">
           <div class="row" data-aos="zoom-in" data-aos-delay="100">
 
@@ -51,12 +52,13 @@
                   <p class="fst-italic text-center">
                     {!! $text1 !!}
                   </p>
-                  <!--
-                    <p class="fst-italic text-center">
-                      <a href="viewexamresources">View Ressources</a>
-                    </p>
-                  -->
+               
+                   
+           
               </div>
+              <p class="fst-italic text-center">
+                      <a href="viewexamresources">View Ressources</a>
+              </p>
               </div>
             </div>
 
@@ -71,12 +73,13 @@
                   <p class="fst-italic text-center">
                   {!! $text2 !!}
                   </p>
-                  <!--
-                    <p class="fst-italic text-center">
-                      <a href="viewexamtrainingvideos">View Videos</a>
-                    </p>
-                  -->
+                 
               </div>
+              
+              <p class="fst-italic text-center">
+                      <a href="viewexamtrainingvideos">View Videos</a>
+              </p>
+                 
               </div>
             </div>
 
@@ -92,12 +95,11 @@
                     <p class="fst-italic text-center">
                     {!! $text3 !!}
                     </p>
-                    <!--
-                      <p class="fst-italic text-center">
-                        <a href="viewicasstrainingvideos">View Videos</a>
-                      </p>
-                      -->
+                           
                 </div>
+                <p class="fst-italic text-center">
+                        <a href="viewicasstrainingvideos">View Videos</a>
+                </p>
               </div>
             </div>
 
@@ -105,7 +107,7 @@
     </diV>
       </div>
    
-
+      </section>
   </main><!-- End #main -->
   
   @endsection
