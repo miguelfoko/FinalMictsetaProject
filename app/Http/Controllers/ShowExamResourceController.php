@@ -16,30 +16,38 @@ class ShowExamResourceController extends Controller
         $cat=$request->cat;
         switch($cat){
             case 1:
-                $examresources = ExamResources::where('category','Exam_Entry_Form')->paginate(5);
+                $category="Exam Entry Form";
+                $examresources = ExamResources::where('category','Exam_Entry_Form')->paginate(500);
                 break;
             case 2:
-                $examresources = ExamResources::where('category','Examination_Re_Marking')->paginate(5);
+                $category="Examination Re-Marking";
+                $examresources = ExamResources::where('category','Examination_Re_Marking')->paginate(500);
                 break;
             case 3:
-                $examresources = ExamResources::where('category','Examination_Time_table')->paginate(5);
+                $category="Examination Timetable";
+                $examresources = ExamResources::where('category','Examination_Time_table')->paginate(500);
                 break;
             case 4:
-                $examresources = ExamResources::where('category','General_Items')->paginate(5);
+                $category="General Items";
+                $examresources = ExamResources::where('category','General_Items')->paginate(500);
                 break;
             case 5:
-                $examresources = ExamResources::where('category','Icass_Support_Documents')->paginate(5);
+                $category="ICASS Support Documents";
+                $examresources = ExamResources::where('category','Icass_Support_Documents')->paginate(500);
                 break;
             case 6:
-                $examresources = ExamResources::where('category','Management_Action_Planning')->paginate(5);
+                $category="Management Action Planning";
+                $examresources = ExamResources::where('category','Management_Action_Planning')->paginate(500);
                 break;
             case 7:
-                $examresources = ExamResources::where('category','Validation_Programmes')->paginate(5);
+                $category="Validation Programmes";
+                $examresources = ExamResources::where('category','Validation_Programmes')->paginate(500);
                 break;
             default:
-            $examresources = ExamResources::where('category','Exam_Entry_Form')->paginate(5);
+                $category="Exam Entry Form";
+                $examresources = ExamResources::where('category','Exam_Entry_Form')->paginate(500);
         } 
-        return view('showExamResourceinformationFiles',compact('examresources','cat')); 
+        return view('showExamResourceInformationFiles',compact('examresources','cat','category')); 
     }
 
     /**

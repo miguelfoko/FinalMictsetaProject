@@ -14,8 +14,6 @@
         @foreach ($abouttvet as $attvet) 
             <h3> </h3>
             {!! $attvet->publicTvetColleges !!}
-
-            <br><br>
             
             <h3>TVET College Administration </h3>
             {!! $attvet->tvetCollegeAdministration !!}

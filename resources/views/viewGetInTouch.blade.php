@@ -4,7 +4,7 @@
 
 <main id="main">
 
-
+<section id="events" class="events">
   <div class="container-fluid" data-aos="fade-up">
       <div class="member2" >
          Get In Touch
@@ -30,7 +30,7 @@
             </div>
 
             <div class="email">
-              <i class="bi bi-envelope"></i>
+              <i class="bi bi-envelope"></i> 
               <h4>Email:</h4>
               <p>TVET@dhet.gov.za</p>
             </div>
@@ -57,7 +57,7 @@
           </div>
 
         </div>
-
+          </section>
 </main><!-- End #main -->
 
   @endsection

@@ -882,6 +882,16 @@ section {
   padding: 0 0 0 0;
 }
 
+.container-fluid .member3 {
+  margin: -1px -1px 10px -1px;
+  text-align: center;
+  color:#eef0ef;
+  background: #144069!important;
+  border: 1px solid #eef0ef;
+  width: 100%;
+  padding: 0 0 0 0;
+}
+
 .welcometrainer .member img {
   margin: -1px -1px 30px -1px;
 }

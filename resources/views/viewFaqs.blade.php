@@ -4,7 +4,7 @@
 
 
   <main id="main">
- 
+  <section id="events" class="events">
         <div class="container-fluid" data-aos="fade-up">
         <div class="member2" >
          Frequently Asked Questions
@@ -72,7 +72,7 @@
 
       
     </script>
-
+</section>
   </main><!-- End #main -->
 
  @endsection
