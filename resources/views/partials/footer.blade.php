@@ -15,33 +15,35 @@
         <div class="row">
           <div class="col-lg-3 col-md-6 footer-links text-center"> 
               <h4>About the TVET College Times website</h4>
+              <span> This page provides information about the TVET College Times website, including: </span>
             @foreach ($footerElement as $key )
                                 
-                    <ul>                
-                        <li><a class="test">Purpose of the website</a></li>
+                <ul>      
+                  <div class="testeurB" >          
+                        <li><a class="testFooter " onclick="load_footer_content(1001,1006)">Purpose of the website</a></li>
+                            <div id="1001" title="{{ $key->purpose }}" class="bx ">
+                                {!! $key->purpose !!}
+                            </div>
+                        <li> <a class="testFooter" onclick="load_footer_content(1002,1006)">Content available on the website</a></li>
                       
-                          <div id="popup" title="{{ $key->purpose }}" class="bx bx-chevron-right">
-                              {!! $key->purpose !!}
-                          </div>
-
-                        <li> <a class="test">Content available on the website</a></li>
-                      
-                          <div id="popup" title="{{ $key->content }}" class="bx bx-chevron-right">
+                          <div id="1002" title="{{ $key->content }}" class="bx">
                               {!! $key->content !!}
                           </div>
 
-                        <li> <a class="test">Additional help to access information on the website</a></li>
+                        <li> <a class="testFooter" onclick="load_footer_content(1003,1006)"">Additional help to access information on the website</a></li>
                       
-                          <div id="popup" title="{{ $key->additionalHelp }}" class="bx bx-chevron-right">
+                          <div id="1003" title="{{ $key->additionalHelp }}" class="bx">
                               {!! $key->additionalHelp !!}
                           </div>
 
-                        <li> <a class="test">Additional help to access information on the website</a></li>
+                        <li> <a class="testFooter" onclick="load_footer_content(1004,1006)"">Additional help to access information on the website</a></li>
                       
-                          <div id="popup" title="{{ $key->listOfAccronyms }}" class="bx bx-chevron-right">
+                          <div id="1004" title="{{ $key->listOfAccronyms }}" class="bx">
                               {!! $key->listOfAccronyms !!}
                           </div>
-                    </ul>
+
+                  </div>   
+                </ul>
                 
               @endforeach
           </div>
@@ -65,21 +67,15 @@
               @foreach ($footerElement as $key )
                   
                     <ul>
-                      <li> <a class="test">Copyright notice</a></li>
-                      <div id="popup" title="{{ $key->copyright }}" class="bx bx-chevron-right">
-                        
+                      <div class="testeurB" >  
+                        <li> <a class="testFooter" onclick="load_footer_content(1005,1006)">Copyright notice</a></li>
+                        <div id="1005" title="{{ $key->copyright }}" class="bx ">
                           {!! $key->copyright !!}
-                       
-                      </div>
-                    </ul>
-                  
-             
-                    <ul>
-                      <li> <a class="test">Disclaimer notice</a></li>
-                      <div id="popup" title="{{ $key->disclaimer }}" class="bx bx-chevron-right">
-                        
-                        {!! $key->disclaimer !!}
-                        
+                        </div>
+                        <li> <a class="testFooter" onclick="load_footer_content(1006,1006)">Disclaimer notice</a></li>
+                        <div id="1006" title="{{ $key->disclaimer }}" class="bx ">
+                          {!! $key->disclaimer !!}
+                        </div>
                       </div>
                     </ul>
                   
@@ -117,9 +113,31 @@
     </div>
 
     <script type="text/javascript">
-    $(".test").click(function(){
-        $( "#popup" ).dialog();
-    });
+     function load_footer_content(theId,i){
+            var openDropdown = document.getElementById(theId);
+            if(openDropdown.style.display == "block"){
+              openDropdown.style.display = "none";
+            }else{
+              openDropdown.style.display = "block";
+            }
+            for(j=1001;j<=i;j++){
+              if(j!=theId){
+                openDropdown = document.getElementById(j);
+                openDropdown.style.display = "none";
+              }
+            }
+            
+        }
+       
+         // Close the dropdown if the user clicks outside of it
+         window.onclick = function(event) {
+          if (!event.target.matches('.testFooter')) {
+            for (k = 1001; k <= 1006; k++) {
+              var openDropdown = document.getElementById(k);
+                openDropdown.style.display = "none";
+            }
+          }
+        }
 </script>
     
   </footer><!-- End Footer -->

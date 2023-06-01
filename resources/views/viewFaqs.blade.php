@@ -15,15 +15,15 @@
             <div class="row  mt-5">
 
               <div class="no">
-              {{$i=0}} {{$j=0}}
+              {{$i=$faqs->count()}}
               </div>
           
             @foreach ($faqs as $faq)   
             
               
                 <div class="dropdown" >
-                      <button id="toggle{{$j=$j+1}}" onclick="myFunction()" class="dropbtn" >{{$faq->title}} <i class="fa fa-caret-down"></i></button>
-                      <div id="{{$i=$i+1}}" class="dropdown-content">
+                      <button onclick="load_faq_content({{$faq->id}},{{$i}})" class="dropbtn" >{{$faq->title}} <i class="fa fa-caret-down"></i></button>
+                      <div id="{{$faq->id}}" class="dropdown-content">
                             {!! $faq->content !!}  
                       </div>
                   </div>
@@ -36,36 +36,31 @@
        <!-- </div>  -->
    
     <script>
-        /* When the user clicks on the button, 
-        toggle between hiding and showing the dropdown content */
-        function myFunction() {
-          var toggles = document.getElementsByTagName("button");
-          const buttonPressed = e => {
-            //alert(e.target.id);  // Get ID of Clicked Element
-            var theId=e.target.id.substring(6);
-            //alert(theId);
+
+        function load_faq_content(theId,i){
             var openDropdown = document.getElementById(theId);
-            if (openDropdown.style.display !== "none") {
-                openDropdown.style.display = "none";
-            } else {
+            if(openDropdown.style.display == "block"){
+              openDropdown.style.display = "none";
+            }else{
               openDropdown.style.display = "block";
             }
-          }
-          for (let button of toggles) {
-            button.addEventListener("click", buttonPressed);
-          }  
+            for(j=1;j<=i;j++){
+              if(j!=theId){
+                openDropdown = document.getElementById(j);
+                openDropdown.style.display = "none";
+              }
+            }
+            
         }
-
+       
          // Close the dropdown if the user clicks outside of it
          window.onclick = function(event) {
           if (!event.target.matches('.dropbtn')) {
             var dropdowns = document.getElementsByClassName("dropdown-content");
-            var i;
-            for (i = 0; i < dropdowns.length; i++) {
-              var openDropdown = dropdowns[i];
-              if (openDropdown.classList.contains('show')) {
-                openDropdown.classList.remove('show');
-              }
+            var k;
+            for (k = 1; k <= dropdowns.length; k++) {
+              var openDropdown = document.getElementById(k);
+                openDropdown.style.display = "none";
             }
           }
         }

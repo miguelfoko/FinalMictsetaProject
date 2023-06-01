@@ -47,15 +47,15 @@
           
             <div class="col-lg-6 mt-5 mt-lg-0" id="map"> </div>
               <div class="no">
-                {{$i=0}} {{$j=0}}
+              {{$i=$regionallocations->count()}}
               </div>
             @foreach ($regionallocations as $regionallocation)        
             <div class="col-lg-3">
 
             
               <div class="dropdown">
-                  <button id="toggle{{$j=$j+1}}" onclick="myFunction()" class="dropbtn" >{{$regionallocation->region}} <i class="fa fa-caret-down"></i></button>
-                  <div id="{{$i=$i+1}}" class="dropdown-content">
+                  <button  onclick="load_regionalLocation_content({{$regionallocation->id}},{{$i}})" class="dropbtn" >{{$regionallocation->region}} <i class="fa fa-caret-down"></i></button>
+                  <div id="{{$regionallocation->id}}" class="dropdown-content">
                   <div class="address">
                       <p>{{$regionallocation->address}}</p>
                       </div>
@@ -89,40 +89,36 @@
           
             </div> 
           </div>
-          <script>
-        /* When the user clicks on the button, 
-        toggle between hiding and showing the dropdown content */
-        function myFunction() {
-          var toggles = document.getElementsByTagName("button");
-          const buttonPressed = e => {
-            //alert(e.target.id);  // Get ID of Clicked Element
-            var theId=e.target.id.substring(6);
-            //alert(theId);
-            var openDropdown = document.getElementById(theId);
-            if (openDropdown.style.display !== "none") {
-                openDropdown.style.display = "none";
-            } else {
+    <script>
+       
+       function load_regionalLocation_content(theId,i){
+          var openDropdown = document.getElementById(theId);
+            if(openDropdown.style.display == "block"){
+              openDropdown.style.display = "none";
+            }else{
               openDropdown.style.display = "block";
             }
-          }
-          for (let button of toggles) {
-            button.addEventListener("click", buttonPressed);
-          }  
+            for(j=1;j<=i;j++){
+              if(j!=theId){
+                openDropdown = document.getElementById(j);
+                openDropdown.style.display = "none";
+              }
+            }
         }
-
+       
          // Close the dropdown if the user clicks outside of it
          window.onclick = function(event) {
           if (!event.target.matches('.dropbtn')) {
             var dropdowns = document.getElementsByClassName("dropdown-content");
-            var i;
-            for (i = 0; i < dropdowns.length; i++) {
-              var openDropdown = dropdowns[i];
-              if (openDropdown.classList.contains('show')) {
-                openDropdown.classList.remove('show');
-              }
+            var k;
+            for (k = 1; k <= dropdowns.length; k++) {
+              var openDropdown = document.getElementById(k);
+                openDropdown.style.display = "none";
             }
           }
         }
+
+      
 
       
     </script>

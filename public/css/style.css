@@ -1937,3 +1937,25 @@ strong{
   margin-left: auto;
   margin-right: auto;
 }
+
+.testFooter {
+  color: #ccc;
+  width:100%;
+  text-align: center;
+  cursor: pointer;
+  outline: none;
+}
+.dropdown-contentFooter {
+  padding: 20px;
+  border: 1px solid #f7931e;
+  padding: 6px 8px 6px 16px;
+  display: none;
+  position: relative;
+  min-width: 160px;
+  overflow: auto;
+  z-index: 1;
+}
+
+.testeurB .bx {
+  display: none;
+}
