@@ -137,6 +137,12 @@
                 openDropdown.style.display = "none";
             }
           }
+          if (!event.target.matches('.dropbtn')) {
+            for (k = 1; k <= 100; k++) {
+              var openDropdown = document.getElementById(k);
+                openDropdown.style.display = "none";
+            }
+          }
         }
 </script>
     

@@ -17,7 +17,7 @@
 
         <div class="col-lg-3 col-md-6 ">
             <div class="box featured text-center">
-            <h3>Module {{$examtrainingvideo->module}}-Session {{$examtrainingvideo->session}}</h3>
+            Module {{$examtrainingvideo->module}}-Session {{$examtrainingvideo->session}}
               
             <div class="theSiteImages">
                             <video width="320" height="240" controls>
@@ -25,7 +25,7 @@
                                 Your browser does not support the video tag
                             </video>        
                 </div> 
-                <h6>{{$examtrainingvideo->title}}</h6>
+                {{$examtrainingvideo->title}}<br>
                 <a href="{{url('videos')}}/{{$examtrainingvideo->video}}" download>Download</a>
 
             </div>

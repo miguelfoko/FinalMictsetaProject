@@ -1932,8 +1932,14 @@ strong{
 }
 
 .centering {
-  height: 40% !important;
-  width: 40% !important;
+  height: 40% ;
+  width: 50% !important;
+  margin-left: auto;
+  margin-right: auto;
+}
+.centering2 {
+  height: 300px ;
+  width: 90% !important;
   margin-left: auto;
   margin-right: auto;
 }
@@ -1957,5 +1963,8 @@ strong{
 }
 
 .testeurB .bx {
+  display: none;
+}
+.testeurB .myTest {
   display: none;
 }

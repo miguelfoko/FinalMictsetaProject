@@ -17,14 +17,14 @@
 
             <div class="col-lg-3 col-md-6 ">
               <div class="box featured text-center">
-                <h3>Module {{$icasstrainingvideo->module}}-Session {{$icasstrainingvideo->session}}</h3>
+                Module {{$icasstrainingvideo->module}}-Session {{$icasstrainingvideo->session}}
                 
                 <div class="theSiteImages">
                               <video width="320" height="240" controls>
                                   <source src="{{url('videos')}}/{{$icasstrainingvideo->video}}" type="video/mp4">
                               </video>        
                   </div>
-                  <h6>{{$icasstrainingvideo->title}}</h6>
+                  {{$icasstrainingvideo->title}}<br>
                   <a href="{{url('videos')}}/{{$icasstrainingvideo->video}}" download>Download</a>
 
               </div>

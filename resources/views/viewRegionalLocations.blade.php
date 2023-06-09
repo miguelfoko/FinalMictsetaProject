@@ -24,8 +24,10 @@
               @foreach ($regionallocations as $regionallocation) 
                     var latitude= {{ Js::from($regionallocation->latitude) }};
                     var longitude= {{ Js::from($regionallocation->longitude) }};
+                    var texttitle= {{ Js::from($regionallocation->region) }};
                     marker = new google.maps.Marker({
                       position: new google.maps.LatLng(latitude, longitude),
+                      title:texttitle,
                       map: map
                     });             
                     google.maps.event.addListener(marker, 'click', (function(marker, i) {
@@ -43,17 +45,17 @@
   </script>
 
     <div class="container-fluid">
-      <div class="row mt-5">
+      <div class="row" align="center">
           
-            <div class="col-lg-6 mt-5 mt-lg-0" id="map"> </div>
+            <div class="col-lg-5 mt-5 mt-lg-0" id="map"> </div>
               <div class="no">
               {{$i=$regionallocations->count()}}
               </div>
-            @foreach ($regionallocations as $regionallocation)        
-            <div class="col-lg-3">
-
-            
-              <div class="dropdown">
+              <div class="col-lg-6  align-items-stretch">   
+              <div class="row">
+              @foreach ($regionallocations as $regionallocation)   
+              <div class="col-lg-5  align-items-stretch">
+                <div class="dropdown">
                   <button  onclick="load_regionalLocation_content({{$regionallocation->id}},{{$i}})" class="dropbtn" >{{$regionallocation->region}} <i class="fa fa-caret-down"></i></button>
                   <div id="{{$regionallocation->id}}" class="dropdown-content">
                   <div class="address">
@@ -82,13 +84,15 @@
                         <p>{{$regionallocation->phone}}</p>
                       </div>
                     </div>
-              </div>
-            </div>
-           
-            @endforeach  
+                </div>
+                </div>
+              @endforeach  
+        </div>
+        </div>
+       
           
-            </div> 
-          </div>
+      </div> 
+    </div>
     <script>
        
        function load_regionalLocation_content(theId,i){
