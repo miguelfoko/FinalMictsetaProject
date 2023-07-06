@@ -17,7 +17,10 @@
                 </div>
                 <div class="pull-right mb-2">
                     <a class="btn btn-success" href="{{ route('collegecoursetype.create') }}"> Create College Course Types</a>
+                    <a class="btn btn-success" href="{{ route('programs.index') }}"> View Programs</a>
                     <a class="btn btn-success" href="{{ route('coursetype.index') }}"> View Course Types</a>
+                    <a class="btn btn-success" href="{{ route('college.index') }}"> View Colleges</a>
+                    <a class="btn btn-success" href="{{ route('subjects.index') }}"> View Subjects</a>
                 </div>
             </div>
         </div>

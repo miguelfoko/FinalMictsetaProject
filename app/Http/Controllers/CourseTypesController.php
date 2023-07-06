@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 use App\Models\CourseType;
 use Auth;
+use App\Models\RegionalLocations;
+use App\Models\Program;
 
 use Illuminate\Http\Request;
 
@@ -25,7 +27,9 @@ class CourseTypesController extends Controller
     public function index()
     {
         $coursetype = CourseType::orderBy('id','desc')->paginate(5);
-        return view('admin.resources.coursetypes.index', compact('coursetype'));
+        $regionallocations = RegionalLocations::all();
+        $program=Program::all();
+        return view('admin.resources.coursetypes.index', compact('coursetype','regionallocations','program'));
     }
 
     /**
@@ -35,7 +39,9 @@ class CourseTypesController extends Controller
      */
     public function create()
     {
-        return view('admin.resources.coursetypes.create');
+        $regionallocations = RegionalLocations::all();
+        $programs = Program::all();
+        return view('admin.resources.coursetypes.create', compact('regionallocations','programs'));
     }
 
     /**
@@ -48,6 +54,7 @@ class CourseTypesController extends Controller
     {
         $request->validate([
             'type' => 'required',
+            'idprogram'=>'required',
             'description' => 'required',
             'duration' => 'required',
             'qualification' => 'required',
@@ -58,13 +65,14 @@ class CourseTypesController extends Controller
         $coursetype = new CourseType;
         $coursetype->description=$request->input('description');
         $coursetype->type=$request->input('type');
+        $coursetype->idprogram=$request->input('idprogram');
         $coursetype->duration=$request->input('duration');
         $coursetype->qualification=$request->input('qualification');
         $coursetype->admissionRequirements=$request->input('admissionRequirements');
         $coursetype->resources=$request->input('resources');
         $coursetype->user_id=Auth::user()->id;
         $coursetype->save();
-        return redirect()->route('collegecoursetype.index')->with('success','Course Type has been created successfully.');
+        return redirect()->route('coursetype.index')->with('success','Course Type has been created successfully.');
     
     }
 
@@ -88,7 +96,9 @@ class CourseTypesController extends Controller
     public function edit($id)
     {
         $coursetype = CourseType::find($id);
-        return view('admin.resources.coursetypes.edit',compact('coursetype'));
+        $regionallocations = RegionalLocations::all();
+        $programs = Program::all();
+        return view('admin.resources.coursetypes.edit',compact('coursetype','regionallocations','programs'));
     }
 
     /**
@@ -105,12 +115,14 @@ class CourseTypesController extends Controller
         $request->validate([
             'description' => 'required',
             'type' => 'required',
+            'idprogram'=>'required',
             'duration' => 'required',
             'qualification' => 'required',
             'admissionRequirements' => 'required',
             'resources' => 'required',
         ]);
         $coursetype->type=$request->input('type');
+        $coursetype->idprogram=$request->input('idprogram');
         $coursetype->description=$request->input('description');
         $coursetype->duration=$request->input('duration');
         $coursetype->qualification=$request->input('qualification');
@@ -121,7 +133,7 @@ class CourseTypesController extends Controller
         $coursetype->save();
         
         $coursetype->fill($request->post())->save();
-        return redirect()->route('collegecoursetype.index')->with('success','Course Type has been updated successfully.');
+        return redirect()->route('coursetype.index')->with('success','Course Type has been updated successfully.');
    
     }
 

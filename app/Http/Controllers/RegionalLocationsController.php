@@ -23,7 +23,7 @@ class RegionalLocationsController extends Controller
      */
     public function index()
     {
-        $regionallocations = RegionalLocations::orderBy('id','desc')->paginate(5);
+        $regionallocations = RegionalLocations::orderBy('id','desc')->paginate(500);
         return view('admin.contactus.regionallocations.index', compact('regionallocations'));
     }
 

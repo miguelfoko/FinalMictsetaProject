@@ -1,25 +1,34 @@
 <?php
 
 namespace App\Http\Controllers;
-use App\Models\CollegeCourseType;
-use App\Models\CourseType;
-use App\Models\Program;
 
 use Illuminate\Http\Request;
+use App\Models\CourseType; 
+use App\Models\RegionalLocations; 
 
-class ViewCollegeCourseTypesController extends Controller
+class ShowCollegesController extends Controller
 {
     /**
      * Display a listing of the resource.
      *
      * @return \Illuminate\Http\Response
-     */ 
-    public function index()
+     */
+    public function index(Request $request) 
     {
-        $collegecoursetype = CollegeCourseType::orderBy('id','desc')->paginate(2);
-        $coursetype = CourseType::all(); 
-        $programs = Program::all();
-        return view('viewCollegeCourseTypes', compact('collegecoursetype','coursetype','programs'));
+        $program=$request->program;
+        $coursetypes = CourseType::all();
+        $regionallocations = RegionalLocations::all();
+        $retCourse=array();
+        foreach($coursetypes as $ctype){
+            foreach($ctype->programs as $progm){
+                if ($program==$progm){
+                    
+                    //$progm=$regionallocations->region;
+                    $retCourse[]=$ctype;
+                }
+            }
+        }
+        return view('showColleges',compact('retCourse','regionallocations')); 
     }
 
     /**

@@ -13,10 +13,10 @@
         <div class="row">
             <div class="col-lg-12 margin-tb">
                 <div class="pull-left">
-                    <h2>Course Types</h2>
+                    <h2>Colleges</h2>
                 </div>
                 <div class="pull-right mb-2">
-                    <a class="btn btn-success" href="{{ route('coursetype.create') }}"> Create Course Types</a>
+                    <a class="btn btn-success" href="{{ route('college.create') }}"> Create College</a>
                 </div>
             </div>
         </div>
@@ -29,31 +29,27 @@
             <thead>
                 <tr>
                     <th>S.No</th>
-                    <th>Type</th>
-                    <th>Program</th>
-                    <th>Description</th>
-                    <th>Duration</th>
-                    <th>Qualification</th>
-                    <th>Admission Requirements</th>
-                    <th>Resources</th>
-
+                    <th>Title</th>
+                    <th>Regional Location</th>
                     <th width="280px">Action</th>
                 </tr>
             </thead>
             <tbody>
-                @foreach ($coursetype as $ctype)
+                @foreach ($college as $colle)
                     <tr heigh=100px>
-                        <td >{{ $ctype->id }}</td>
-                        <td >{{ $ctype->type }}</td>
-                        <td > {{ $ctype->idprogram }}</td>
-                        <td >{!! $ctype->description !!}</td>
-                        <td >{!! $ctype->duration !!}</td>
-                        <td >{!! $ctype->qualification !!}</td>
-                        <td >{!! $ctype->admissionRequirements !!}</td>
-                        <td >{!! $ctype->resources !!}</td>
+                        <td >{{ $colle->id }}</td>
+                        <td >{{ $colle->title }}</td>
+                        <td > 
+                            @foreach ($regionallocations as $regionallocation)
+                                @if ($regionallocation->id = $colle->regional_location_id)
+                                    {{$regionallocation->region}};<br>
+                                @endif
+                            @endforeach
+                        </td>
+
                         <td >
-                            <form action="{{ route('coursetype.destroy',$ctype->id) }}" method="Post">
-                                <a class="btn btn-primary" href="{{ route('coursetype.edit',$ctype->id) }}">Edit</a>
+                            <form action="{{ route('college.destroy',$colle->id) }}" method="Post">
+                                <a class="btn btn-primary" href="{{ route('college.edit',$colle->id) }}">Edit</a>
                                 @csrf
                                 @method('DELETE')
                                 <button type="submit" class="btn btn-danger">Delete</button>
@@ -63,7 +59,7 @@
                     @endforeach
             </tbody>
         </table>
-        {{ $coursetype->links() }}
+       
     </div>
 
     <div class="container">

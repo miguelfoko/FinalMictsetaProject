@@ -6,7 +6,7 @@
 
 
    
-      <div class="container-fluid" data-aos="fade-up">
+        <div class="container-fluid" data-aos="fade-up">
             <div class="member2" >
                 College Course Type
             </div>
@@ -26,36 +26,41 @@
                     <h3>Types of courses </h3>
                     {!! $cctype->typeOfCourses !!}
                 @endforeach
-                </div>
-                @foreach ($coursetype as $ctype)
-                    <table class="table table-bordered align-center">
-                            <tr class="question">
-                                <td>Course Type</td> 
-                                <td width=80% >{!! $ctype->type !!}</td>
-                            </tr>
-                                <td class="mien">Description</td> 
-                                <td >{!! $ctype->description !!}</td>
-                            </tr >
-                                <td class="mien"><b>Duration</b></td>  
-                                <td >{!! $ctype->duration !!}</td>
-                            </tr>
-                                <td class="mien"><b>Qualification</b></td> 
-                                <td >{!! $ctype->qualification !!}</td>
-                            </tr>
-                                <td class="mien"><b>Admission Requirements</b></td> 
-                                <td >{!! $ctype->admissionRequirements !!}</td>
-                            </tr>
-                                <td class="mien"><b>Resources</b></td> 
-                                <td >{!! $ctype->resources !!}</td>
-                            </tr>
-                    </table>
-                   
-                    @endforeach
-                    <div class="noUseOfWysiwyg">* Please contact your nearest public TVET College for further details</div>
-           
-        {{ $coursetype->links() }}
-      </div>
+            </div>
+        </div>
+    <section id="pricing" class="pricing">
+        
+        <div class="container-fluid" data-aos="fade-up">
+            <div class="new">
+                <div class="row" data-aos="zoom-in" data-aos-delay="100">
+                    <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
+                        <div class="card">
+                            <div class="card-body">
+                                @foreach ($programs as $program)
+                                    <button id="{{$program->id}}" class="dropbtn" onclick="load_colleges('{{$program->id}}')" >{{$program->title}}<i class="fa fa-caret-right"></i></button> 
+                                @endforeach
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="col-lg-8  align-items-stretch">
+                        <div class="card">
+                            <div class="colleges_div" id='colleges_div'></div>
+                        </div>
+                    </div>
+                </div> 
+            </div>
+        </div>
+
+    </section>                 
    
+
+      <script type="text/javascript">
+        function load_colleges(theProgramTitle){
+          var finalUrl="showcolleges?program="+theProgramTitle
+          $('#colleges_div').load(finalUrl)
+        }
+      </script>
 
   </main><!-- End #main -->
   @endsection

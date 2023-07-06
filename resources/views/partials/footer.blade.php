@@ -53,7 +53,7 @@
             <h4>Site Map</h4>
             <ul>
               <li> <a href="/">Home</a></li>
-              <li> <a href="/abouttvet">About TVET</a></li>
+              <li> <a href="/aboutus">About TVET</a></li>
               <li> <a href="/examinations">Examinations</a></li>
               <li> <a href="/resources">Resources</a></li>
               <li> <a href="/viewNews">News</a></li>

@@ -4,8 +4,8 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateCourseTypesTable extends Migration
-{
+class CreateCollegesTable extends Migration
+{ 
     /**
      * Run the migrations.
      *
@@ -13,15 +13,14 @@ class CreateCourseTypesTable extends Migration
      */
     public function up()
     {
-        Schema::create('course_types', function (Blueprint $table) {
+        Schema::create('colleges', function (Blueprint $table) {
             $table->id();
-            $table->timestamps(); 
-            $table->longText('type');
-            $table->longText('description');
-            $table->longText('duration');
-            $table->longText('qualification');
-            $table->longText('admissionRequirements');
-            $table->longText('resources'); 
+            $table->timestamps();
+            $table->longText('title'); 
+            $table->foreignId('regional_location_id')
+            ->constrained('regional_locations')
+            ->onUpdate('cascade')
+            ->onDelete('cascade');
 
             $table->foreignId('user_id')
             ->constrained('users')
@@ -37,6 +36,6 @@ class CreateCourseTypesTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('course_types');
+        Schema::dropIfExists('colleges');
     }
 }

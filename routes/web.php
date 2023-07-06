@@ -40,8 +40,10 @@ use App\Http\Controllers\SubscribeController;
 use App\Http\Controllers\CommunityCollegesController;
 use App\Http\Controllers\SetasController;
 use App\Http\Controllers\ShowExamResourceController;
-
-
+use App\Http\Controllers\ProgramController;
+use App\Http\Controllers\ShowCollegesController;
+use App\Http\Controllers\CollegeController;
+use App\Http\Controllers\SubjectsController;
 
 
 
@@ -90,6 +92,8 @@ Route::resource('/viewexamtrainingvideos',ViewExamTrainingVideosController::clas
 Route::resource('/viewicasstrainingvideos',ViewIcassTrainingVideosController::class);
 Route::resource('/examinformationresources',ExamResourceController::class);
 Route::resource('/showexaminformationresources',ShowExamResourceController::class);
+Route::resource('/programs',ProgramController::class);
+
 
 
 
@@ -107,7 +111,9 @@ Route::resource('/viewcollegecalendar',ViewCollegeCalendarController::class);
 Route::resource('/careerguidance',CareerGuidanceController::class);
 Route::resource('/viewcareerguidance',ViewCareerGuidanceController::class);
 Route::get('/updateResources', [App\Http\Controllers\AdminResourcesController::class, 'index'])->name('admin.adminResources');
-
+Route::resource('/showcolleges',ShowCollegesController::class);
+Route::resource('/college',CollegeController::class);
+Route::resource('/subjects',SubjectsController::class);
 
  
 
