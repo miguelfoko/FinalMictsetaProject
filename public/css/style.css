@@ -630,7 +630,7 @@ div.title {
 .services-wrapper {
 	float: left;
 	width: 100%;
-	padding: 89px 0 90px;
+	padding: 0 0 0;
 }
 .services-wrapper .separator i {
 	background: #ffffff none repeat scroll 0 0;
