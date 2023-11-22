@@ -40,33 +40,33 @@
           <div class="main-menu-area bg-dark-1"> 
             <nav>
               <ul>
-                <li class="active"><a href="/" class="{{ (request()->is('/')) ? 'active' : '' }}" >Home</a></li>
-                <li><a href="/aboutus" class="{{ (request()->is('aboutus')||request()->is('abouttvet')
+                <li class="{{ (request()->is('/')) ? 'active' : '' }}"><a href="/"  >Home</a></li>
+                <li class="{{ (request()->is('aboutus')||request()->is('abouttvet')
                     ||request()->is('viewcommunitycolleges')
                     ||request()->is('publicTvetCollege')
                     ||request()->is('privateTvetCollege')
-                    ||request()->is('viewsetas')) ? 'active' : '' }}">About Us</a></li>
-                <li><a href="/examinations" class="{{ (request()->is('examinations')
+                    ||request()->is('viewsetas')) ? 'active' : '' }}"><a href="/aboutus" >About Us</a></li>
+                <li class="{{ (request()->is('examinations')
                     ||request()->is('viewexamresources')
                     ||request()->is('viewexamtrainingvideos')
-                    ||request()->is('viewicasstrainingvideos')) ? 'active' : '' }}">Examinations<i class="fa fa-angle-down"></i></a>
+                    ||request()->is('viewicasstrainingvideos')) ? 'active' : '' }}"><a href="/examinations" >Examinations<i class="fa fa-angle-down"></i></a>
                   <ul class="dropdown_menu">
                     <li><a href="course-grid.html">Course Grid</a></li>
                     <li><a href="course-list.html">Course List</a></li>
                     <li><a href="course-details.html">Course Details</a></li>
                   </ul>
                 </li>
-                <li><a href="/resources" class="{{ (request()->is('resources')
+                <li class="{{ (request()->is('resources')
                     ||request()->is('viewcollegecoursetype')
                     ||request()->is('viewsuccessstories') 
                     ||request()->is('viewcollegecalendar')
-                    ||request()->is('viewcareerguidance')) ? 'active' : '' }}">Resources </a></li>
-                <li><a href="/viewNews" class="{{ (request()->is('viewNews')||request()->is('viewNews/*')) ? 'active' : '' }}">News </a></li>
-                <li><a href="/tvetcollegetimes" class="{{ (request()->is('tvetcollegetimes')) ? 'active' : '' }}">TVET College Times </a></li>
-                <li><a href="/contactus" class="{{ (request()->is('contactus')
+                    ||request()->is('viewcareerguidance')) ? 'active' : '' }}"><a href="/resources" >Resources </a></li>
+                <li class="{{ (request()->is('viewNews')||request()->is('viewNews/*')) ? 'active' : '' }}"><a href="/viewNews" >News </a></li>
+                <li class="{{ (request()->is('tvetcollegetimes')) ? 'active' : '' }}"><a href="/tvetcollegetimes" >TVET College Times </a></li>
+                <li class="{{ (request()->is('contactus')
                     ||request()->is('viewgetintouch')
                     ||request()->is('viewregionallocations')
-                    ||request()->is('viewfaqs')) ? 'active' : '' }}">Contact Us </a></li> 
+                    ||request()->is('viewfaqs')) ? 'active' : '' }}"><a href="/contactus" >Contact Us </a></li> 
               </ul>
             </nav>
             <div class="search-form">
@@ -87,34 +87,34 @@
             <div class="mobile-menu">
               <nav id="mobile-menu-active">
                 <ul>
-                  <li class="active"><a href="/" class="{{ (request()->is('/')) ? 'active' : '' }}" >Home</a></li>
-                  <li><a href="/aboutus" class="{{ (request()->is('aboutus')||request()->is('abouttvet')
+                  <li class="{{ (request()->is('/')) ? 'active' : '' }}"><a href="/"  >Home</a></li>
+                  <li class="{{ (request()->is('aboutus')||request()->is('abouttvet')
                     ||request()->is('viewcommunitycolleges')
                     ||request()->is('publicTvetCollege')
                     ||request()->is('privateTvetCollege')
-                    ||request()->is('viewsetas')) ? 'active' : '' }}">About Us</a></li>
-                  <li><a href="/examinations" class="{{ (request()->is('examinations')
+                    ||request()->is('viewsetas')) ? 'active' : '' }}"><a href="/aboutus" >About Us</a></li>
+                  <li class="{{ (request()->is('examinations')
                     ||request()->is('viewexamresources')
                     ||request()->is('viewexamtrainingvideos')
-                    ||request()->is('viewicasstrainingvideos')) ? 'active' : '' }}">Examinations</a>
+                    ||request()->is('viewicasstrainingvideos')) ? 'active' : '' }}"><a href="/examinations" >Examinations</a>
                     <ul class="dropdown_menu">
                       <li><a href="course-grid.html">Course Grid</a></li>
                       <li><a href="course-list.html">Course List</a></li>
                       <li><a href="course-details.html">Course Details</a></li>
                     </ul>
                   </li>
-                  <li><a href="/resources" class="{{ (request()->is('resources')
+                  <li class="{{ (request()->is('resources')
                     ||request()->is('viewcollegecoursetype')
                     ||request()->is('viewsuccessstories') 
                     ||request()->is('viewcollegecalendar')
-                    ||request()->is('viewcareerguidance')) ? 'active' : '' }}">Resources</a> </li>
+                    ||request()->is('viewcareerguidance')) ? 'active' : '' }}"><a href="/resources" >Resources</a> </li>
                     
-                  <li><a href="/viewNews" class="{{ (request()->is('viewNews')||request()->is('viewNews/*')) ? 'active' : '' }}">NEWS</a> </li>
-                  <li><a href="/tvetcollegetimes" class="{{ (request()->is('tvetcollegetimes')) ? 'active' : '' }}">TVET College Times</a></li>
-                  <li><a href="/contactus" class="{{ (request()->is('contactus')
+                  <li class="{{ (request()->is('viewNews')||request()->is('viewNews/*')) ? 'active' : '' }}"><a href="/viewNews" >NEWS</a> </li>
+                  <li class="{{ (request()->is('tvetcollegetimes')) ? 'active' : '' }}"><a href="/tvetcollegetimes" >TVET College Times</a></li>
+                  <li class="{{ (request()->is('contactus')
                     ||request()->is('viewgetintouch')
                     ||request()->is('viewregionallocations')
-                    ||request()->is('viewfaqs')) ? 'active' : '' }}">Contact Us</a></li>
+                    ||request()->is('viewfaqs')) ? 'active' : '' }}"><a href="/contactus" >Contact Us</a></li>
                 </ul>
               </nav>
             </div>
