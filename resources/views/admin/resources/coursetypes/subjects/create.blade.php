@@ -13,7 +13,7 @@
         <div class="row">
             <div class="col-lg-12 margin-tb">
                 <div class="pull-left mb-2">
-                    <h2>Add Subject</h2>
+                    <h2>Add Course</h2>
                 </div>
             </div>
         </div>
@@ -37,9 +37,9 @@
                     </div> 
 
                     <div class="form-group">
-                        <strong>Choose the course that the subject belongs to:</strong>
+                        <strong>Choose the program that the subject belongs to:</strong>
                         <select name="coursetype_id" class="form-control ">
-                            <option> Choose a course</option>
+                            <option> Choose a program</option>
                             @foreach ($coursetypes as $coursetype)  
                                 <option value="{{$coursetype->id}}"><strong> {!!$coursetype->type!!}</strong></option>
                             @endforeach
@@ -52,14 +52,17 @@
 
                     <div class="form-group">
                         <strong>Select the Level for this course:</strong>
-                        <label><input type="checkbox" name="level[]" value="N1"> N1</label>
-                        <label><input type="checkbox" name="level[]" value="N2"> N2</label>
-                        <label><input type="checkbox" name="level[]" value="N3"> N3</label>
-                        <label><input type="checkbox" name="level[]" value="N4"> N4</label>
-                        <label><input type="checkbox" name="level[]" value="N5"> N5</label>
-                        <label><input type="checkbox" name="level[]" value="N6"> N6</label>
-                        
-                        @error('level[]')
+
+                        <select name="level" class="form-control ">
+                            <option> Choose the Level</option>
+                            <option value="N1"><strong> N1</strong></option>
+                            <option value="N2"><strong> N2</strong></option>
+                            <option value="N3"><strong> N3</strong></option>
+                            <option value="N4"><strong> N4</strong></option>
+                            <option value="N5"><strong> N5</strong></option>
+                            <option value="N6"><strong> N6</strong></option>
+                        </select>                        
+                        @error('level')
                         <div class="alert alert-danger mt-1 mb-1">{{ $message }}</div>
                         @enderror
                     </div>

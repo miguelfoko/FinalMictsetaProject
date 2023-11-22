@@ -10,13 +10,13 @@ class Subjects extends Model
     use HasFactory; 
     protected $fillable = ['title','coursetype_id','user_id','level']; 
 
-    public function setLevelAttribute($value)
-    {
+    /*
+    public function setLevelAttribute($value){
         $this->attributes['level'] = json_encode($value);
     }
 
-    public function getLevelAttribute($value)
-    {
+    public function getLevelAttribute($value){
         return $this->attributes['level'] = json_decode($value);
     }
+    */
 }
