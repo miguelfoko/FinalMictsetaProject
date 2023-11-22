@@ -13,10 +13,10 @@
         <div class="row">
             <div class="col-lg-12 margin-tb">
                 <div class="pull-left">
-                    <h2>Existing Programs</h2>
+                    <h2>Existing Domains</h2>
                 </div>
                 <div class="pull-right mb-2">
-                    <a class="btn btn-success" href="{{ route('programs.create') }}"> Create a Program</a>
+                    <a class="btn btn-success" href="{{ route('programs.create') }}"> Create a Domain</a>
                 </div>
             </div>
         </div>

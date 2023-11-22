@@ -20,7 +20,7 @@
         <div class="col-lg-3 col-md-6 ">
             <div class="box featured text-center">
               <h3>{{$tctimes->title}}</h3>
-              <h4>{{$tctimes->volume}}</h4>
+              <h5>{{$tctimes->volume}}</h5>
               <h5>{{$tctimes->publicationDate}}</h5>
               <h5>Size: {{$tctimes->size}} </h5>
               <div class="theSiteImages">

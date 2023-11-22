@@ -15,11 +15,11 @@
         <div class="row" data-aos="zoom-in" data-aos-delay="100">
 
           
-          <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
+          <div class="col-lg-4" align="center">
             <div class="card">
            
                 <div class="card-img">
-                    <a href="viewgetintouch"><img src="{{ asset('/img/ContactUsDetails.png') }}" alt="..."></a>
+                    <a href="viewgetintouch"><img src="{{ asset('/img/ContactUsDetails.png') }}" align="center" alt="..."></a>
                 </div>
                 <div class="card-body">
                     <h5 class="card-title"><a href="viewgetintouch">Contact Details</a></h5>
@@ -40,11 +40,11 @@
             </div>
           </div>
 
-          <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
+          <div class="col-lg-4" align="center">
             <div class="card">
            
             <div class="card-img">
-            <a href="viewregionallocations"> <img src="{{ asset('/img/OurRegionalLocations.png') }}" alt="..."> </a>
+            <a href="viewregionallocations"> <img src="{{ asset('/img/OurRegionalLocations.png') }}" align="center" alt="..."> </a>
             </div>
             <div class="card-body text-center">
                 <h5 class="card-title "><a href="viewregionallocations">Our Regional Locations</a></h5>
@@ -61,11 +61,11 @@
             </div>
           </div>
 
-          <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
+          <div class="col-lg-4" align="center">
             <div class="card">
            
             <div class="card-img">
-            <a href="viewfaqs"> <img src="{{ asset('/img/FAQs.png') }}" alt="..."> </a>
+            <a href="viewfaqs"> <img src="{{ asset('/img/FAQs.png') }}" align="center" alt="..."> </a>
             </div>
             <div class="card-body text-center"> 
                 <h5 class="card-title"><a href="viewfaqs">Frequently Asked Questions</a></h5>
