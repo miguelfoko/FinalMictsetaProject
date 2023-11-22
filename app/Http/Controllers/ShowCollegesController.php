@@ -4,36 +4,31 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\CourseType; 
-use App\Models\College; 
-use App\Models\Subjects; 
-use App\Models\Program; 
-use App\Models\CollegeProgram; 
 use App\Models\RegionalLocations; 
-use DB;
+
 class ShowCollegesController extends Controller
 {
-    /**  
+    /**
      * Display a listing of the resource.
      *
      * @return \Illuminate\Http\Response
      */
-    public function index(Request $request)  
+    public function index(Request $request) 
     {
-            $coursetype= CourseType::find($request->input('coursetype'));
-            $subjects=DB::table('subjects')
-                ->join('course_types','course_types.id','=','subjects.coursetype_id')
-                ->select('subjects.title','subjects.level')
-                ->where('course_types.id','=',$request->input('coursetype'))
-                ->get(); 
-
-            $colleges=DB::table('colleges') 
-                ->join('college_programs','colleges.id','=','college_programs.college_id')
-                ->join('programs','college_programs.program_id','=','programs.id')
-                ->select('colleges.title','colleges.id')
-                ->where('programs.id','=',$request->input('program'))
-                ->get();
-            return view('showColleges',compact('subjects','coursetype','colleges')); 
-        
+        $program=$request->program;
+        $coursetypes = CourseType::all();
+        $regionallocations = RegionalLocations::all();
+        $retCourse=array();
+        foreach($coursetypes as $ctype){
+            foreach($ctype->programs as $progm){
+                if ($program==$progm){
+                    
+                    //$progm=$regionallocations->region;
+                    $retCourse[]=$ctype;
+                }
+            }
+        }
+        return view('showColleges',compact('retCourse','regionallocations')); 
     }
 
     /**
@@ -65,7 +60,7 @@ class ShowCollegesController extends Controller
      */
     public function show($id)
     {
-        
+        //
     }
 
     /**

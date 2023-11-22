@@ -1,16 +1,3 @@
-<!-- jQuery (necessary for Bootstrap's JavaScript plugins) --> 
-<script src="{{ asset('/assets/jquery/jquery-min.js') }}"></script> 
-<script src="{{ asset('/assets/jquery/plugins.js') }}"></script> 
-<script src="{{ asset('/assets/jquery/jquery.mainmenu.js') }}"></script> 
-<script src="{{ asset('/assets/bootstrap/js/bootstrap.min.js') }}"></script> 
-<script src="{{ asset('/assets/number-animation/jquery.animateNumber.min.js') }}"></script> 
-<script src="{{ asset('/assets/owl-carousel/js/owl.carousel.min.js') }}"></script> 
-<script src="{{ asset('/assets/wow/wow.min.js') }}"></script> 
-<script src="{{ asset('/assets/jquery/slider.js') }}"></script> 
-<script src="{{ asset('/assets/jquery/magnific-popup.min.js') }}"></script> 
-<script src="{{ asset('/js/custom.js') }}"></script>
-
-
 <!-- Vendor JS Files -->
 <script src="{{ asset('/vendor/purecounter/purecounter_vanilla.js') }}" ></script>
   <script src="{{ asset('/vendor/aos/aos.js') }}"></script>

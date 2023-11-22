@@ -41,7 +41,7 @@
                         <td >{{ $colle->title }}</td>
                         <td > 
                             @foreach ($regionallocations as $regionallocation)
-                                @if ($regionallocation->id == $colle->regional_location_id)
+                                @if ($regionallocation->id = $colle->regional_location_id)
                                     {{$regionallocation->region}};<br>
                                 @endif
                             @endforeach

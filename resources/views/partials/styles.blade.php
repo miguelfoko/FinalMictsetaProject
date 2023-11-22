@@ -39,32 +39,3 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-
-<!-- Bootstrap CSS --> 
-<link href="{{ asset('/assets/bootstrap/css/bootstrap.min.css') }}" rel="stylesheet">
-<!-- Font Awesome CSS-->
-<link href="{{ asset('/assets/font-awesome/css/font-awesome.min.css') }}" rel="stylesheet">
-<!-- Ico icons CSS-->
-<link href="{{ asset('/assets/icofont/css/icofont.css') }}" rel="stylesheet">
-<!-- Linear icons CSS-->
-<link href="{{ asset('/assets/linearicons/css/icon-font.min.css') }}" rel="stylesheet">
-<!-- Meanmenu CSS -->
-<link href="{{ asset('/assets/css/meanmenu.css') }}" rel="stylesheet" >
-<!-- Owl Carousel -->
-<link href="{{ asset('/assets/owl-carousel/css/owl.carousel.css') }}" rel="stylesheet">
-<!-- magnific popup -->
-<link href="{{ asset('/assets/css/magnific-popup.css') }}"  rel="stylesheet" >
-<!-- Custom CSS -->
-<link href="{{ asset('/css/style.css') }}" rel="stylesheet">
-<!-- Animate CSS -->
-<link href="{{ asset('/assets/animate/animate.css') }}" rel="stylesheet">
-<!-- Slider CSS -->
-<link href="{{ asset('/assets/css/slider.css') }}" rel="stylesheet">
-<!-- Favicon -->
-<link rel="shortcut icon" type="image/x-icon" href="{{ asset('/images/favicon.ico') }}">
-<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
-<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-<!--[if lt IE 9]>
-      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
-      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-    <![endif]-->

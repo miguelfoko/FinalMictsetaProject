@@ -13,10 +13,10 @@
         <div class="row">
             <div class="col-lg-12 margin-tb">
                 <div class="pull-left">
-                    <h2>Courses</h2>
+                    <h2>Subjects</h2>
                 </div>
                 <div class="pull-right mb-2">
-                    <a class="btn btn-success" href="{{ route('subjects.create') }}"> Create Course</a>
+                    <a class="btn btn-success" href="{{ route('subjects.create') }}"> Create Subject</a>
                 </div>
             </div>
         </div>
@@ -30,7 +30,7 @@
                 <tr>
                     <th>S.No</th>
                     <th>Title</th>
-                    <th>Program</th>
+                    <th>Course</th>
                     <th>Level</th>
                     <th width="280px">Action</th>
                 </tr>
@@ -42,12 +42,16 @@
                         <td >{{ $subject->title }}</td>
                         <td > 
                             @foreach ($coursetypes as $coursetype)
-                                @if ($coursetype->id == $subject->coursetype_id)
+                                @if ($coursetype->id = $subject->coursetype_id)
                                     {!!$coursetype->type!!}
                                 @endif
                             @endforeach
                         </td>
-                        <td > {{ $subject->level }}</td>
+                        <td > 
+                            @foreach ($subject->level as $level)    
+                                {{$level}},
+                            @endforeach
+                        </td>
                         <td >
                             <form action="{{ route('subjects.destroy',$subject->id) }}" method="Post">
                                 <a class="btn btn-primary" href="{{ route('subjects.edit',$subject->id) }}">Edit</a>

@@ -13,7 +13,7 @@
         <div class="row">
             <div class="col-lg-12 margin-tb">
                 <div class="pull-left">
-                    <h2>Edit Program</h2>
+                    <h2>Edit Course Type</h2>
                 </div>
             </div>
         </div>
@@ -29,7 +29,9 @@
              <div class="col-xs-12 col-sm-12 col-md-12">
                     <div class="form-group">
                         <strong>Type:</strong>
-                        <input type="text" name="type" value="{{$coursetype->type}}" class="form-control">
+                        <textarea name="type" class="form-control" id="myeditorinstance" rows="10" style="white-space: pre-wrap; text-indent: 50px;">
+                            {!! $coursetype->type !!}
+                        </textarea>
                         @error('type')
                             <div class="alert alert-danger mt-1 mb-1">{{ $message }}</div>
                         @enderror
@@ -37,9 +39,9 @@
 
                     <div class="form-group">
                         
-                        <strong>Choose the domain that the course belongs to:</strong>
+                        <strong>Choose the program that the course belongs to:</strong>
                         <select name="idprogram">
-                            <option> Choose a domain</option>
+                            <option> Choose a program</option>
                             @foreach ($programs as $program)  
                                 <option value="{{$program->id}}"> {{$program->title}}</option>
                             @endforeach
@@ -54,7 +56,9 @@
                 
                     <div class="form-group">
                         <strong>Description:</strong>
-                        <input type="text" name="description" value="{{ $coursetype->description }}" class="form-control">
+                        <textarea name="description" class="form-control" id="myeditorinstance" rows="10" style="white-space: pre-wrap; text-indent: 50px;">
+                            {!! $coursetype->description !!}
+                        </textarea>
                         @error('description')
                             <div class="alert alert-danger mt-1 mb-1">{{ $message }}</div>
                         @enderror
@@ -63,7 +67,9 @@
                 
                     <div class="form-group">
                         <strong>Duration:</strong>
-                        <input type="text" name="duration" value="{{ $coursetype->duration }}" class="form-control">
+                        <textarea name="duration" class="form-control" id="myeditorinstance" rows="10" style="white-space: pre-wrap; text-indent: 50px;"> 
+                        {!! $coursetype->duration !!}
+                        </textarea>
                         @error('duration')
                             <div class="alert alert-danger mt-1 mb-1">{{ $message }}</div>
                         @enderror
@@ -71,7 +77,9 @@
                
                     <div class="form-group">
                         <strong>Qualification:</strong>
-                        <input type="text" name="qualification" value="{{ $coursetype->qualification }}" class="form-control">
+                        <textarea name="qualification" class="form-control" id="myeditorinstance" rows="10" style="white-space: pre-wrap; text-indent: 50px;"> 
+                        {!! $coursetype->qualification !!}
+                        </textarea>
                         @error('qualification')
                             <div class="alert alert-danger mt-1 mb-1">{{ $message }}</div>
                         @enderror
@@ -79,7 +87,9 @@
                 
                     <div class="form-group">
                         <strong>Admission Requirements:</strong>
-                        <input type="text" name="admissionRequirements" value="{{ $coursetype->admissionRequirements }}" class="form-control">
+                        <textarea name="admissionRequirements" class="form-control" id="myeditorinstance" rows="10" style="white-space: pre-wrap; text-indent: 50px;"> 
+                        {!! $coursetype->admissionRequirements !!}
+                        </textarea>
                         @error('admissionRequirements')
                             <div class="alert alert-danger mt-1 mb-1">{{ $message }}</div>
                         @enderror
@@ -87,7 +97,9 @@
                
                     <div class="form-group">
                         <strong>Resources:</strong>
-                        <input type="text" name="resources" value="{{ $coursetype->resources }}" class="form-control">
+                        <textarea name="resources" class="form-control" id="myeditorinstance" rows="10" style="white-space: pre-wrap; text-indent: 50px;"> 
+                        {{ $coursetype->resources }}
+                        </textarea>
                         @error('resources')
                             <div class="alert alert-danger mt-1 mb-1">{{ $message }}</div>
                         @enderror

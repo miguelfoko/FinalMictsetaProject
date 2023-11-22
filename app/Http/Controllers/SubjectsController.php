@@ -62,7 +62,7 @@ class SubjectsController extends Controller
         $subjects->user_id=Auth::user()->id;
         $subjects->save();
 
-        return redirect()->route('subjects.index')->with('success','Course has been created successfully.');
+        return redirect()->route('subjects.index')->with('success','Subject has been created successfully.');
     
     }
 
@@ -117,7 +117,7 @@ class SubjectsController extends Controller
         
         $subjects->fill($request->post())->save();
 
-        return redirect()->route('subjects.index')->with('success','Course has been updated successfully.');
+        return redirect()->route('subjects.index')->with('success','Subject has been updated successfully.');
    
     }
 
@@ -131,6 +131,6 @@ class SubjectsController extends Controller
     {
         $subjects = Subjects::find($id);
         $subjects->delete();
-        return redirect()->route('subjects.index')->with('success','Course has been deleted successfully');
+        return redirect()->route('subjects.index')->with('success','Subject has been deleted successfully');
     }
 }

@@ -44,7 +44,7 @@ use App\Http\Controllers\ProgramController;
 use App\Http\Controllers\ShowCollegesController;
 use App\Http\Controllers\CollegeController;
 use App\Http\Controllers\SubjectsController;
-use App\Http\Controllers\ShowSubjectsController;
+
 
 
 
@@ -99,8 +99,6 @@ Route::resource('/programs',ProgramController::class);
 
 
 
-
-
 //Resources pages---------------------------------------------------------------------------
 Route::get('/resources', function(){ return view('resources');});
 Route::resource('/collegecoursetype',CollegeCourseTypesController::class);
@@ -116,7 +114,6 @@ Route::get('/updateResources', [App\Http\Controllers\AdminResourcesController::c
 Route::resource('/showcolleges',ShowCollegesController::class);
 Route::resource('/college',CollegeController::class);
 Route::resource('/subjects',SubjectsController::class);
-Route::resource('/showsubjects',ShowSubjectsController::class);
 
  
 

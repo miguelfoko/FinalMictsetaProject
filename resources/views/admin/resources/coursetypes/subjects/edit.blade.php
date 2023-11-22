@@ -13,7 +13,7 @@
         <div class="row">
             <div class="col-lg-12 margin-tb">
                 <div class="pull-left">
-                    <h2>Edit Course</h2>
+                    <h2>Edit Course Type</h2>
                 </div>
             </div>
         </div>
@@ -28,7 +28,7 @@
             <div class="row">
                     <div class="col-xs-12 col-sm-12 col-md-12">
                         <div class="form-group">
-                        <strong>Course title:</strong>
+                        <strong>Subject title:</strong>
                         <input type="text" name="title" class="form-control" value="{{ $subjects->title }}" >
                         @error('title')
                             <div class="alert alert-danger mt-1 mb-1">{{ $message }}</div>
@@ -37,11 +37,11 @@
                     </div>
 
                     <div class="form-group">
-                            <strong>Choose the program that the subject belongs to:</strong>
+                            <strong>Choose the course that the subject belongs to:</strong>
                             <select name="coursetype_id" class="form-control ">
-                                <option value="{{$subjects->id}}"> Choose a program</option>
+                                <option value="{{$subjects->id}}"> Choose a course</option>
                                 @foreach ($coursetypes as $coursetype)  
-                                    <option value="{{$coursetype->id}}"><strong> {{$coursetype->type}}</strong></option>
+                                    <option value="{{$coursetype->id}}"><strong> {!!$coursetype->type!!}</strong></option>
                                 @endforeach
                             </select>  
                             @error('coursetype_id')
@@ -52,16 +52,14 @@
 
                     <div class="form-group">
                         <strong>Select the Level for this course:</strong>
-                        <select name="level" class="form-control ">
-                            <option value="{{$coursetype->level}}"> Choose the Level</option>
-                            <option value="N1"><strong> N1</strong></option>
-                            <option value="N2"><strong> N2</strong></option>
-                            <option value="N3"><strong> N3</strong></option>
-                            <option value="N4"><strong> N4</strong></option>
-                            <option value="N5"><strong> N5</strong></option>
-                            <option value="N6"><strong> N6</strong></option>
-                        </select>                               
-                        @error('level')
+                        <label><input type="checkbox" name="level[]" value="N1"> N1</label>
+                        <label><input type="checkbox" name="level[]" value="N2"> N2</label>
+                        <label><input type="checkbox" name="level[]" value="N3"> N3</label>
+                        <label><input type="checkbox" name="level[]" value="N4"> N4</label>
+                        <label><input type="checkbox" name="level[]" value="N5"> N5</label>
+                        <label><input type="checkbox" name="level[]" value="N6"> N6</label>
+                        
+                        @error('level[]')
                         <div class="alert alert-danger mt-1 mb-1">{{ $message }}</div>
                         @enderror
                     </div>

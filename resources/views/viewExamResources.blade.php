@@ -30,7 +30,7 @@
                       </div>
                   </div>
 
-                  <div class="col-lg-5  align-items-stretch">
+                  <div class="col-lg-8  align-items-stretch">
                       <div class="card">
                         <div class="directory_content_div" id='directory_content_div'>
                           

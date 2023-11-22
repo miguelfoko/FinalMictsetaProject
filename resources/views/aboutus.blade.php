@@ -18,7 +18,7 @@
           <div class="col-lg-4" align="center">
               <div class="card">
             
-                <div class="card-img"> 
+                <div class="card-img">
                   <a href="abouttvet"> <img src="{{ asset('/img/CourseType.png') }}" align="center" alt="..."> </a>
                 </div>
                 <div class="card-body"> 

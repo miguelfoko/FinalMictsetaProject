@@ -13,10 +13,10 @@
         <div class="row">
             <div class="col-lg-12 margin-tb">
                 <div class="pull-left">
-                    <h2>Program</h2>
+                    <h2>Course Types</h2>
                 </div>
                 <div class="pull-right mb-2">
-                    <a class="btn btn-success" href="{{ route('coursetype.create') }}"> Create Program</a>
+                    <a class="btn btn-success" href="{{ route('coursetype.create') }}"> Create Course Types</a>
                 </div>
             </div>
         </div>
@@ -30,7 +30,7 @@
                 <tr>
                     <th>S.No</th>
                     <th>Type</th>
-                    <th>Domain</th>
+                    <th>Program</th>
                     <th>Description</th>
                     <th>Duration</th>
                     <th>Qualification</th>
@@ -63,7 +63,7 @@
                     @endforeach
             </tbody>
         </table>
-       
+        {{ $coursetype->links() }}
     </div>
 
     <div class="container">

@@ -26,7 +26,7 @@ class CourseTypesController extends Controller
      */
     public function index()
     {
-        $coursetype = CourseType::all();
+        $coursetype = CourseType::orderBy('id','desc')->paginate(5);
         $regionallocations = RegionalLocations::all();
         $program=Program::all();
         return view('admin.resources.coursetypes.index', compact('coursetype','regionallocations','program'));
@@ -72,7 +72,7 @@ class CourseTypesController extends Controller
         $coursetype->resources=$request->input('resources');
         $coursetype->user_id=Auth::user()->id;
         $coursetype->save();
-        return redirect()->route('coursetype.index')->with('success','Program has been created successfully.');
+        return redirect()->route('coursetype.index')->with('success','Course Type has been created successfully.');
     
     }
 
@@ -133,7 +133,7 @@ class CourseTypesController extends Controller
         $coursetype->save();
         
         $coursetype->fill($request->post())->save();
-        return redirect()->route('coursetype.index')->with('success','Program has been updated successfully.');
+        return redirect()->route('coursetype.index')->with('success','Course Type has been updated successfully.');
    
     }
 
@@ -147,7 +147,7 @@ class CourseTypesController extends Controller
     {
         $coursetype = CourseType::find($id);
         $coursetype->delete();
-        return redirect()->route('coursetype.index')->with('success','Program has been deleted successfully');
+        return redirect()->route('coursetype.index')->with('success','Course Type has been deleted successfully');
     
     }
 }

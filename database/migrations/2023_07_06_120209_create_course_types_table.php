@@ -17,16 +17,12 @@ class CreateCourseTypesTable extends Migration
             $table->id();
             $table->timestamps(); 
             $table->longText('type');
+            $table->longText('idprogram');
             $table->longText('description');
             $table->longText('duration');
             $table->longText('qualification');
             $table->longText('admissionRequirements');
             $table->longText('resources'); 
-
-            $table->foreignId('idprogram')
-            ->constrained('programs')
-            ->onUpdate('cascade')
-            ->onDelete('cascade');
 
             $table->foreignId('user_id')
             ->constrained('users')

@@ -34,18 +34,18 @@
    
       <div class="container-fluid" data-aos="fade-up">
           <div class="member2" >
-           Examinations
+           Examination
           </div>
       </div>
       <div class="container" data-aos="fade-up">
           <div class="new">
           <div class="row" data-aos="zoom-in" data-aos-delay="100">
 
-          <div class="col-lg-4" align="center">
+          <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
               <div class="card">
             
               <div class="card-img">
-                  <a href="viewexamresources"><img src="{{ asset('/img/ExamResources.png') }}" align="center" alt="..."></a>
+                  <a href="viewexamresources"><img src="{{ asset('/img/ExamResources.png') }}" width=100% alt="..."></a>
               </div>
               <div class="card-body">
                   <h5 class="card-title text-center"><a href="viewexamresources">Examination Information and Resources</a></h5>
@@ -62,11 +62,11 @@
               </div>
             </div>
 
-            <div class="col-lg-4 " align="center">
+            <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
               <div class="card">
             
               <div class="card-img">
-                  <a href="viewexamtrainingvideos"><img src="{{ asset('/img/ExamTrainingVideos.png') }}" align="center" alt="..."></a>
+                  <a href="viewexamtrainingvideos"><img src="{{ asset('/img/ExamTrainingVideos.png') }}" width=100% alt="..."></a>
               </div>
               <div class="card-body">
                   <h5 class="card-title  text-center" ><a href="viewexamtrainingvideos">Examination Training Videos</a></h5>
@@ -84,11 +84,11 @@
             </div>
 
 
-            <div class="col-lg-4" align="center">
+            <div class="col-lg-4">
               <div class="card">
             
                 <div class="card-img">
-                    <a href="viewicasstrainingvideos"><img src="{{ asset('/img/ICASSTrainingVideos.png') }}" align="center" alt="..."></a>
+                    <a href="viewicasstrainingvideos"><img src="{{ asset('/img/ICASSTrainingVideos.png') }}" width=100% alt="..."></a>
                 </div>
                 <div class="card-body">
                     <h5 class="card-title  text-center"><a href="viewicasstrainingvideos">ICASS Training Videos</a></h5>

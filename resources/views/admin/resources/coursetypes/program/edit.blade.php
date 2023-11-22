@@ -13,7 +13,7 @@
         <div class="row">
             <div class="col-lg-12 margin-tb">
                 <div class="pull-left">
-                    <h2>Edit Domain</h2>
+                    <h2>Edit Course Type</h2>
                 </div>
             </div>
         </div>
@@ -28,7 +28,7 @@
             <div class="row">
                 <div class="col-xs-12 col-sm-12 col-md-12">
                     <div class="form-group">
-                    <strong>Domain title:</strong>
+                    <strong>Program title:</strong>
                     <input type="text" name="title" class="form-control" value="{{ $programs->title }}" >
                     @error('title')
                         <div class="alert alert-danger mt-1 mb-1">{{ $message }}</div>
@@ -38,7 +38,7 @@
 
                 <div class="col-xs-12 col-sm-12 col-md-12">
                     <div class="form-group">
-                    <strong>Domain Description:</strong>
+                    <strong>Program Description:</strong>
                     <textarea name="description" class="form-control" id="myeditorinstance" rows="10" style="white-space: pre-wrap; text-indent: 50px;">
                         {!! $programs->description !!}
                     </textarea>
