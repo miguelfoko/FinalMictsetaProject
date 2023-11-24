@@ -25,5 +25,8 @@ How to run project
 	- Open a terminal and move to the project folder. Run the command "composer install"  or "composer update"
 	- run command php artisan key:generate
 	- run command php artisan migrate
+	- Open the file app/provider/AppServiceProvider.php in your prefered text editor. uncomment lines 28 to 33 and save the file.
 	- run php artisan serve
+
+4- Enjoy
 	
