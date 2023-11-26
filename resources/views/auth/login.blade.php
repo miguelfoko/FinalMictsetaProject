@@ -1,15 +1,14 @@
 @extends('layouts.login_register')
 
 @section('content')
-
+<div class="login-title"><strong>Welcome</strong>, Please login.</div>
 <form method="POST" class="form-horizontal" action="{{ route('login') }}">
     @csrf
-
     <div class="form-group">
         <div class="col-md-12">
             <div class="input-group">
                 <div class="input-group-addon">
-                    <span class="fa fa-user"></span>
+                    <span class="fa fa-envelope"></span>
                 </div>
                 <input id="email" type="email" class="form-control  @error('email') is-invalid @enderror" placeholder="{{ __('Email Address') }}" name="email" required autocomplete="email" autofocus/>
             </div>
@@ -23,23 +22,22 @@
         </div>
     </div>
     <div class="form-group">
-    <div class="col-md-12">
-        <div class="input-group">
-            <div class="input-group-addon">
-                <span class="fa fa-lock"></span>
-            </div>                                
-            <input id="password" type="password" class="form-control @error('password') is-invalid @enderror" name="password" required autocomplete="current-password"/>
+        <div class="col-md-12">
+            <div class="input-group">
+                <div class="input-group-addon">
+                    <span class="fa fa-lock"></span>
+                </div>                                
+                <input id="password" type="password" class="form-control @error('password') is-invalid @enderror" placeholder="{{ __('Password') }}" name="password" required autocomplete="current-password"/>
+            </div>
         </div>
-    </div>
-    <div class="col-md-12">
-
-            @error('password')
+        <div class="col-md-12">
+                @error('password')
                 <span class="invalid-feedback" role="alert">
                     <strong>{{ $message }}</strong>
                 </span>
             @enderror
         </div>
-</div>
+    </div>
     <div class="row mb-3">
         <div class="col-md-6 offset-md-4">
             <div class="form-check">

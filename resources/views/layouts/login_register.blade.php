@@ -20,7 +20,6 @@
             
             <div class="login-box animated fadeInDown">
                 <div class="login-body">
-                    <div class="login-title"><strong>Welcome</strong>, Please login.</div>
                     @yield('content')
                 </div>
                 <div class="login-footer">
