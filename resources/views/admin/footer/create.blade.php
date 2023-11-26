@@ -1,115 +1,99 @@
 @extends('layouts.app')
 
 @section('content')
-<div class="container">
-        <div class="pull-right">
-            <a class="btn btn-success" href="{{ route('footer.index') }}"> Back</a>
-        </div>
-    </div> 
 <!-- new content-->
 <div class="container mt-2">
-        <div class="row">
-            <div class="col-lg-12 margin-tb">
-                <div class="pull-left mb-2">
-                    <h2>Add Footer element</h2>
-                </div>
-            </div>
-        </div>
         @if(session('status'))
         <div class="alert alert-success mb-1 mt-1">
             {{ session('status') }}
         </div>
         @endif
-        <form action="{{ route('footer.store') }}" method="POST" enctype="multipart/form-data">
+        <form action="{{ route('footer.store') }}" method="POST" class="form-horizontal" enctype="multipart/form-data">
             @csrf
-            <div class="row">
-                <div class="col-xs-12 col-sm-12 col-md-12">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h3 class="panel-title"><strong>Add Footer element</strong></h3>
+                    <ul class="panel-controls">
+                        <li><a href="/footer" class="panel-remove"><span class="fa fa-times"></span></a></li>
+                    </ul>
+                </div>
+                <div class="panel-body">
+                    <p>Fill the form below to add a new slide.</p>
+                </div>
+                <div class="panel-body">
                     <div class="form-group">
-                        <strong>Purpose:</strong>
-                        <textarea name="purpose" class="form-control"  rows="10" id="myeditorinstance" 
-                            rows="5" style="white-space: pre-wrap; text-indent: 50px;"> 
-                            Purpose
-                        </textarea>
+                        <label class="col-md-3 col-xs-12 control-label">Purpose:</label>
+                        <div class="col-md-6 col-xs-12">                                            
+                            <textarea name="purpose" class="form-control" rows="5" id="myeditorinstance"></textarea>
+                        </div>
                         @error('purpose')
                         <div class="alert alert-danger mt-1 mb-1">{{ $message }}</div>
                         @enderror
                     </div>
-                </div>
-                
-                <div class="col-xs-12 col-sm-12 col-md-12">
+
                     <div class="form-group">
-                        <strong>Content:</strong>
-                        <textarea name="content" class="form-control"  rows="10" id="myeditorinstance" 
-                            rows="5" style="white-space: pre-wrap; text-indent: 50px;"> 
-                            Content
-                        </textarea>
+                        <label class="col-md-3 col-xs-12 control-label">Content:</label>
+                        <div class="col-md-6 col-xs-12">                                            
+                            <textarea name="content" class="form-control" rows="5" id="myeditorinstance"></textarea>
+                        </div>
                         @error('content')
                         <div class="alert alert-danger mt-1 mb-1">{{ $message }}</div>
                         @enderror
                     </div>
-                </div>
 
-                <div class="col-xs-12 col-sm-12 col-md-12">
                     <div class="form-group">
-                        <strong>Additional Help:</strong>
-                        <textarea name="additionalHelp" class="form-control"  rows="10" id="myeditorinstance" 
-                            rows="5" style="white-space: pre-wrap; text-indent: 50px;"> 
-                            Additional Help
-                        </textarea>
+                        <label class="col-md-3 col-xs-12 control-label">Additional Help:</label>
+                        <div class="col-md-6 col-xs-12">                                            
+                            <textarea name="additionalHelp" class="form-control" rows="5" id="myeditorinstance"></textarea>
+                        </div>
                         @error('additionalHelp')
                         <div class="alert alert-danger mt-1 mb-1">{{ $message }}</div>
                         @enderror
                     </div>
-                </div>
-
-                <div class="col-xs-12 col-sm-12 col-md-12">
+                    
                     <div class="form-group">
-                        <strong>List Of Accronyms:</strong>
-                        <textarea name="listOfAccronyms" class="form-control"  rows="10" id="myeditorinstance" 
-                            rows="5" style="white-space: pre-wrap; text-indent: 50px;"> 
-                            List Of Accronyms
-                        </textarea>
+                        <label class="col-md-3 col-xs-12 control-label">List Of Accronyms:</label>
+                        <div class="col-md-6 col-xs-12">                                            
+                            <textarea name="listOfAccronyms" class="form-control" rows="5" id="myeditorinstance"></textarea>
+                        </div>
                         @error('listOfAccronyms')
                         <div class="alert alert-danger mt-1 mb-1">{{ $message }}</div>
                         @enderror
                     </div>
-                </div>
 
-                <div class="col-xs-12 col-sm-12 col-md-12">
                     <div class="form-group">
-                        <strong>Copyright:</strong>
-                        <textarea name="copyright" class="form-control"  rows="10" id="myeditorinstance" 
-                            rows="5" style="white-space: pre-wrap; text-indent: 50px;"> 
-                            Copyright
-                        </textarea>
+                        <label class="col-md-3 col-xs-12 control-label">Copyright:</label>
+                        <div class="col-md-6 col-xs-12">                                            
+                            <textarea name="copyright" class="form-control" rows="5" id="myeditorinstance"></textarea>
+                        </div>
                         @error('copyright')
                         <div class="alert alert-danger mt-1 mb-1">{{ $message }}</div>
                         @enderror
                     </div>
-                </div>
 
-                <div class="col-xs-12 col-sm-12 col-md-12">
                     <div class="form-group">
-                        <strong>Disclaimer:</strong>
-                        <textarea name="disclaimer" class="form-control"  rows="10" id="myeditorinstance" 
-                            rows="5" style="white-space: pre-wrap; text-indent: 50px;"> 
-                            Disclaimer
-                        </textarea>
+                        <label class="col-md-3 col-xs-12 control-label">Disclaimer:</label>
+                        <div class="col-md-6 col-xs-12">                                            
+                            <textarea name="disclaimer" class="form-control" rows="5" id="myeditorinstance"></textarea>
+                        </div>
                         @error('disclaimer')
                         <div class="alert alert-danger mt-1 mb-1">{{ $message }}</div>
                         @enderror
                     </div>
                 </div>
 
-                <div>
-                 <button type="submit" class="btn btn-primary ml-3">Submit</button>
+                <div class="panel-footer">
+                    <div>
+                        <label class="col-md-3 col-xs-12 control-label"></label>
+                        <button type="submit" class="col-md-3 col-xs-12 btn btn-success">Submit</button>
+                    </div>
                 </div>
             </div>
         </form>
     </div>
     <div class="container">
         <div class="pull-right">
-            <a class="btn btn-success" href="{{ route('footer.index') }}"> Back</a>
+            <a class="btn btn-warning" href="{{ route('footer.index') }}"> Back</a>
         </div>
     </div> 
 

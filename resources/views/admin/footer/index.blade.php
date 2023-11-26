@@ -2,11 +2,11 @@
 
 @section('content')
 
-    <div class="container">
+   <!-- <div class="container">
         <div class="pull-right">
             <a class="btn btn-success" href="updateHomePage"> Back</a>
         </div>
-    </div> 
+    </div> -->
 
 <!-- new content-->
 
@@ -17,7 +17,7 @@
                     <h2>Footer Elements</h2> 
                 </div>
                 <div class="pull-right mb-2">
-                    <a class="btn btn-success" href="{{ route('footer.create') }}"> Create Footer element</a>
+                    <a class="btn btn-success" href="/createFooter"> Create Footer element</a>
                 </div>
             </div>
         </div>
@@ -65,10 +65,10 @@
         {{ $footer->links() }}
     </div>
 
-    <div class="container">
+    <!--<div class="container">
         <div class="pull-right">
             <a class="btn btn-success" href="updateHomePage"> Back</a>
         </div>
-    </div> 
+    </div> -->
 
 @endsection

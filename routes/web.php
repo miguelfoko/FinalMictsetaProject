@@ -165,3 +165,5 @@ Route::get('/updateHomePage', [App\Http\Controllers\AdminHomePageController::cla
 
 Route::resource('slides', SliderController::class);
 Route::resource('footer', FooterController::class);
+Route::get('/createSlider', function(){ return view('sliders.create');});
+Route::get('/createFooter', function(){ return view('admin.footer.create');});
