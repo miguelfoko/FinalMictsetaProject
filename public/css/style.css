@@ -3165,3 +3165,8 @@ footer .footer-text.second {
 	margin: 20px 0 30px;
 }
 }
+
+.my_nav {
+	margin: auto;
+	width: 50%;
+  }

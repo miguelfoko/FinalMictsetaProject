@@ -36,7 +36,7 @@
           <a href="viewcollegecalendar"><img src="{{ asset('/img/tvetCallendar.png') }}" alt="..."></a> 
           </span>
           <div class="caption">
-            <a href="viewcollegecalendar">Academic Calendar</a> 
+          <h4><a href="viewcollegecalendar">Academic Calendar</a> </h4>
           </div>
         </div>
       </div>
@@ -44,10 +44,10 @@
       <div class="col-12 col-sm-6 col-md-4 col-xl-3">
         <div class="single-service">
           <span class="icofont ">
-          <a href="viewsubscribe"><img src="{{ asset('/img/Subscribe.png') }}" alt="..."></a> 
+          <h4><a href="viewsubscribe"><img src="{{ asset('/img/Subscribe.png') }}" alt="..."></a>  </h4>
           </span>
           <div class="caption">
-            <a href="viewsubscribe">Subscribe</a> 
+          <h4><a href="viewsubscribe">Subscribe</a> 
           </div>
         </div>
       </div>
@@ -58,7 +58,7 @@
           <a href="https://www.nsfas.org.za/" target=”_blank”><img src="{{ asset('/img/NSFAS_Icon.png') }}" alt="..."></a> 
           </span>
           <div class="caption">
-            <a href="https://www.nsfas.org.za/" target=”_blank”>Financial Aid</a> 
+          <h4><a href="https://www.nsfas.org.za/" target=”_blank”>Financial Aid</a> </h4>
           </div>
         </div>
       </div>
@@ -66,10 +66,10 @@
       <div class="col-12 col-sm-6 col-md-4 col-xl-3">
         <div class="single-service">
           <span class="icofont ">
-          <a href="viewcareerguidance" ><img src="{{ asset('/img/Careers_Icon.png') }}" alt="..."></a> 
+          <a href="viewcareerguidance" ><img src="{{ asset('/img/Careers_Icon.png') }}" alt="..."></a> </h4>
           </span>
           <div class="caption">
-            <a href="viewcareerguidance">Career Guidance</a> 
+          <h4><a href="viewcareerguidance">Career Guidance</a> 
           </div>
         </div>
       </div>
@@ -207,7 +207,7 @@
              <a href="https://www.nsfas.org.za/" target=”_blank”> <img src="{{ asset('/img/NSFAS-design-Homepage.jpg') }}" class="img-fluid" alt=""></a>
             </div>
           </div>
-        </div>
+        </div> 
       </div>
     </section>
     
