@@ -136,6 +136,19 @@
         <script type="text/javascript" src="adminResources/js/plugins/daterangepicker/daterangepicker.js"></script>
         <!-- END THIS PAGE PLUGINS-->        
 
+        <!-- START TABLE PLUGINS-->       
+        <script type='text/javascript' src='adminResources/js/plugins/icheck/icheck.min.js'></script>
+        <script type="text/javascript" src="js/plugins/mcustomscrollbar/jquery.mCustomScrollbar.min.js"></script>
+        
+        <script type="text/javascript" src="adminResources/js/plugins/datatables/jquery.dataTables.min.js"></script>
+        <script type="text/javascript" src="adminResources/js/plugins/tableexport/tableExport.js"></script>
+        <script type="text/javascript" src="adminResources/js/plugins/tableexport/jquery.base64.js"></script>
+        <script type="text/javascript" src="adminResources/js/plugins/tableexport/html2canvas.js"></script>
+        <script type="text/javascript" src="adminResources/js/plugins/tableexport/jspdf/libs/sprintf.js"></script>
+        <script type="text/javascript" src="adminResources/js/plugins/tableexport/jspdf/jspdf.js"></script>
+        <script type="text/javascript" src="adminResources/js/plugins/tableexport/jspdf/libs/base64.js"></script>        
+        <!-- END TABLE PLUGINS-->  
+
         <!-- START TEMPLATE -->
         <script type="text/javascript" src="adminResources/js/settings.js"></script>
         

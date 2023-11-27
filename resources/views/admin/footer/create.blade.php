@@ -21,81 +21,86 @@
                     <p>Fill the form below to add a new slide.</p>
                 </div>
                 <div class="panel-body">
-                    <div class="form-group">
-                        <label class="col-md-3 col-xs-12 control-label">Purpose:</label>
-                        <div class="col-md-6 col-xs-12">                                            
-                            <textarea name="purpose" class="form-control" rows="5" id="myeditorinstance"></textarea>
-                        </div>
-                        @error('purpose')
-                        <div class="alert alert-danger mt-1 mb-1">{{ $message }}</div>
-                        @enderror
-                    </div>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label class="col-md-3 col-xs-12 control-label">Purpose:</label>
+                                <div class="col-md-6 col-xs-12">                                            
+                                    <textarea name="purpose" class="form-control" rows="5" id="myeditorinstance"></textarea>
+                                </div>
+                                @error('purpose')
+                                <div class="alert alert-danger mt-1 mb-1">{{ $message }}</div>
+                                @enderror
+                            </div>
 
-                    <div class="form-group">
-                        <label class="col-md-3 col-xs-12 control-label">Content:</label>
-                        <div class="col-md-6 col-xs-12">                                            
-                            <textarea name="content" class="form-control" rows="5" id="myeditorinstance"></textarea>
-                        </div>
-                        @error('content')
-                        <div class="alert alert-danger mt-1 mb-1">{{ $message }}</div>
-                        @enderror
-                    </div>
+                            <div class="form-group">
+                                <label class="col-md-3 col-xs-12 control-label">Content:</label>
+                                <div class="col-md-6 col-xs-12">                                            
+                                    <textarea name="content" class="form-control" rows="5" id="myeditorinstance"></textarea>
+                                </div>
+                                @error('content')
+                                <div class="alert alert-danger mt-1 mb-1">{{ $message }}</div>
+                                @enderror
+                            </div>
 
-                    <div class="form-group">
-                        <label class="col-md-3 col-xs-12 control-label">Additional Help:</label>
-                        <div class="col-md-6 col-xs-12">                                            
-                            <textarea name="additionalHelp" class="form-control" rows="5" id="myeditorinstance"></textarea>
+                            <div class="form-group">
+                                <label class="col-md-3 col-xs-12 control-label">Additional Help:</label>
+                                <div class="col-md-6 col-xs-12">                                            
+                                    <textarea name="additionalHelp" class="form-control" rows="5" id="myeditorinstance"></textarea>
+                                </div>
+                                @error('additionalHelp')
+                                <div class="alert alert-danger mt-1 mb-1">{{ $message }}</div>
+                                @enderror
+                            </div>  
                         </div>
-                        @error('additionalHelp')
-                        <div class="alert alert-danger mt-1 mb-1">{{ $message }}</div>
-                        @enderror
-                    </div>
-                    
-                    <div class="form-group">
-                        <label class="col-md-3 col-xs-12 control-label">List Of Accronyms:</label>
-                        <div class="col-md-6 col-xs-12">                                            
-                            <textarea name="listOfAccronyms" class="form-control" rows="5" id="myeditorinstance"></textarea>
-                        </div>
-                        @error('listOfAccronyms')
-                        <div class="alert alert-danger mt-1 mb-1">{{ $message }}</div>
-                        @enderror
-                    </div>
 
-                    <div class="form-group">
-                        <label class="col-md-3 col-xs-12 control-label">Copyright:</label>
-                        <div class="col-md-6 col-xs-12">                                            
-                            <textarea name="copyright" class="form-control" rows="5" id="myeditorinstance"></textarea>
-                        </div>
-                        @error('copyright')
-                        <div class="alert alert-danger mt-1 mb-1">{{ $message }}</div>
-                        @enderror
-                    </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label class="col-md-3 col-xs-12 control-label">List Of Accronyms:</label>
+                                <div class="col-md-6 col-xs-12">                                            
+                                    <textarea name="listOfAccronyms" class="form-control" rows="5" id="myeditorinstance"></textarea>
+                                </div>
+                                @error('listOfAccronyms')
+                                <div class="alert alert-danger mt-1 mb-1">{{ $message }}</div>
+                                @enderror
+                            </div>
 
-                    <div class="form-group">
-                        <label class="col-md-3 col-xs-12 control-label">Disclaimer:</label>
-                        <div class="col-md-6 col-xs-12">                                            
-                            <textarea name="disclaimer" class="form-control" rows="5" id="myeditorinstance"></textarea>
+                            <div class="form-group">
+                                <label class="col-md-3 col-xs-12 control-label">Copyright:</label>
+                                <div class="col-md-6 col-xs-12">                                            
+                                    <textarea name="copyright" class="form-control" rows="5" id="myeditorinstance"></textarea>
+                                </div>
+                                @error('copyright')
+                                <div class="alert alert-danger mt-1 mb-1">{{ $message }}</div>
+                                @enderror
+                            </div>
+
+                            <div class="form-group">
+                                <label class="col-md-3 col-xs-12 control-label">Disclaimer:</label>
+                                <div class="col-md-6 col-xs-12">                                            
+                                    <textarea name="disclaimer" class="form-control" rows="5" id="myeditorinstance"></textarea>
+                                </div>
+                                @error('disclaimer')
+                                <div class="alert alert-danger mt-1 mb-1">{{ $message }}</div>
+                                @enderror
+                            </div>
                         </div>
-                        @error('disclaimer')
-                        <div class="alert alert-danger mt-1 mb-1">{{ $message }}</div>
-                        @enderror
                     </div>
                 </div>
 
                 <div class="panel-footer">
                     <div>
-                        <label class="col-md-3 col-xs-12 control-label"></label>
-                        <button type="submit" class="col-md-3 col-xs-12 btn btn-success">Submit</button>
+                        <label class="col-md-4 col-xs-12 control-label"></label>
+                        <button type="submit" class="col-md-4 col-xs-12 btn btn-success">Submit</button>
                     </div>
                 </div>
             </div>
         </form>
     </div>
-    <div class="container">
+    <!--<div class="container">
         <div class="pull-right">
             <a class="btn btn-warning" href="{{ route('footer.index') }}"> Back</a>
         </div>
-    </div> 
-
+    </div> -->
 
 @endsection
