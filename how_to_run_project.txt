@@ -1,0 +1,32 @@
+How to run project
+
+1- Pre-requisites
+   - Php at least V7 and MySql or postgresql
+   - or simply install Xamp or wamp. It includes php and mysql; and then if you want to use postgresql, you need to install it
+   
+   
+2- Composer installation
+	-Download and install composer (link for composer: https://getcomposer.org/download/)
+	
+	
+2- Laravel Installation
+	- Open a terminal and insert command: composer global require laravel/installer
+	NB: You must make sure that the php_zip extension is enabled in your php.ini file. If it is not the case, just edit the php.ini file and insert
+	extension=php_zip.dll and then save the file and restart all php services.
+	
+
+3- Install or update project dependencies
+	- Open the file app/provider/AppServiceProvider.php in your prefered text editor. comment lines 28 to 33 and save the file.
+	- At the root of the project, you have a file named ".env.example". Create a new file named ".env" then copy and paste the content of the ".env.example" file
+	- Edit ".env" file from line 11 to 16 with your credentials to your local database.
+	- Make sure the driver of your database is enable in php.ini file. You must have a line with "extension=mysqli" and "extension=pdo_mysql" in php.ini file in the case you are using mysql, or 
+	"extension=pgsql" and "extension=pdo_pgsql" in the case of postgresql.
+	- In your DBMS (Postgresql or mysql), create database mictseta.
+	- Open a terminal and move to the project folder. Run the command "composer install"  or "composer update"
+	- run command php artisan key:generate
+	- run command php artisan migrate
+	- Open the file app/provider/AppServiceProvider.php in your prefered text editor. uncomment lines 28 to 33 and save the file.
+	- run php artisan serve
+
+4- Enjoy
+	
