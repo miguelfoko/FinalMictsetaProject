@@ -15,7 +15,7 @@
                     <h2>Slider's Image</h2>
                 </div>
                 <div class="pull-right mb-2">
-                    <a class="btn btn-success" href="/createSlider"> Create Slide</a>
+                    <a class="btn btn-success" href="/viewCreateSlider"> Create Slide</a>
                 </div>
             </div>
         </div>
@@ -26,7 +26,7 @@
 
     <img src="{{url('images')}}/{{$slider->photo}}" alt="{{$slider->title}}" width="100%" height="300">
 
-<a href="{{ route('slides.edit', $slider->id) }}" class="btn btn-block btn-info">Edit</a>
+    <a href="{{ route('slides.edit', $slider->id) }}" class="btn btn-block btn-info">Edit</a>
 
 
 {!! Form::open(['method' => 'DELETE', 'route' => ['slides.destroy', $slider->id] ]) !!}

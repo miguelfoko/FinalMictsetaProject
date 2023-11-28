@@ -1,66 +1,97 @@
 @extends('layouts.app')
 
 @section('content')
-    <div class="container">
+    <!--<div class="container">
         <div class="pull-right">
             <a class="btn btn-success" href="updateExamination"> Back</a>
         </div>
-    </div> 
+    </div> -->
 
 <!-- new content-->
-
-<div class="container mt-2"> 
-        <div class="row">
-            <div class="col-lg-12 margin-tb">
-                <div class="pull-left">
-                    <h2>Examination Information and Resources</h2> 
-                </div>
-                <div class="pull-right mb-2">
-                    <a class="btn btn-success" href="{{ route('examinformationresources.create') }}"> Create an Examination Resources</a>
-                </div>
-            </div>
-        </div>
-        @if ($message = Session::get('success'))
-            <div class="alert alert-success">
-                <p>{{ $message }}</p>
-            </div>
-        @endif
-        <table class="table table-bordered">
-            <thead>
-                <tr>
-                    <th>S.No</th>
-                    <th>Category</th>
-                    <th>File</th>
-                    <th width="280px">Action</th>
-                </tr>
-            </thead>
-            <tbody>
-                @foreach ($examinformationresources as $examinformationresource)
-                    <tr heigh=100px>
-                        <td width=5%>{{ $examinformationresource->id }}</td>
-                        <td with=10%>{{ $examinformationresource->category }}</td>
-                        <td width=20% height="300">
-                            <a href="{{url('files')}}/{{$examinformationresource->category}}/{{$examinformationresource->file}}">View File</a>
-                            <embed src="{{url('files')}}/{{$examinformationresource->category}}/{{$examinformationresource->file}}" height="100%" width="100%">
-                        </td>
-                        <td width="10%">
-                            <form action="{{ route('examinformationresources.destroy',$examinformationresource->id) }}" method="Post">
-                                <a class="btn btn-primary" href="{{ route('examinformationresources.edit',$examinformationresource->id) }}">Edit</a>
-                                @csrf
-                                @method('DELETE')
-                                <button type="submit" class="btn btn-danger">Delete</button>
-                            </form>
-                        </td>
-                    </tr>
-                    @endforeach
-            </tbody>
-        </table>
-        {{ $examinformationresources->links() }}
+    <!-- PAGE TITLE -->
+    <div class="page-title">                    
+    <h2><span class="fa fa-arrow-circle-o-left"></span> Examination Information and Resources</h2>
     </div>
-
-    <div class="container">
-        <div class="pull-right">
-            <a class="btn btn-success" href="updateExamination"> Back</a>
+    <!-- END PAGE TITLE -->                
+    
+    <!-- PAGE CONTENT WRAPPER -->
+    <div class="page-content-wrap">
+    
+        
+        
+        <div class="row">
+            <div class="col-md-12">
+                
+                <!-- START DATATABLE EXPORT -->
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">Examination Information and Resources</h3>
+                        <div class="btn-group pull-right">
+                            <a class="btn btn-success" href="{{ route('examinformationresources.create') }}">Create an Examination Resources</a>
+                            <button class="btn btn-danger dropdown-toggle" data-toggle="dropdown"><i class="fa fa-bars"></i> Export Data</button>
+                            <ul class="dropdown-menu">
+                                <li><a href="#" onClick ="$('#tableElements').tableExport({type:'sql'});"><img src='adminResources/img/icons/sql.png' width="24"/> SQL</a></li>
+                                <li class="divider"></li>
+                                <li><a href="#" onClick ="$('#tableElements').tableExport({type:'csv',escape:'false'});"><img src='adminResources/img/icons/csv.png' width="24"/> CSV</a></li>
+                                <li><a href="#" onClick ="$('#tableElements').tableExport({type:'txt',escape:'false'});"><img src='adminResources/img/icons/txt.png' width="24"/> TXT</a></li>
+                                <li class="divider"></li>
+                                <li><a href="#" onClick ="$('#tableElements').tableExport({type:'excel',escape:'false'});"><img src='adminResources/img/icons/xls.png' width="24"/> XLS</a></li>
+                            </ul>
+                        </div>                                    
+                        
+                    </div>
+                    <div class="panel-body">
+                        <div class="table-responsive">
+                            @if ($message = Session::get('success'))
+                                <div class="alert alert-success">
+                                    <p>{{ $message }}</p>
+                                </div>
+                            @endif
+                            <table id="tableElements" class="table datatable">
+                                <thead>
+                                    <tr>
+                                        <th>S.No</th>
+                                        <th>Category</th>
+                                        <th>File</th>
+                                        <th width="280px">Action</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    @foreach ($examinformationresources as $examinformationresource)
+                                        <tr heigh=100px>
+                                            <td width=5%>{{ $examinformationresource->id }}</td>
+                                            <td with=10%>{{ $examinformationresource->category }}</td>
+                                            <td width=20% height="300">
+                                                <a href="{{url('files')}}/{{$examinformationresource->category}}/{{$examinformationresource->file}}">View File</a>
+                                                <embed src="{{url('files')}}/{{$examinformationresource->category}}/{{$examinformationresource->file}}" height="100%" width="100%">
+                                            </td>
+                                            <td width="10%">
+                                                <form action="{{ route('examinformationresources.destroy',$examinformationresource->id) }}" method="Post">
+                                                    <a class="btn btn-primary" href="{{ route('examinformationresources.edit',$examinformationresource->id) }}">Edit</a>
+                                                    @csrf
+                                                    @method('DELETE')
+                                                    <button type="submit" class="btn btn-danger">Delete</button>
+                                                </form>
+                                            </td>
+                                        </tr>
+                                    @endforeach
+                                </tbody>
+                            </table>  
+                            {{ $examinformationresources->links() }}                             
+                        </div>
+                    </div>
+                </div>
+                <!-- END DATATABLE EXPORT -->                            
+            </div>
         </div>
-    </div> 
+
+    </div>         
+    <!-- END PAGE CONTENT WRAPPER -->
+   
+    <!--<div class="container">
+        <div class="pull-right">
+            <a class="btn btn-success" href="updateHomePage"> Back</a>
+        </div>
+    </div> -->
+
 @endsection

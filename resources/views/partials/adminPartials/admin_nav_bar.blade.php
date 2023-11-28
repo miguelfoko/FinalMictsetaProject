@@ -75,7 +75,7 @@
                             <li><a href="collegecoursetype"><span class="glyphicon glyphicon-flash"></span>Manage College Course Type</a></li>
                             <li><a href="collegecalendar"><span class="fa fa-calendar"></span>Manage Calendar</a></li>
                             <li><a href="careerguidance"><span class="fa fa-caret-square-o-up"></span>Manage Carreer Guidance</a></li>
-                            <li><a href="successstories"><span class="glyphicon glyphicon-ok"></span>Manage Success Storiese</a></li>
+                            <li><a href="successstories"><span class="glyphicon glyphicon-ok"></span>Manage Success Stories</a></li>
                         </ul>
                     </li>
                     <li>

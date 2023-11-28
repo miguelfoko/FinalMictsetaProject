@@ -164,6 +164,11 @@ Route::get('/updateHomePage', [App\Http\Controllers\AdminHomePageController::cla
 
 
 Route::resource('slides', SliderController::class);
+Route::get('/viewCreateSlider', function(){ return view('sliders.create');});
+Route::get('/viewEditSlider', function(){ return view('sliders.edit');});
+
+
 Route::resource('footer', FooterController::class);
-Route::get('/createSlider', function(){ return view('sliders.create');});
-Route::get('/createFooter', function(){ return view('admin.footer.create');});
+Route::get('/viewCreateFooter', function(){ return view('admin.footer.create');});
+
+
