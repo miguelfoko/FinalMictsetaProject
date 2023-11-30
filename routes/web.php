@@ -79,7 +79,6 @@ Route::resource('/faqs',FaqsController::class);
 Route::resource('/regionallocations',RegionalLocationsController::class);
 
 
-
 Route::get('/test', function(){return view('testPopup');});
 
 //Examination pages
@@ -171,4 +170,6 @@ Route::get('/viewEditSlider', function(){ return view('sliders.edit');});
 Route::resource('footer', FooterController::class);
 Route::get('/viewCreateFooter', function(){ return view('admin.footer.create');});
 
-
+Route::get('/viewCreaRegionalLocation', function(){ return view('admin.contactus.regionallocations.create');});
+Route::get('/viewCreateFaq', function(){ return view('admin.faqs.create');});
+Route::get('/viewCreateNews', function(){ return view('admin.news.create');});

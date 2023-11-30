@@ -11,7 +11,7 @@
 <!-- new content-->
     <!-- PAGE TITLE -->
 <div class="page-title">                    
-    <h2><span class="fa fa-arrow-circle-o-left"></span> Footer Elements</h2>
+    <h2><span class="fa fa-bookmark-o"></span> Footer Elements</h2>
     </div>
     <!-- END PAGE TITLE -->                
     

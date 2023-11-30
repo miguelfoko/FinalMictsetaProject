@@ -15,7 +15,7 @@
                     <h2>Slider's Image</h2>
                 </div>
                 <div class="pull-right mb-2">
-                    <a class="btn btn-success" href="/viewCreateSlider"> Create Slide</a>
+                    <a class="btn btn-success" href="/viewCreateSlider"><i class="fa fa-plus"></i> Create Slide</a>
                 </div>
             </div>
         </div>

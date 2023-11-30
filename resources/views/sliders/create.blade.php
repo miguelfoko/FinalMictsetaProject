@@ -39,7 +39,8 @@
   </div>
   <div class="panel-footer">
       {{ Form::label('', '', array('class' => 'col-md-3 col-xs-12 control-label')) }}
-      {{ Form::submit('Add', array('class' => 'col-md-3 col-xs-12 btn btn-success')) }}
+      {{ Form::submit('Add', array('class' => 'btn btn-success ml-3')) }}
+      <a class="btn btn-danger" href="/slides"> Cancel</a>
   </div>
 </div>
 {{ Form::close() }}

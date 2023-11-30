@@ -90,8 +90,9 @@
 
                 <div class="panel-footer">
                     <div>
-                        <label class="col-md-4 col-xs-12 control-label"></label>
-                        <button type="submit" class="col-md-4 col-xs-12 btn btn-success">Submit</button>
+                        <label class="col-md-5 col-xs-12 control-label"></label>
+                        <button type="submit" class="btn btn-success ml-3">Submit</button>
+                        <a class="btn btn-danger" href="{{ route('footer.index') }}"> Cancel</a>
                     </div>
                 </div>
             </div>
