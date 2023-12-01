@@ -174,3 +174,4 @@ Route::get('/viewCreaRegionalLocation', function(){ return view('admin.contactus
 Route::get('/viewCreateFaq', function(){ return view('admin.faqs.create');});
 Route::get('/viewCreateNews', function(){ return view('admin.news.create');});
 Route::get('/viewCreateExaminationResource', function(){ return view('admin.examinations.examresources.create');});
+Route::get('/viewCreateExamVideo', function(){ return view('admin.examinations.examtrainingvideos.create');});
