@@ -2,72 +2,47 @@
 
 @section('content')
 
+<div class="breadcromb-text">
+  <div class="container">
+    <ul>
+      <li><a href="/">Home</a></li>
+      <li><a href="/contactus">Contact us</a></li>
+      <li>Frequently Asked Questions</li>
+    </ul>
+  </div>
+</div>
+ 
 
-  <main id="main">
-  <section id="events" class="events">
-        <div class="container-fluid" data-aos="fade-up">
-        <div class="member2" >
-         Frequently Asked Questions
-        </div>
-         </div>
-    <div class="container" data-aos="fade-up">
-    <div class="new">
-            <div class="row  mt-5">
 
-              <div class="no">
-              {{$i=$faqs->count()}}
-              </div>
-          
-            @foreach ($faqs as $faq)   
-            
-              
-                <div class="dropdown" >
-                      <button onclick="load_faq_content({{$faq->id}},{{$i}})" class="dropbtn" >{{$faq->title}} <i class="fa fa-caret-down"></i></button>
-                      <div id="{{$faq->id}}" class="dropdown-content">
-                            {!! $faq->content !!}  
-                      </div>
-                  </div>
-                  
-              @endforeach  
+<!-- Our FAQ Wrapper start -->
+<div class="our-faq-wrapper">
+  <div class="container">
+    <div class="title text-center">
+      <h2>Asked <span>Questions</span></h2>
+      <div class="separator my"> <i class="icofont icofont-hat-alt"></i> </div>
+    </div>
+    <div class="row">
+      <div class="col-lg-12">
+        <div class="accordion" id="accordion">
+        @foreach ($faqs as $faq)   
+          <div class="card">
+            <div class="card-header" id="headingOne">
+              <h5 class="mb-0">
+                <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne"> >{{$faq->title}} </button>
+              </h5>
+            </div>
+            <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion">
+              <div class="card-body"> {!! $faq->content !!}   </div>
             </div>
           </div>
+          @endforeach  
+          
         </div>
-                  <!--   {{ $faqs->links() }} -->
-       <!-- </div>  -->
-   
-    <script>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Our FAQ Wrapper End --> 
 
-        function load_faq_content(theId,i){
-            var openDropdown = document.getElementById(theId);
-            if(openDropdown.style.display == "block"){
-              openDropdown.style.display = "none";
-            }else{
-              openDropdown.style.display = "block";
-            }
-            for(j=1;j<=i;j++){
-              if(j!=theId){
-                openDropdown = document.getElementById(j);
-                openDropdown.style.display = "none";
-              }
-            }
-            
-        }
-       
-         // Close the dropdown if the user clicks outside of it
-         window.onclick = function(event) {
-          if (!event.target.matches('.dropbtn')) {
-            var dropdowns = document.getElementsByClassName("dropdown-content");
-            var k;
-            for (k = 1; k <= dropdowns.length; k++) {
-              var openDropdown = document.getElementById(k);
-                openDropdown.style.display = "none";
-            }
-          }
-        }
-
-      
-    </script>
-</section>
-  </main><!-- End #main -->
-
+ 
  @endsection

@@ -2,46 +2,43 @@
 
 @section('content')
 
+<div class="breadcromb-text">
+  <div class="container">
+    <ul>
+      <li><a href="/">Home</a></li>
+      <li>Newsletter</li>
+    </ul>
+  </div>
+</div>
 
-  <main id="main" data-aos="fade-up">
-
-    <!-- ======= Events Section ======= -->
-    <section id="events" class="events">
-      <div class="container-fluid" >
-      <div class="member2" >
-         Newsletter
-        </div> 
-      </div> 
-        <div class="container" data-aos="fade-up">
-       
-        <div class="row" > 
-      @foreach ($news as $new) 
-         <div class="col-lg-4 col-md-6 d-flex align-items-stretch" align="center">
-            <div class="card">
-           
-            <div class="card-img">
-            <a href="/viewNews/{{$new->id}}"> <img src="{{ asset('/images/'.$new->picture) }}" alt="..."> </a>
-            </div>
-            <div class="card-body"> 
-                <h5 class="card-title"><a href="{{route('viewNews.show',$new->id)}}">{{ $new->title }}</a></h5>
-                <p class="fst-italic text-center">
-                {{ $new->subtitle }}
-                </p>
-
-            </div>
-            <p class="fst-italic text-center">
-              <a href="{{route('viewNews.show',$new->id)}}">Read more</a>
-            </p>
+<!-- Inner Page Wrapper Start -->
+<div class="inner-page-wrapper course-wrapper">
+  <div class="container">
+    <div class="row">
+    @foreach ($news as $new) 
+      <div class="col-12 col-md-6 col-lg-4">
+        <div class="single-blog">
+          <div class="single_courses">
+            <div class="single_courses_thumb">
+              <div class="courses_badge"> <span>New</span> </div>
+              <img src="{{ asset('/images/'.$new->picture) }}" alt=""> </div>
+            <div class="single_courses_desc">
+              <div class="title"> <a href="{{route('viewNews.show',$new->id)}}">{{ $new->title }}</a>
+                <p>{{ $new->subtitle }}</p>
+              </div>
             </div>
           </div>
-        @endforeach
+          
+          <a class="btn small" href="{{route('viewNews.show',$new->id)}}">Read More</a>
         </div>
-
-        </div>
-        {{ $news->links() }}
-
       </div>
-      </section><!-- End Events Section -->
-
-  </main><!-- End #main -->
+    @endforeach
+    </div>
+    
+    <div class="my_nav">
+      {{ $news->links() }}
+    </div>
+  </div>
+</div>
+<!-- Inner Page Wrapper End --> 
   @endsection
