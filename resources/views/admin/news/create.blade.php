@@ -4,13 +4,6 @@
 <!-- new content-->
 
 <div class="container mt-2">
-        <div class="row">
-            <div class="col-lg-12 margin-tb">
-                <div class="pull-left mb-2">
-                    <h2>Add News</h2>
-                </div>
-            </div>
-        </div>
         @if(session('status'))
         <div class="alert alert-success mb-1 mt-1">
             {{ session('status') }}
