@@ -10,7 +10,7 @@
 <!-- new content-->
     <!-- PAGE TITLE -->
     <div class="page-title">                    
-    <h2><span class="fa fa-arrow-circle-o-left"></span> ICASS Videos</h2>
+    <h2><span class="fa fa-youtube-play"></span> ICASS Videos</h2>
     </div>
     <!-- END PAGE TITLE -->                
     
@@ -27,7 +27,7 @@
                     <div class="panel-heading">
                         <h3 class="panel-title">ICASS Videos</h3>
                         <div class="btn-group pull-right">
-                            <a class="btn btn-success" href="{{ route('icasstrainingvideos.create') }}"> Create ICASS Videos</a>
+                            <a class="btn btn-success" href="/viewCreateIcassVideo"><i class="fa fa-plus"></i> Create ICASS Videos</a>
                             <button class="btn btn-danger dropdown-toggle" data-toggle="dropdown"><i class="fa fa-bars"></i> Export Data</button>
                             <ul class="dropdown-menu">
                                 <li><a href="#" onClick ="$('#tableElements').tableExport({type:'sql'});"><img src='adminResources/img/icons/sql.png' width="24"/> SQL</a></li>
