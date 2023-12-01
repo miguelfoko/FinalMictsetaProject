@@ -177,3 +177,4 @@ Route::get('/viewCreateExaminationResource', function(){ return view('admin.exam
 Route::get('/viewCreateExamVideo', function(){ return view('admin.examinations.examtrainingvideos.create');});
 Route::get('/viewCreateIcassVideo', function(){ return view('admin.examinations.icasstrainingvideos.create');});
 Route::get('/viewAboutTvet', function(){ return view('admin.abouttvet.create');});
+Route::get('/viewCreateCommunityCollege', function(){ return view('admin.abouttvet.communitycolleges.create');});
