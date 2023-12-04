@@ -21,7 +21,7 @@
                     <div class="panel-heading">
                         <h3 class="panel-title">Colleges</h3>
                         <div class="btn-group pull-right">
-                            <a class="btn btn-success" href="{{ route('college.create') }}"><i class="fa fa-plus"></i>Create College</a>
+                            <a class="btn btn-success" href="/viewCreateCollege"><i class="fa fa-plus"></i>Create College</a>
                             <button class="btn btn-danger dropdown-toggle" data-toggle="dropdown"><i class="fa fa-bars"></i> Export Data</button>
                             <ul class="dropdown-menu">
                                 <li><a href="#" onClick ="$('#tableElements').tableExport({type:'sql'});"><img src='adminResources/img/icons/sql.png' width="24"/> SQL</a></li>

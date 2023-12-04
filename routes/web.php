@@ -1,5 +1,7 @@
 <?php
 use App\Models\CourseType;
+use App\Models\RegionalLocations;
+use App\Models\Program;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\InternalStakeHolderController;
 use App\Http\Controllers\NewsController;
@@ -188,6 +190,6 @@ Route::get('/viewCreateDomain', function(){ return view('admin.resources.courset
 
 //A revoir ou supprimer
 Route::get('/viewCreateCourse', function(){$coursetypes = CourseType::all(); return view('admin.resources.coursetypes.subjects.create', compact('coursetypes'));});
-Route::get('/viewCreateProgram', function(){ return view('admin.resources.coursetypes.create');});
-Route::get('/viewCreateCollege', function(){ return view('admin.resources.coursetypes.college.create');});
+Route::get('/viewCreateProgram', function(){$regionallocations = RegionalLocations::all(); $programs = Program::all(); return view('admin.resources.coursetypes.create', compact('regionallocations','programs'));});
+Route::get('/viewCreateCollege', function(){$programs = Program::all(); $regionallocations = RegionalLocations::all(); return view('admin.resources.coursetypes.college.create', compact('programs','regionallocations'));});
 //Fin à revoir ou supprimer
