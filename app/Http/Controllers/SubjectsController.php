@@ -39,6 +39,7 @@ class SubjectsController extends Controller
     {
         $coursetypes = CourseType::all();
         return view('admin.resources.coursetypes.subjects.create', compact('coursetypes'));
+        //return view('admin.resources.coursetypes.subjects.create');
     }
 
     /**

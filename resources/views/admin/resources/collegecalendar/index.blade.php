@@ -10,14 +10,13 @@
 <!-- new content-->
     <!-- PAGE TITLE -->
     <div class="page-title">                    
-    <h2><span class="fa fa-arrow-circle-o-left"></span>College Calendar</h2>
+    <h2><span class="fa fa-calendar"></span>College Calendar</h2>
     </div>
     <!-- END PAGE TITLE -->                
     
     <!-- PAGE CONTENT WRAPPER -->
     <div class="page-content-wrap">
-    
-        
+           
         
         <div class="row">
             <div class="col-md-12">
@@ -27,7 +26,7 @@
                     <div class="panel-heading">
                         <h3 class="panel-title">College Calendar</h3>
                         <div class="btn-group pull-right">
-                            <a class="btn btn-success" href="{{ route('collegecalendar.create') }}">Create College Calendar</a>
+                            <a class="btn btn-success" href="viewCreateCalendar"><i class="fa fa-plus"></i>Create College Calendar</a>
                             <button class="btn btn-danger dropdown-toggle" data-toggle="dropdown"><i class="fa fa-bars"></i> Export Data</button>
                             <ul class="dropdown-menu">
                                 <li><a href="#" onClick ="$('#tableElements').tableExport({type:'sql'});"><img src='adminResources/img/icons/sql.png' width="24"/> SQL</a></li>

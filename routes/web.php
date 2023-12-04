@@ -1,5 +1,5 @@
 <?php
-
+use App\Models\CourseType;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\InternalStakeHolderController;
 use App\Http\Controllers\NewsController;
@@ -179,3 +179,15 @@ Route::get('/viewCreateIcassVideo', function(){ return view('admin.examinations.
 Route::get('/viewAboutTvet', function(){ return view('admin.abouttvet.create');});
 Route::get('/viewCreateCommunityCollege', function(){ return view('admin.abouttvet.communitycolleges.create');});
 Route::get('/viewCreateSeta', function(){ return view('admin.abouttvet.setas.create');});
+Route::get('/viewCreateCollegeTimes', function(){ return view('admin.tvetcollegetimes.create');});
+Route::get('/viewCreateSuccessStories', function(){ return view('admin.resources.successstories.create');});
+Route::get('/viewCreateCarreerGuidance', function(){ return view('admin.resources.careerguidance.create');});
+Route::get('/viewCreateCalendar', function(){ return view('admin.resources.collegecalendar.create');});
+Route::get('/viewCreateCollegeCourseType', function(){ return view('admin.resources.create');});
+Route::get('/viewCreateDomain', function(){ return view('admin.resources.coursetypes.program.create');});
+
+//A revoir ou supprimer
+Route::get('/viewCreateCourse', function(){$coursetypes = CourseType::all(); return view('admin.resources.coursetypes.subjects.create', compact('coursetypes'));});
+Route::get('/viewCreateProgram', function(){ return view('admin.resources.coursetypes.create');});
+Route::get('/viewCreateCollege', function(){ return view('admin.resources.coursetypes.college.create');});
+//Fin à revoir ou supprimer

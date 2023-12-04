@@ -10,7 +10,7 @@
 <!-- new content-->
     <!-- PAGE TITLE -->
     <div class="page-title">                    
-    <h2><span class="fa fa-arrow-circle-o-left"></span> Success Stories</h2>
+    <h2><span class="glyphicon glyphicon-ok"></span> Success Stories</h2>
     </div>
     <!-- END PAGE TITLE -->                
     
@@ -27,7 +27,7 @@
                     <div class="panel-heading">
                         <h3 class="panel-title">Success Stories</h3>
                         <div class="btn-group pull-right">
-                            <a class="btn btn-success" href="{{ route('successstories.create') }}"> Create Success Story</a>
+                            <a class="btn btn-success" href="/viewCreateSuccessStories"><i class="fa fa-plus"></i>Create Success Story</a>
                             <button class="btn btn-danger dropdown-toggle" data-toggle="dropdown"><i class="fa fa-bars"></i> Export Data</button>
                             <ul class="dropdown-menu">
                                 <li><a href="#" onClick ="$('#tableElements').tableExport({type:'sql'});"><img src='adminResources/img/icons/sql.png' width="24"/> SQL</a></li>

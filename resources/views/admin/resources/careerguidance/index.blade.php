@@ -10,7 +10,7 @@
 <!-- new content-->
     <!-- PAGE TITLE -->
     <div class="page-title">                    
-    <h2><span class="fa fa-arrow-circle-o-left"></span>Career Guidance</h2>
+    <h2><span class="fa fa-caret-square-o-up"></span>Career Guidance</h2>
     </div>
     <!-- END PAGE TITLE -->                
     
@@ -27,7 +27,7 @@
                     <div class="panel-heading">
                         <h3 class="panel-title">Career Guidance</h3>
                         <div class="btn-group pull-right">
-                            <a class="btn btn-success" href="{{ route('careerguidance.create') }}">Create Career Guidance Booklet</a>
+                            <a class="btn btn-success" href="/viewCreateCarreerGuidance"><i class="fa fa-plus"></i>Create Career Guidance Booklet</a>
                             <button class="btn btn-danger dropdown-toggle" data-toggle="dropdown"><i class="fa fa-bars"></i> Export Data</button>
                             <ul class="dropdown-menu">
                                 <li><a href="#" onClick ="$('#tableElements').tableExport({type:'sql'});"><img src='adminResources/img/icons/sql.png' width="24"/> SQL</a></li>

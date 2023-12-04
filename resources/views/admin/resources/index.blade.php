@@ -10,7 +10,7 @@
 <!-- new content-->
     <!-- PAGE TITLE -->
     <div class="page-title">                    
-    <h2><span class="fa fa-arrow-circle-o-left"></span>College Course Types</h2>
+    <h2><span class="glyphicon glyphicon-flash"></span>College Course Types</h2>
     </div>
     <!-- END PAGE TITLE -->                
     
@@ -27,7 +27,7 @@
                     <div class="panel-heading">
                         <h3 class="panel-title">College Course Types</h3>
                         <div class="btn-group pull-right">
-                            <a class="btn btn-success" href="{{ route('collegecoursetype.create') }}"><i class="fa fa-plus"></i>Create College Course Types</a>
+                            <a class="btn btn-success" href="/viewCreateCollegeCourseType"><i class="fa fa-plus"></i>Create College Course Types</a>
                             <a class="btn btn-success" href="{{ route('programs.index') }}"><i class="fa fa-bars"></i> View Domains</a>
                             <a class="btn btn-success" href="{{ route('coursetype.index') }}"><i class="fa fa-bars"></i> View Programs</a>
                             <a class="btn btn-success" href="{{ route('college.index') }}"><i class="fa fa-bars"></i> View Colleges</a>
