@@ -63,11 +63,11 @@
                                             <td>{{ $sstorry->id }}</td>
                                             <td>{{ $sstorry->title }}</td>
                                             <td>
-                                            <a href="{{url('images')}}/{{$sstorry->coverPage}}">View cover page</a>
+                                            <a href="{{url('images')}}/{{$sstorry->coverPage}}" target="_blank">View cover page</a>
                                             <!--<img src="{{url('images')}}/{{$sstorry->coverPage}}"  width="50%" height="100%">-->
                                             </td>
                                             <td>
-                                                <a href="{{url('files')}}/{{$sstorry->file}}">View File</a>
+                                                <a href="{{url('files')}}/{{$sstorry->file}}" target="_blank">View File</a>
                                                 <!--<embed src="{{url('files')}}/{{$sstorry->file}}" height="100%" width="100%"></td>-->
                                             <td>
                                                 <form action="{{ route('successstories.destroy',$sstorry->id) }}" method="Post">

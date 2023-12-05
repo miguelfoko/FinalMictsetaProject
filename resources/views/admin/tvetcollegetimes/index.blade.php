@@ -50,32 +50,33 @@
                             <table id="tableElements" class="table datatable">
                                 <thead>
                                     <tr>
-                                        <th>S.No</th>
+                                        <th width="1%">S.No</th>
                                         <th>Title</th>
                                         <th>Volume</th>
                                         <th>Publication Date</th>
                                         <th>Cover Page</th>
                                         <th>File Link</th>
                                         <th>Size</th>
-                                        <th>Action</th>
+                                        <th width="200px">Action</th>
                                     </tr>
                                 </thead>
                                 <tbody>
                                     @foreach ($tvetcollegetimes as $tctimes)
                                         <tr heigh=100px>
-                                            <td width=5%>{{ $tctimes->id }}</td>
-                                            <td with=20%>{{ $tctimes->title }}</td>
-                                            <td with=10%>{{ $tctimes->volume }}</td>
-                                            <td width=10%>{{$tctimes->publicationDate}}</td>
-                                            <td width=15%>
-                                            <img src="{{url('images')}}/{{$tctimes->coverPage}}"  width="50%" height="100%">
+                                            <td>{{ $tctimes->id }}</td>
+                                            <td>{{ $tctimes->title }}</td>
+                                            <td>{{ $tctimes->volume }}</td>
+                                            <td>{{$tctimes->publicationDate}}</td>
+                                            <td>
+                                                <a href="{{url('images')}}/{{$tctimes->coverPage}}" target="_blank">View cover page</a>
+                                                <!--<img src="{{url('images')}}/{{$tctimes->coverPage}}"  width="50%" height="100%">-->
                                             </td>
                                             <td width=20% height="300">
-                                                <a href="{{url('files')}}/{{$tctimes->file}}">View File</a>
-                                                <embed src="{{url('files')}}/{{$tctimes->file}}" height="100%" width="100%"></td>
+                                                <a href="{{url('files')}}/{{$tctimes->file}}" target="_blank">View File</a>
+                                                <!--<embed src="{{url('files')}}/{{$tctimes->file}}" height="100%" width="100%"></td>-->
                                             
-                                            <td width=10%>{{$tctimes->size}}</td>
-                                            <td width="10%">
+                                            <td>{{$tctimes->size}}</td>
+                                            <td>
                                                 <form action="{{ route('admintvetcollegetimes.destroy',$tctimes->id) }}" method="Post">
                                                     <a class="btn btn-primary" href="{{ route('admintvetcollegetimes.edit',$tctimes->id) }}">Edit</a>
                                                     @csrf
