@@ -50,25 +50,25 @@
                             <table id="tableElements" class="table datatable">
                                 <thead>
                                     <tr>
-                                        <th>S.No</th>
+                                        <th width="1%">S.No</th>
                                         <th>What is TVET?</th>
                                         <th>TVET Overview</th>
                                         <th>Public TVET Colleges</th>
                                         <th>TVET College Administration</th>
                                         <th>Private TvetColleges</th>
-                                        <th>Action</th>
+                                        <th width="200px">Action</th>
                                     </tr>
                                 </thead>
                                 <tbody>
                                     @foreach ($abouttvet as $atvet)
                                         <tr heigh=100px>
-                                            <td width=5%>{{ $atvet->id }}</td>
-                                            <td with=17%>{!! $atvet->whatIsTvet !!}</td>
-                                            <td with=17%>{!! $atvet->tvetOverview !!}</td>
-                                            <td with=17%>{!! $atvet->publicTvetColleges !!}</td>
-                                            <td with=17%>{!! $atvet->tvetCollegeAdministration !!}</td>
-                                            <td with=17%>{!! $atvet->privateTvetColleges !!}</td>
-                                            <td width="10%">
+                                            <td>{{ $atvet->id }}</td>
+                                            <td>{!! $atvet->whatIsTvet !!}</td>
+                                            <td>{!! $atvet->tvetOverview !!}</td>
+                                            <td>{!! $atvet->publicTvetColleges !!}</td>
+                                            <td>{!! $atvet->tvetCollegeAdministration !!}</td>
+                                            <td>{!! $atvet->privateTvetColleges !!}</td>
+                                            <td>
                                                 <form action="{{ route('adminAbouttvet.destroy',$atvet->id) }}" method="Post">
                                                     <a class="btn btn-primary" href="{{ route('adminAbouttvet.edit',$atvet->id) }}">Edit</a>
                                                     @csrf 

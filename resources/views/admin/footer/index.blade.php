@@ -51,14 +51,14 @@
                             <table id="tableElements" class="table datatable">
                                 <thead>
                                     <tr>
-                                        <th>S.No</th>
+                                        <th width="1%">S.No</th>
                                         <th>Purpose</th>
                                         <th>Content</th>
                                         <th>Additional Help</th>
                                         <th>List Of Accronyms</th>
                                         <th>Copyright</th>
                                         <th>Disclaimer</th>
-                                        <th width="280px">Action</th>
+                                        <th width="200px">Action</th>
                                     </tr>
                                 </thead>
                                 <tbody>
