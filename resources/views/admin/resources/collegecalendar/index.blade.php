@@ -49,11 +49,11 @@
                             <table id="tableElements" class="table datatable">
                                 <thead>
                                     <tr>
-                                        <th>S.No</th>
+                                        <th width="1%">S.No</th>
                                         <th>Event Title</th>
                                         <th>Start date</th>
                                         <th>End Date</th>
-                                        <th>Action</th>
+                                        <th width="200px">Action</th>
                                     </tr>
                                 </thead>
                                 <tbody>
@@ -64,7 +64,7 @@
                                             <td >{{ $ccalendar->startdate }}</td>
                                             <td >{{ $ccalendar->enddate }}</td>
 
-                                            <td width="10%">
+                                            <td>
                                                 <form action="{{ route('collegecalendar.destroy',$ccalendar->id) }}" method="Post">
                                                     <a class="btn btn-primary" href="{{ route('collegecalendar.edit',$ccalendar->id) }}">Edit</a>
                                                     @csrf

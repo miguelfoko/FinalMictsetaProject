@@ -50,26 +50,26 @@
                             <table id="tableElements" class="table datatable">
                                 <thead>
                                     <tr>
-                                        <th>S.No</th>
+                                        <th width="1%">S.No</th>
                                         <th>Title</th>
                                         <th>Cover Page</th>
                                         <th>File Link</th>
-                                        <th>Action</th>
+                                        <th width="200px">Action</th>
                                     </tr>
                                 </thead>
                                 <tbody>
                                     @foreach ($successstories as $sstorry)
                                         <tr heigh=100px>
-                                            <td width=5%>{{ $sstorry->id }}</td>
-                                            <td with=20%>{{ $sstorry->title }}</td>
-                                            <td width=15%>
-                                            <img src="{{url('images')}}/{{$sstorry->coverPage}}"  width="50%" height="100%">
+                                            <td>{{ $sstorry->id }}</td>
+                                            <td>{{ $sstorry->title }}</td>
+                                            <td>
+                                            <a href="{{url('images')}}/{{$sstorry->coverPage}}">View cover page</a>
+                                            <!--<img src="{{url('images')}}/{{$sstorry->coverPage}}"  width="50%" height="100%">-->
                                             </td>
-                                            <td width=20% height="300">
+                                            <td>
                                                 <a href="{{url('files')}}/{{$sstorry->file}}">View File</a>
-                                                <embed src="{{url('files')}}/{{$sstorry->file}}" height="100%" width="100%"></td>
-                                            
-                                            <td width="10%">
+                                                <!--<embed src="{{url('files')}}/{{$sstorry->file}}" height="100%" width="100%"></td>-->
+                                            <td>
                                                 <form action="{{ route('successstories.destroy',$sstorry->id) }}" method="Post">
                                                     <a class="btn btn-primary" href="{{ route('successstories.edit',$sstorry->id) }}">Edit</a>
                                                     @csrf

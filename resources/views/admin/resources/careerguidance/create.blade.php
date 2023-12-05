@@ -58,7 +58,7 @@
                     <label class="col-md-5 col-xs-12 control-label"></label>
                     <button type="submit" class="btn btn-success ml-3">Submit</button>
                     <a class="btn btn-danger" href="{{ route('careerguidance.index') }}"> Cancel</a>
-                    
+                </div> 
             </div>
         </form>
     </div>

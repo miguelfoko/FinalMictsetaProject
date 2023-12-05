@@ -50,26 +50,27 @@
                             <table id="tableElements" class="table datatable">
                                 <thead>
                                     <tr>
-                                        <th>S.No</th>
+                                        <th width="1%">S.No</th>
                                         <th>Title</th>
                                         <th>Cover Page</th>
                                         <th>File Link</th>
-                                        <th>Action</th>
+                                        <th width="200px">Action</th>
                                     </tr>
                                 </thead>
                                 <tbody>
                                     @foreach ($careerguidance as $cguidance)
                                         <tr heigh=100px>
-                                            <td width=5%>{{ $cguidance->id }}</td>
-                                            <td with=20%>{{ $cguidance->title }}</td>
-                                            <td width=15%>
-                                            <img src="{{url('images')}}/{{$cguidance->coverPage}}"  width="50%" height="100%">
+                                            <td>{{ $cguidance->id }}</td>
+                                            <td>{{ $cguidance->title }}</td>
+                                            <td>
+                                            <a href="{{url('images')}}/{{$cguidance->coverPage}}" target="_blank">View cover page</a>
+                                            <!--<img src="{{url('images')}}/{{$cguidance->coverPage}}"  width="50%" height="10px">-->
                                             </td>
-                                            <td width=20% height="300">
-                                                <a href="{{url('files')}}/{{$cguidance->file}}">View File</a>
-                                                <embed src="{{url('files')}}/{{$cguidance->file}}" height="100%" width="100%"></td>
+                                            <td>
+                                                <a href="{{url('files')}}/{{$cguidance->file}}" target="_blank">View File</a>
+                                                <!--<embed src="{{url('files')}}/{{$cguidance->file}}" height="100%" width="100%"></td>-->
                                             
-                                            <td width="10%">
+                                            <td>
                                                 <form action="{{ route('careerguidance.destroy',$cguidance->id) }}" method="Post">
                                                     <a class="btn btn-primary" href="{{ route('careerguidance.edit',$cguidance->id) }}">Edit</a>
                                                     @csrf
