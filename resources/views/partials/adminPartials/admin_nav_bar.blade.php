@@ -45,7 +45,7 @@
                     <li class="xn-openable">
                         <a href="#"><span class="fa fa-phone"></span> <span class="xn-text">Update contact information</span></a>
                         <ul>
-                            <li><a href="/updateContactDetails"><span class="fa fa-user"></span>Update Contact Details</a></li>
+                            <!--<li><a href="/updateContactDetails"><span class="fa fa-user"></span>Update Contact Details</a></li>-->
                             <li><a href="/regionallocations"><span class="fa fa-globe"></span>Update Regional Locations</a></li>
                             <li><a href="/faqs"><span class="fa fa-check-square"></span>Update FAQs</a></li>
                         </ul>
