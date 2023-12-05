@@ -58,14 +58,14 @@
                                 </thead>
                                 <tbody>
                                     @foreach ($examinformationresources as $examinformationresource)
-                                        <tr heigh=100px>
-                                            <td width=5%>{{ $examinformationresource->id }}</td>
-                                            <td with=10%>{{ $examinformationresource->category }}</td>
-                                            <td width=20% height="300">
-                                                <a href="{{url('files')}}/{{$examinformationresource->category}}/{{$examinformationresource->file}}">View File</a>
-                                                <embed src="{{url('files')}}/{{$examinformationresource->category}}/{{$examinformationresource->file}}" height="100%" width="100%">
+                                        <tr>
+                                            <td>{{ $examinformationresource->id }}</td>
+                                            <td>{{ $examinformationresource->category }}</td>
+                                            <td>
+                                                <a href="{{url('files')}}/{{$examinformationresource->category}}/{{$examinformationresource->file}}" target="_blank">View File</a>
+                                                <!--<embed src="{{url('files')}}/{{$examinformationresource->category}}/{{$examinformationresource->file}}" height="100%" width="100%">-->
                                             </td>
-                                            <td width="10%">
+                                            <td>
                                                 <form action="{{ route('examinformationresources.destroy',$examinformationresource->id) }}" method="Post">
                                                     <a class="btn btn-primary" href="{{ route('examinformationresources.edit',$examinformationresource->id) }}">Edit</a>
                                                     @csrf

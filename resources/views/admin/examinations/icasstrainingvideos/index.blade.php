@@ -61,17 +61,18 @@
                                 <tbody>
                                     @foreach ($icasstrainingvideos as $icasstrainingvideo)
                                         <tr heigh=100px>
-                                            <td width=5%>{{ $icasstrainingvideo->id }}</td>
-                                            <td with=10%>Module {{ $icasstrainingvideo->module }}</td>
-                                            <td with=10%>Session {{ $icasstrainingvideo->session }}</td>
-                                            <td width=35%>{!! $icasstrainingvideo->title !!}</td>
-                                            <td width=35%>
-                                                <video width="320" height="240" controls>
+                                            <td>{{ $icasstrainingvideo->id }}</td>
+                                            <td>Module {{ $icasstrainingvideo->module }}</td>
+                                            <td>Session {{ $icasstrainingvideo->session }}</td>
+                                            <td>{!! $icasstrainingvideo->title !!}</td>
+                                            <td>
+                                                <a href="{{url('videos')}}/{{$icasstrainingvideo->video}}" target="_blank">View File</a>
+                                                <!--<video width="320" height="240" controls>
                                                     <source src="{{url('videos')}}/{{$icasstrainingvideo->video}}" type="video/mp4">
                                                     Your browser does not support the video tag
-                                                </video>    
+                                                </video>  -->  
                                             </td>
-                                            <td width="10%">
+                                            <td>
                                                 <form action="{{ route('icasstrainingvideos.destroy',$icasstrainingvideo->id) }}" method="Post">
                                                     <a class="btn btn-primary" href="{{ route('icasstrainingvideos.edit',$icasstrainingvideo->id) }}">Edit</a>
                                                     @csrf

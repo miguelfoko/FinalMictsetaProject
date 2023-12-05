@@ -53,21 +53,22 @@
                                         <th>Session</th>
                                         <th>Title</th>
                                         <th>Video</th>
-                                        <th width="280px">Action</th>
+                                        <th>Action</th>
                                     </tr>
                                 </thead>
                                 <tbody>
                                     @foreach ($examtrainingvideos as $examtrainingvideo)
                                         <tr heigh=100px>
-                                            <td width=5%>{{ $examtrainingvideo->id }}</td>
-                                            <td with=10%>Module {{ $examtrainingvideo->module }}</td>
-                                            <td with=10%>Session {{ $examtrainingvideo->session }}</td>
-                                            <td width=35%>{!! $examtrainingvideo->title !!}</td>
-                                            <td width=35%>
-                                                <video width="320" height="240" controls>
+                                            <td>{{ $examtrainingvideo->id }}</td>
+                                            <td>Module {{ $examtrainingvideo->module }}</td>
+                                            <td>Session {{ $examtrainingvideo->session }}</td>
+                                            <td>{!! $examtrainingvideo->title !!}</td>
+                                            <td>
+                                                <a href="{{url('videos')}}/{{$examtrainingvideo->video}}" target="_blank">View File</a>
+                                                <!--<video width="320" height="240" controls>
                                                     <source src="{{url('videos')}}/{{$examtrainingvideo->video}}" type="video/mp4">
                                                     Your browser does not support the video tag
-                                                </video>    
+                                                </video> -->   
                                             </td>
                                             <td width="10%">
                                                 <form action="{{ route('examtrainingvideos.destroy',$examtrainingvideo->id) }}" method="Post">
