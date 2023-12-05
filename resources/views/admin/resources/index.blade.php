@@ -54,21 +54,21 @@
                             <table id="tableElements" class="table datatable">
                                 <thead>
                                     <tr>
-                                        <th>S.No</th>
+                                        <th width="1%">S.No</th>
                                         <th>Overview</th>
                                         <th>Industry Fields</th>
                                         <th>Type of Courses</th>
-                                        <th width="280px">Action</th>
+                                        <th width="200px">Action</th>
                                     </tr>
                                 </thead>
                                 <tbody>
                                     @foreach ($collegecoursetype as $cctype)
                                         <tr heigh=100px>
-                                            <td width=5%>{{ $cctype->id }}</td>
-                                            <td with=30%>{!! $cctype->overview !!}</td>
-                                            <td with=30%>{!! $cctype->industryFields !!}</td>
-                                            <td width=25%>{!! $cctype->typeOfCourses !!}</td>
-                                            <td width="10%">
+                                            <td>{{ $cctype->id }}</td>
+                                            <td>{!! $cctype->overview !!}</td>
+                                            <td>{!! $cctype->industryFields !!}</td>
+                                            <td>{!! $cctype->typeOfCourses !!}</td>
+                                            <td>
                                                 <form action="{{ route('collegecoursetype.destroy',$cctype->id) }}" method="Post">
                                                     <a class="btn btn-primary" href="{{ route('collegecoursetype.edit',$cctype->id) }}">Edit</a>
                                                     @csrf

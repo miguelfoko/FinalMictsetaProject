@@ -44,7 +44,7 @@
                             <table id="tableElements" class="table datatable">
                                 <thead>
                                     <tr>
-                                        <th>S.No</th>
+                                        <th width="1%">S.No</th>
                                         <th>Type</th>
                                         <th>Domain</th>
                                         <th>Description</th>
@@ -53,7 +53,7 @@
                                         <th>Admission Requirements</th>
                                         <th>Resources</th>
 
-                                        <th width="280px">Action</th>
+                                        <th width="200px">Action</th>
                                     </tr>
                                 </thead>
                                 <tbody>

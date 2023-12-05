@@ -12,7 +12,7 @@
         <form action="{{ route('collegecoursetype.store') }}" method="POST" enctype="multipart/form-data">
             @csrf
             <div class="panel panel-default">
-            <div class="panel-heading">
+                <div class="panel-heading">
                     <h3 class="panel-title"><strong>Add College Course Types</strong></h3>
                     <ul class="panel-controls">
                         <li><a href="/news" class="panel-remove"><span class="fa fa-times"></span></a></li>
