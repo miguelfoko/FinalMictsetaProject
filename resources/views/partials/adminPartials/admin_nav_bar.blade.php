@@ -26,7 +26,7 @@
                     </li>
                     <li class="xn-title">Navigation</li>
                     <li>
-                        <a href="home"><span class="fa fa-dashboard"></span> <span class="xn-text">Dashboard</span></a>
+                        <a href="/home"><span class="fa fa-dashboard"></span> <span class="xn-text">Dashboard</span></a>
                     </li>                    
                     <li class="xn-openable">
                         <a href="#"><span class="fa fa-files-o"></span> <span class="xn-text">Pages</span></a>
@@ -38,51 +38,51 @@
                     <li class="xn-openable">
                         <a href="#"><span class="fa fa-home"></span> <span class="xn-text">Manage Home Page content</span></a>
                         <ul>
-                            <li><a href="slides"><span class="fa fa-wrench"></span>Manage sliders</a></li>
-                            <li><a href="footer"><span class="fa fa-bookmark-o"></span>Manage footer</a></li>
+                            <li><a href="/slides"><span class="fa fa-wrench"></span>Manage sliders</a></li>
+                            <li><a href="/footer"><span class="fa fa-bookmark-o"></span>Manage footer</a></li>
                         </ul>
                     </li>
                     <li class="xn-openable">
                         <a href="#"><span class="fa fa-phone"></span> <span class="xn-text">Update contact information</span></a>
                         <ul>
-                            <li><a href="updateContactDetails"><span class="fa fa-user"></span>Update Contact Details</a></li>
-                            <li><a href="regionallocations"><span class="fa fa-globe"></span>Update Regional Locations</a></li>
-                            <li><a href="faqs"><span class="fa fa-check-square"></span>Update FAQs</a></li>
+                            <li><a href="/updateContactDetails"><span class="fa fa-user"></span>Update Contact Details</a></li>
+                            <li><a href="/regionallocations"><span class="fa fa-globe"></span>Update Regional Locations</a></li>
+                            <li><a href="/faqs"><span class="fa fa-check-square"></span>Update FAQs</a></li>
                         </ul>
                     </li>
                     <li>
-                        <a href="news"><span class="fa fa-info"></span> <span class="xn-text">Access News</span></a>
+                        <a href="/news"><span class="fa fa-info"></span> <span class="xn-text">Access News</span></a>
                     </li>
                     <li class="xn-openable">
-                        <a href="updateExamination"><span class="glyphicon glyphicon-edit"></span> <span class="xn-text">Update Examination information</span></a>
+                        <a href="/updateExamination"><span class="glyphicon glyphicon-edit"></span> <span class="xn-text">Update Examination information</span></a>
                         <ul>
-                            <li><a href="examinformationresources"><span class="fa fa-maxcdn"></span>Manage Examination Resources</a></li>
-                            <li><a href="examtrainingvideos"><span class="fa fa-video-camera"></span>Update Training Videos</a></li>
-                            <li><a href="icasstrainingvideos"><span class="fa fa-youtube-play"></span>Update ICASS Training Videos</a></li>
+                            <li><a href="/examinformationresources"><span class="fa fa-maxcdn"></span>Manage Examination Resources</a></li>
+                            <li><a href="/examtrainingvideos"><span class="fa fa-video-camera"></span>Update Training Videos</a></li>
+                            <li><a href="/icasstrainingvideos"><span class="fa fa-youtube-play"></span>Update ICASS Training Videos</a></li>
                         </ul>
                     </li>
                     <li class="xn-openable">
-                        <a href="updateAboutTvet"><span class="fa fa-credit-card"></span> <span class="xn-text">Update About Tvet information</span></a>
+                        <a href="/updateAboutTvet"><span class="fa fa-credit-card"></span> <span class="xn-text">Update About Tvet information</span></a>
                         <ul>
-                            <li><a href="adminAbouttvet"><span class="glyphicon glyphicon-plus"></span>Add about TVET</a></li>
-                            <li><a href="communitycolleges"><span class="glyphicon glyphicon-floppy-open"></span>Update Community Colleges</a></li>
-                            <li><a href="setas"><span class="glyphicon glyphicon-hand-right"></span>Update SETAs</a></li>
+                            <li><a href="/adminAbouttvet"><span class="glyphicon glyphicon-plus"></span>Add about TVET</a></li>
+                            <li><a href="/communitycolleges"><span class="glyphicon glyphicon-floppy-open"></span>Update Community Colleges</a></li>
+                            <li><a href="/setas"><span class="glyphicon glyphicon-hand-right"></span>Update SETAs</a></li>
                         </ul>
                     </li>
                     <li class="xn-openable">
-                        <a href="updateResources"><span class="glyphicon glyphicon-refresh"></span> <span class="xn-text">Update Resources</span></a>
+                        <a href="/updateResources"><span class="glyphicon glyphicon-refresh"></span> <span class="xn-text">Update Resources</span></a>
                         <ul>
-                            <li><a href="collegecoursetype"><span class="glyphicon glyphicon-flash"></span>Manage College Course Type</a></li>
-                            <li><a href="collegecalendar"><span class="fa fa-calendar"></span>Manage Calendar</a></li>
-                            <li><a href="careerguidance"><span class="fa fa-caret-square-o-up"></span>Manage Carreer Guidance</a></li>
-                            <li><a href="successstories"><span class="glyphicon glyphicon-ok"></span>Manage Success Stories</a></li>
+                            <li><a href="/collegecoursetype"><span class="glyphicon glyphicon-flash"></span>Manage College Course Type</a></li>
+                            <li><a href="/collegecalendar"><span class="fa fa-calendar"></span>Manage Calendar</a></li>
+                            <li><a href="/careerguidance"><span class="fa fa-caret-square-o-up"></span>Manage Carreer Guidance</a></li>
+                            <li><a href="/successstories"><span class="glyphicon glyphicon-ok"></span>Manage Success Stories</a></li>
                         </ul>
                     </li>
                     <li>
-                        <a href="admintvetcollegetimes"><span class="glyphicon glyphicon-time"></span> <span class="xn-text">Manage TVET College Time</span></a>
+                        <a href="/admintvetcollegetimes"><span class="glyphicon glyphicon-time"></span> <span class="xn-text">Manage TVET College Time</span></a>
                     </li>
                     <li>
-                        <a href="subscription"><span class="fa fa-users"></span> <span class="xn-text">View Subscriptions</span></a>
+                        <a href="/subscription"><span class="fa fa-users"></span> <span class="xn-text">View Subscriptions</span></a>
                     </li>
                 </ul>
                 <!-- END X-NAVIGATION -->

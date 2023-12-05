@@ -2,6 +2,7 @@
 use App\Models\CourseType;
 use App\Models\RegionalLocations;
 use App\Models\Program;
+use App\Models\College;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\InternalStakeHolderController;
 use App\Http\Controllers\NewsController;

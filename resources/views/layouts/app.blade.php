@@ -12,7 +12,7 @@
         <!-- END META SECTION -->
         
         <!-- CSS INCLUDE -->        
-        <link rel="stylesheet" type="text/css" id="theme" href="adminResources/css/theme-default.css"/>
+        <link rel="stylesheet" type="text/css" id="theme" href="/adminResources/css/theme-default.css"/>
         <!-- EOF CSS INCLUDE -->                   
     </head>
     <body>
@@ -107,55 +107,55 @@
         <!-- END MESSAGE BOX-->
 
         <!-- START PRELOADS -->
-        <audio id="audio-alert" src="adminResources/audio/alert.mp3" preload="auto"></audio>
-        <audio id="audio-fail" src="adminResources/audio/fail.mp3" preload="auto"></audio>
+        <audio id="audio-alert" src="/adminResources/audio/alert.mp3" preload="auto"></audio>
+        <audio id="audio-fail" src="/adminResources/audio/fail.mp3" preload="auto"></audio>
         <!-- END PRELOADS -->                  
         
     <!-- START SCRIPTS -->
         <!-- START PLUGINS -->
-        <script type="text/javascript" src="adminResources/js/plugins/jquery/jquery.min.js"></script>
-        <script type="text/javascript" src="adminResources/js/plugins/jquery/jquery-ui.min.js"></script>
-        <script type="text/javascript" src="adminResources/js/plugins/bootstrap/bootstrap.min.js"></script>        
+        <script type="text/javascript" src="/adminResources/js/plugins/jquery/jquery.min.js"></script>
+        <script type="text/javascript" src="/adminResources/js/plugins/jquery/jquery-ui.min.js"></script>
+        <script type="text/javascript" src="/adminResources/js/plugins/bootstrap/bootstrap.min.js"></script>        
         <!-- END PLUGINS -->
 
         <!-- START THIS PAGE PLUGINS-->        
-        <script type='text/javascript' src='adminResources/js/plugins/icheck/icheck.min.js'></script>        
-        <script type="text/javascript" src="adminResources/js/plugins/mcustomscrollbar/jquery.mCustomScrollbar.min.js"></script>
-        <script type="text/javascript" src="adminResources/js/plugins/scrolltotop/scrolltopcontrol.js"></script>
+        <script type='text/javascript' src='/adminResources/js/plugins/icheck/icheck.min.js'></script>        
+        <script type="text/javascript" src="/adminResources/js/plugins/mcustomscrollbar/jquery.mCustomScrollbar.min.js"></script>
+        <script type="text/javascript" src="/adminResources/js/plugins/scrolltotop/scrolltopcontrol.js"></script>
         
-        <script type="text/javascript" src="adminResources/js/plugins/morris/raphael-min.js"></script>
-        <script type="text/javascript" src="adminResources/js/plugins/morris/morris.min.js"></script>       
-        <script type="text/javascript" src="adminResources/js/plugins/rickshaw/d3.v3.js"></script>
-        <script type="text/javascript" src="adminResources/js/plugins/rickshaw/rickshaw.min.js"></script>
-        <script type='text/javascript' src='adminResources/js/plugins/jvectormap/jquery-jvectormap-1.2.2.min.js'></script>
-        <script type='text/javascript' src='adminResources/js/plugins/jvectormap/jquery-jvectormap-world-mill-en.js'></script>                
-        <script type='text/javascript' src='adminResources/js/plugins/bootstrap/bootstrap-datepicker.js'></script>                
-        <script type="text/javascript" src="adminResources/js/plugins/owl/owl.carousel.min.js"></script>                 
+        <script type="text/javascript" src="/adminResources/js/plugins/morris/raphael-min.js"></script>
+        <script type="text/javascript" src="/adminResources/js/plugins/morris/morris.min.js"></script>       
+        <script type="text/javascript" src="/adminResources/js/plugins/rickshaw/d3.v3.js"></script>
+        <script type="text/javascript" src="/adminResources/js/plugins/rickshaw/rickshaw.min.js"></script>
+        <script type='text/javascript' src='/adminResources/js/plugins/jvectormap/jquery-jvectormap-1.2.2.min.js'></script>
+        <script type='text/javascript' src='/adminResources/js/plugins/jvectormap/jquery-jvectormap-world-mill-en.js'></script>                
+        <script type='text/javascript' src='/adminResources/js/plugins/bootstrap/bootstrap-datepicker.js'></script>                
+        <script type="text/javascript" src="/adminResources/js/plugins/owl/owl.carousel.min.js"></script>                 
         
-        <script type="text/javascript" src="adminResources/js/plugins/moment.min.js"></script>
-        <script type="text/javascript" src="adminResources/js/plugins/daterangepicker/daterangepicker.js"></script>
+        <script type="text/javascript" src="/adminResources/js/plugins/moment.min.js"></script>
+        <script type="text/javascript" src="/adminResources/js/plugins/daterangepicker/daterangepicker.js"></script>
         <!-- END THIS PAGE PLUGINS-->        
 
         <!-- START TABLE PLUGINS-->       
-        <script type='text/javascript' src='adminResources/js/plugins/icheck/icheck.min.js'></script>
-        <script type="text/javascript" src="js/plugins/mcustomscrollbar/jquery.mCustomScrollbar.min.js"></script>
+        <script type='text/javascript' src='/adminResources/js/plugins/icheck/icheck.min.js'></script>
+        <script type="text/javascript" src="/js/plugins/mcustomscrollbar/jquery.mCustomScrollbar.min.js"></script>
         
-        <script type="text/javascript" src="adminResources/js/plugins/datatables/jquery.dataTables.min.js"></script>
-        <script type="text/javascript" src="adminResources/js/plugins/tableexport/tableExport.js"></script>
-        <script type="text/javascript" src="adminResources/js/plugins/tableexport/jquery.base64.js"></script>
-        <script type="text/javascript" src="adminResources/js/plugins/tableexport/html2canvas.js"></script>
-        <script type="text/javascript" src="adminResources/js/plugins/tableexport/jspdf/libs/sprintf.js"></script>
-        <script type="text/javascript" src="adminResources/js/plugins/tableexport/jspdf/jspdf.js"></script>
-        <script type="text/javascript" src="adminResources/js/plugins/tableexport/jspdf/libs/base64.js"></script>        
+        <script type="text/javascript" src="/adminResources/js/plugins/datatables/jquery.dataTables.min.js"></script>
+        <script type="text/javascript" src="/adminResources/js/plugins/tableexport/tableExport.js"></script>
+        <script type="text/javascript" src="/adminResources/js/plugins/tableexport/jquery.base64.js"></script>
+        <script type="text/javascript" src="/adminResources/js/plugins/tableexport/html2canvas.js"></script>
+        <script type="text/javascript" src="/adminResources/js/plugins/tableexport/jspdf/libs/sprintf.js"></script>
+        <script type="text/javascript" src="/adminResources/js/plugins/tableexport/jspdf/jspdf.js"></script>
+        <script type="text/javascript" src="/adminResources/js/plugins/tableexport/jspdf/libs/base64.js"></script>        
         <!-- END TABLE PLUGINS-->  
 
         <!-- START TEMPLATE -->
-        <script type="text/javascript" src="adminResources/js/settings.js"></script>
+        <script type="text/javascript" src="/adminResources/js/settings.js"></script>
         
-        <script type="text/javascript" src="adminResources/js/plugins.js"></script>        
-        <script type="text/javascript" src="adminResources/js/actions.js"></script>
+        <script type="text/javascript" src="/adminResources/js/plugins.js"></script>        
+        <script type="text/javascript" src="/adminResources/js/actions.js"></script>
         
-        <script type="text/javascript" src="adminResources/js/demo_dashboard.js"></script>
+        <script type="text/javascript" src="/adminResources/js/demo_dashboard.js"></script>
         <!-- END TEMPLATE -->
     <!-- END SCRIPTS -->         
     </body>

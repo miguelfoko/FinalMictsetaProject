@@ -42,7 +42,7 @@ class CollegeController extends Controller
     {
         $regionallocations = RegionalLocations::all();
         $programs = Program::all();
-        return view('admin.resources.coursetypes.college.create', compact('regionallocations','programs'));
+        return view('admin.resources.coursetypes.college.create', compact('regionallocations','a'));
     }
 
     /**
