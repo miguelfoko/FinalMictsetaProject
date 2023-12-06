@@ -1,104 +1,131 @@
 @extends('layouts.master')
 
 @section('content')
+<?php
+    $text1=" Public TVET Colleges offer a very wide range of courses/programmes that have been developed to respond 
+    to the scarce skills needed by employers.";
+    if (strlen($text1)>100){
+      $text1=substr($text1, 0, 25)."...";
+    }
+    $text2="Visit our calendar to see key dates for TVET College events.";
+    if (strlen($text2)>100){
+      $text2=substr($text2, 0, 25)."...";
+    }
 
- <!-- ======= Breadcrumbs ======= -->
- 
-  <main id="main" data-aos="fade-up">
+    $text3="Career Development Services (CDS) is a national initiative to bring free quality career information, advice 
+    and counseling services.";
+    if (strlen($text3)>100){
+      $text3=substr($text3, 0, 50)."...";
+    }
 
-  <section id="events" class="events">
-      <div class="container-fluid" data-aos="fade-up">
-        <div class="member2" >
-          Resources
-        </div> 
-      <div class="new">
-          <div class="row" data-aos="zoom-in" data-aos-delay="100">
-            <div class="col-lg-3" align="center">
-                <div class="card">
-              
-                  <div class="card-img">
-                    <a href="viewcollegecoursetype"> <img src="{{ asset('/img/CourseType.png') }}" align="center" alt="..."> </a>
-                  </div>
-                  <div class="card-body"> 
-                      <h5 class="card-title"><a href="viewcollegecoursetype">College Course Types</a></h5>
-                      <p class="fst-italic text-center">
-                      Public TVET Colleges offer a very wide range of courses/programmes that have been developed to respond 
-    to the scarce skills needed by employers.
-                                      
-                      </p>                   
-                  </div>
-                  <p class="fst-italic text-center">
-                        <a class="none" href="viewcollegecoursetype">View More</a>
-                      </p>
-                </div>
-            </div>
+    $text4="Visit our calendar to see key dates for TVET College events. ";
+    if (strlen($text4)>100){
+      $text4=substr($text4, 0, 50)."...";
+    }
+   
 
-            <div class="col-lg-3" align="center">
-              <div class="card">
-              
-                <div class="card-img">
-                  <a href="viewcollegecalendar"> <img src="{{ asset('/img/tvetCallendar.png') }}"  alt="..."> </a>
-                </div>
-                <div class="card-body" align="center> 
-                    <h5 class="card-title"><a href="viewcollegecalendar">TVET College Calendar</a></h5>
-                    <p class="fst-italic text-center">
-                    Visit our calendar to see key dates for TVET College events.          
-                    </p>
-                    
-                        
-                    
-                </div>
-                <p class="fst-italic text-center">
-                          <a class="none"  href="viewcollegecalendar">View Calendar</a>
-                </p>
-              </div>
-            </div>
+ ?>
 
+<!-- Breadcromb Area Start -->
+<div class="breadcromb-wrapper">
+  <div class="breadcromb-overlay"></div>
+  <div class="container">
+    <h1>Resources</h1>
+  </div>
+</div>
 
-            <div class="col-lg-3" align="center">
-              <div class="card">
-                <div class="card-img">
-                <a href="viewcareerguidance"> <img src="{{ asset('/img/Careers_Icon.png') }}"  alt="..."> </a>
-                </div>
-                <div class="card-body"> 
-                    <h5 class="card-title"><a href="viewcareerguidance">Career Guidance</a></h5>
-                    <p class="fst-italic text-center">
-                    Career Development Services (CDS) is a national initiative to bring free quality career information, advice 
-      and counseling services.               
-                    </p>
-                    
-                </div>
-                <p class="fst-italic text-center">
-                        <a href="viewcareerguidance">Get Guidance</a>
-                </p>
-              </div>
-            </div>
-          
+<div class="breadcromb-text">
+  <div class="container">
+    <ul>
+      <li><a href="/">Home</a></li>
+      <li>Resources</li>
+    </ul>
+  </div>
+</div>
 
-            <div class="col-lg-3" align="center">
-              <div class="card">
+<!-- Our Team Wrapper start -->
+<div class="our-team-wrapper">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-12 col-lg-3">
+        <div class="single-blog">
+          <div class="single-service">
             
-                <div class="card-img">
-                <a href="viewsuccessstories"> <img src="{{ asset('/img/SuccessStories.png') }}"  alt="..."> </a>
-                </div>
-                <div class="card-body"> 
-                    <h5 class="card-title"><a href="viewsuccessstories">Success Stories</a></h5>
-                    <p class="fst-italic text-center">
-                    Visit our calendar to see key dates for TVET College events.                
-                    </p>
-                
-                </div>
-                
-                <p class="fst-italic text-center">
-                        <a href="viewsuccessstories">Get Stories</a>
-                </p>
-                   
-              </div>
+            <span class="icofont ">
+              <img src="{{ asset('/img/CourseType.png') }}" alt="...">
+            </span>
+              
+            <div class="post-tittle">
+              <h4><a href="viewcollegecoursetype">College Course Types</a></h4>
             </div>
+            <div class="caption">
+                  <p>{!! $text1 !!}</p>
+            </div>
+
+            <a class="btn small"  href="viewcollegecoursetype"> View more</a>
           </div>
         </div>
-      </div>
-    
-</section>
-  </main><!-- End #main -->
+    </div>
+
+    <div class="col-sm-12 col-lg-3">
+        <div class="single-blog">
+          <div class="single-service">
+            
+            <span class="icofont ">
+              <img src="{{ asset('/img/tvetCallendar.png') }}" alt="...">
+            </span>
+              
+            <div class="post-tittle">
+              <h4><a href="viewcollegecalendar">TVET College Calendar</a></h4>
+            </div>
+            <div class="caption">
+              <p>{!! $text2 !!}</p>
+            </div>
+            <a class="btn small" href="viewcollegecalendar">View Calendar</a>
+          </div>
+        </div>
+    </div>
+
+    <div class="col-sm-12 col-lg-3">
+        <div class="single-blog">
+          <div class="single-service">
+            
+            <span class="icofont ">
+              <img src="{{ asset('/img/Careers_Icon.png') }}" alt="...">
+            </span>
+              
+            <div class="post-tittle">
+              <h4><a href="viewcareerguidance">Career Guidance</a></h4>
+            </div>
+            <div class="caption">
+              <p>{!! $text3 !!}</p>
+            </div>
+            <a class="btn small" href="viewcareerguidance">Get Guidance</a>
+          </div>
+        </div>
+    </div>
+
+    <div class="col-sm-12 col-lg-3">
+        <div class="single-blog">
+          <div class="single-service">
+            
+            <span class="icofont ">
+              <img src="{{ asset('/img/SuccessStories.png') }}" alt="...">
+            </span>
+              
+            <div class="post-tittle">
+              <h4><a href="viewsuccessstories">Success Stories</a></h4>
+            </div>
+            <div class="caption">
+              <p>{!! $text4 !!}</p>
+            </div>
+            <a class="btn small" href="viewsuccessstories">Get Stories</a>
+          </div>
+        </div>
+    </div>
+
+  </div>
+</div>
+  
+
   @endsection

@@ -2,6 +2,14 @@
 
 @section('content')
 
+<!-- Breadcromb Area Start -->
+<div class="breadcromb-wrapper">
+  <div class="breadcromb-overlay"></div>
+  <div class="container">
+    <h1>FAQ</h1>
+  </div> 
+</div>
+
 <div class="breadcromb-text">
   <div class="container">
     <ul>
@@ -13,36 +21,75 @@
 </div>
  
 
-
-<!-- Our FAQ Wrapper start -->
-<div class="our-faq-wrapper">
+<!-- Inner Page Wrapper Start -->
+<div class="inner-page-wrapper our-faq-wrapper">
   <div class="container">
-    <div class="title text-center">
-      <h2>Asked <span>Questions</span></h2>
-      <div class="separator my"> <i class="icofont icofont-hat-alt"></i> </div>
-    </div>
+  <div class="title text-center">
+    <h2>Asked <span>Questions</span></h2>
+  </div>  
+     <div class="no">
+       {{$i=$faqs->count()}}
+       {{$j=$i/2+1}}
+       {{$k=1}}
+     </div>
     <div class="row">
-      <div class="col-lg-12">
-        <div class="accordion" id="accordion">
-        @foreach ($faqs as $faq)   
-          <div class="card">
-            <div class="card-header" id="headingOne">
-              <h5 class="mb-0">
-                <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne"> >{{$faq->title}} </button>
-              </h5>
+    
+      <div class="col-lg-6">
+            <div class="accordion" id="accordion">
+              @foreach ($faqs as $faq)
+                @if($k%2)
+                <div class="card">
+                  <div class="card-header" id="heading{{$k}}">
+                    <h5 class="mb-0">
+                      <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapse{{$k}}" aria-expanded="false" aria-controls="collapse{{$k}}"> {{$faq->title}}  </button>
+                    </h5>
+                  </div>
+                  <div id="collapse{{$k}}" class="collapse" aria-labelledby="heading{{$k}}" data-parent="#accordion">
+                    <div class="card-body"> 
+                      {!! $faq->content !!}
+                    </div>
+                  </div>
+                </div>  
+                @endif  
+                <div class="no">
+                  {{$k++}}
+                </div>
+              @endforeach
             </div>
-            <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion">
-              <div class="card-body"> {!! $faq->content !!}   </div>
-            </div>
-          </div>
-          @endforeach  
+
           
+      </div>
+      <div class="col-lg-6">
+        <div class="no">
+          {{$k=$j-1}}
+        </div>
+        <div class="accordion" id="accordion2">
+          @foreach ($faqs as $faq)
+            @if($k%2)
+
+
+            <div class="card">
+                  <div class="card-header" id="heading{{$k}}">
+                    <h5 class="mb-0">
+                      <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapse{{$k}}" aria-expanded="false" aria-controls="collapse{{$k}}">{{$faq->title}}  </button>
+                    </h5>
+                  </div>
+                  <div id="collapse{{$k}}" class="collapse" aria-labelledby="heading{{$k}}" data-parent="#accordion">
+                    <div class="card-body"> 
+                      {!! $faq->content !!}
+                    </div>
+                  </div>
+            </div> 
+
+            @endif   
+            <div class="no">
+              {{$k++}}
+            </div>
+          @endforeach
         </div>
       </div>
     </div>
   </div>
 </div>
-<!-- Our FAQ Wrapper End --> 
-
- 
+<!-- Inner Page Wrapper End -->  
  @endsection

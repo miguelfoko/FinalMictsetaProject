@@ -431,7 +431,7 @@ div.title {
 }
 .main-menu-area nav {
 	display: inline-block;
-	width: 77%;
+	width: 85%;
 }
 .mean-container .mean-nav {
 	position: absolute;
@@ -605,7 +605,7 @@ div.title {
 	padding: 10px 18px;
 	position: relative;
 	transition: all 300ms ease 0s;
-	width: 200px;
+	width: 150px;
 	border: none;
 	box-shadow: none;
 }
@@ -647,6 +647,8 @@ div.title {
 	background:#f4f4f4;
 	padding:30px;
 }
+
+
 .single-service:hover span.icofont {
     box-shadow: 0 2px 30px 0 hsla(0, 0%, 0%, 0.2);
 }
@@ -673,10 +675,11 @@ div.title {
 	background:#fff;
 	border-radius:50%;
 	transition: all 0.3s ease 0s;
-	border-bottom:2px solid #F7931E;
+	border-bottom:1px solid #fff;
 }
 .single-service .caption {
 	margin-top: 25px;
+	height: 100px;
 }
 /*
 ================================================
@@ -1931,6 +1934,8 @@ div.title {
 	margin-bottom: 40px;
 	-webkit-transition-duration: 500ms;
 	transition-duration: 500ms;
+	height: 320px;
+	max-height: 1220px;
 }
 .single_courses_desc {
 	padding: 15px 0 0 0;
@@ -1940,17 +1945,21 @@ div.title {
 .single_courses .title {
 	padding: 0 25px;
 	margin: 0;
-	text-align: left;
+	text-align: center;
 }
+
 .single_courses .title > a {
 	font-size: 1.20em;
 	margin-bottom: 15px;
 	display: block;
 	color: #2d2d2d;
 }
+
+
 .single_courses .title > a:hover {
 	color: #F7931E;
 }
+
 .price_rating_area {
 	padding: 5px 30px;
 	-webkit-transition-duration: 500ms;
@@ -1983,10 +1992,14 @@ div.title {
 	-webkit-transform: scale(1.3) rotate(10deg);
 	transform: scale(1.3) rotate(10deg);
 }
+
+
 .single_courses:hover {
 	background-color: #f9f9f9;
 	box-shadow: 10px 14px 14px rgba(0, 0, 0, 0.075);
 }
+
+
 .courses_badge > span {
 	background: #F7931E;
 	clear: both;
@@ -2051,12 +2064,15 @@ div.title {
 	position: relative;
 	z-index: 1;
 }
+
+
 .single_courses.course-list .single_courses_desc {
 	display: block;
 	margin-left: 50%;
 	position: relative;
 	z-index: 1;
 }
+
 .single_courses.course-list .single_courses_thumb {
 	background-position: center center;
 	background-size: cover;
@@ -2067,9 +2083,11 @@ div.title {
 	width: 50%;
 	z-index: 9;
 }
+
 .single_courses.course-list .single_courses_desc .price_rating_area {
 	border-bottom: 6px solid #F7931E;
 }
+
 /** Course Details Wrapper **/
 .inner-page-wrapper.course-details {
    padding: 90px 0 50px;
@@ -2084,6 +2102,10 @@ div.title {
 }
 .courses_details_thumb img {
     width:100%;
+}
+.courses_details_thumb1 img {
+    width:60%;
+	margin: 0 auto;
 }
 .event_overview_schildle, .related_upcoming_event_title, .courses_overview, .courses_description {
   background-color: #ffffff;
@@ -2108,6 +2130,7 @@ div.title {
 .single_courses.related {
 	margin-top: 50px;
 }
+
 .courses_details_title {
 	display: inline-block;
 }
@@ -3110,9 +3133,11 @@ div.single-slide {
 	position: relative;
 	width: 100%;
 }
+
 .single_courses.course-list .single_courses_desc {
 	margin-left: 0;
 }
+
 .course-wrapper .pagination {
   margin: 0 auto !important;
 }
@@ -3170,3 +3195,12 @@ footer .footer-text.second {
 	margin: auto;
 	width: 50%;
   }
+
+  .no {
+	display: none;
+  }
+
+  .new  .row .col-sm-12{
+	display: flex;
+  }
+  

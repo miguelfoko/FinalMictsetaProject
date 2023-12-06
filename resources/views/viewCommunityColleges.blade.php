@@ -1,32 +1,41 @@
 @extends('layouts.master')
 
 @section('content')
+<!-- Breadcromb Area Start -->
+<div class="breadcromb-wrapper">
+  <div class="breadcromb-overlay"></div>
+  <div class="container">
+    <h1>Community Education and Training Colleges</h1>
+  </div> 
+</div>
 
+<div class="breadcromb-text">
+  <div class="container">
+    <ul>
+      <li><a href="/">Home</a></li>
+      <li><a href="/aboutus">About us</a></li>
+      <li>Community Education and Training Colleges</li>
+    </ul>
+  </div>
+</div>
 
-  <main id="main">
-
-    <!-- ======= Pricing Section ======= -->
-   
-      <div class="container-fluid" data-aos="fade-up">
-
-      <div class="member2" >
-      Community Education and Training Colleges
+<div class="inner-page-wrapper course-wrapper course-details">
+      <div class="container">
+       
+          <div class="row">
+            <!-- Courses Details Thumb Area End --> 
+            <!-- Courses Overview -->
+            <div class="courses_overview">
+              <h5>Community Education and Training Colleges Title</h5>
+            </div>
+            <!-- Courses Overview Content -->
+            <div class="couress_overview_content">
+              <p>Community Education and Training Colleges Content </p>
+            </div>
+          </div>
+          
       </div>
-      <div class="member2" >
-      
-      </div>
-        <div class="row">
-        
-        @foreach ($communitycolleges as $communitycollege) 
+    </div>
 
-        {!! $communitycollege->content !!}
-
-        @endforeach
-        </div>
-
-      </div>
-   
-
-  </main><!-- End #main -->
-
+ 
  @endsection

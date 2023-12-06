@@ -3,37 +3,52 @@
 @section('content')
 
 
-  <main id="main">
 
-      <div class="container-fluid" data-aos="fade-up">
-      <div class="member2" >
-         ICASS Training Videos
-        </div>
-        </div>
-        <div class="container" data-aos="fade-up">
-        <div class="new">
-        <div class="row" data-aos="zoom-in" data-aos-delay="100">
-          @foreach ($icasstrainingvideos as $icasstrainingvideo) 
+<!-- Breadcromb Area Start -->
+<div class="breadcromb-wrapper">
+  <div class="breadcromb-overlay"></div>
+  <div class="container">
+    <h1> ICASS Training Videos</h1>
+  </div>
+</div>
 
-            <div class="col-lg-3 col-md-6 ">
-              <div class="box featured text-center">
-                Module {{$icasstrainingvideo->module}}-Session {{$icasstrainingvideo->session}}
-                
-                <div class="theSiteImages">
-                              <video width="320" height="240" controls>
-                                  <source src="{{url('videos')}}/{{$icasstrainingvideo->video}}" type="video/mp4">
-                              </video>        
-                  </div>
-                  {{$icasstrainingvideo->title}}<br>
-                  <a href="{{url('videos')}}/{{$icasstrainingvideo->video}}" download>Download</a>
+<div class="breadcromb-text">
+  <div class="container">
+    <ul>
+      <li><a href="/">Home</a></li>
+      <li><a href="/examinations">Examinations</a></li>
+      <li> ICASS Training Videos</li>
+    </ul>
+  </div>
+</div>
 
+
+<!-- Our Blog Wrapper End -->
+<div class="our-blog-wrapper">
+  <div class="container">
+  <div class="new">
+    <div class="row">  
+    @foreach ($icasstrainingvideos as $icasstrainingvideo) 
+          <div class="col-sm-12 col-lg-4">
+            <div class="single-blog">
+              <figure class="single-blog-img green"> 
+                            <video width="320" height="240" controls>
+                              <source src="{{url('videos')}}/{{$icasstrainingvideo->video}}" type="video/mp4">
+                                Your browser does not support the video tag
+                            </video> 
+              </figure>
+              <div class="post-tittle">
+                <h4>Module {{$icasstrainingvideo->module}}-Session {{$icasstrainingvideo->session}}</h4>
+                <p>{{$icasstrainingvideo->title}}</p>
               </div>
-            </div>
-          @endforeach
-        </div>
+            <a class="btn small" href="{{url('videos')}}/{{$icasstrainingvideo->video}}" download>Download</a>
+          </div>
+      
     </div>
-      </div>
-    
-  </main><!-- End #main -->
+    @endforeach
+    </div>
+  </div>
+</div>
+<!-- Our Blog Wrapper End --> 
 
  @endsection

@@ -3,33 +3,47 @@
 @section('content')
 
 
-  <main id="main">
-  <section id="pricing" class="pricing">
-      <div class="container-fluid" data-aos="fade-up">
-      <div class="member2" >
-         Success Stories
-        </div>
-         </div>
-         <div class="container" data-aos="fade-up">
-        <div class="row">
-        @foreach ($successstories as $sstory) 
+<!-- Breadcromb Area Start -->
+<div class="breadcromb-wrapper">
+  <div class="breadcromb-overlay"></div>
+  <div class="container">
+    <h1> Success Stories</h1>
+  </div>
+</div>
 
-        <div class="col-lg-3 col-md-6 ">
-            <div class="box featured text-center">
-              <h3>{{$sstory->title}}</h3>
-           
-             <div class="theSiteImages">
-                <embed src="{{url('images')}}/{{$sstory->coverPage}}" height="250" width="200">
-            </div >
-                <a href="{{url('files')}}/{{$sstory->file}}" target="_blank" rel="noopener" class="btn-buy">Open Document</a>
-             
-            </div>
+<div class="breadcromb-text">
+  <div class="container">
+    <ul>
+      <li><a href="/">Home</a></li>
+      <li><a href="/resources">Resources</a></li>
+      <li> Success Stories</li>
+    </ul>
+  </div>
+</div>
+
+
+<!-- Our Blog Wrapper End -->
+<div class="our-blog-wrapper">
+  <div class="container">
+  <div class="new">
+    <div class="row">  
+    @foreach ($successstories as $sstory) 
+          <div class="col-sm-12 col-lg-4">
+            <div class="single-blog">
+              <figure class="single-blog-img green"> <img alt="" src="{{url('images')}}/{{$sstory->coverPage}}">
+                <div><i class="fa fa-plus"></i></div>
+                <a href="{{url('files')}}/{{$sstory->file}}"></a> </figure>
+              <div class="post-tittle">
+                <h4><a href="{{url('files')}}/{{$sstory->file}}">{{$sstory->title}}</a></h4>
+              </div>
+            <a class="btn small" href="{{url('files')}}/{{$sstory->file}}">Open Document</a>
           </div>
-        @endforeach
-        </div>
-
-      </div>
-</section>
-  </main><!-- End #main -->
+      
+    </div>
+    @endforeach
+    </div>
+  </div>
+</div>
+<!-- Our Blog Wrapper End --> 
 
  @endsection

@@ -2,32 +2,109 @@
 
 @section('content')
 
-  <main id="main" data-aos="fade-in">
+
+<!-- Breadcromb Area Start -->
+<div class="breadcromb-wrapper">
+  <div class="breadcromb-overlay"></div>
+  <div class="container">
+    <h1>College Course Type</h1>
+  </div>
+</div>
+
+<div class="breadcromb-text">
+  <div class="container">
+    <ul>
+      <li><a href="/">Home</a></li>
+      <li><a href="/resources">Resources</a></li>
+      <li>College Course Type</li>
+    </ul>
+  </div>
+</div>
 
 
-   
-        <div class="container-fluid" data-aos="fade-up">
-            <div class="member2" >
-                College Course Type
+<div class="inner-page-wrapper course-wrapper course-details">
+      <div class="container">
+      @foreach ($collegecoursetype as $cctype) 
+          <div class="row">
+            <div class="courses_overview">
+              <h5>Overview</h5>
             </div>
-            <div class="noUseOfWysiwyg">
-                @foreach ($collegecoursetype as $cctype) 
-                    <h4>Overview </h4>
-                    
-                        {!! $cctype->overview !!}
-                
-                    <br>
-                    
-                    <h4>Industry  Fields </h4>
-                    {!! $cctype->industryFields !!}
+            <!-- Courses Overview Content --> 
+            <div class="couress_overview_content">
+              <p>{!! $cctype->overview !!} </p>
+            </div>
 
-                    <br>
-                    
-                    <h4>Types of courses </h4>
-                    {!! $cctype->typeOfCourses !!}
+            <div class="courses_overview">
+              <h5>Industry  Fields</h5>
+            </div>
+            <!-- Courses Overview Content -->
+            <div class="couress_overview_content">
+              <p>{!! $cctype->industryFields !!} </p>
+            </div>
+
+            <div class="courses_overview">
+              <h5>Types of courses</h5>
+            </div>
+            <!-- Courses Overview Content -->
+            <div class="couress_overview_content">
+              <p> {!! $cctype->typeOfCourses !!}</p>
+            </div>
+
+
+          </div>
+        @endforeach 
+        
+      </div>
+    </div>
+
+
+    <!-- Inner Page Wrapper Start -->
+<div class="inner-page-wrapper course-wrapper">
+    <div class="container">
+        
+            <div class="row">
+                @foreach ($programs as $program)
+
+                <div class="col-12">
+                    <div class="single_courses course-list"> 
+                    <!-- Single Courses Image Area -->
+                        <div class="single_courses_thumb">
+                            <div class="card">
+                                        <div class="card-title">
+                                            <h4 id="{{$program->id}}" class="dropbtn1" >{{$program->title}}</h4>
+                                        </div>
+                                        <div class="card-body">
+                                            @foreach($coursetypes as $coursetype) 
+                                                @if($coursetype->idprogram==$program->id)
+                                                <h6 id="{{$coursetype->id}}" class="dropbtncourse" 
+                                                    onclick="load_levels('{{$coursetype->id}}','{{$program->id}}')">{{$coursetype->type }}
+                                                    <a href="#levels_div"> 
+                                                        <i class="fa fa-angle-right"></i>
+                                                    </a>
+                                                </h6>  
+                                                @endif 
+                                            @endforeach
+                                        </div>
+                            </div>
+                        </div>
+                        <!-- Single Courses Description Area -->
+                        <div class="single_courses_desc" id="single_courses_desc">
+                                    <p class="levels_div" id='levels_div'>  </p>         
+                        </div>
+                            
+                    </div>
+                </div>
                 @endforeach
             </div>
-        </div>
+        
+    </div>
+</div>
+<!-- Inner Page Wrapper End --> 
+
+
+
+  <main id="main" data-aos="fade-in">
+
     <section id="pricing" class="pricing">
         
         <div class="container-fluid" data-aos="fade-up"> 

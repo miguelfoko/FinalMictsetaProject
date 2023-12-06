@@ -1,12 +1,7 @@
-
-
-        
-        <div class="container-fluid">
-                        <div class="member3" >
-                                {{$coursetype->type}}
-                        </div>
-        </div>
-
+<div  class="title" >
+  <a href="#single_courses_desc"> {{$coursetype->type}}</a>
+</div>
+       
         <div class="container-fluid" data-aos="fade-up">
            
            <div class="row"> 

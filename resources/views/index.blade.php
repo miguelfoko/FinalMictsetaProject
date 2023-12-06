@@ -33,10 +33,10 @@
       <div class="col-12 col-sm-6 col-md-4 col-xl-3">
         <div class="single-service">
           <span class="icofont ">
-          <a href="viewcollegecalendar"><img src="{{ asset('/img/tvetCallendar.png') }}" alt="..."></a> 
+          <a href="/viewcollegecalendar"><img src="{{ asset('/img/tvetCallendar.png') }}" alt="..."></a> 
           </span>
           <div class="caption">
-          <h4><a href="viewcollegecalendar">Academic Calendar</a> </h4>
+            <h4><a href="/viewcollegecalendar">Academic Calendar</a> </h4>
           </div>
         </div>
       </div>
@@ -44,10 +44,10 @@
       <div class="col-12 col-sm-6 col-md-4 col-xl-3">
         <div class="single-service">
           <span class="icofont ">
-          <h4><a href="viewsubscribe"><img src="{{ asset('/img/Subscribe.png') }}" alt="..."></a>  </h4>
+          <h4><a href="/viewgetintouch"><img src="{{ asset('/img/Subscribe.png') }}" alt="..."></a>  </h4>
           </span>
           <div class="caption">
-          <h4><a href="viewsubscribe">Subscribe</a> 
+          <h4><a href="/viewgetintouch">Subscribe</a> 
           </div>
         </div>
       </div>
@@ -66,10 +66,10 @@
       <div class="col-12 col-sm-6 col-md-4 col-xl-3">
         <div class="single-service">
           <span class="icofont ">
-          <a href="viewcareerguidance" ><img src="{{ asset('/img/Careers_Icon.png') }}" alt="..."></a> </h4>
+          <a href="/viewcareerguidance" ><img src="{{ asset('/img/Careers_Icon.png') }}" alt="..."></a> </h4>
           </span>
           <div class="caption">
-          <h4><a href="viewcareerguidance">Career Guidance</a> 
+          <h4><a href="/viewcareerguidance">Career Guidance</a> 
           </div>
         </div>
       </div>
@@ -85,8 +85,8 @@
   <div class="title text-center">
       <h2> Successful<span> TVET Graduates</span></h2>
       <div class="separator my"> <i class="icofont icofont-hat-alt"></i> </div>
-    </div>  
-
+  </div>  
+   <div class="new">
     <div class="row">
       <div class="col-sm-12 col-lg-4">
         <div class="single-blog">
@@ -103,7 +103,7 @@
                   "The quality training that I got from Maluti TVET College pushed   
                   me to become my own boss. I am the successfull owner of Monoceros Electrical company"
                 </p>
-		      <a class="btn small" href="javascript:void(0)">Read More</a>
+		      <!--<a class="btn small" href="javascript:void(0)">Read More</a>-->
         </div>
       </div>
 
@@ -123,7 +123,7 @@
                      workshops and highly skilled lecturers laid a solid foundation for me to achieve success in my 
                      profession ."
                 </p>
-		      <a class="btn small" href="javascript:void(0)">Read More</a>
+		      <!--<a class="btn small" href="javascript:void(0)">Read More</a>-->
         </div>
       </div>
 
@@ -141,11 +141,12 @@
             "I am the pround owner of Be-Dazzle hair and Beauty salons. All of this would  not have been possible without the
             College of Cape Town being a stepping stone and allowing me to fulfil my dreams."  
           </p>
-		      <a class="btn small" href="javascript:void(0)">Read More</a>
+		      <!--<a class="btn small" href="javascript:void(0)">Read More</a>-->
         </div>
       </div>
      
 	 
+    </div>
     </div>
   </div>
 </div>
@@ -175,7 +176,7 @@
                   <p>{{ $new->subtitle }}</p>
                   <p class="name">{{ $new->title }}</p>
                   <p class="fst-italic">
-                          <a href="{{route('viewNews.show',$new->id)}}">Read more</a>
+                          <a href="{{route('viewNews.show',$new->id)}}" style="color:#F7931E;">Read more</a>
                       </p>
                 </div>
                 <div class="col-sm-3 offset-sm-0 col-4 offset-4 order-sm-0 order-1">

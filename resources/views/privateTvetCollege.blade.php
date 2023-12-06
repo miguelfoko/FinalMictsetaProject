@@ -3,27 +3,41 @@
 @section('content')
 
 
-  <main id="main" data-aos="fade-up">
+<!-- Breadcromb Area Start -->
+<div class="breadcromb-wrapper">
+  <div class="breadcromb-overlay"></div>
+  <div class="container">
+    <h1>About TVET</h1>
+  </div>
+</div>
 
-      <div class="container-fluid" >
-      <div class="member2" >
-      Private Colleges
+<div class="breadcromb-text">
+  <div class="container">
+    <ul>
+      <li><a href="/">Home</a></li>
+      <li><a href="/aboutus">About us</a></li>
+      <li><a href="/abouttvet">About TVET</a></li>
+      <li>Public TVET Colleges</li>
+    </ul>
+  </div>
+</div>
+
+
+<div class="inner-page-wrapper course-wrapper course-details">
+      <div class="container">
+      @foreach ($abouttvet as $attvet)
+          <div class="row">
+            <div class="courses_overview">
+              <h5>Overview</h5>
+            </div>
+            <!-- Courses Overview Content --> 
+            <div class="couress_overview_content">
+              <p>{!! $attvet->privateTvetColleges !!} </p>
+            </div>
+
+          </div>
+        @endforeach 
+        
       </div>
-      <div class="noUseOfWysiwyg">
-        @foreach ($abouttvet as $attvet)
-        {!! $attvet->privateTvetColleges !!}
-        @endforeach
-      </div>
-
-      </div>
-   
-
-   
-    
-    
-
-   
-
-  </main><!-- End #main -->
-
+    </div>
   @endsection
