@@ -2,8 +2,8 @@
 <div class="page-sidebar">
                 <!-- START X-NAVIGATION -->
                 <ul class="x-navigation">
-                    <li class="xn-logo">
-                        <a href="/home">MICT SETA</a>
+                    <li>
+                        <a href="/home"><b class="tvet_app_color">TVET College & SETA Times</b></a>
                         <a href="#" class="x-navigation-control"></a>
                     </li>
                     <li class="xn-profile">
@@ -12,29 +12,29 @@
                         </a>
                         <div class="profile">
                             <div class="profile-image">
-                                <img src="adminResources/assets/images/users/avatar.jpg" alt="John Doe"/>
+                                <img src="adminResources/assets/images/TVET_logo.jpeg" alt="TVET Logo"/>
                             </div>
                             <div class="profile-data">
-                                <div class="profile-data-name">John Doe</div>
-                                <div class="profile-data-title">Web Developer/Designer</div>
+                                <div class="profile-data-name">Admin</div>
+                               <!-- <div class="profile-data-title">Web Developer/Designer</div>-->
                             </div>
-                            <div class="profile-controls">
+                            <!--<div class="profile-controls">
                                 <a href="adminResources/pages-profile.html" class="profile-control-left"><span class="fa fa-info"></span></a>
                                 <a href="adminResources/pages-messages.html" class="profile-control-right"><span class="fa fa-envelope"></span></a>
-                            </div>
+                            </div>-->
                         </div>                                                                        
                     </li>
                     <li class="xn-title">Navigation</li>
                     <li>
                         <a href="/home"><span class="fa fa-dashboard"></span> <span class="xn-text">Dashboard</span></a>
                     </li>                    
-                    <li class="xn-openable">
+                    <!--<li class="xn-openable">
                         <a href="#"><span class="fa fa-files-o"></span> <span class="xn-text">Pages</span></a>
                         <ul>
                             <li><a href="adminResources/pages-edit-profile.html"><span class="fa fa-wrench"></span> Edit Profile</a></li>
                             <li><a href="adminResources/pages-profile.html"><span class="fa fa-user"></span> Profile</a></li>
                         </ul>
-                    </li>
+                    </li>-->
                     <li class="xn-openable">
                         <a href="#"><span class="fa fa-home"></span> <span class="xn-text">Manage Home Page content</span></a>
                         <ul>
