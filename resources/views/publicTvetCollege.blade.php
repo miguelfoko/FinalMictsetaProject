@@ -2,28 +2,49 @@
 
 @section('content')
 
+<!-- Breadcromb Area Start -->
+<div class="breadcromb-wrapper">
+  <div class="breadcromb-overlay"></div>
+  <div class="container">
+    <h1>About TVET</h1>
+  </div>
+</div>
 
-  <main id="main">
-   
-      <div class="container-fluid" data-aos="fade-up">
-      <div class="member2" >
-      Public TVET Colleges
-      </div>
-   
-      <div class="noUseOfWysiwyg">
-        @foreach ($abouttvet as $attvet) 
-            <h3> </h3>
-            {!! $attvet->publicTvetColleges !!}
-            
-            <h3>TVET College Administration </h3>
-            {!! $attvet->tvetCollegeAdministration !!}
-        @endforeach
-      </div>
-      </div>
-   
+<div class="breadcromb-text">
+  <div class="container">
+    <ul>
+      <li><a href="/">Home</a></li>
+      <li><a href="/aboutus">About us</a></li>
+      <li><a href="/abouttvet">About TVET</a></li>
+      <li>Public TVET Colleges</li>
+    </ul>
+  </div>
+</div>
 
-    
+<div class="inner-page-wrapper course-wrapper course-details">
+      <div class="container">
+       @foreach ($abouttvet as $attvet) 
+          <div class="row">
+            <div class="courses_overview">
+              <h5>Overview</h5>
+            </div>
+            <!-- Courses Overview Content -->
+            <div class="couress_overview_content">
+              <p>{!! $attvet->publicTvetColleges !!} </p>
+            </div>
 
-  </main><!-- End #main -->
+            <div class="courses_overview">
+              <h5>TVET College Administration</h5>
+            </div>
+            <!-- Courses Overview Content -->
+            <div class="couress_overview_content">
+              <p>{!! $attvet->tvetCollegeAdministration !!} </p>
+            </div>
+
+          </div>
+        @endforeach 
+        
+      </div>
+    </div>
 
   @endsection

@@ -3,10 +3,25 @@
 @section('content')
 
 
-  <main id="main">
-      <!-- ======= Pricing Section ======= -->
-   
-    <?php $Events=[]; ?>
+<!-- Breadcromb Area Start -->
+<div class="breadcromb-wrapper">
+  <div class="breadcromb-overlay"></div>
+  <div class="container">
+    <h1>Tvet College Times</h1>
+  </div>
+</div>
+
+<div class="breadcromb-text">
+  <div class="container">
+    <ul>
+      <li><a href="/">Home</a></li>
+      <li><a href="/resources">Resources</a></li>
+      <li>College Calendar</li>
+    </ul>
+  </div>
+</div>
+
+<?php $Events=[]; ?>
     @foreach ($collegecalendar as $ccalendar) 
       <?php
         $a=array("title"=>$ccalendar->eventtitle,
@@ -14,9 +29,9 @@
               "end"=>$ccalendar->enddate);
         array_push($Events,$a);
       ?>
-    @endforeach
-
-    <script>
+@endforeach
+ 
+<script>
   $(document).ready(function() {
     $('#calendar').fullCalendar({
       header: {
@@ -32,16 +47,8 @@
   });
 </script>
 
-<section id="pricing" class="pricing">
-      <div class="container-fluid" data-aos="fade-up">
-            <div class="member2" >
-              College Calendar
-            </div>
-      </div>
-      <div class="container" data-aos="fade-up">
+<div class="container" data-aos="fade-up">
         <div class="calendar" id='calendar'></div>
-      </div>
-</section>
-  </main><!-- End #main -->
+</div>
 
  @endsection

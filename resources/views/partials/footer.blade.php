@@ -9,9 +9,5 @@
 </footer>
 <!-- Footer Wrapper End --> 
 <!-- Copyright Wrapper End -->
-<div class="copyright-wrapper">
-  <div class="container"> 
-    <p>&copy; Copyright <span id="year"></span> Eduworld | All Rights Reserved.</p>
-  </div>
-</div>
+
 <!-- Copyright Wrapper End --> 

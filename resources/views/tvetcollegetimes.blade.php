@@ -2,46 +2,51 @@
 
 @section('content')
 
+<!-- Breadcromb Area Start -->
+<div class="breadcromb-wrapper">
+  <div class="breadcromb-overlay"></div>
+  <div class="container">
+    <h1>Tvet College Times</h1>
+  </div>
+</div>
 
-  <main id="main" data-aos="fade-up">
+<div class="breadcromb-text">
+  <div class="container">
+    <ul>
+      <li><a href="/">Home</a></li>
+      <li>Tvet College Times</li>
+    </ul>
+  </div>
+</div>
 
-    <!-- ======= Pricing Section ======= -->
-    <section id="pricing" class="pricing">
-      <div class="container-fluid" >
-      <div class="member2" >
-         Tvet College Times
-        </div>
-        </div>
-        <div class="container" >
-        <div class="row">
 
-        @foreach ($tvetcollegetimes as $tctimes) 
-
-        <div class="col-lg-3 col-md-6 ">
-            <div class="box featured text-center">
-              <h3>{{$tctimes->title}}</h3>
-              <h5>{{$tctimes->volume}}</h5>
-              <h5>{{$tctimes->publicationDate}}</h5>
-              <h5>Size: {{$tctimes->size}} </h5>
-              <div class="theSiteImages">
-                <embed align="center" src="{{url('images')}}/{{$tctimes->coverPage}}" height="250" width="200">
-              </div >
-                <a href="{{url('files')}}/{{$tctimes->file}}" target="_blank" rel="noopener" class="btn-buy">Open Document</a>
-             
-            </div>
+<!-- Our Blog Wrapper End -->
+<div class="our-blog-wrapper">
+  <div class="container">
+  <div class="new">
+    <div class="row">  
+    @foreach ($tvetcollegetimes as $tctimes) 
+          <div class="col-sm-12 col-lg-4">
+            <div class="single-blog">
+              <figure class="single-blog-img green"> <img alt="" src="{{url('images')}}/{{$tctimes->coverPage}}">
+                <div><i class="fa fa-plus"></i></div>
+                <a href="{{url('files')}}/{{$tctimes->file}}"></a> </figure>
+              <div class="post-tittle">
+                <h4><a href="{{url('files')}}/{{$tctimes->file}}">{{$tctimes->title}}</a></h4>
+              </div>
+              <ul class="blogDate">
+                <li> <i aria-hidden="true" class="fas fa-pencil-alt"></i><span>{{$tctimes->volume}}</span> </li>
+                <li> <i aria-hidden="true" class="fa fa-calendar"></i> <span>{{$tctimes->publicationDate}}</span> </li>
+                <li> <i aria-hidden="true" class="fa fa-bars"></i> <span> Size: {{$tctimes->size}} </span> </li>
+              </ul>
+            <a class="btn small" href="{{url('files')}}/{{$tctimes->file}}">Open Document</a>
           </div>
-        @endforeach
-        </div>
+      
+    </div>
+    @endforeach
+    </div>
+  </div>
+</div>
+<!-- Our Blog Wrapper End --> 
 
-      </div>
-  
-</section>
-  </main><!-- End #main -->
-
-  <script>
-      jQuery('.btn-buy').click(function(){
-        var pdf = jQuery(this).attr('data-pdfurl');
-        jQuery('iframe #modal').attr('src', pdf);
-      });
-  </script>
  @endsection

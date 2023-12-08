@@ -2,6 +2,14 @@
 
 @section('content')
 
+<!-- Breadcromb Area Start -->
+<div class="breadcromb-wrapper">
+  <div class="breadcromb-overlay"></div>
+  <div class="container">
+    <h1>Newsletter</h1>
+  </div>
+</div>
+
 <div class="breadcromb-text">
   <div class="container">
     <ul>
@@ -9,7 +17,7 @@
       <li>Newsletter</li>
     </ul>
   </div>
-</div>
+</div> 
 
 <!-- Inner Page Wrapper Start -->
 <div class="inner-page-wrapper course-wrapper">
@@ -41,4 +49,5 @@
   </div>
 </div>
 <!-- Inner Page Wrapper End --> 
+
   @endsection
