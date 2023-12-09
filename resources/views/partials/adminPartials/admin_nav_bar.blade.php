@@ -15,7 +15,7 @@
                                 <img src="adminResources/assets/images/TVET_logo.jpeg" alt="TVET Logo"/>
                             </div>
                             <div class="profile-data">
-                                <div class="profile-data-name">Admin</div>
+                                <div class="profile-data-name">{{Auth::user()->name}}</div>
                                <!-- <div class="profile-data-title">Web Developer/Designer</div>-->
                             </div>
                             <!--<div class="profile-controls">
