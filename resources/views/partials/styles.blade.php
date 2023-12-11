@@ -10,7 +10,11 @@
 <link href="{{ asset('/vendor/boxicons/css/boxicons.min.css') }}" rel="stylesheet">
 <link href="{{ asset('/vendor/remixicon/remixicon.css') }}" rel="stylesheet">
 <link href="{{ asset('/vendor/swiper/swiper-bundle.min.css') }}" rel="stylesheet">
+
+<!-- Problems....-->
 <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.4/flowbite.min.css" rel="stylesheet" />
+<!-- ENd Problems-->
+
 
  <!--<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css">-->
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.2/css/all.css">

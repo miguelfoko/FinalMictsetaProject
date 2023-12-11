@@ -28,7 +28,7 @@
             <div class="courses_overview">
               <h5>Overview</h5>
             </div>
-            <!-- Courses Overview Content -->
+            <!-- Courses Overview Content --> 
             <div class="couress_overview_content">
               <p>{!! $attvet->publicTvetColleges !!} </p>
             </div>
