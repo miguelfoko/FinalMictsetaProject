@@ -48,6 +48,7 @@ use App\Http\Controllers\ShowCollegesController;
 use App\Http\Controllers\CollegeController;
 use App\Http\Controllers\SubjectsController;
 use App\Http\Controllers\ShowSubjectsController;
+use Illuminate\Support\Facades\Auth;
 
 
 
@@ -67,7 +68,8 @@ use App\Http\Controllers\ShowSubjectsController;
 */
 
 Route::get('/', function () { return view('index');});
-Route::get('/logout', function () { return view('index');});
+//Route::get('/logout', function () { return view('index');});
+Route::get('/logout', function(Request $request){Auth::logout(); return redirect('/');});
 
 //Home pages---------------------------------------------------------------------------
 Route::resource('/viewsubscribe',ViewSubscribeController::class);
