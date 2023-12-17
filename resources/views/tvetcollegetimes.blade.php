@@ -6,7 +6,7 @@
 <div class="breadcromb-wrapper">
   <div class="breadcromb-overlay"></div>
   <div class="container">
-    <h1>Tvet College Times</h1>
+    <h1>TVET College Times</h1>
   </div>
 </div>
 
@@ -14,7 +14,7 @@
   <div class="container">
     <ul>
       <li><a href="/">Home</a></li>
-      <li>Tvet College Times</li>
+      <li>TVET College Times</li>
     </ul>
   </div>
 </div>

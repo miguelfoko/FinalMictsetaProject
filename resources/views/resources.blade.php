@@ -95,7 +95,7 @@
             </span>
               
             <div class="post-tittle">
-              <h4><a href="viewcareerguidance">Career Guidance</a></h4>
+              <h4><a href="viewcareerguidance">Career<br> Guidance</a></h4>
             </div>
             <div class="caption">
               <p>{!! $text3 !!}</p>
@@ -114,7 +114,7 @@
             </span>
               
             <div class="post-tittle">
-              <h4><a href="viewsuccessstories">Success Stories</a></h4>
+              <h4><a href="viewsuccessstories">Success <br>Stories</a></h4>
             </div>
             <div class="caption">
               <p>{!! $text4 !!}</p>

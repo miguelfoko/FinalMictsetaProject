@@ -7,8 +7,7 @@ use App\Models\Subscribe;
 
 class SubscribeController extends Controller
 {
-    
-    
+     
     /**
      * Create a new controller instance.
      *

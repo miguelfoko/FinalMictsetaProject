@@ -4,6 +4,7 @@ namespace App\Providers;
 use App\Models\Slider;
 use App\Models\Footer;
 use App\Models\News;
+use App\Models\SuccesfulTvetGraduates;
 use Illuminate\Support\ServiceProvider;
 use View;
 class AppServiceProvider extends ServiceProvider
@@ -31,5 +32,7 @@ class AppServiceProvider extends ServiceProvider
         View::share('footerElement', $footerElement);
         $news = News::orderBy('id','desc')->paginate(3);
         View::share('news', $news);
+        $succesfulTvetGraduates = SuccesfulTvetGraduates::orderBy('id','desc')->paginate(3);
+        View::share('succesfulTvetGraduates', $succesfulTvetGraduates);
     }
 }

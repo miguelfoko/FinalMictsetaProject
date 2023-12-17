@@ -88,63 +88,26 @@
   </div>  
    <div class="new">
     <div class="row">
-      <div class="col-sm-12 col-lg-4">
-        <div class="single-blog">
-          <figure class="single-blog-img green"> 
-          <img src="{{ asset('/img/Nashveer_Nemesar_Mokone-Mofokeng.jpg') }}"  alt="">
-          
-            <div><i class="fa fa-plus"></i></div>
-            <a href="#"></a> </figure>
-          <div class="post-tittle">
-            <h4><a href="#">Mokone Mofokeng</a></h4>
+      @foreach ($succesfulTvetGraduates as $succesfulTvetGraduate) 
+          <div class="col-sm-12 col-lg-4">
+            <div class="single-blog">
+              <figure class="single-blog-img green"> 
+              <img src="{{ asset('/images/'.$succesfulTvetGraduate->picture) }}"  alt="">
+              
+                <div><i class="fa fa-plus"></i></div>
+                <a href="#"></a> </figure>
+              <div class="post-tittle">
+                <h4><a href="#">{{ $succesfulTvetGraduate->name }}</a></h4>
+              </div>
+              <span>{{ $succesfulTvetGraduate->title }}</span>
+                    <p class="fst-italic">
+                      "{{ $succesfulTvetGraduate->content }}"
+                    </p>
+              <!--<a class="btn small" href="javascript:void(0)">Read More</a>-->
+            </div>
           </div>
-          <span>Former student of Maluti TVET College</span>
-                <p class="fst-italic">
-                  "The quality training that I got from Maluti TVET College pushed   
-                  me to become my own boss. I am the successfull owner of Monoceros Electrical company"
-                </p>
-		      <!--<a class="btn small" href="javascript:void(0)">Read More</a>-->
-        </div>
-      </div>
+      @endforeach
 
-      <div class="col-sm-12 col-lg-4">
-        <div class="single-blog">
-          <figure class="single-blog-img green"> 
-          <img src="{{ asset('/img/Nashveer-_Nemesar_Majuba.jpg') }}"  alt="">
-            <div><i class="fa fa-plus"></i></div>
-            <a href="#"></a> </figure>
-          <div class="post-tittle">
-            <h4><a href="#">Snethemba Mpontshane</a></h4>
-          </div>
-          <span>Former Electrical Engineering student at Majuba TVET College</span>
-          <p class="fst-italic">
-                  "I'm a qualified Senior Electrican at Eskom based at the Kusile Power 
-                 Station in Witbank. The practical training , advanced equipment that we were exposed to in
-                     workshops and highly skilled lecturers laid a solid foundation for me to achieve success in my 
-                     profession ."
-                </p>
-		      <!--<a class="btn small" href="javascript:void(0)">Read More</a>-->
-        </div>
-      </div>
-
-      <div class="col-sm-12 col-lg-4">
-        <div class="single-blog">
-          <figure class="single-blog-img green"> 
-          <img src="{{ asset('/img/Nashveer_Nemesar_Sue-Kelly-Maneveld.jpg') }}"  alt="">
-            <div><i class="fa fa-plus"></i></div>
-            <a href="#"></a> </figure>
-          <div class="post-tittle">
-            <h4><a href="#">Sue-Kelly Maneveld</a></h4>
-          </div>
-          <span>Former student of College of Cape Town TVET</span>
-          <p class="fst-italic">
-            "I am the pround owner of Be-Dazzle hair and Beauty salons. All of this would  not have been possible without the
-            College of Cape Town being a stepping stone and allowing me to fulfil my dreams."  
-          </p>
-		      <!--<a class="btn small" href="javascript:void(0)">Read More</a>-->
-        </div>
-      </div>
-     
 	 
     </div>
     </div>

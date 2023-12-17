@@ -97,7 +97,7 @@
             </span>
               
             <div class="post-tittle">
-              <h4><a href="viewicasstrainingvideos">ICASS Training Videos</a></h4>
+              <h4><a href="viewicasstrainingvideos">ICASS Training <br>Videos</a></h4>
             </div>
             <div class="caption">
               <p>{!! $text3 !!}</p>

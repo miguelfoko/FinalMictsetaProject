@@ -40,6 +40,7 @@
                         <ul>
                             <li><a href="/slides"><span class="fa fa-wrench"></span>Manage sliders</a></li>
                             <li><a href="/footer"><span class="fa fa-bookmark-o"></span>Manage footer</a></li>
+                            <li><a href="/succesfulTvetGraduates"><span class="fa fa-bookmark-o"></span>Manage Succesful TVET Graduates</a></li>
                         </ul>
                     </li>
                     <li class="xn-openable">

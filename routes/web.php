@@ -48,6 +48,7 @@ use App\Http\Controllers\ShowCollegesController;
 use App\Http\Controllers\CollegeController;
 use App\Http\Controllers\SubjectsController;
 use App\Http\Controllers\ShowSubjectsController;
+use App\Http\Controllers\SuccesfullTvetGraduatesController;
 
 
 
@@ -71,7 +72,8 @@ Route::get('/', function () { return view('index');});
 //Home pages---------------------------------------------------------------------------
 Route::resource('/viewsubscribe',ViewSubscribeController::class);
 Route::resource('/subscription',SubscribeController::class);
-
+Route::resource('/succesfulTvetGraduates',SuccesfullTvetGraduatesController::class);
+Route::get('/viewsuccesfultvetgraduates', function(){ return view('admin.succesfulTvetGraduates.create');});
 
 //Contact Us pages---------------------------------------------------------------------------
 Route::get('/contactus', function(){return view('contact');});

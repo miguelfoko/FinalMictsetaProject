@@ -122,7 +122,7 @@
 
   <!-- Google Map End -->  
   </div>
-
+<br>
 <script type="text/javascript"> 
           function initMap() {
               const myLatLng = { lat: -25.760319754713873, lng: 28.190917968750004 };
