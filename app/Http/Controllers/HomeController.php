@@ -27,9 +27,4 @@ class HomeController extends Controller
         $numberOfRegisteredUsers = User::count();
         return view('home', compact('numberOfRegisteredUsers'));
     }
-
-    public function logout(Request $request) {
-        Auth::logout();
-        return redirect('/');
-    }
 }

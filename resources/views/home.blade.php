@@ -11,7 +11,7 @@
                 <div class="owl-carousel" id="owl-example">
                     <div>                                    
                         <div class="widget-title">Total Visitors</div>                                                                        
-                        <div class="widget-subtitle">27/08/2015 15:23</div>
+                        <div class="widget-subtitle"><div class="widget-subtitle plugin-date">Loading...</div></div>
                         <div class="widget-int">3,548</div>
                     </div>
                 </div>                            
