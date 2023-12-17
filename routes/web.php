@@ -67,6 +67,7 @@ use App\Http\Controllers\ShowSubjectsController;
 */
 
 Route::get('/', function () { return view('index');});
+Route::get('/logout', function () { return view('index');});
 
 //Home pages---------------------------------------------------------------------------
 Route::resource('/viewsubscribe',ViewSubscribeController::class);

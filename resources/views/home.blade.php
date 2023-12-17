@@ -4,7 +4,7 @@
 
 <!-- START WIDGETS -->                    
 <div class="row">
-        <div class="col-md-3">
+        <div class="col-md-4">
             
             <!-- START WIDGET SLIDER -->
             <div class="widget widget-default widget-carousel">
@@ -14,16 +14,6 @@
                         <div class="widget-subtitle">27/08/2015 15:23</div>
                         <div class="widget-int">3,548</div>
                     </div>
-                    <div>                                    
-                        <div class="widget-title">Returned</div>
-                        <div class="widget-subtitle">Visitors</div>
-                        <div class="widget-int">1,695</div>
-                    </div>
-                    <div>                                    
-                        <div class="widget-title">New</div>
-                        <div class="widget-subtitle">Visitors</div>
-                        <div class="widget-int">1,977</div>
-                    </div>
                 </div>                            
                 <div class="widget-controls">                                
                     <a href="#" class="widget-control-right widget-remove" data-toggle="tooltip" data-placement="top" title="Remove Widget"><span class="fa fa-times"></span></a>
@@ -32,10 +22,10 @@
             <!-- END WIDGET SLIDER -->
             
         </div>
-        <div class="col-md-3">
+       <!-- <div class="col-md-3">-->
             
             <!-- START WIDGET MESSAGES -->
-            <div class="widget widget-default widget-item-icon" onclick="location.href='pages-messages.html';">
+           <!-- <div class="widget widget-default widget-item-icon" onclick="location.href='pages-messages.html';">
                 <div class="widget-item-left">
                     <span class="fa fa-envelope"></span>
                 </div>                             
@@ -47,11 +37,11 @@
                 <div class="widget-controls">                                
                     <a href="#" class="widget-control-right widget-remove" data-toggle="tooltip" data-placement="top" title="Remove Widget"><span class="fa fa-times"></span></a>
                 </div>
-            </div>                            
+            </div>    -->                        
             <!-- END WIDGET MESSAGES -->
             
-        </div>
-        <div class="col-md-3">
+        <!--</div>-->
+        <div class="col-md-4">
             
             <!-- START WIDGET REGISTRED -->
             <div class="widget widget-default widget-item-icon" onclick="location.href='pages-address-book.html';">
@@ -70,7 +60,7 @@
             <!-- END WIDGET REGISTRED -->
             
         </div>
-        <div class="col-md-3">
+        <div class="col-md-4">
             
             <!-- START WIDGET CLOCK -->
             <div class="widget widget-danger widget-padding-sm">
