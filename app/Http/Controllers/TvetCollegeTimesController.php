@@ -61,7 +61,7 @@ class TvetCollegeTimesController extends Controller
         
         $publicationDate=$request->input('publicationMonth').' '.$request->input('publicationYear');
         $tvetcollegetimes = new TvetCollegeTimes;
-        $tvetcollegetimes->volume="Volume ".$request->input('volume');
+        $tvetcollegetimes->volume="Vol. ".$request->input('volume');
         $tvetcollegetimes->title=$request->input('title');
         $tvetcollegetimes->publicationDate=$publicationDate;
 
@@ -132,7 +132,7 @@ class TvetCollegeTimesController extends Controller
         ]); 
         
         $publicationDate=$request->input('publicationMonth').' '.$request->input('publicationYear');
-        $tvetcollegetimes->volume="Volume ".$request->input('volume');
+        $tvetcollegetimes->volume="Vol. ".$request->input('volume');
         $tvetcollegetimes->title=$request->input('title');
         $tvetcollegetimes->publicationDate=$publicationDate;
 

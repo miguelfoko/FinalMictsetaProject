@@ -54,6 +54,47 @@
                         </div>
                         <div class="col-xs-12 col-sm-12 col-md-12">
                             <div class="form-group">
+                                <strong>Publication Month:</strong>
+
+                                <select id="year" name="publicationMonth" class="form-control ">
+                                    <option >Choose here</option>
+                                    <option value="January">January</option>
+                                    <option value="February">February</option>
+                                    <option value="March">March</option>
+                                    <option value="April">April</option>
+                                    <option value="May">May</option>
+                                    <option value="June">June</option>
+                                    <option value="July">July</option>
+                                    <option value="August">August</option>
+                                    <option value="September">September</option>
+                                    <option value="October">October</option>
+                                    <option value="November">November</option>
+                                    <option value="December">December</option>                            
+                                </select>
+                                @error('publicationMonth')
+                                <div class="alert alert-danger mt-1 mb-1">{{ $message }}</div>
+                                @enderror
+                            </div>
+                        </div>
+                        <div class="col-xs-12 col-sm-12 col-md-12">
+                            <div class="form-group">
+                                <strong>Volume:</strong>
+
+                                <select  name="volume" class="form-control ">
+                                    {{ $last= 1 }}
+                                    {{ $now = 100 }}
+
+                                    @for ($i = $last; $i <= $now; $i++)
+                                        <option value="{{ $i }}">{{ $i }}</option>
+                                    @endfor
+                                </select>
+                                @error('volume')
+                                <div class="alert alert-danger mt-1 mb-1">{{ $message }}</div>
+                                @enderror
+                            </div>
+                        </div>
+                        <div class="col-xs-12 col-sm-12 col-md-12">
+                            <div class="form-group">
                                 <strong>Youtube Link:</strong>
                                 <input type="text" name="link" value="{{ $news->link }}" class="form-control" placeholder="Youtube Link">
                                 @error('link')

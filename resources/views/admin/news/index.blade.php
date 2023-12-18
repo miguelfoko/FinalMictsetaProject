@@ -54,6 +54,7 @@
                                         <th>News title</th>
                                         <th>News Subtitle</th>
                                         <th>News content</th>
+                                        <th>Publication Date</th>
                                         <th>Youtube link</th>
                                         <th>News picture</th>
                                         <th width="280px">Action</th>
@@ -62,13 +63,14 @@
                                 <tbody>
                                     @foreach ($news as $new)
                                         <tr heigh=100px>
-                                            <td width=5%>{{ $new->id }}</td>
-                                            <td with=10%>{{ $new->title }}</td>
-                                            <td with=10%>{{ $new->subtitle }}</td>
-                                            <td width=35%>{!! $new->content !!}</td>
-                                            <td width=10%><a href="{!! $new->link !!}">{!! $new->link !!}</a></td>
-                                            <td width="20%"><img src="{{ asset('/images/'.$new->picture) }}" alt="" class="img-fluid"> </td>
-                                            <td width="10%">
+                                            <td >{{ $new->id }}</td>
+                                            <td >{{ $new->title }}</td>
+                                            <td >{{ $new->subtitle }}</td>
+                                            <td >{!! $new->content !!}</td>
+                                            <td>{{$new->publicationDate}}</td>
+                                            <td ><a href="{!! $new->link !!}">{!! $new->link !!}</a></td>
+                                            <td ><img src="{{ asset('/images/'.$new->picture) }}" alt="" class="img-fluid"> </td>
+                                            <td >
                                                 <form action="{{ route('news.destroy',$new->id) }}" method="Post">
                                                     <a class="btn btn-primary" href="{{ route('news.edit',$new->id) }}">Edit</a>
                                                     @csrf
@@ -78,7 +80,7 @@
                                             </td>
                                         </tr>
                                     @endforeach
-                                </tbody>
+                                </tbody> 
                             </table>  
                             {{ $news->links() }}                                
                         </div>

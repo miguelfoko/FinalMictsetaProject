@@ -16,3 +16,26 @@
         </tr>
     @endif
 </table>
+
+<style>
+    .table .question td{
+        background-color: #f7931e;
+        color: #16537e;
+        text-align: center ;
+        font-weight: bold ;
+        }
+
+    .table{
+        width: 75%!important;
+        margin-left: auto;
+        margin-right: auto;
+        }
+    .question:focus {
+        outline: none;
+        background-color: #fff;
+    }
+
+    .question:hover {
+        background-color: #eee;
+    }
+</style>

@@ -2,7 +2,7 @@
   <a href="#single_courses_desc"> {{$coursetype->type}}</a>
 </div>
        
-        <div class="container-fluid" data-aos="fade-up">
+        <div class="container" data-aos="fade-up">
            
            <div class="row"> 
                <div class="col-lg-3 col-md-6 d-flex align-items-stretch">

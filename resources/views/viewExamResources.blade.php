@@ -24,42 +24,37 @@
 
  <!-- Inner Page Wrapper Start -->
  <div class="inner-page-wrapper course-wrapper">
-    <div class="container">
-        
-            <div class="row">
-                <div class="col-12">
-                    <div class="single_courses course-list"> 
-                    <!-- Single Courses Image Area -->
-                        <div class="single_courses_thumb">
-                            <div class="card">
-                                        <div class="card-title">
-                                            <h4 class="dropbtn1" >Options</h4>
-                                        </div>
-                                        <div class="card-body">
-                                          <h6 id="1" class="dropbtn" onclick="load_directory_content(1)" >Exam Entry Form <i class="fa fa-caret-right"></i></h6> 
-                                          <h6 id="2" class="dropbtn" onclick="load_directory_content(2)">Examination Re-Marking <i class="fa fa-caret-right"></i></h6> 
-                                          <h6 id="3" class="dropbtn" onclick="load_directory_content(3)">Examination Timetable <i class="fa fa-caret-right"></i></h6> 
-                                          <h6 id="4" class="dropbtn" onclick="load_directory_content(4)">General Items <i class="fa fa-caret-right"></i></h6> 
-                                          <h6 id="5" class="dropbtn" onclick="load_directory_content(5)">ICASS Support Documents <i class="fa fa-caret-right"></i></h6> 
-                                          <h6 id="6" class="dropbtn" onclick="load_directory_content(6)">Management Action Planning<i class="fa fa-caret-right"></i></h6> 
-                                          <h6 id="7" class="dropbtn" onclick="load_directory_content(7)">Validation Programmes <i class="fa fa-caret-right"></i></h6> 
-                                        </div>
-                            </div>
+ <div class="container" data-aos="fade-up">
+          <div class="new">
+              <div class="row" data-aos="zoom-in" data-aos-delay="100">
+
+                  <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
+                      <div class="card">
+                        <div class="card-body">
+                          <a id="1" href="#directory_content_div" class="dropbtn" onclick="load_directory_content(1)" >Exam Entry Form <i class="fa fa-caret-right"></i></a> <br>
+                          <a id="2" href="#directory_content_div" class="dropbtn" onclick="load_directory_content(2)">Examination Re-Marking <i class="fa fa-caret-right"></i></a> <br>
+                          <a id="3" href="#directory_content_div" class="dropbtn" onclick="load_directory_content(3)">Examination Timetable <i class="fa fa-caret-right"></i></a> <br>
+                          <a id="4" href="#directory_content_div" class="dropbtn" onclick="load_directory_content(4)">General Items <i class="fa fa-caret-right"></i></a> <br>
+                          <a id="5" href="#directory_content_div" class="dropbtn" onclick="load_directory_content(5)">ICASS Support Documents <i class="fa fa-caret-right"></i></a> <br>
+                          <a id="6" href="#directory_content_div" class="dropbtn" onclick="load_directory_content(6)">Management Action Planning<i class="fa fa-caret-right"></i></a> <br>
+                          <a id="7" href="#directory_content_div" class="dropbtn" onclick="load_directory_content(7)">Validation Programmes <i class="fa fa-caret-right"></i></a> 
                         </div>
-                        <!-- Single Courses Description Area -->
-                        
-                          <div class="single_courses_desc" id='directory_content_div'>
-                                      <p class="levels_div" id='levels_div'>  </p>         
-                          </div>
-                       
-                            
-                    </div>
-                </div>
-            </div>
-        
-    </div>
-</div>
-<!-- Inner Page Wrapper End --> 
+                      </div>
+                  </div>
+
+                  <div class="col-lg-8  align-items-stretch">
+                      <div class="card">
+                        <div class="directory_content_div" id='directory_content_div'>
+                          
+                        </div>
+                      </div>
+                  </div>
+
+              </div>
+        </diV>
+      </div>
+
+  
 
       <script type="text/javascript">
         function load_directory_content(theId){
@@ -67,6 +62,8 @@
           $('#directory_content_div').load(finalUrl)
         }
       </script>
+</div>
+<!-- Inner Page Wrapper End --> 
 
 
  @endsection

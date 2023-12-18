@@ -33,11 +33,12 @@
               <figure class="single-blog-img green"> 
                             <video width="320" height="240" controls>
                                 <source src="{{url('videos')}}/{{$examtrainingvideo->video}}" type="video/mp4">
-                                Your browser does not support the video tag
+                                Your browser does not support the video tag 
                             </video> 
               </figure>
               <div class="post-tittle">
                 <h4>Module {{$examtrainingvideo->module}}-Session {{$examtrainingvideo->session}}</h4>
+                <p>{{$examtrainingvideo->title}}</p>
               </div>
             <a class="btn small" href="{{url('videos')}}/{{$examtrainingvideo->video}}" download>Download</a>
           </div>

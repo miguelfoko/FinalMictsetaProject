@@ -1,4 +1,4 @@
-<!-- Google Fonts -->
+ <!-- Google Fonts -->
 <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
 
 <!-- Vendor CSS Files -->
@@ -11,9 +11,6 @@
 <link href="{{ asset('/vendor/remixicon/remixicon.css') }}" rel="stylesheet">
 <link href="{{ asset('/vendor/swiper/swiper-bundle.min.css') }}" rel="stylesheet">
 
-<!-- Problems....-->
-<link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.4/flowbite.min.css" rel="stylesheet" />
-<!-- ENd Problems-->
 
 
  <!--<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css">-->

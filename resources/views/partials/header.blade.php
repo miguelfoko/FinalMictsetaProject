@@ -9,7 +9,7 @@
         <div class="col-lg-6 col-sm-6 col-md-6">
           <div class="header-msg"><span>Welcome To <span>Colleges and SETA Times</span></span></div>
         </div>
-        <div class="col-lg-6 col-sm-6 col-md-6">
+        <div class="col-lg-6 col-sm-6 col-md-6"> 
           <div class="header-links"> 
             <a href="#"><i class="fa fa-facebook"></i></a> 
             <a href="#"><i class="fa fa-youtube"></i></a> 

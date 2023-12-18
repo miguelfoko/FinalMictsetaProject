@@ -27,7 +27,7 @@
     <div class="row">  
     @foreach ($tvetcollegetimes as $tctimes) 
           <div class="col-sm-12 col-lg-4">
-            <div class="single-blog">
+            <div class="single-blog"> 
               <figure class="single-blog-img green"> <img alt="" src="{{url('images')}}/{{$tctimes->coverPage}}">
                 <div><i class="fa fa-plus"></i></div>
                 <a href="{{url('files')}}/{{$tctimes->file}}"></a> </figure>

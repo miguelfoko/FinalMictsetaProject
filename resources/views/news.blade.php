@@ -33,7 +33,10 @@
             <div class="single_courses_desc">
               <div class="title"> <a href="{{route('viewNews.show',$new->id)}}">{{ $new->title }}</a>
                 <p>{{ $new->subtitle }}</p>
-              </div>
+              </div> 
+              <ul class="blogDate">
+                <li> <i aria-hidden="true" class="fa fa-calendar"></i> <span>{{ $new->publicationDate }}</span> </li>
+              </ul>
             </div>
           </div>
           

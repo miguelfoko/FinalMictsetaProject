@@ -60,73 +60,28 @@
 
     <!-- Inner Page Wrapper Start -->
 <div class="inner-page-wrapper course-wrapper">
-    <div class="container">
-        
-            <div class="row">
-                @foreach ($programs as $program)
-
-                <div class="col-12">
-                    <div class="single_courses course-list"> 
-                    <!-- Single Courses Image Area -->
-                        <div class="single_courses_thumb">
-                            <div class="card">
-                                        <div class="card-title">
-                                            <h4 id="{{$program->id}}" class="dropbtn1" >{{$program->title}}</h4>
-                                        </div>
-                                        <div class="card-body">
-                                            @foreach($coursetypes as $coursetype) 
-                                                @if($coursetype->idprogram==$program->id)
-                                                <h6 id="{{$coursetype->id}}" class="dropbtncourse" 
-                                                    onclick="load_levels('{{$coursetype->id}}','{{$program->id}}')">{{$coursetype->type }}
-                                                    <a href="#levels_div"> 
-                                                        <i class="fa fa-angle-right"></i>
-                                                    </a>
-                                                </h6>  
-                                                @endif 
-                                            @endforeach
-                                        </div>
-                            </div>
-                        </div>
-                        <!-- Single Courses Description Area -->
-                        <div class="single_courses_desc" id="single_courses_desc">
-                                    <p class="levels_div" id='levels_div'>  </p>         
-                        </div>
-                            
-                    </div>
-                </div>
-                @endforeach
-            </div>
-        
-    </div>
-</div>
-<!-- Inner Page Wrapper End --> 
-
-
-
-  <main id="main" data-aos="fade-in">
-
-    <section id="pricing" class="pricing">
-        
-        <div class="container-fluid" data-aos="fade-up"> 
+    <div class="container" data-aos="fade-up"> 
             <div class="new">
                 <div class="row" data-aos="zoom-in" data-aos-delay="100">
-                    <div class="col-lg-3 col-md-6 d-flex align-items-stretch">
+                    <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
                         <div class="card">
                             <div class="card-body">
                                 @foreach ($programs as $program)
-                                    <button id="{{$program->id}}" class="dropbtn1" >{{$program->title}}</button> 
-                                    @foreach($coursetypes as $coursetype) 
-                                        @if($coursetype->idprogram==$program->id)
-                                        <button  id="{{$coursetype->id}}" class="dropbtncourse" onclick="load_levels('{{$coursetype->id}}','{{$program->id}}')">{{$coursetype->type }}</button>
-                                            
-                                        @endif 
-                                    @endforeach
+                                    <h4 id="{{$program->id}}" class="dropbtn1" >{{$program->title}}</h4>
+                                    <ul> 
+                                      @foreach($coursetypes as $coursetype) 
+                                          @if($coursetype->idprogram==$program->id)
+                                          <li><button  id="{{$coursetype->id}}" class="dropbtncourse" onclick="load_levels('{{$coursetype->id}}','{{$program->id}}')">{{$coursetype->type }}</button>
+                                          </li>  
+                                          @endif 
+                                      @endforeach
+                                    </ul>
                                 @endforeach
                             </div>
                         </div>
                     </div>
                     
-                    <div class="col-lg-7  align-items-stretch">
+                    <div class="col-lg-8  align-items-stretch">
                         <div class="card">
                             <div class="levels_div" id='levels_div'></div>
                         </div>
@@ -141,8 +96,10 @@
                 </div> 
             </div>
         </div>
+</div>
+<!-- Inner Page Wrapper End --> 
 
-    </section>                 
+
    
 
       <script type="text/javascript">
@@ -158,5 +115,4 @@
       </script>
 
 
-  </main><!-- End #main -->
   @endsection

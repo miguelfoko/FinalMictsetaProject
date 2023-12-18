@@ -1,4 +1,4 @@
-@extends('layouts.master')
+@extends('layouts.master2')
 
 @section('content')
 
@@ -9,7 +9,7 @@
     <h1>FAQ</h1>
   </div> 
 </div>
-
+ 
 <div class="breadcromb-text">
   <div class="container">
     <ul>

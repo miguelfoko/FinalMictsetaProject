@@ -52,6 +52,8 @@ class NewsController extends Controller
         $request->validate([
             'title' => 'required',
             'subtitle' => 'required',
+            'publicationMonth' => 'required',
+            'publicationYear' => 'required',
             'content' => 'required',
             'picture' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:10240',
         ]);
@@ -59,13 +61,15 @@ class NewsController extends Controller
         $imageName = time().'.'.$request->picture->extension();  
         
         $request->picture->move(public_path('images'), $imageName);
-
+        
+        $publicationDate=$request->input('publicationMonth').' '.$request->input('publicationYear');
         $news=new News;
         $news->link=$request->input('link');
         $news->title=$request->input('title');
         $news->subtitle=$request->input('subtitle');
         $news->content=nl2br($request->input('content'));
         $news->picture=$imageName;
+        $news->publicationDate=$publicationDate;
         $news->user_id=Auth::user()->id;
         $news->save();
         return redirect()->route('news.index')->with('success','News has been created successfully.')
@@ -93,7 +97,7 @@ class NewsController extends Controller
     */
     public function edit(News $news)
     {
-        return view('admin.news.edit',compact('news'));
+        return view('admin.news.edit',compact('news')); 
     }
 
     /**
@@ -108,6 +112,8 @@ class NewsController extends Controller
         $request->validate([
             'title' => 'required',
             'subtitle' => 'required',
+            'publicationMonth' => 'required',
+            'publicationYear' => 'required',
             'content' => 'required',
             'picture' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:9000',
         ]);
@@ -119,12 +125,13 @@ class NewsController extends Controller
         $imageName = time().'.'.$request->picture->extension();
         $request->picture->move(public_path('images'), $imageName);
 
-         
+        $publicationDate=$request->input('publicationMonth').' '.$request->input('publicationYear');
         //$news=new News;
         $news->title=$request->input('title');
         $news->link=$request->input('link');
         $news->subtitle=$request->input('subtitle');
         $news->content=nl2br($request->input('content'));
+        $news->publicationDate=$publicationDate;
         $news->picture=$imageName;
         $news->save();
 

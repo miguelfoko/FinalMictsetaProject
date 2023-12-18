@@ -49,6 +49,8 @@ use App\Http\Controllers\CollegeController;
 use App\Http\Controllers\SubjectsController;
 use App\Http\Controllers\ShowSubjectsController;
 use App\Http\Controllers\SuccesfullTvetGraduatesController;
+use App\Http\Controllers\ViewSuccesfullTvetGraduatesController;
+
 
 
 
