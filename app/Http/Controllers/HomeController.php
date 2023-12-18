@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\User;
+use App\Models\Visitor;
 
 class HomeController extends Controller
 {
@@ -25,6 +26,7 @@ class HomeController extends Controller
     public function index()
     {
         $numberOfRegisteredUsers = User::count();
-        return view('home', compact('numberOfRegisteredUsers'));
+        $numberOfROnlineUsers = Visitor::count();
+        return view('home', compact('numberOfRegisteredUsers', 'numberOfROnlineUsers'));
     }
 }

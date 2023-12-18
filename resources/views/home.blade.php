@@ -12,7 +12,7 @@
                     <div>                                    
                         <div class="widget-title">Total Visitors</div>                                                                        
                         <div class="widget-subtitle"><div class="widget-subtitle plugin-date">Loading...</div></div>
-                        <div class="widget-int">3,548</div>
+                        <div class="widget-int">{{$numberOfROnlineUsers}}</div>
                     </div>
                 </div>                            
                 <div class="widget-controls">                                
