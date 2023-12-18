@@ -34,17 +34,22 @@
                     </li>
                     <!-- END TOGGLE NAVIGATION -->
                     <!-- SEARCH -->
-                    <li class="xn-search">
+                    <!--<li class="xn-search">
                         <form role="form">
                             <input type="text" name="search" placeholder="Search..."/>
                         </form>
-                    </li>   
+                    </li>   -->
                     <!-- END SEARCH -->                    
                     <!-- POWER OFF -->
                     <li class="xn-icon-button pull-right last">
                         <a href="#"><span class="fa fa-power-off"></span></a>
                         <ul class="xn-drop-left animated zoomIn">
+<<<<<<< HEAD
                             <li><a href="/index" class="mb-control" data-box="#mb-signout"><span class="fa fa-sign-out"></span> Sign Out</a></li>
+=======
+                            <!--<li><a href="#" class="mb-control" data-box="#mb-signout"><span class="fa fa-sign-out"></span> Sign Out</a></li>-->
+                            <li><a href="/logout"><span class="fa fa-sign-out"></span> Sign Out</a></li>
+>>>>>>> 7fb49cb76a9167c495b363b533cf9438c1ff75b3
                         </ul>                        
                     </li> 
                     <!-- END POWER OFF -->                    
@@ -55,14 +60,14 @@
                     
                     <!-- END TASKS -->
                     <!-- LANG BAR -->
-                    <li class="xn-icon-button pull-right">
+                    <!--<li class="xn-icon-button pull-right">
                         <a href="#"><span class="flag flag-gb"></span></a>
                         <ul class="xn-drop-left xn-drop-white animated zoomIn">
                             <li><a href="#"><span class="flag flag-gb"></span> English</a></li>
                             <li><a href="#"><span class="flag flag-de"></span> Deutsch</a></li>
                             <li><a href="#"><span class="flag flag-cn"></span> Chinese</a></li>
                         </ul>                        
-                    </li> 
+                    </li> -->
                     <!-- END LANG BAR -->
                 </ul>
                 <!-- END X-NAVIGATION VERTICAL -->                     
@@ -87,7 +92,7 @@
         <!-- END PAGE CONTAINER -->
 
         <!-- MESSAGE BOX-->
-        <div class="message-box animated fadeIn" data-sound="alert" id="mb-signout">
+        <!--<div class="message-box animated fadeIn" data-sound="alert" id="mb-signout">
             <div class="mb-container">
                 <div class="mb-middle">
                     <div class="mb-title"><span class="fa fa-sign-out"></span> Log <strong>Out</strong> ?</div>
@@ -103,7 +108,7 @@
                     </div>
                 </div>
             </div>
-        </div>
+        </div>-->
         <!-- END MESSAGE BOX-->
 
         <!-- START PRELOADS -->
