@@ -21,10 +21,10 @@ class CountVisits
         $existingVisitor = Visitor::where('ip_address', $ip)->first(); 
         if ($existingVisitor != null) {
             $counter = $existingVisitor->visits_coutner;
-            $updated_counter = $counter++;
+            $updated_counter = $counter+1;
             $visitor = Visitor::firstOrCreate(['ip_address' => $ip]);
             $visitor->visits_coutner = $updated_counter;
-            $visitor->update();
+            $visitor->save();
         }
         else {
             $visitor = Visitor::firstOrCreate(['ip_address' => $ip]);
