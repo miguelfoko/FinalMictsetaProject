@@ -17,7 +17,6 @@ class CreateNewsTable extends Migration
             $table->id();
             $table->string('title');
             $table->string('subtitle');
-            $table->string('publicationDate');
             $table->string('link')->nullable(true);
             $table->longText('content');
             $table->string('picture');
