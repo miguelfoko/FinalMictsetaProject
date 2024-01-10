@@ -27,7 +27,7 @@
                     <div class="panel-heading">
                         <h3 class="panel-title">News</h3>
                         <div class="btn-group pull-right">
-                            <a class="btn btn-success" href="/viewCreateNews"><i class="fa fa-plus"></i> Create News</a>
+                            <a class="btn btn-success" href="/viewCreateNews"><i class="fa fa-plus"></i> Add News</a>
                             <button class="btn btn-danger dropdown-toggle" data-toggle="dropdown"><i class="fa fa-bars"></i> Export Data</button>
                             <ul class="dropdown-menu">
                                 <li><a href="#" onClick ="$('#tableElements').tableExport({type:'sql'});"><img src='adminResources/img/icons/sql.png' width="24"/> SQL</a></li>
@@ -67,7 +67,10 @@
                                             <td with=10%>{{ $new->subtitle }}</td>
                                             <td width=35%>{!! $new->content !!}</td>
                                             <td width=10%><a href="{!! $new->link !!}">{!! $new->link !!}</a></td>
-                                            <td width="20%"><img src="{{ asset('/images/'.$new->picture) }}" alt="" class="img-fluid"> </td>
+                                            <td>
+                                                <a href="{{ asset('/images/'.$new->picture) }}" target="_blank">View File</a>
+                                            </td>
+                                            <!--<td width="20%"><img src="{{ asset('/images/'.$new->picture) }}" alt="" class="img-fluid"> </td>-->
                                             <td width="10%">
                                                 <form action="{{ route('news.destroy',$new->id) }}" method="Post">
                                                     <a class="btn btn-primary" href="{{ route('news.edit',$new->id) }}">Edit</a>
