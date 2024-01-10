@@ -27,7 +27,7 @@
                     <div class="panel-heading">
                         <h3 class="panel-title">News</h3>
                         <div class="btn-group pull-right">
-                            <a class="btn btn-success" href="/viewCreateNews"><i class="fa fa-plus"></i> Create News</a>
+                            <a class="btn btn-success" href="/viewCreateNews"><i class="fa fa-plus"></i> Add News</a>
                             <button class="btn btn-danger dropdown-toggle" data-toggle="dropdown"><i class="fa fa-bars"></i> Export Data</button>
                             <ul class="dropdown-menu">
                                 <li><a href="#" onClick ="$('#tableElements').tableExport({type:'sql'});"><img src='adminResources/img/icons/sql.png' width="24"/> SQL</a></li>
@@ -52,7 +52,6 @@
                                     <tr>
                                         <th>S.No</th>
                                         <th>News title</th>
-                                        <th>News Subtitle</th>
                                         <th>News content</th>
                                         <th>Publication Date</th>
                                         <th>Youtube link</th>
@@ -63,14 +62,16 @@
                                 <tbody>
                                     @foreach ($news as $new)
                                         <tr heigh=100px>
-                                            <td >{{ $new->id }}</td>
-                                            <td >{{ $new->title }}</td>
-                                            <td >{{ $new->subtitle }}</td>
-                                            <td >{!! $new->content !!}</td>
+                                            <td width=5%>{{ $new->id }}</td>
+                                            <td>{{ $new->title }}</td>
+                                            <td>{!! $new->content !!}</td>
                                             <td>{{$new->publicationDate}}</td>
-                                            <td ><a href="{!! $new->link !!}">{!! $new->link !!}</a></td>
-                                            <td ><img src="{{ asset('/images/'.$new->picture) }}" alt="" class="img-fluid"> </td>
-                                            <td >
+                                            <td><a href="{!! $new->link !!}">{!! $new->link !!}</a></td>
+                                            <td>
+                                                <a href="{{ asset('/images/'.$new->picture) }}" target="_blank">View File</a>
+                                            </td>
+                                            <!--<td width="20%"><img src="{{ asset('/images/'.$new->picture) }}" alt="" class="img-fluid"> </td>-->
+                                            <td>
                                                 <form action="{{ route('news.destroy',$new->id) }}" method="Post">
                                                     <a class="btn btn-primary" href="{{ route('news.edit',$new->id) }}">Edit</a>
                                                     @csrf
