@@ -10,19 +10,20 @@
         <link rel="icon" href="favicon.ico" type="image/x-icon" />
         <!-- END META SECTION -->
         
-        <!-- CSS INCLUDE -->        
-        <link rel="stylesheet" type="text/css" id="theme" href="adminResources/css/theme-default.css"/>
+        <!-- CSS INCLUDE -->     
+        @include('partials.styles')
+        <link rel="stylesheet" type="text/css" id="theme" href="/adminResources/css/theme-default.css"/>
+       
         <!-- EOF CSS INCLUDE -->                                     
     </head>
     <body>
-        
-        <div class="login-container login-v2">
-            
+        @include('partials.header') 
+        <div class="login-container login-v2"> 
             <div class="login-box animated fadeInDown">
                 <div class="login-body">
                     @yield('content')
                 </div>
-                <div class="login-footer">
+                <!--<div class="login-footer">
                     <div class="pull-left">
                         &copy; 2023 MICTSETA
                     </div>
@@ -31,11 +32,11 @@
                         <a href="#">Privacy</a> |
                         <a href="#">Contact Us</a>
                     </div>
-                </div>
+                </div>-->
             </div>
-            
         </div>
-        
+        @include('partials.footer')
+        @include('partials.scripts')
     </body>
 </html>
 

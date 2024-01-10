@@ -62,7 +62,7 @@
                                         <th>Phone(s)</th>
                                         <th>Latitude</th>
                                         <th>Longitude</th>
-                                        <th width="200px">Action</th>
+                                        <th width="280px">Action</th>
                                     </tr>
                                 </thead>
                                 <tbody>
@@ -80,7 +80,7 @@
                                             <td >{{ $regionallocation->phone }}</td>
                                             <td >{{ $regionallocation->latitude }}</td>
                                             <td >{{ $regionallocation->longitude }}</td>                        
-                                            <td width="200px" >
+                                            <td>
                                                 <form action="{{ route('regionallocations.destroy',$regionallocation->id) }}" method="Post">
                                                     <a class="btn btn-primary" href="{{ route('regionallocations.edit',$regionallocation->id) }}"><i class="fa fa-pencil"></i></a>
                                                     @csrf

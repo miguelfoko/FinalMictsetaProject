@@ -8,11 +8,11 @@
                     </li>
                     <li class="xn-profile">
                         <a href="#" class="profile-mini">
-                            <img src="adminResources/assets/images/users/avatar.jpg" alt="John Doe"/>
+                            <img src="/adminResources/assets/images/users/avatar.jpg" alt="John Doe"/>
                         </a>
                         <div class="profile">
                             <div class="profile-image">
-                                <img src="adminResources/assets/images/TVET_logo.jpeg" alt="TVET Logo"/>
+                                <img src="/adminResources/assets/images/TVET_logo.jpeg" alt="TVET Logo"/>
                             </div>
                             <div class="profile-data">
                                 <div class="profile-data-name">{{Auth::user()->name}}</div>

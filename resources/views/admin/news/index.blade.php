@@ -52,7 +52,6 @@
                                     <tr>
                                         <th>S.No</th>
                                         <th>News title</th>
-                                        <th>News Subtitle</th>
                                         <th>News content</th>
                                         <th>Youtube link</th>
                                         <th>News picture</th>
@@ -63,15 +62,14 @@
                                     @foreach ($news as $new)
                                         <tr heigh=100px>
                                             <td width=5%>{{ $new->id }}</td>
-                                            <td with=10%>{{ $new->title }}</td>
-                                            <td with=10%>{{ $new->subtitle }}</td>
-                                            <td width=35%>{!! $new->content !!}</td>
-                                            <td width=10%><a href="{!! $new->link !!}">{!! $new->link !!}</a></td>
+                                            <td>{{ $new->title }}</td>
+                                            <td>{!! $new->content !!}</td>
+                                            <td><a href="{!! $new->link !!}">{!! $new->link !!}</a></td>
                                             <td>
                                                 <a href="{{ asset('/images/'.$new->picture) }}" target="_blank">View File</a>
                                             </td>
                                             <!--<td width="20%"><img src="{{ asset('/images/'.$new->picture) }}" alt="" class="img-fluid"> </td>-->
-                                            <td width="10%">
+                                            <td>
                                                 <form action="{{ route('news.destroy',$new->id) }}" method="Post">
                                                     <a class="btn btn-primary" href="{{ route('news.edit',$new->id) }}">Edit</a>
                                                     @csrf
