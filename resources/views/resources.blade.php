@@ -52,7 +52,7 @@
           <div class="single-service">
             
             <span class="icofont ">
-              <img src="{{ asset('/img/CourseType.png') }}" alt="...">
+            <a href="viewcollegecoursetype"><img src="{{ asset('/img/CourseType.png') }}" alt="..."></a>
             </span>
               
             <div class="post-tittle">
@@ -72,7 +72,7 @@
           <div class="single-service">
             
             <span class="icofont ">
-              <img src="{{ asset('/img/tvetCallendar.png') }}" alt="...">
+            <a href="viewcollegecalendar"><img src="{{ asset('/img/tvetCallendar.png') }}" alt="..."></a>
             </span>
               
             <div class="post-tittle">
@@ -91,7 +91,7 @@
           <div class="single-service">
             
             <span class="icofont ">
-              <img src="{{ asset('/img/Careers_Icon.png') }}" alt="...">
+            <a href="viewcareerguidance"><img src="{{ asset('/img/Careers_Icon.png') }}" alt="..."></a>
             </span>
               
             <div class="post-tittle">
@@ -110,7 +110,7 @@
           <div class="single-service">
             
             <span class="icofont ">
-              <img src="{{ asset('/img/SuccessStories.png') }}" alt="...">
+            <a href="viewsuccessstories"><img src="{{ asset('/img/SuccessStories.png') }}" alt="..."></a>
             </span>
               
             <div class="post-tittle">

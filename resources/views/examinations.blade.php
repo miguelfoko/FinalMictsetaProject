@@ -54,7 +54,7 @@
           <div class="single-service">
             
             <span class="icofont ">
-              <img src="{{ asset('/img/ExamResources.png') }}" alt="...">
+            <a href="viewexamresources"><img src="{{ asset('/img/ExamResources.png') }}" alt="..."></a>
             </span>
               
             <div class="post-tittle">
@@ -74,7 +74,7 @@
           <div class="single-service">
             
             <span class="icofont ">
-              <img src="{{ asset('/img/ExamTrainingVideos.png') }}" alt="...">
+            <a href="viewexamtrainingvideos"><img src="{{ asset('/img/ExamTrainingVideos.png') }}" alt="..."></a>
             </span>
               
             <div class="post-tittle">
@@ -93,7 +93,7 @@
           <div class="single-service">
             
             <span class="icofont ">
-              <img src="{{ asset('/img/ICASSTrainingVideos.png') }}" alt="...">
+            <a href="viewicasstrainingvideos"><img src="{{ asset('/img/ICASSTrainingVideos.png') }}" alt="..."></a>
             </span>
               
             <div class="post-tittle">
