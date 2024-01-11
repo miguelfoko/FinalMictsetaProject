@@ -52,41 +52,9 @@
                         </div>
                         <div class="col-xs-12 col-sm-12 col-md-12">
                             <div class="form-group">
-                                <strong>Publication Year:</strong>
-
-                                <select name="publicationYear" class="form-control ">
-                                    {{ $last= date('Y')-120 }}
-                                    {{ $now = date('Y') }}
-
-                                    @for ($i = $now; $i >= $last; $i--)
-                                        <option value="{{ $i }}">{{ $i }}</option>
-                                    @endfor
-                                </select> 
-                                @error('publicationYear')
-                                <div class="alert alert-danger mt-1 mb-1">{{ $message }}</div>
-                                @enderror
-                            </div>
-                        </div>
-                        <div class="col-xs-12 col-sm-12 col-md-12">
-                            <div class="form-group">
-                                <strong>Publication Month:</strong>
-
-                                <select name="publicationMonth" class="form-control ">
-                                    <option >Choose here</option>
-                                    <option value="January">January</option>
-                                    <option value="February">February</option>
-                                    <option value="March">March</option>
-                                    <option value="April">April</option>
-                                    <option value="May">May</option>
-                                    <option value="June">June</option>
-                                    <option value="July">July</option>
-                                    <option value="August">August</option>
-                                    <option value="September">September</option>
-                                    <option value="October">October</option>
-                                    <option value="November">November</option>
-                                    <option value="December">December</option>                            
-                                </select>
-                                @error('publicationMonth')
+                                <strong>Publication date:</strong>
+                                <input type="date" name="publicationDate" id="publicationDate" class="form-control" placeholder="Publication date">
+                                @error('publicationDate')
                                 <div class="alert alert-danger mt-1 mb-1">{{ $message }}</div>
                                 @enderror
                             </div>

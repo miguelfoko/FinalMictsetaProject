@@ -62,14 +62,14 @@ class NewsController extends Controller
         
         $request->picture->move(public_path('images'), $imageName);
         
-        $publicationDate=$request->input('publicationMonth').' '.$request->input('publicationYear');
+        //$publicationDate=$request->input('publicationMonth').' '.$request->input('publicationYear');
         $news=new News;
         $news->link=$request->input('link');
         $news->title=$request->input('title');
         $news->subtitle=$request->input('subtitle');
         $news->content=nl2br($request->input('content'));
         $news->picture=$imageName;
-        $news->publicationDate=$publicationDate;
+        $news->publicationDate=$request->input('publicationDate');
         $news->user_id=Auth::user()->id;
         $news->save();
         return redirect()->route('news.index')->with('success','News has been created successfully.')
@@ -125,13 +125,13 @@ class NewsController extends Controller
         $imageName = time().'.'.$request->picture->extension();
         $request->picture->move(public_path('images'), $imageName);
 
-        $publicationDate=$request->input('publicationMonth').' '.$request->input('publicationYear');
+        //$publicationDate=$request->input('publicationMonth').' '.$request->input('publicationYear');
         //$news=new News;
         $news->title=$request->input('title');
         $news->link=$request->input('link');
         $news->subtitle=$request->input('subtitle');
         $news->content=nl2br($request->input('content'));
-        $news->publicationDate=$publicationDate;
+        $news->publicationDate=$request->input('publicationDate');
         $news->picture=$imageName;
         $news->save();
 

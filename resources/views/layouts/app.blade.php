@@ -44,12 +44,8 @@
                     <li class="xn-icon-button pull-right last">
                         <a href="#"><span class="fa fa-power-off"></span></a>
                         <ul class="xn-drop-left animated zoomIn">
-<<<<<<< HEAD
-                            <li><a href="/index" class="mb-control" data-box="#mb-signout"><span class="fa fa-sign-out"></span> Sign Out</a></li>
-=======
                             <!--<li><a href="#" class="mb-control" data-box="#mb-signout"><span class="fa fa-sign-out"></span> Sign Out</a></li>-->
                             <li><a href="/logout"><span class="fa fa-sign-out"></span> Sign Out</a></li>
->>>>>>> 7fb49cb76a9167c495b363b533cf9438c1ff75b3
                         </ul>                        
                     </li> 
                     <!-- END POWER OFF -->                    

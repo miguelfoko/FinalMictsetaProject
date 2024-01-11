@@ -62,11 +62,13 @@
                                     @foreach ($succesfulTvetGraduates as $succesfulTvetGraduate)
                                         <tr heigh=100px>
                                             <td width=5%>{{ $succesfulTvetGraduate->id }}</td>
-                                            <td with=10%>{{ $succesfulTvetGraduate->name }}</td>
-                                            <td with=10%>{{ $succesfulTvetGraduate->title }}</td>
-                                            <td width=35%>{!! $succesfulTvetGraduate->content !!}</td>
-                                            <td width="20%"><img src="{{ asset('/images/'.$succesfulTvetGraduate->picture) }}" alt="" class="img-fluid"> </td>
-                                            <td width="10%">
+                                            <td>{{ $succesfulTvetGraduate->name }}</td>
+                                            <td>{{ $succesfulTvetGraduate->title }}</td>
+                                            <td>{!! $succesfulTvetGraduate->content !!}</td>
+                                            <td>
+                                                <a href="{{ asset('/images/'.$succesfulTvetGraduate->picture) }}" target="_blank">View File</a>
+                                            </td>
+                                            <td>
                                                 <form action="{{ route('succesfulTvetGraduates.destroy',$succesfulTvetGraduate->id) }}" method="Post">
                                                     <a class="btn btn-primary" href="{{ route('succesfulTvetGraduates.edit',$succesfulTvetGraduate->id) }}">Edit</a>
                                                     @csrf
