@@ -15,7 +15,7 @@ class CountVisits
      * @param  \Closure(\Illuminate\Http\Request): (\Illuminate\Http\Response|\Illuminate\Http\RedirectResponse)  $next
      * @return \Illuminate\Http\Response|\Illuminate\Http\RedirectResponse
      */
-    /*public function handle(Request $request, Closure $next)
+    public function handle(Request $request, Closure $next)
     {
         $ip = $request->ip();
         $existingVisitor = Visitor::where('ip_address', $ip)->first(); 
@@ -32,5 +32,5 @@ class CountVisits
             $visitor->save();
         }
         return $next($request);
-    }*/
+    }
 }
