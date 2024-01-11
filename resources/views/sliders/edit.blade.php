@@ -15,7 +15,7 @@
     </div>
     <div class="panel-body"> 
         <div class="form-group">
-            {{Form::label('title', 'Title', array('class' => 'col-md-3 col-xs-12 control-label'))}}
+            {{ Form::label('title', 'Title', array('class' => 'col-md-3 col-xs-12 control-label')) }}
             <div class="col-md-6 col-xs-12">
                 <div class="input-group">
                     <span class="input-group-addon"><span class="fa fa-pencil"></span></span>

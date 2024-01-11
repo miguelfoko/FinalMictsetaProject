@@ -27,7 +27,9 @@ class CountVisits
             $visitor->save();
         }
         else {
-            $visitor = Visitor::firstOrCreate(['ip_address' => $ip]);
+            $visitor=new Visitor;
+            $visitor->ip_address = $ip;
+            //$visitor = Visitor::firstOrCreate(['ip_address' => $ip]);
             $visitor->visits_coutner = 1;
             $visitor->save();
         }
