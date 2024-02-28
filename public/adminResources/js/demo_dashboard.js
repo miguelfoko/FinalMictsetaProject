@@ -102,7 +102,7 @@ $(function(){
     /* END Bar dashboard chart */
     
     /* Line dashboard chart */
-    Morris.Line({
+    /*Morris.Line({
       element: 'dashboard-line-1',
       data: [
         { y: '2014-10-10', a: 2,b: 4},
@@ -122,7 +122,7 @@ $(function(){
       gridTextSize: '10px',
       lineColors: ['#3FBAE4','#33414E'],
       gridLineColor: '#E5E5E5'
-    });   
+    });   */
     /* EMD Line dashboard chart */
     
     /* Vector Map */
