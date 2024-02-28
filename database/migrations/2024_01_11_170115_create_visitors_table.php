@@ -18,6 +18,7 @@ class CreateVisitorsTable extends Migration
             $table->string('ip_address')->unique();
             $table->integer('visits_coutner');
             $table->timestamps();
+            
         });
     }
 
