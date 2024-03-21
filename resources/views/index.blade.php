@@ -168,7 +168,7 @@
         <div class="row" data-aos="zoom-in" data-aos-delay="100">
           <div class="col-lg-12">
             <div class="member">
-             <a href="https://www.nsfas.org.za/" target=”_blank”> <img src="{{ asset('/img/NSFAS-design-Homepage.jpg') }}" class="img-fluid" alt=""></a>
+             <a href="https://www.nsfas.org.za/" target=”_blank”> <img src="{{ asset('/images/nsfas/NSFAS-design-Homepage.jpg') }}" class="img-fluid" alt=""></a>
             </div>
           </div>
         </div> 

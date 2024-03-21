@@ -48,16 +48,31 @@ public function store(Request $request)
             'photo'=>'required|image',
           ));
           $slider = new Slider;
-          $slider->title = $request->input('title');
-          if ($request->hasFile('photo')) {
-            $photo = $request->file('photo');
-            $filename = 'slide' . '-' . time() . '.' . $photo->getClientOriginalExtension();
-            $location = public_path('images/');
-            $request->file('photo')->move($location, $filename);
+          $nsfasimg = request('nsfasimg',1);
+          if ($nsfasimg==0){
+            $slider->title = $request->input('title');
+            if ($request->hasFile('photo')) {
+                $photo = $request->file('photo');
+                $filename = 'NSFAS-design-Homepage.'. $photo->getClientOriginalExtension();
+                $location = public_path('images/nsfas/');
+                $request->file('photo')->move($location, $filename);
 
-            $slider->photo = $filename;
+                $slider->photo = $filename;
+            }
           }
-          $slider->save();
+          else{
+            $slider->title = $request->input('title');
+            if ($request->hasFile('photo')) {
+                $photo = $request->file('photo');
+                $filename = 'slide' . '-' . time() . '.' . $photo->getClientOriginalExtension();
+                $location = public_path('images/');
+                $request->file('photo')->move($location, $filename);
+
+                $slider->photo = $filename;
+            }
+            $slider->save();
+         }
+          
           return redirect()->route('slides.index');
     }
 

@@ -25,9 +25,9 @@ class AppServiceProvider extends ServiceProvider
      * @return void 
      */
     public function boot(){
-        if (APP::environment('production')){
-            URL::forceScheme('https');
-        }
+        //if (APP::environment('production')){
+        //    URL::forceScheme('https');
+        //}
         $sliders = Slider::all();
         View::share('sliders', $sliders);
         $footerElement = Footer::orderby('id', 'desc')->paginate(10);
