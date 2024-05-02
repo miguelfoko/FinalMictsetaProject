@@ -28,7 +28,7 @@
           <div class="single-blog">
             <div class="single-service">
               <span class="icofont ">
-                <img src="{{ asset('/img/ContactUsDetails.png') }}" alt="...">
+              <a href="viewgetintouch"><img src="{{ asset('/img/ContactUsDetails.png') }}" alt="..."></a>
               </span>
                 
               <div class="post-tittle">
@@ -48,7 +48,7 @@
             <div class="single-service">
               
               <span class="icofont ">
-                <img src="{{ asset('/img/OurRegionalLocations.png') }}" alt="...">
+              <a href="viewregionallocations"><img src="{{ asset('/img/OurRegionalLocations.png') }}" alt="..."></a>
               </span>
                 
               <div class="post-tittle">
@@ -68,7 +68,7 @@
             <div class="single-service">
               
               <span class="icofont ">
-                <img src="{{ asset('/img/FAQs.png') }}" alt="...">
+              <a href="viewfaqs"><img src="{{ asset('/img/FAQs.png') }}" alt="..."></a>
               </span>
                 
               <div class="post-tittle">

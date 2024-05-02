@@ -122,7 +122,7 @@
   <div class="container">
     <div class="title text-center">
       <h2> LATEST<span> NEWS</span></h2>
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do</p>
+      <!--<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do</p>-->
       <div class="separator my"><i class="icofont icofont-hat-alt"></i> </div>
     </div>
   </div>
@@ -168,7 +168,7 @@
         <div class="row" data-aos="zoom-in" data-aos-delay="100">
           <div class="col-lg-12">
             <div class="member">
-             <a href="https://www.nsfas.org.za/" target=”_blank”> <img src="{{ asset('/img/NSFAS-design-Homepage.jpg') }}" class="img-fluid" alt=""></a>
+             <a href="https://www.nsfas.org.za/" target=”_blank”> <img src="{{ asset('/images/nsfas/NSFAS-design-Homepage.jpg') }}" class="img-fluid" alt=""></a>
             </div>
           </div>
         </div> 

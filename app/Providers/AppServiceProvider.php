@@ -24,8 +24,10 @@ class AppServiceProvider extends ServiceProvider
      *
      * @return void 
      */
-    public function boot()
-    {
+    public function boot(){
+        //if (APP::environment('production')){
+        //    URL::forceScheme('https');
+        //}
         $sliders = Slider::all();
         View::share('sliders', $sliders);
         $footerElement = Footer::orderby('id', 'desc')->paginate(10);
@@ -34,5 +36,6 @@ class AppServiceProvider extends ServiceProvider
         View::share('news', $news);
         $succesfulTvetGraduates = SuccesfulTvetGraduates::orderBy('id','desc')->paginate(3);
         View::share('succesfulTvetGraduates', $succesfulTvetGraduates);
+        
     }
 }

@@ -14,7 +14,7 @@ class ViewExamTrainingVideosController extends Controller
      */
     public function index()
     {
-        $examtrainingvideos = ExamTrainingVideos::orderBy('id','desc')->paginate(5);
+        $examtrainingvideos = ExamTrainingVideos::orderBy('id','desc')->paginate(3);
         return view('viewExamTrainingVideos',compact('examtrainingvideos'));
     }
 

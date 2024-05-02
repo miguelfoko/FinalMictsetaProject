@@ -29,7 +29,7 @@
           <div class="single-service">
             
             <span class="icofont ">
-              <img src="{{ asset('/img/CourseType.png') }}" alt="...">
+            <a href="abouttvet"><img src="{{ asset('/img/CourseType.png') }}" alt="..."></a>
             </span>
               
             <div class="post-tittle">
@@ -49,7 +49,7 @@
           <div class="single-service">
             
             <span class="icofont ">
-              <img src="{{ asset('/img/communityColleges.png') }}" alt="...">
+            <a href="viewcommunitycolleges"><img src="{{ asset('/img/communityColleges.png') }}" alt="..."></a>
             </span>
               
             <div class="post-tittle">
@@ -68,7 +68,7 @@
           <div class="single-service">
             
             <span class="icofont ">
-              <img src="{{ asset('/img/setas.png') }}" alt="...">
+            <a href="viewsetas"><img src="{{ asset('/img/setas.png') }}" alt="..."></a>
             </span>
               
             <div class="post-tittle">

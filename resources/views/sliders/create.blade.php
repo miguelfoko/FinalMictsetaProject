@@ -29,13 +29,25 @@
             </ul>
         </p></span>
       </div>
-    </div>
+    </div> 
     <div class="form-group">
       {{ Form::label('title', 'Photo', array('class' => 'col-md-3 col-xs-12 control-label')) }}
       <div class="col-md-6 col-xs-12">
         {{ Form::file('photo', array('class' => 'btn-primary')) }}
       </div>
     </div>
+
+    <div class="form-group">
+      {{ Form::label('nsfasimg', 'Is the NSFAS Image', array('class' => 'col-md-3 col-xs-12 control-label')) }}
+      <div class="col-md-6 col-xs-12">
+        <div class="input-group">
+          
+          {{ Form::checkbox('nsfasimg', 0, array('class' => 'form-control')) }}
+        </div>
+
+      </div>
+    </div>
+    
   </div>
   <div class="panel-footer">
       {{ Form::label('', '', array('class' => 'col-md-3 col-xs-12 control-label')) }}
