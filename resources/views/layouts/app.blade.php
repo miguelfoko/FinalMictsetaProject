@@ -158,6 +158,25 @@
         
         <script type="text/javascript" src="/adminResources/js/demo_dashboard.js"></script>
         <!-- END TEMPLATE -->
+
+        <!-- START tinyMCE script  -->
+        <script src="https://cdn.tiny.cloud/1/3xh5vuypbbojodjtyppl64ug6qh6la2cq973vt5vpemz2w62/tinymce/6/tinymce.min.js" referrerpolicy="origin"></script>
+
+        <script>
+
+        tinymce.init({
+
+            selector: 'textarea#myeditorinstance', // Replace this CSS selector to match the placeholder element for TinyMCE
+
+            plugins: 'powerpaste advcode table lists checklist',
+
+            toolbar: 'undo redo | blocks fontfamily fontsize | bold italic underline strikethrough | link image media table mergetags | addcomment showcomments | spellcheckdialog a11ycheck typography | align lineheight | checklist numlist bullist indent outdent | emoticons charmap | removeformat',
+            tinycomments_mode: 'embedded'
+
+        });
+
+        </script>
+         <!-- END tinyMCE script  -->
     <!-- END SCRIPTS -->         
     </body>
 </html>

@@ -22,64 +22,60 @@
                 </div>
                 <div class="panel-body">
                     <div class="row">
-                        <div class="col-md-6">
+                        <div class="col-xs-12 col-sm-12 col-md-12">
                             <div class="form-group">
-                                <label class="col-md-3 col-xs-12 control-label">Purpose:</label>
-                                <div class="col-md-6 col-xs-12">                                            
-                                    <textarea name="purpose" class="form-control" rows="5" id="myeditorinstance"></textarea>
-                                </div>
+                                <strong>Purpose:</strong>
+                                <textarea name="purpose" class="form-control" rows="5" id="myeditorinstance"></textarea>
                                 @error('purpose')
                                 <div class="alert alert-danger mt-1 mb-1">{{ $message }}</div>
                                 @enderror
                             </div>
-
+                        </div>
+                        <br />
+                        <div class="col-xs-12 col-sm-12 col-md-12">
                             <div class="form-group">
-                                <label class="col-md-3 col-xs-12 control-label">Content:</label>
-                                <div class="col-md-6 col-xs-12">                                            
-                                    <textarea name="content" class="form-control" rows="5" id="myeditorinstance"></textarea>
-                                </div>
-                                @error('content')
+                                <strong>Content:</strong>
+                                <textarea name="Content" class="form-control" rows="5" id="myeditorinstance"></textarea>
+                                @error('Content')
                                 <div class="alert alert-danger mt-1 mb-1">{{ $message }}</div>
                                 @enderror
                             </div>
-
+                        </div>
+                        <br />
+                        <div class="col-xs-12 col-sm-12 col-md-12">
                             <div class="form-group">
-                                <label class="col-md-3 col-xs-12 control-label">Additional Help:</label>
-                                <div class="col-md-6 col-xs-12">                                            
-                                    <textarea name="additionalHelp" class="form-control" rows="5" id="myeditorinstance"></textarea>
-                                </div>
+                                <strong>Additional Help:</strong>
+                                <textarea name="additionalHelp" class="form-control" rows="5" id="myeditorinstance"></textarea>
                                 @error('additionalHelp')
                                 <div class="alert alert-danger mt-1 mb-1">{{ $message }}</div>
                                 @enderror
-                            </div>  
+                            </div>
                         </div>
-
-                        <div class="col-md-6">
+                        <br />
+                        <div class="col-xs-12 col-sm-12 col-md-12">
                             <div class="form-group">
-                                <label class="col-md-3 col-xs-12 control-label">List Of Accronyms:</label>
-                                <div class="col-md-6 col-xs-12">                                            
-                                    <textarea name="listOfAccronyms" class="form-control" rows="5" id="myeditorinstance"></textarea>
-                                </div>
+                                <strong>List Of Accronyms:</strong>
+                                <textarea name="listOfAccronyms" class="form-control" rows="5" id="myeditorinstance"></textarea>
                                 @error('listOfAccronyms')
                                 <div class="alert alert-danger mt-1 mb-1">{{ $message }}</div>
                                 @enderror
                             </div>
-
+                        </div>
+                        <br />
+                        <div class="col-xs-12 col-sm-12 col-md-12">
                             <div class="form-group">
-                                <label class="col-md-3 col-xs-12 control-label">Copyright:</label>
-                                <div class="col-md-6 col-xs-12">                                            
-                                    <textarea name="copyright" class="form-control" rows="5" id="myeditorinstance"></textarea>
-                                </div>
+                                <strong>Copyright:</strong>
+                                <textarea name="copyright" class="form-control" rows="5" id="myeditorinstance"></textarea>
                                 @error('copyright')
                                 <div class="alert alert-danger mt-1 mb-1">{{ $message }}</div>
                                 @enderror
                             </div>
-
+                        </div>
+                        <br />
+                        <div class="col-xs-12 col-sm-12 col-md-12">
                             <div class="form-group">
-                                <label class="col-md-3 col-xs-12 control-label">Disclaimer:</label>
-                                <div class="col-md-6 col-xs-12">                                            
-                                    <textarea name="disclaimer" class="form-control" rows="5" id="myeditorinstance"></textarea>
-                                </div>
+                                <strong>Disclaimer:</strong>
+                                <textarea name="disclaimer" class="form-control" rows="5" id="myeditorinstance"></textarea>
                                 @error('disclaimer')
                                 <div class="alert alert-danger mt-1 mb-1">{{ $message }}</div>
                                 @enderror

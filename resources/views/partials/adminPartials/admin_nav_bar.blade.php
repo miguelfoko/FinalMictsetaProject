@@ -80,6 +80,9 @@
                         </ul>
                     </li>
                     <li>
+                        <a href="/users"><span class="fa fa-user"></span> <span class="xn-text">Manage users</span></a>
+                    </li>
+                    <li>
                         <a href="/admintvetcollegetimes"><span class="glyphicon glyphicon-time"></span> <span class="xn-text">Manage TVET College Time</span></a>
                     </li>
                     <li>
