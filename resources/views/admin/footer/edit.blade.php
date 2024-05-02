@@ -23,90 +23,75 @@
                 </div>
                 <div class="panel-body">
                     <div class="row">
-                        <div class="col-md-6">
-                            <div class="col-xs-12 col-sm-12 col-md-12">
-                                <div class="form-group">
-                                    <strong>Purpose:</strong>
-                                    <textarea name="purpose" class="form-control" value="{!! $footer->purpose !!}"
-                                    rows="5" id="myeditorinstance" 
-                                        rows="5" style="white-space: pre-wrap; text-indent: 50px;"> 
-                                        {!! $footer->purpose !!}
-                                    </textarea>
-                                    @error('purpose')
-                                    <div class="alert alert-danger mt-1 mb-1">{{ $message }}</div>
-                                    @enderror
-                                </div>
-                            </div>
-                            
-                            <div class="col-xs-12 col-sm-12 col-md-12">
-                                <div class="form-group">
-                                    <strong>Content:</strong>
-                                    <textarea name="content" class="form-control"  value="{!! $footer->content !!}"
-                                    rows="5" id="myeditorinstance" 
-                                        rows="5" style="white-space: pre-wrap; text-indent: 50px;"> 
-                                        {!! $footer->content !!}
-                                    </textarea>
-                                    @error('content')
-                                    <div class="alert alert-danger mt-1 mb-1">{{ $message }}</div>
-                                    @enderror
-                                </div>
-                            </div>
-
-                            <div class="col-xs-12 col-sm-12 col-md-12">
-                                <div class="form-group">
-                                    <strong>Additional Help:</strong>
-                                    <textarea name="additionalHelp" class="form-control"  value="{!! $footer->additionalHelp !!}"
-                                    rows="5" id="myeditorinstance" 
-                                        rows="5" style="white-space: pre-wrap; text-indent: 50px;"> 
-                                        {!! $footer->additionalHelp !!}
-                                    </textarea>
-                                    @error('additionalHelp')
-                                    <div class="alert alert-danger mt-1 mb-1">{{ $message }}</div>
-                                    @enderror
-                                </div>
+                        <div class="col-xs-12 col-sm-12 col-md-12">
+                            <div class="form-group">
+                                <strong>Purpose:</strong>
+                                <textarea name="purpose" class="form-control" value="{!! $footer->purpose !!}" rows="4" id="myeditorinstance">
+                                    {!! $footer->purpose !!}
+                                </textarea>
+                                @error('purpose')
+                                <div class="alert alert-danger mt-1 mb-1">{{ $message }}</div>
+                                @enderror
                             </div>
                         </div>
-                        <div class="col-md-6">
-                            <div class="col-xs-12 col-sm-12 col-md-12">
-                                <div class="form-group">
-                                    <strong>List Of Accronyms:</strong>
-                                    <textarea name="listOfAccronyms" class="form-control"  value="{!! $footer->listOfAccronyms !!}"
-                                    rows="5" id="myeditorinstance" 
-                                        rows="5" style="white-space: pre-wrap; text-indent: 50px;"> 
-                                        {!! $footer->listOfAccronyms !!}
-                                    </textarea>
-                                    @error('listOfAccronyms')
-                                    <div class="alert alert-danger mt-1 mb-1">{{ $message }}</div>
-                                    @enderror
-                                </div>
-                            </div>
 
-                            <div class="col-xs-12 col-sm-12 col-md-12">
-                                <div class="form-group">
-                                    <strong>Copyright:</strong>
-                                    <textarea name="copyright" class="form-control"  value="{!! $footer->copyright !!}"
-                                    rows="5" id="myeditorinstance" 
-                                        rows="5" style="white-space: pre-wrap; text-indent: 50px;"> 
-                                        {!! $footer->copyright !!}
-                                    </textarea>
-                                    @error('copyright')
-                                    <div class="alert alert-danger mt-1 mb-1">{{ $message }}</div>
-                                    @enderror
-                                </div>
+                        <div class="col-xs-12 col-sm-12 col-md-12">
+                            <div class="form-group">
+                                <strong>Content:</strong>
+                                <textarea name="content" class="form-control" value="{!! $footer->content !!}" rows="4" id="myeditorinstance">
+                                    {!! $footer->content !!}
+                                </textarea>
+                                @error('content')
+                                <div class="alert alert-danger mt-1 mb-1">{{ $message }}</div>
+                                @enderror
                             </div>
+                        </div>
 
-                            <div class="col-xs-12 col-sm-12 col-md-12">
-                                <div class="form-group">
-                                    <strong>Disclaimer:</strong>
-                                    <textarea name="disclaimer" class="form-control" value="{!! $footer->disclaimer !!}"
-                                    rows="5" id="myeditorinstance" 
-                                        rows="5" style="white-space: pre-wrap; text-indent: 50px;"> 
-                                        {!! $footer->disclaimer !!}
-                                    </textarea>
-                                    @error('disclaimer')
-                                    <div class="alert alert-danger mt-1 mb-1">{{ $message }}</div>
-                                    @enderror
-                                </div>
+                        <div class="col-xs-12 col-sm-12 col-md-12">
+                            <div class="form-group">
+                                <strong>Additional Help:</strong>
+                                <textarea name="additionalHelp" class="form-control" value="{!! $footer->additionalHelp !!}" rows="4" id="myeditorinstance">
+                                    {!! $footer->additionalHelp !!}
+                                </textarea>
+                                @error('additionalHelp')
+                                <div class="alert alert-danger mt-1 mb-1">{{ $message }}</div>
+                                @enderror
+                            </div>
+                        </div>
+                        
+                        <div class="col-xs-12 col-sm-12 col-md-12">
+                            <div class="form-group">
+                                <strong>List Of Accronyms:</strong>
+                                <textarea name="listOfAccronyms" class="form-control" value="{!! $footer->listOfAccronyms !!}" rows="4" id="myeditorinstance">
+                                    {!! $footer->listOfAccronyms !!}
+                                </textarea>
+                                @error('listOfAccronyms')
+                                <div class="alert alert-danger mt-1 mb-1">{{ $message }}</div>
+                                @enderror
+                            </div>
+                        </div>
+
+                        <div class="col-xs-12 col-sm-12 col-md-12">
+                            <div class="form-group">
+                                <strong>Copyright:</strong>
+                                <textarea name="copyright" class="form-control" value="{!! $footer->copyright !!}" rows="4" id="myeditorinstance">
+                                    {!! $footer->copyright !!}
+                                </textarea>
+                                @error('copyright')
+                                <div class="alert alert-danger mt-1 mb-1">{{ $message }}</div>
+                                @enderror
+                            </div>
+                        </div>
+                            
+                        <div class="col-xs-12 col-sm-12 col-md-12">
+                            <div class="form-group">
+                                <strong>Disclaimer:</strong>
+                                <textarea name="disclaimer" class="form-control" value="{!! $footer->disclaimer !!}" rows="4" id="myeditorinstance">
+                                    {!! $footer->disclaimer !!}
+                                </textarea>
+                                @error('disclaimer')
+                                <div class="alert alert-danger mt-1 mb-1">{{ $message }}</div>
+                                @enderror
                             </div>
                         </div>
                     </div>
