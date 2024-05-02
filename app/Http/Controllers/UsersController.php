@@ -76,14 +76,15 @@ class UsersController extends Controller
         return view('admin.users.edit',compact('users')); 
     }
 
+
     /**
     * Update the specified resource in storage.
     *
     * @param  \Illuminate\Http\Request  $request
-    * @param  \App\news  $news
+    * @param  \App\users  $users
     * @return \Illuminate\Http\Response
     */
-    public function update(Request $request, News $news)
+    public function update(Request $request, User $users)
     {
         
     }
@@ -91,10 +92,10 @@ class UsersController extends Controller
     /**
     * Remove the specified resource from storage.
     *
-    * @param  \App\News  $news
+    * @param  \App\User  $users
     * @return \Illuminate\Http\Response
     */
-    public function destroy(News $news)
+    public function destroy(User $users)
     {
         
     }
