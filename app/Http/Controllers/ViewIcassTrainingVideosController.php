@@ -14,7 +14,7 @@ class ViewIcassTrainingVideosController extends Controller
      */
     public function index()
     {
-        $icasstrainingvideos = IcassTrainingVideos::orderBy('id','desc')->paginate(5);
+        $icasstrainingvideos = IcassTrainingVideos::orderBy('id','desc')->paginate(3);
         return view('viewIcassTrainingVideos',compact('icasstrainingvideos'));
     }
 

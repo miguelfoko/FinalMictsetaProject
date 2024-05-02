@@ -51,4 +51,7 @@
 </div>
 <!-- Our Blog Wrapper End --> 
 
+<div class="my_nav">
+      {{ $icasstrainingvideos->links() }}
+    </div>
  @endsection

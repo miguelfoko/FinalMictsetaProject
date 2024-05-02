@@ -50,4 +50,7 @@
 </div>
 <!-- Our Blog Wrapper End --> 
 
+<div class="my_nav">
+      {{ $examtrainingvideos->links() }}
+    </div>
  @endsection

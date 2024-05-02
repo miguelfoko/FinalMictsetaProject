@@ -122,7 +122,7 @@
   <div class="container">
     <div class="title text-center">
       <h2> LATEST<span> NEWS</span></h2>
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do</p>
+      <!--<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do</p>-->
       <div class="separator my"><i class="icofont icofont-hat-alt"></i> </div>
     </div>
   </div>
