@@ -77,7 +77,7 @@ a, a:hover, a:active, a:focus {
 	transition: all 0.3s ease 0s;
 }
 .bg-dark-1 {
-	background: #144069;
+	background: #005D28;
 }
 .bg-white {
   background-color: #ffffff;
@@ -137,7 +137,7 @@ section {
 	padding: 80px 0;
 }
 #scrollUp {
-	background: #144069;
+	background: #005D28;
 	border-radius: 50%;
 	bottom: 100px;
 	color: #fff;
@@ -180,7 +180,7 @@ div.title {
 	line-height: 30px;
 	margin: 0 0 20px;
 	text-transform: capitalize;
-	color: #144069;
+	color: #005D28;
 }
 .title h2 span {
 	color: #F7931E;
@@ -288,7 +288,7 @@ div.title {
 	left: 0;
 	right: 0;
 	bottom: 0;
-	background: #144069;
+	background: #005D28;
 	-webkit-transform: scaleX(0);
 	transform: scaleX(0);
 	-webkit-transform-origin: 0 50%;
@@ -331,7 +331,7 @@ div.title {
 }
 .header-sticky.sticky {
 	animation: 300ms ease-in-out 0s normal none 1 running fadeInDown;
-	background: #144069;
+	background: #005D28;
 	left: 0;
 	padding: 0;
 	position: fixed;
@@ -695,7 +695,7 @@ div.title {
 	right: 0;
 	top: 0;
 	z-index: -1;
-	background: #144069;
+	background: #005D28;
 }
 .satisfied-wrapper {
 	float: left;
@@ -882,7 +882,7 @@ div.title {
 	border: none;
 }
 .team-modern-social-list .icofont:hover {
-	background: #144069;
+	background: #005D28;
 }
 .team-modern-social-list .icofont-google-plus {
 	font-size: 18px;
@@ -1068,7 +1068,7 @@ div.title {
 	width: 100%;
 	text-align: left;
 	position: relative;
-	background: #144069;
+	background: #005D28;
 	color: #fff;
 	border-radius: 0;
 	padding: 7px 15px 12px;
@@ -2755,7 +2755,7 @@ label {
 ================================================
 */
 footer {
-	background: #144069;
+	background: #005D28;
 	float: left;
 	padding: 1px 0 1px;
 	margin: 0;
@@ -2834,7 +2834,7 @@ footer .footer-text .address li span {
 	left: 4px;
 }
 .copyright-wrapper {
-	background: #144069;
+	background: #005D28;
 	float: left;
 	padding: 15px 0;
 	margin: 0;
