@@ -50,6 +50,7 @@ use App\Http\Controllers\SubjectsController;
 use App\Http\Controllers\ShowSubjectsController;
 use App\Http\Controllers\SuccesfullTvetGraduatesController;
 use Illuminate\Support\Facades\Auth;
+use App\Http\Controllers\UsersController;
 
 
 

@@ -10,7 +10,7 @@
 <!-- new content-->
     <!-- PAGE TITLE -->
     <div class="page-title">                    
-    <h2><span class="fa fa-info"></span> Users</h2>
+    <h2><span class="fa fa-user"></span> Users</h2>
     </div>
     <!-- END PAGE TITLE -->                
     
@@ -62,17 +62,13 @@
                                     @foreach ($users as $user)
                                         <tr heigh=100px>
                                             <td width=5%>{{ $user->id }}</td>
-                                            <td>{{ $user->title }}</td>
-                                            <td>{!! $user->content !!}</td>
-                                            <td>{{$user->publicationDate}}</td>
-                                            <td><a href="{!! $user->link !!}">{!! $user->link !!}</a></td>
-                                            <td>
-                                                <a href="{{ asset('/images/'.$user->picture) }}" target="_blank">View File</a>
-                                            </td>
-                                            <!--<td width="20%"><img src="{{ asset('/images/'.$user->picture) }}" alt="" class="img-fluid"> </td>-->
+                                            <td>{{ $user->name }}</td>
+                                            <td>{!! $user->email !!}</td>
+                                            <td>{{$user->email_verified_at}}</td>
+                                            <td>{{$user->userStatus}}</td>
                                             <td>
                                                 <form action="{{ route('users.destroy',$user->id) }}" method="Post">
-                                                    <a class="btn btn-primary" href="{{ route('user.edit',$user->id) }}">Edit</a>
+                                                    <a class="btn btn-primary" href="{{ route('users.edit',$user->id) }}">Edit</a>
                                                     @csrf
                                                     @method('DELETE')
                                                     <button type="submit" class="btn btn-danger">Delete</button>
