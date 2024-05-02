@@ -198,3 +198,7 @@ Route::get('/viewCreateCourse', function(){$coursetypes = CourseType::all(); ret
 Route::get('/viewCreateProgram', function(){$regionallocations = RegionalLocations::all(); $programs = Program::all(); return view('admin.resources.coursetypes.create', compact('regionallocations','programs'));});
 Route::get('/viewCreateCollege', function(){$programs = Program::all(); $regionallocations = RegionalLocations::all(); return view('admin.resources.coursetypes.college.create', compact('programs','regionallocations'));});
 //Fin à revoir ou supprimer
+
+//users pages----------------------------------------------------------------
+Route::get('/viewCreateUser', function(){ return view('admin.users.create');});
+Route::resource('/users', UsersController::class);
