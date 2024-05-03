@@ -73,6 +73,7 @@
                                             <td>
                                                 <form action="{{ route('users.destroy',$user->id) }}" method="Post">
                                                     <a class="btn btn-primary" href="{{ route('users.edit',$user->id) }}">Edit</a>
+                                                    <a class="btn btn-warning" href="{{ route('users.edit',$user->id) }}">Validate</a>
                                                     @csrf
                                                     @method('DELETE')
                                                     <button type="submit" class="btn btn-danger">Delete</button>

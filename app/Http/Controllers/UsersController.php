@@ -76,6 +76,16 @@ class UsersController extends Controller
         return view('admin.users.edit',compact('users')); 
     }
 
+    /**
+    * Show the form for editing the specified resource.
+    *
+    * @param  \App\User  $users
+    * @return \Illuminate\Http\Response
+    */
+    public function validateUser(User $id)
+    {
+        return view('admin.users.index', compact('users'));
+    }
 
     /**
     * Update the specified resource in storage.
