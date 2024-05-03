@@ -19,7 +19,7 @@
             {{ session('status') }}
         </div>
         @endif
-        <form action="{{ route('viewsubscribe.store') }}" method="post" role="form"  enctype="multipart/form-data">
+        <form action="{{ route('send-subscription-email') }}" method="post" role="form"  enctype="multipart/form-data">
         @csrf
             <div class="row">
                 <div class="form-group">
@@ -49,7 +49,7 @@
                 </div>
                 </div>
                 <div class="form-group">
-                <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject" >
+                <input type="text" class="form-control" name="subject" id="subject" placeholder="Subjectsss" >
                 @error('subject')
                         <div class="alert alert-danger mt-1 mb-1">{{ $message }}</div>
                     @enderror

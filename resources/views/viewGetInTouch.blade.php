@@ -22,6 +22,12 @@
 <!-- Inner Page Wrapper Start -->
 <div class="inner-page-wrapper contact-wrapper">
   <div class="contact-info-main">
+        <div class="alert alert-success mb-1 mt-1">
+        @if( isset($status) ) 
+          {{$status}}
+        @endif
+            
+        </div> 
     <div class="container">
       <div class="row">
         <div class="col-lg-6">
@@ -29,7 +35,8 @@
             <h4>Question or comments? Let us know how we can help you.</h4>
           </div>
           <div class="contact-form-box">
-            <form id="contactForm" class="contact-form">
+            <form id="contactForm" class="contact-form" action="/email" role="form"  enctype="multipart/form-data" method="POST">
+              @csrf
               <div class="row">
                 <div class="col-12 col-sm-12">
                   <input class="medium-input" maxlength="50" placeholder="Name *" required id="name" name="name" type="text">

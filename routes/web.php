@@ -53,6 +53,7 @@ use Illuminate\Support\Facades\Auth;
 use App\Http\Controllers\UsersController;
 use App\Http\Controllers\ViewTermsAndConditionsController;
 use App\Http\Controllers\ViewPrivacyPolicyController;
+use App\Http\Controllers\EmailController;
 
 
 
@@ -74,9 +75,11 @@ use App\Http\Controllers\ViewPrivacyPolicyController;
 Route::get('/', function () { return view('index');});
 Route::get('/logout', function(Request $request){Auth::logout(); return redirect('/');});
 
+
 //Home pages---------------------------------------------------------------------------
 Route::resource('/viewsubscribe',ViewSubscribeController::class);
 Route::resource('/subscription',SubscribeController::class);
+Route::resource('/email',EmailController::class);
 Route::resource('/succesfulTvetGraduates',SuccesfullTvetGraduatesController::class);
 Route::get('/viewsuccesfultvetgraduates', function(){ return view('admin.succesfulTvetGraduates.create');});
 

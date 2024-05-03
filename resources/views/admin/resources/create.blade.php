@@ -6,7 +6,7 @@
 <div class="container mt-2">
         @if(session('status'))
         <div class="alert alert-success mb-1 mt-1">
-            {{ session('status') }}
+            {{ session('status') }} 
         </div>
         @endif
         <form action="{{ route('collegecoursetype.store') }}" method="POST" enctype="multipart/form-data">
