@@ -51,6 +51,8 @@ use App\Http\Controllers\ShowSubjectsController;
 use App\Http\Controllers\SuccesfullTvetGraduatesController;
 use Illuminate\Support\Facades\Auth;
 use App\Http\Controllers\UsersController;
+use App\Http\Controllers\ViewTermsAndConditionsController;
+use App\Http\Controllers\ViewPrivacyPolicyController;
 
 
 
@@ -177,6 +179,8 @@ Route::get('/viewEditSlider', function(){ return view('sliders.edit');});
 
 Route::resource('footer', FooterController::class);
 Route::get('/viewCreateFooter', function(){ return view('admin.footer.create');});
+Route::resource('/viewTermsAndConditions', ViewTermsAndConditionsController::class);
+Route::resource('/viewPrivacyPolicy', ViewPrivacyPolicyController::class);
 
 Route::get('/viewCreaRegionalLocation', function(){ return view('admin.contactus.regionallocations.create');});
 Route::get('/viewCreateFaq', function(){ return view('admin.faqs.create');});
