@@ -74,7 +74,7 @@
                                                 <form action="{{ route('users.destroy',$user->id) }}" method="Post">
                                                     <a class="btn btn-primary" href="{{ route('users.edit',$user->id) }}">Edit</a>
                                                     @if($user->user_status =='Disabled') 
-                                                        <a class="btn btn-success" href="{{ route('users.edit',$user->id) }}">Validate</a>
+                                                        <a class="btn btn-success" href="/validateUser/{{$user->id}}">Validate</a>
                                                     @endif
                                                     @csrf
                                                     @method('DELETE')
