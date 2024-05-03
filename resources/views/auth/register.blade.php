@@ -40,14 +40,6 @@
             @enderror
         </div>
     </div>
-
-
-
-    <div class="form-group">
-        <input id="user_status" type="hidden" class="form-control  @error('user_status') is-invalid @enderror" name="user_status" value="Disabled" required autocomplete="user_status" />
-    </div>
-
-
     <div class="form-group">
         <div class="col-md-12">
             <div class="input-group">
