@@ -169,9 +169,10 @@ class LoginController extends Controller
      */
     protected function sendFailedLoginResponse(Request $request)
     {
-        throw ValidationException::withMessages([
+        return redirect()->route('login')->with('error','Unable to login. Check your username, your password and if your account is activated.');
+        /*throw ValidationException::withMessages([
             $this->username() => [trans('auth.failed')],
-        ]);
+        ]);*/
     }
 
     /**

@@ -2,6 +2,11 @@
 
 @section('content')
 <div class="login-title"><strong>Welcome</strong>, Please login.</div>
+@if ($message = Session::get('error'))
+    <div class="alert alert-danger">
+        <p>{{ $message }}</p>
+    </div>
+@endif
 <form method="POST" class="form-horizontal" action="{{ route('login') }}">
     @csrf
     <div class="form-group">
