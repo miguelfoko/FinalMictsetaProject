@@ -73,7 +73,9 @@
                                             <td>
                                                 <form action="{{ route('users.destroy',$user->id) }}" method="Post">
                                                     <a class="btn btn-primary" href="{{ route('users.edit',$user->id) }}">Edit</a>
-                                                    <a class="btn btn-warning" href="{{ route('users.edit',$user->id) }}">Validate</a>
+                                                    @if($user->user_status =='Disabled') 
+                                                        <a class="btn btn-warning" href="{{ route('users.edit',$user->id) }}">Validate</a>
+                                                    @endif
                                                     @csrf
                                                     @method('DELETE')
                                                     <button type="submit" class="btn btn-danger">Delete</button>
