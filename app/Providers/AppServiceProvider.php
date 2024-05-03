@@ -18,7 +18,7 @@ class AppServiceProvider extends ServiceProvider
     {
         //
     }
-
+ 
     /**
      * Bootstrap any application services.
      *
@@ -30,8 +30,6 @@ class AppServiceProvider extends ServiceProvider
         //}
         $sliders = Slider::all();
         View::share('sliders', $sliders);
-        $footerElement = Footer::orderby('id', 'desc')->paginate(10);
-        View::share('footerElement', $footerElement);
         $news = News::orderBy('id','desc')->paginate(3);
         View::share('news', $news);
         $succesfulTvetGraduates = SuccesfulTvetGraduates::orderBy('id','desc')->paginate(3);
