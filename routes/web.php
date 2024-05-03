@@ -1,4 +1,5 @@
 <?php
+use App\Models\User;
 use App\Models\CourseType;
 use App\Models\RegionalLocations;
 use App\Models\Program;
@@ -210,3 +211,13 @@ Route::get('/viewCreateCollege', function(){$programs = Program::all(); $regiona
 //users pages----------------------------------------------------------------
 Route::get('/viewCreateUser', function(){ return view('admin.users.create');});
 Route::resource('/users', UsersController::class);
+Route::get('/validateUser/{id}', function(int $id){
+    $oneUser = User::find($id);
+    if ($oneUser != null) {
+        $oneUser->user_status = 'Enabled';
+        $oneUser->save();
+    }
+    $users = User::orderBy('id','desc')->paginate(5);
+    return redirect()->route('users.index')->with('success','User activated successfully.');
+    //view('admin.users.index', compact('users'));
+});

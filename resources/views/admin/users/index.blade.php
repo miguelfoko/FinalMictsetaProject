@@ -65,10 +65,17 @@
                                             <td>{{ $user->name }}</td>
                                             <td>{!! $user->email !!}</td>
                                             <td>{{$user->email_verified_at}}</td>
-                                            <td>{{$user->userStatus}}</td>
+                                            @if($user->user_status =='Disabled')         
+                                                <td><font color="red">{{$user->user_status}}</font></td>         
+                                            @else
+                                                <td><font color="green">{{$user->user_status}}</font></td>        
+                                            @endif
                                             <td>
                                                 <form action="{{ route('users.destroy',$user->id) }}" method="Post">
                                                     <a class="btn btn-primary" href="{{ route('users.edit',$user->id) }}">Edit</a>
+                                                    @if($user->user_status =='Disabled') 
+                                                        <a class="btn btn-success" href="/validateUser/{{$user->id}}">Validate</a>
+                                                    @endif
                                                     @csrf
                                                     @method('DELETE')
                                                     <button type="submit" class="btn btn-danger">Delete</button>
