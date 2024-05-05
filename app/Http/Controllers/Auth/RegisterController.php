@@ -114,13 +114,13 @@ class RegisterController extends Controller
             
             if ($userSaved == true) {
                 $title = 'Activation link';
-                $body = 'Thank you for your registration. </ br> Click <a href="http://localhost:8000/activate_account/{{$activation_token}}> here </a> to activate your account.'; 
+                $body = 'Thank you for your registration. <br> Click <a href="'.env("APP_URL").'/activate_account/'.$activation_token.'"> here </a> to activate your account.'; 
                 
                 //$title="Title1";
                 //$body="Body1";
                 Mail::to($user->email)
                         //->cc('fosimilan@gmail.com')
-                        ->bcc($user->email)
+                        //->bcc('fosimilan@gmail.com')
                         ->send(new WelcomeMail($title, $body));
                     //;
                 return redirect()->route('register')->with('success','Registration successful. Please check your email to activate your account.');

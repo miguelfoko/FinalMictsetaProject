@@ -55,6 +55,8 @@ use App\Http\Controllers\UsersController;
 use App\Http\Controllers\ViewTermsAndConditionsController;
 use App\Http\Controllers\ViewPrivacyPolicyController;
 use App\Http\Controllers\EmailController;
+use Illuminate\Support\Facades\Mail;
+use App\Mail\WelcomeMail;
 
 
 
@@ -216,9 +218,19 @@ Route::get('/validateUser/{id}', function(int $id){
     if ($oneUser != null) {
         if ($oneUser->email_verified_at != null) {
             $oneUser->user_status = 'Enabled';
-            $oneUser->save();
-            $users = User::orderBy('id','desc')->paginate(5);
-            return redirect()->route('users.index')->with('success','User activated successfully.');
+            $isUserActivated = $oneUser->save();
+            if ($isUserActivated ==true) {
+                $title = 'Account activated';
+                $body = 'Hello '.$oneUser->name.'. <br> Your account has been activated by administrators. You can now login. <br> Thank you.'; 
+                
+                Mail::to($oneUser->email)
+                        ->send(new WelcomeMail($title, $body));
+                $users = User::orderBy('id','asc')->paginate(5);
+                return redirect()->route('users.index')->with('success','User activated successfully.');
+            }
+            else {
+                return redirect()->route('users.index')->with('error','An error occured during the activation process. Please try again later.');
+            }
         } 
         else {
             return redirect()->route('users.index')->with('error','This user has not activated his account.');
@@ -229,12 +241,24 @@ Route::get('/validateUser/{id}', function(int $id){
 
 Route::get('/activate_account/{activation_token}', function(string $activation_token){
     $activation_hash = hash("sha256", $activation_token);
-    $oneUser = User::find($activation_hash);
+    $oneUser = DB::table('users')
+    ->select('id', 'name', 'email', 'email_verified_at','account_activation_hash')
+    ->distinct()
+    ->where('account_activation_hash', '=', $activation_hash)
+    ->first();
+    error_log($oneUser->id);
+    
+    //$oneUser = User->only($activation_hash);
     if ($oneUser != null) {
-        $oneUser->email_verified_at = new date();
-        //$oneUser->account_activation_hash = null;
-        $oneUser->save();
-        return redirect()->route('login')->with('success','User activated successfully. You can now sign in.');
+        $updatedUser = new User();
+        $updatedUser->id = $oneUser->id;
+        $updatedUser->email_verified_at = date('Y-m-d h:m:s');
+        $result = DB::table('users')
+            ->where('id', $updatedUser->id)
+            ->update([
+                'email_verified_at' => $updatedUser->email_verified_at
+            ]);
+        return redirect()->route('login')->with('success','User activated successfully. Your account will be validated by administrators and you will be able to sign in.');
     }
     else {
         return redirect()->route('register')->with('error','An error occured. Maybe the token has expired.');
