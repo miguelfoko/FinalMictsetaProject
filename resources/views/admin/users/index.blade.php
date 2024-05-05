@@ -78,7 +78,7 @@
                                             <td>
                                                 <form action="{{ route('users.destroy',$user->id) }}" method="Post">
                                                     <a class="btn btn-primary" href="{{ route('users.edit',$user->id) }}">Edit</a>
-                                                    @if($user->user_status =='Disabled') 
+                                                    @if($user->user_status =='Disabled' && Auth::user()->is_admin ==true) 
                                                         <a class="btn btn-success" href="/validateUser/{{$user->id}}">Validate</a>
                                                     @endif
                                                     @csrf

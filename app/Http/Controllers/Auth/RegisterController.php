@@ -92,6 +92,7 @@ class RegisterController extends Controller
 
         event(new Registered($user = $this->create($request->all())));*/
         $request['user_status'] = 'Disabled';
+        $request['is_admin'] = false;
         $readablePassword = $request->input('password');
         $hashPassword = Hash::make($readablePassword);
         $user = new User;
@@ -99,6 +100,7 @@ class RegisterController extends Controller
         $user->email=$request->input('email');
         $user->email=$request->input('email');
         $user->user_status=$request->input('user_status');
+        $user->is_admin=$request->input('is_admin');
         $user->password=$hashPassword;
         $user->save();
 
