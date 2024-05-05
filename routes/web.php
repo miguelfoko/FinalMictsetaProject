@@ -211,10 +211,15 @@ Route::resource('/users', UsersController::class);
 Route::get('/validateUser/{id}', function(int $id){
     $oneUser = User::find($id);
     if ($oneUser != null) {
-        $oneUser->user_status = 'Enabled';
-        $oneUser->save();
+        if ($oneUser->email_verified_at != null) {
+            $oneUser->user_status = 'Enabled';
+            $oneUser->save();
+            $users = User::orderBy('id','desc')->paginate(5);
+            return redirect()->route('users.index')->with('success','User activated successfully.');
+        } 
+        else {
+            return redirect()->route('users.index')->with('error','This user has not activated his account.');
+        }
     }
-    $users = User::orderBy('id','desc')->paginate(5);
-    return redirect()->route('users.index')->with('success','User activated successfully.');
     //view('admin.users.index', compact('users'));
 });
