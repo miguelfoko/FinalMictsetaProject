@@ -7,6 +7,11 @@
         <p>{{ $message }}</p>
     </div>
 @endif
+@if ($message = Session::get('success'))
+    <div class="alert alert-success">
+        <p>{{ $message }}</p>
+    </div>
+@endif
 <form method="POST" class="form-horizontal" action="{{ route('login') }}">
     @csrf
     <div class="form-group">

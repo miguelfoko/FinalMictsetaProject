@@ -226,3 +226,18 @@ Route::get('/validateUser/{id}', function(int $id){
     }
     //view('admin.users.index', compact('users'));
 });
+
+Route::get('/activate_account/{activation_token}', function(string $activation_token){
+    $activation_hash = hash("sha256", $activation_token);
+    $oneUser = User::find($activation_hash);
+    if ($oneUser != null) {
+        $oneUser->email_verified_at = new date();
+        //$oneUser->account_activation_hash = null;
+        $oneUser->save();
+        return redirect()->route('login')->with('success','User activated successfully. You can now sign in.');
+    }
+    else {
+        return redirect()->route('register')->with('error','An error occured. Maybe the token has expired.');
+    }
+    //view('admin.users.index', compact('users'));
+});

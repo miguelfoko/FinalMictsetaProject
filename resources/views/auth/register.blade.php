@@ -2,6 +2,16 @@
 
 @section('content')
 <div class="login-title"><strong>Welcome</strong>, Please fill the form to register.</div>
+@if ($message = Session::get('error'))
+    <div class="alert alert-danger">
+        <p>{{ $message }}</p>
+    </div>
+@endif
+@if ($message = Session::get('success'))
+    <div class="alert alert-success">
+        <p>{{ $message }}</p>
+    </div>
+@endif
 <form method="POST" class="form-horizontal" action="{{ route('register') }}">
     @csrf
 

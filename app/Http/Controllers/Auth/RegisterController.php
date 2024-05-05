@@ -14,6 +14,8 @@ use Illuminate\Auth\Events\Registered;
 use Illuminate\Http\JsonResponse;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Mail;
+use App\Mail\WelcomeMail;
 
 class RegisterController extends Controller
 {
@@ -87,38 +89,61 @@ class RegisterController extends Controller
      */
     public function register(Request $request)
     {
-        error_log('Here1');
-        /*$this->validator($request->all())->validate();
+        try {
+            error_log('Here1');
+            /*$this->validator($request->all())->validate();
 
-        event(new Registered($user = $this->create($request->all())));*/
-        //Generation of hash token for email verification
-        $activation_token = bin2hex(random_bytes(16));
-        $activation_hash = hash("sha256", $activation_token);
-        //End generation of hash token for email verification
-        $request['account_activation_hash'] = $activation_hash;
-        $request['user_status'] = 'Disabled';
-        $request['is_admin'] = false;
-        $readablePassword = $request->input('password');
-        $hashPassword = Hash::make($readablePassword);
-        $user = new User;
-        $user->name=$request->input('name');
-        $user->email=$request->input('email');
-        $user->email=$request->input('email');
-        $user->user_status=$request->input('user_status');
-        $user->is_admin=$request->input('is_admin');
-        $user->account_activation_hash=$activation_hash;
-        $user->password=$hashPassword;
-        $user->save();
+            event(new Registered($user = $this->create($request->all())));*/
+            //Generation of hash token for email verification
+            $activation_token = bin2hex(random_bytes(16));
+            $activation_hash = hash("sha256", $activation_token);
+            //End generation of hash token for email verification
+            $request['account_activation_hash'] = $activation_hash;
+            $request['user_status'] = 'Disabled';
+            $request['is_admin'] = false;
+            $readablePassword = $request->input('password');
+            $hashPassword = Hash::make($readablePassword);
+            $user = new User;
+            $user->name=$request->input('name');
+            $user->email=$request->input('email');
+            $user->user_status=$request->input('user_status');
+            $user->is_admin=$request->input('is_admin');
+            $user->account_activation_hash=$activation_hash;
+            $user->password=$hashPassword;
+            $userSaved = $user->save();
+            
+            if ($userSaved == true) {
+                $title = 'Activation link';
+                $body = 'Thank you for your registration. </ br> Click <a href="http://localhost:8000/activate_account/{{$activation_token}}> here </a> to activate your account.'; 
+                
+                //$title="Title1";
+                //$body="Body1";
+                Mail::to($user->email)
+                        //->cc('fosimilan@gmail.com')
+                        ->bcc($user->email)
+                        ->send(new WelcomeMail($title, $body));
+                    //;
+                return redirect()->route('register')->with('success','Registration successful. Please check your email to activate your account.');
 
-        $this->guard()->login($user);
+                //$this->guard()->login($user);
 
-        if ($response = $this->registered($request, $user)) {
-            return $response;
+                /*if ($response = $this->registered($request, $user)) {
+                    return $response;
+                }
+
+                return $request->wantsJson()
+                            ? new JsonResponse([], 201)
+                            : redirect($this->redirectPath());*/
+            }
+            else {
+                return redirect()->route('register')->with('error','Please check if you don\'t already have an account with this email.');
+            }
+        
         }
-
-        return $request->wantsJson()
-                    ? new JsonResponse([], 201)
-                    : redirect($this->redirectPath());
+        catch (\Exception $e) {
+            //return $e->getMessage();
+            return redirect()->route('register')->with('error',$e->getMessage());
+        }
     }
 
     /**
