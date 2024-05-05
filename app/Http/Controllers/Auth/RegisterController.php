@@ -91,6 +91,11 @@ class RegisterController extends Controller
         /*$this->validator($request->all())->validate();
 
         event(new Registered($user = $this->create($request->all())));*/
+        //Generation of hash token for email verification
+        $activation_token = bin2hex(random_bytes(16));
+        $activation_hash = hash("sha256", $activation_token);
+        //End generation of hash token for email verification
+        $request['account_activation_hash'] = $activation_hash;
         $request['user_status'] = 'Disabled';
         $request['is_admin'] = false;
         $readablePassword = $request->input('password');
@@ -101,6 +106,7 @@ class RegisterController extends Controller
         $user->email=$request->input('email');
         $user->user_status=$request->input('user_status');
         $user->is_admin=$request->input('is_admin');
+        $user->account_activation_hash=$activation_hash;
         $user->password=$hashPassword;
         $user->save();
 

@@ -23,6 +23,7 @@ class User extends Authenticatable
         'password',
         'user_status',
         'is_admin',
+        'account_activation_hash',
     ];
 
     /**
