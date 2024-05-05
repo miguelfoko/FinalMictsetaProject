@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Mail;
 use App\Mail\WelcomeMail;
+use App\Models\Subscribe;
 
 class EmailController extends Controller{
     
@@ -24,6 +25,15 @@ class EmailController extends Controller{
         $subject=$request->input('subject');
         $message = $request->input('message');
         
+
+        $subscribe=new Subscribe;
+        $subscribe->name=$name;
+        $subscribe->organisation=$organisation;
+        $subscribe->email=$email;
+        $subscribe->subject=$subject;
+        $subscribe->message=$message;
+        $subscribe->number=00000000;
+        $subscribe->save();
 
         $title = 'From TVET Colleges (do not reply)';
         $body = '<h2>Name:</h2> '.$name.'<br> <h2>From:</h2> '.$organisation.',<br> <h2>Email address:</h2>
