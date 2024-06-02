@@ -35,7 +35,7 @@
                             <div class="form-group">
 
                                 <strong>Content:</strong>
-                                <textarea name="content" class="form-control" id="myeditorinstance" rows="10" style="white-space: pre-wrap; text-indent: 50px;">
+                                <textarea name="content" class="form-control summernote">
                                 {!! $communitycolleges->content !!}
                                 </textarea>
                                 @error('content')
