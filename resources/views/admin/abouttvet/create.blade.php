@@ -26,7 +26,7 @@
                         <div class="col-xs-12 col-sm-12 col-md-12">
                             <div class="form-group">
                                 <strong>What is TVET:</strong>
-                                <textarea name="whatIsTvet" class="form-control" data-edit="fontName Arial" id="myeditorinstance" rows="10" style="white-space: pre-wrap; text-indent: 50px;">
+                                <textarea name="whatIsTvet" class="form-control summernote">
                                 
                                 </textarea>
                                 @error('whatIsTvet')
@@ -38,7 +38,7 @@
                         <div class="col-xs-12 col-sm-12 col-md-12">
                             <div class="form-group"> 
                                 <strong>TVET College Overview:</strong>
-                                <textarea name="tvetOverview" class="form-control"  id="myeditorinstance" rows="10" style="white-space: pre-wrap; text-indent: 50px;">
+                                <textarea name="tvetOverview" class="form-control summernote">
                                 
                                 </textarea>
                                 @error('tvetOverview')
@@ -50,7 +50,7 @@
                         <div class="col-xs-12 col-sm-12 col-md-12">
                             <div class="form-group"> 
                                 <strong>Public TVET College:</strong>
-                                <textarea name="publicTvetColleges" class="form-control" id="myeditorinstance" rows="10" style="white-space: pre-wrap; text-indent: 50px;">
+                                <textarea name="publicTvetColleges" class="form-control summernote">
                                 
                                 </textarea>
                                 @error('publicTvetColleges')
@@ -62,7 +62,7 @@
                         <div class="col-xs-12 col-sm-12 col-md-12">
                             <div class="form-group"> 
                                 <strong>TVET College Administration:</strong>
-                                <textarea name="tvetCollegeAdministration" class="form-control" id="myeditorinstance" rows="10" style="white-space: pre-wrap; text-indent: 50px;">
+                                <textarea name="tvetCollegeAdministration" class="form-control summernote">
                                 
                                 </textarea>
                                 @error('tvetCollegeAdministration')
@@ -74,7 +74,7 @@
                         <div class="col-xs-12 col-sm-12 col-md-12">
                             <div class="form-group"> 
                                 <strong>Private College:</strong>
-                                <textarea name="privateTvetColleges" class="form-control" id="myeditorinstance" rows="10" style="white-space: pre-wrap; text-indent: 50px;">
+                                <textarea name="privateTvetColleges" class="form-control summernote">
                                 
                                 </textarea>
                                 @error('privateTvetColleges')

@@ -44,7 +44,7 @@
                         <div class="col-xs-12 col-sm-12 col-md-12">
                             <div class="form-group">
                                 <strong>News Content:</strong>
-                                <textarea name="content" class="form-control"  rows="10" id="myeditorinstance" rows="10" style="white-space: pre-wrap; text-indent: 50px;">
+                                <textarea name="content" class="form-control summernote">
                                 {{ $news->content }}
                                 </textarea>
                                 @error('content')
