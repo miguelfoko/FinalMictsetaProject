@@ -25,7 +25,7 @@
     <div class="container">
       <div class="row">
         <div class="col-lg-12 col-md-4 col-9">
-          <div class="logo"> <a href="/"><img src="{{ asset('/img/TVET/Header1.png') }}" alt="DHET" data-popupalt-original-title="null" title="DHET" style="width: 100%; height:auto;" ></a> </div>
+          <div class="logo"> <a href="/"><img src="{{ asset('/img/TVET/Header1.jpg') }}" alt="DHET" data-popupalt-original-title="null" title="DHET" style="width: 100%; height:auto;" ></a> </div>
         </div>
        
       </div>

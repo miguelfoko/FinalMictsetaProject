@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-@section('content')
+@section('content') 
     <!--<div class="container">
         <div class="pull-right">
             <a class="btn btn-success" href="updateAboutTvet"> Back</a>

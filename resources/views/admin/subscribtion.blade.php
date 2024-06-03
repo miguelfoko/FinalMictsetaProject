@@ -54,7 +54,7 @@
                                         <th>Name</th>
                                         <th>Organisation</th>
                                         <th>Email</th>
-                                        <th>Number</th>
+                                       <!-- <th>Number</th>-->
                                         <th>Subject</th>
                                         <th >Message</th>
                                     </tr>
@@ -66,7 +66,7 @@
                                             <td >{{ $subscribe->name }}</td>
                                             <td >{{ $subscribe->organisation }}</td>
                                             <td >{{ $subscribe->email }}</td>
-                                            <td >{{ $subscribe->number }}</td>
+                                            <!--<td >{{ $subscribe->number }}</td>-->
                                             <td >{{ $subscribe->subject }}</td>
                                             <td >{{ $subscribe->message }}</td>
                                         </tr>

@@ -1824,6 +1824,53 @@ div.title {
 	margin-top: -35px;
 	text-align: center;
 }
+
+.breadcromb-wrapperCareerGuidance {
+	background: rgba(0, 0, 0, 0) url(../images/CareerGuidance.jpg)  no-repeat fixed center top / cover;
+	float:left;
+	padding: 60px 0 40px;
+	position: relative;
+	width: 100%;
+	height: 100%;
+	margin-top: -35px;
+	text-align: center;
+}
+
+.breadcromb-wrapperCalendar {
+	background: rgba(0, 0, 0, 0) url(../images/Calendar.jpg)  no-repeat fixed center top / cover;
+	float:left;
+	padding: 60px 0 40px;
+	position: relative;
+	width: 100%;
+	height: 100%;
+	margin-top: -35px;
+	text-align: center;
+}
+
+.breadcromb-wrapperCollegeCourseTypes {
+	background: rgba(0, 0, 0, 0) url(../images/CollegeCourses.jpg)  no-repeat fixed center top / cover;
+	float:left;
+	padding: 60px 0 40px;
+	position: relative;
+	width: 100%;
+	height: 100%;
+	margin-top: -35px;
+	text-align: center;
+}
+
+.breadcromb-wrapperExaminationResources {
+	background: rgba(0, 0, 0, 0) url(../images/ExaminationResources.jpg)  no-repeat center top;
+	background-size: contain;
+	
+	float:left;
+	padding: 60px 0 40px;
+	position: relative;
+	width: 100%;
+	height: 100%;
+	margin-top: -35px;
+	text-align: center;	
+}
+
 .breadcromb-overlay {
 	background: rgba(0, 33, 71, 0.65);
 	height: 100%;
