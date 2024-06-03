@@ -34,7 +34,7 @@
                         <div class="col-xs-12 col-sm-12 col-md-12">
                             <div class="form-group">
                             <strong>Overview:</strong>
-                            <textarea name="overview" class="form-control" id="myeditorinstance" rows="10" style="white-space: pre-wrap; text-indent: 50px;">
+                            <textarea name="overview" class="form-control summernote">
                                 {{ $collegecoursetype->overview }}
                             </textarea>
                                 @error('overview')
@@ -45,7 +45,7 @@
                         <div class="col-xs-12 col-sm-12 col-md-12">
                             <div class="form-group">
                                 <strong>Industry Fields:</strong>
-                                <textarea name="industryFields" class="form-control" id="myeditorinstance" rows="10" style="white-space: pre-wrap; text-indent: 50px;"> 
+                                <textarea name="industryFields" class="form-control summernote"> 
                                 {{ $collegecoursetype->industryFields }}
                                 </textarea>
                                 @error('industryFields')
@@ -56,7 +56,7 @@
                         <div class="col-xs-12 col-sm-12 col-md-12">
                             <div class="form-group">
                                 <strong>Type of Courses:</strong>
-                                <textarea name="typeOfCourses" class="form-control" id="myeditorinstance" rows="10" style="white-space: pre-wrap; text-indent: 50px;"> 
+                                <textarea name="typeOfCourses" class="form-control summernote"> 
                                     {{ $collegecoursetype->typeOfCourses }}
                                 </textarea>
                                 @error('typeOfCourses')

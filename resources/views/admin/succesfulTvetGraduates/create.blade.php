@@ -44,7 +44,7 @@
                         <div class="col-xs-12 col-sm-12 col-md-12">
                             <div class="form-group">
                                 <strong>TVET Graduates Content:</strong>
-                                <textarea name="content" class="form-control" id="myeditorinstance" rows="10" style="white-space: pre-wrap; text-indent: 50px;"></textarea>
+                                <textarea name="content" class="form-control summernote"></textarea>
                                 @error('content')
                                 <div class="alert alert-danger mt-1 mb-1">{{ $message }}</div>
                                 @enderror

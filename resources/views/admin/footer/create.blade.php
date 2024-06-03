@@ -25,7 +25,7 @@
                         <div class="col-xs-12 col-sm-12 col-md-12">
                             <div class="form-group">
                                 <strong>Purpose:</strong>
-                                <textarea name="purpose" class="form-control" rows="5" id="myeditorinstance"></textarea>
+                                <textarea name="purpose" class="form-control summernote"></textarea>
                                 @error('purpose')
                                 <div class="alert alert-danger mt-1 mb-1">{{ $message }}</div>
                                 @enderror
@@ -35,7 +35,7 @@
                         <div class="col-xs-12 col-sm-12 col-md-12">
                             <div class="form-group">
                                 <strong>Content:</strong>
-                                <textarea name="Content" class="form-control" rows="5" id="myeditorinstance"></textarea>
+                                <textarea name="Content" class="form-control summernote"></textarea>
                                 @error('Content')
                                 <div class="alert alert-danger mt-1 mb-1">{{ $message }}</div>
                                 @enderror
@@ -45,7 +45,7 @@
                         <div class="col-xs-12 col-sm-12 col-md-12">
                             <div class="form-group">
                                 <strong>Additional Help:</strong>
-                                <textarea name="additionalHelp" class="form-control" rows="5" id="myeditorinstance"></textarea>
+                                <textarea name="additionalHelp" class="form-control summernote"></textarea>
                                 @error('additionalHelp')
                                 <div class="alert alert-danger mt-1 mb-1">{{ $message }}</div>
                                 @enderror
@@ -55,7 +55,7 @@
                         <div class="col-xs-12 col-sm-12 col-md-12">
                             <div class="form-group">
                                 <strong>List Of Accronyms:</strong>
-                                <textarea name="listOfAccronyms" class="form-control" rows="5" id="myeditorinstance"></textarea>
+                                <textarea name="listOfAccronyms" class="form-control summernote"></textarea>
                                 @error('listOfAccronyms')
                                 <div class="alert alert-danger mt-1 mb-1">{{ $message }}</div>
                                 @enderror
@@ -65,7 +65,7 @@
                         <div class="col-xs-12 col-sm-12 col-md-12">
                             <div class="form-group">
                                 <strong>Copyright:</strong>
-                                <textarea name="copyright" class="form-control" rows="5" id="myeditorinstance"></textarea>
+                                <textarea name="copyright" class="form-control summernote"></textarea>
                                 @error('copyright')
                                 <div class="alert alert-danger mt-1 mb-1">{{ $message }}</div>
                                 @enderror
@@ -75,7 +75,7 @@
                         <div class="col-xs-12 col-sm-12 col-md-12">
                             <div class="form-group">
                                 <strong>Disclaimer:</strong>
-                                <textarea name="disclaimer" class="form-control" rows="5" id="myeditorinstance"></textarea>
+                                <textarea name="disclaimer" class="form-control summernote"></textarea>
                                 @error('disclaimer')
                                 <div class="alert alert-danger mt-1 mb-1">{{ $message }}</div>
                                 @enderror

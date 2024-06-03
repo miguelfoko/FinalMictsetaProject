@@ -157,10 +157,11 @@
         <script type="text/javascript" src="/adminResources/js/actions.js"></script>
         
         <script type="text/javascript" src="/adminResources/js/demo_dashboard.js"></script>
+        <script type="text/javascript" src="/adminResources/js/plugins/summernote/summernote.js"></script>
         <!-- END TEMPLATE -->
 
         <!-- START tinyMCE script  -->
-        <script src="https://cdn.tiny.cloud/1/3xh5vuypbbojodjtyppl64ug6qh6la2cq973vt5vpemz2w62/tinymce/6/tinymce.min.js" referrerpolicy="origin"></script>
+        <!--<script src="https://cdn.tiny.cloud/1/3xh5vuypbbojodjtyppl64ug6qh6la2cq973vt5vpemz2w62/tinymce/6/tinymce.min.js" referrerpolicy="origin"></script>
 
         <script>
 
@@ -175,7 +176,7 @@
 
         });
 
-        </script>
+        </script>-->
          <!-- END tinyMCE script  -->
     <!-- END SCRIPTS -->         
     </body>

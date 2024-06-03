@@ -26,7 +26,7 @@
                         <div class="col-xs-12 col-sm-12 col-md-12">
                             <div class="form-group">
                                 <strong>Purpose:</strong>
-                                <textarea name="purpose" class="form-control" value="{!! $footer->purpose !!}" rows="4" id="myeditorinstance">
+                                <textarea name="purpose" class="form-control summernote" value="{!! $footer->purpose !!}">
                                     {!! $footer->purpose !!}
                                 </textarea>
                                 @error('purpose')
@@ -38,7 +38,7 @@
                         <div class="col-xs-12 col-sm-12 col-md-12">
                             <div class="form-group">
                                 <strong>Content:</strong>
-                                <textarea name="content" class="form-control" value="{!! $footer->content !!}" rows="4" id="myeditorinstance">
+                                <textarea name="content" class="form-control summernote" value="{!! $footer->content !!}">
                                     {!! $footer->content !!}
                                 </textarea>
                                 @error('content')
@@ -50,7 +50,7 @@
                         <div class="col-xs-12 col-sm-12 col-md-12">
                             <div class="form-group">
                                 <strong>Additional Help:</strong>
-                                <textarea name="additionalHelp" class="form-control" value="{!! $footer->additionalHelp !!}" rows="4" id="myeditorinstance">
+                                <textarea name="additionalHelp" class="form-control summernote" value="{!! $footer->additionalHelp !!}">
                                     {!! $footer->additionalHelp !!}
                                 </textarea>
                                 @error('additionalHelp')
@@ -62,7 +62,7 @@
                         <div class="col-xs-12 col-sm-12 col-md-12">
                             <div class="form-group">
                                 <strong>List Of Accronyms:</strong>
-                                <textarea name="listOfAccronyms" class="form-control" value="{!! $footer->listOfAccronyms !!}" rows="4" id="myeditorinstance">
+                                <textarea name="listOfAccronyms" class="form-control summernote" value="{!! $footer->listOfAccronyms !!}">
                                     {!! $footer->listOfAccronyms !!}
                                 </textarea>
                                 @error('listOfAccronyms')
@@ -74,7 +74,7 @@
                         <div class="col-xs-12 col-sm-12 col-md-12">
                             <div class="form-group">
                                 <strong>Copyright:</strong>
-                                <textarea name="copyright" class="form-control" value="{!! $footer->copyright !!}" rows="4" id="myeditorinstance">
+                                <textarea name="copyright" class="form-control summernote" value="{!! $footer->copyright !!}">
                                     {!! $footer->copyright !!}
                                 </textarea>
                                 @error('copyright')
@@ -86,7 +86,7 @@
                         <div class="col-xs-12 col-sm-12 col-md-12">
                             <div class="form-group">
                                 <strong>Disclaimer:</strong>
-                                <textarea name="disclaimer" class="form-control" value="{!! $footer->disclaimer !!}" rows="4" id="myeditorinstance">
+                                <textarea name="disclaimer" class="form-control summernote" value="{!! $footer->disclaimer !!}">
                                     {!! $footer->disclaimer !!}
                                 </textarea>
                                 @error('disclaimer')
