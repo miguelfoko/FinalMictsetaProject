@@ -1826,7 +1826,7 @@ div.title {
 }
 
 .breadcromb-wrapperCareerGuidance {
-	background: rgba(0, 0, 0, 0) url(../images/CareerGuidance.jpg)  no-repeat fixed center top / cover;
+	background: rgba(0, 0, 0, 0) url(../img/CareerGuidance.jpg)  no-repeat fixed center top / cover;
 	float:left;
 	padding: 60px 0 40px;
 	position: relative;
@@ -1837,7 +1837,7 @@ div.title {
 }
 
 .breadcromb-wrapperCalendar {
-	background: rgba(0, 0, 0, 0) url(../images/Calendar.jpg)  no-repeat fixed center top / cover;
+	background: rgba(0, 0, 0, 0) url(../img/Calendar.jpg)  no-repeat fixed center top / cover;
 	float:left;
 	padding: 60px 0 40px;
 	position: relative;
@@ -1848,7 +1848,7 @@ div.title {
 }
 
 .breadcromb-wrapperCollegeCourseTypes {
-	background: rgba(0, 0, 0, 0) url(../images/CollegeCourses.jpg)  no-repeat fixed center top / cover;
+	background: rgba(0, 0, 0, 0) url(../img/CollegeCourses.jpg)  no-repeat fixed center top / cover;
 	float:left;
 	padding: 60px 0 40px;
 	position: relative;
@@ -1859,7 +1859,7 @@ div.title {
 }
 
 .breadcromb-wrapperExaminationResources {
-	background: rgba(0, 0, 0, 0) url(../images/ExaminationResources.jpg)  no-repeat center top;
+	background: rgba(0, 0, 0, 0) url(../img/ExaminationResources.jpg)  no-repeat center top;
 	background-size: contain;
 	
 	float:left;
