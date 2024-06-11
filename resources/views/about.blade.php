@@ -37,7 +37,7 @@
             <div class="courses_overview">
               <h5>TVET Overview</h5>
             </div>
-            <!-- Courses Overview Content -->
+            <!-- Courses Overview Content --> 
             <div class="couress_overview_content">
               <p>{!! $attvet->tvetOverview !!} </p>
             </div>
