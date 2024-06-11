@@ -22,11 +22,7 @@
       <div class="container">
       @foreach ($setas as $seta)
           <div class="row">
-            <!-- Courses Details Thumb Area End --> 
-            <!-- Courses Overview -->
-            <div class="courses_overview">
-              <h5>SETAs title</h5>
-            </div>
+                     
             <!-- Courses Overview Content -->
             <div class="couress_overview_content">
               <p>{!! $seta->content !!} </p>
