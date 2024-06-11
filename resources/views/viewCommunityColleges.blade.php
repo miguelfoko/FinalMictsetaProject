@@ -2,7 +2,7 @@
 
 @section('content')
 <!-- Breadcromb Area Start -->
-<div class="breadcromb-wrapper">
+<div class="breadcromb-wrapperCommunityEducationAndTrainingCollege">
   <div class="breadcromb-overlay"></div>
   <div class="container">
     <h1>Community Education and Training Colleges</h1>

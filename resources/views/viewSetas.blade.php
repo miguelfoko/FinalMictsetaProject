@@ -2,7 +2,7 @@
 
 @section('content')
 <!-- Breadcromb Area Start -->
-<div class="breadcromb-wrapper">
+<div class="breadcromb-wrapperSETAs">
   <div class="breadcromb-overlay"></div>
   <div class="container">
     <h1>SETAs</h1>
