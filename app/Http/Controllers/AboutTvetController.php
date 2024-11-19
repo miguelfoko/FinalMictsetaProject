@@ -69,22 +69,20 @@ class AboutTvetController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\AboutTvet  $abouttvet
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show(AboutTvet $abouttvet)
-    {
-        //return view('adminAbouttvet.show',compact('abouttvet'));
+    public function show(int  $id)    {
+        
     }
 
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Abouttvet $abouttvet
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
-    {
+    public function edit($id)    {
         $abouttvet = AboutTvet::findOrFail($id);
         return view('admin.abouttvet.edit',compact('abouttvet'));
     }
@@ -93,7 +91,7 @@ class AboutTvetController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\abouttvet  $abouttvet
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
     public function update(Request $request, $id) 
@@ -101,21 +99,20 @@ class AboutTvetController extends Controller
         $abouttvet = AboutTvet::find($id);
         $request->validate([
             'whatIsTvet' => 'required',
-            'tvetOverview' => 'required',
+            'tvetOverview' => 'required', 
             'publicTvetColleges'=> 'required',
             'tvetCollegeAdministration'=> 'required',
             'privateTvetColleges'=> 'required',
         ]);
 
-       
-        $aboutTvet->whatIsTvet=nl2br($request->input('whatIsTvet'));
-        $aboutTvet->tvetOverview=nl2br($request->input('tvetOverview'));
-        $aboutTvet->publicTvetColleges=nl2br($request->input('publicTvetColleges'));
-        $aboutTvet->tvetCollegeAdministration=nl2br($request->input('tvetCollegeAdministration'));
-        $aboutTvet->privateTvetColleges=nl2br($request->input('privateTvetColleges'));
-        $aboutTvet->save();
+        $abouttvet->whatIsTvet=nl2br($request->input('whatIsTvet'));
+        $abouttvet->tvetOverview=nl2br($request->input('tvetOverview'));
+        $abouttvet->publicTvetColleges=nl2br($request->input('publicTvetColleges'));
+        $abouttvet->tvetCollegeAdministration=nl2br($request->input('tvetCollegeAdministration'));
+        $abouttvet->privateTvetColleges=nl2br($request->input('privateTvetColleges'));
+        $abouttvet->save();
 
-        $aboutTvet->fill($request->post())->save();
+        $abouttvet->fill($request->post())->save();
 
         return redirect()->route('adminAbouttvet.index')->with('success','About Tvet Has Been updated successfully');
     }

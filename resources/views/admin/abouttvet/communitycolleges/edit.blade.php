@@ -9,7 +9,7 @@
                 <div class="pull-left">
                     <h2>Edit Community Colleges Information</h2>
                 </div>
-            </div>
+            </div> 
         </div>
         @if(session('status'))
         <div class="alert alert-success mb-1 mt-1">
