@@ -128,7 +128,7 @@ public function store(Request $request)
         $oldFilename = $slider->photo;
         $slider->photo= $filename;
         if(!empty($slider->photo)){
-          Storage::delete($oldFilename);
+          Storage::delete($oldFilename); 
         }
       }
 

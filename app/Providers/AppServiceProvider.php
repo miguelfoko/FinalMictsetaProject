@@ -28,7 +28,7 @@ class AppServiceProvider extends ServiceProvider
         //if (APP::environment('production')){
         //    URL::forceScheme('https');
         //}
-        $sliders = Slider::all();
+        $sliders = Slider::orderby('id', 'desc')->paginate(100);
         View::share('sliders', $sliders);
         $news = News::orderBy('id','desc')->paginate(3);
         View::share('news', $news);

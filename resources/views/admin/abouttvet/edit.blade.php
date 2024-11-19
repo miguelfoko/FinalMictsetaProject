@@ -77,7 +77,7 @@
                             <div class="form-group"> 
                                 <strong>Private College:</strong>
                                 <textarea name="privateTvetColleges" class="form-control summernote">
-                                {!! $abouttvet->privateTvetColleges !!}
+                                {!! $abouttvet->privateTvetColleges !!} 
                                 </textarea>
                                 @error('privateTvetColleges')
                                 <div class="alert alert-danger mt-1 mb-1">{{ $message }}</div>

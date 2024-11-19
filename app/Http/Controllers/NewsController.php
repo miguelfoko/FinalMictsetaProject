@@ -80,8 +80,7 @@ class NewsController extends Controller
     * @param  \App\news  $news
     * @return \Illuminate\Http\Response
     */
-    public function show(News $id)
-    {
+    public function show(News $id)    {
         $news = News::find($id);
 
         return view('news.show',compact('news'));
@@ -98,7 +97,7 @@ class NewsController extends Controller
         return view('admin.news.edit',compact('news')); 
     }
 
-    /**
+    /** 
     * Update the specified resource in storage.
     *
     * @param  \Illuminate\Http\Request  $request
