@@ -24,18 +24,16 @@
                         <div class="col-xs-12 col-sm-12 col-md-12">
                             <div class="form-group">
                                 <strong>News Title:</strong>
-                                <input type="text" name="title" value="{{ $news->title }}" class="form-control"
-                                    placeholder="{{ $news->title }}">
+                                <input type="text" name="title" value="{{ $news->title }}" class="form-control">
                                 @error('title')
                                 <div class="alert alert-danger mt-1 mb-1">{{ $message }}</div>
-                                @enderror
+                                @enderror 
                             </div>
                         </div>
                         <div class="col-xs-12 col-sm-12 col-md-12">
                             <div class="form-group">
                                 <strong>News Subitle:</strong>
-                                <input type="text" name="subtitle" value="{{ $news->subtitle }}" class="form-control"
-                                    placeholder="{{ $news->subtitle }}">
+                                <input type="text" name="subtitle" value="{{ $news->subtitle }}" class="form-control">
                                 @error('subtitle')
                                 <div class="alert alert-danger mt-1 mb-1">{{ $message }}</div>
                                 @enderror
@@ -55,33 +53,16 @@
                         <div class="col-xs-12 col-sm-12 col-md-12">
                             <div class="form-group">
                                 <strong>Publication date:</strong>
-                                <input type="date" name="publicationDate" id="publicationDate" class="form-control" placeholder="{{ $news->publicationDate }}">
+                                <input type="date" name="publicationDate" id="publicationDate" class="form-control" value="{{ $news->publicationDate }}">
                                 @error('publicationDate')
                                 <div class="alert alert-danger mt-1 mb-1">{{ $message }}</div>
                                 @enderror
                             </div>
                         </div>
-                        <!--<div class="col-xs-12 col-sm-12 col-md-12">
-                            <div class="form-group">
-                                <strong>Volume:</strong>
-
-                                <select  name="volume" class="form-control ">
-                                    {{ $last= 1 }}
-                                    {{ $now = 100 }}
-
-                                    @for ($i = $last; $i <= $now; $i++)
-                                        <option value="{{ $i }}">{{ $i }}</option>
-                                    @endfor
-                                </select>
-                                @error('volume')
-                                <div class="alert alert-danger mt-1 mb-1">{{ $message }}</div>
-                                @enderror
-                            </div>
-                        </div>-->
                         <div class="col-xs-12 col-sm-12 col-md-12">
                             <div class="form-group">
                                 <strong>Youtube Link:</strong>
-                                <input type="text" name="link" value="{{ $news->link }}" class="form-control" placeholder="Youtube Link">
+                                <input type="text" name="link" value="{{ $news->link }}" class="form-control">
                                 @error('link')
                                 <div class="alert alert-danger mt-1 mb-1">{{ $message }}</div>
                                 @enderror
@@ -97,7 +78,7 @@
                                     </ul>
                                 </p>
                             <strong>News Picture:</strong>
-                                <input type="file" name="picture" class="form-control" value="{{ $news->picture }}"  placeholder="News Picture">
+                                <input type="file" name="picture" class="form-control" value="{{ $news->picture }}">
                                 @error('picture')
                                 <div class="alert alert-danger mt-1 mb-1">{{ $message }}</div>
                                 @enderror

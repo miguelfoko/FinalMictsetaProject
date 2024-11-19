@@ -77,10 +77,10 @@ class NewsController extends Controller
     /**
     * Display the specified resource.
     *
-    * @param  \App\news  $news
+    * @param  int  $id
     * @return \Illuminate\Http\Response
     */
-    public function show(News $id)    {
+    public function show($id)    {
         $news = News::find($id);
 
         return view('news.show',compact('news'));
@@ -89,11 +89,12 @@ class NewsController extends Controller
     /**
     * Show the form for editing the specified resource.
     *
-    * @param  \App\News  $news
+    * @param  int  $id
     * @return \Illuminate\Http\Response
     */
-    public function edit(News $news)
+    public function edit($id)
     {
+        $news = News::findOrFail($id);
         return view('admin.news.edit',compact('news')); 
     }
 
@@ -101,11 +102,11 @@ class NewsController extends Controller
     * Update the specified resource in storage.
     *
     * @param  \Illuminate\Http\Request  $request
-    * @param  \App\news  $news
+    * @param  int  $id
     * @return \Illuminate\Http\Response
     */
-    public function update(Request $request, News $news)
-    {
+    public function update(Request $request, $id)    {
+        $news = News::find($id);
         $request->validate([
             'title' => 'required',
             'subtitle' => 'required',
@@ -113,7 +114,7 @@ class NewsController extends Controller
             'publicationYear' => 'required',
             'content' => 'required',
             'picture' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:9000',
-        ]);
+        ]); 
         $imageName=$news->picture;
         $file_path = "images/$imageName";
         unlink(public_path($file_path)); 

@@ -101,9 +101,9 @@
               </div>
               <span>{{ $succesfulTvetGraduate->title }}</span>
                     <p class="fst-italic">
-                      "{{ $succesfulTvetGraduate->content }}"
+                      "{!! $succesfulTvetGraduate->content !!}" 
                     </p>
-              <!--<a class="btn small" href="javascript:void(0)">Read More</a>-->
+              <a class="btn small" href="javascript:void(0)">Read More</a>
             </div>
           </div>
       @endforeach
