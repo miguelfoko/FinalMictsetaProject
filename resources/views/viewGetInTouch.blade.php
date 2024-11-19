@@ -2,7 +2,7 @@
 
 @section('content')
 
-<div class="breadcromb-wrapper">
+<div class="breadcromb-wrapperGetInTouch">
   <div class="breadcromb-overlay"></div>
   <div class="container">
     <h1>Get In Touch</h1>

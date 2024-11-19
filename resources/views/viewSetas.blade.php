@@ -2,7 +2,7 @@
 
 @section('content')
 <!-- Breadcromb Area Start -->
-<div class="breadcromb-wrapper">
+<div class="breadcromb-wrapperSETAs">
   <div class="breadcromb-overlay"></div>
   <div class="container">
     <h1>SETAs</h1>
@@ -20,19 +20,15 @@
 </div>
 <div class="inner-page-wrapper course-wrapper course-details">
       <div class="container">
-       
+      @foreach ($setas as $seta)
           <div class="row">
-            <!-- Courses Details Thumb Area End --> 
-            <!-- Courses Overview -->
-            <div class="courses_overview">
-              <h5>SETAs title</h5>
-            </div>
+                     
             <!-- Courses Overview Content -->
             <div class="couress_overview_content">
-              <p>SETAs Content </p>
+              <p>{!! $seta->content !!} </p>
             </div>
           </div>
-          
+          @endforeach 
     </div>
   </div>
 

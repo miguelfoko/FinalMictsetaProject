@@ -3,7 +3,7 @@
 @section('content')
 
 <!-- Breadcromb Area Start -->
-<div class="breadcromb-wrapper">
+<div class="breadcromb-wrapperAboutTVET">
   <div class="breadcromb-overlay"></div>
   <div class="container">
     <h1>About TVET</h1>
@@ -37,7 +37,7 @@
             <div class="courses_overview">
               <h5>TVET Overview</h5>
             </div>
-            <!-- Courses Overview Content -->
+            <!-- Courses Overview Content --> 
             <div class="couress_overview_content">
               <p>{!! $attvet->tvetOverview !!} </p>
             </div>

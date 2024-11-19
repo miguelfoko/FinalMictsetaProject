@@ -1826,7 +1826,7 @@ div.title {
 }
 
 .breadcromb-wrapperCareerGuidance {
-	background: rgba(0, 0, 0, 0) url(../img/CareerGuidance.jpg)  no-repeat fixed center top / cover;
+	background: rgba(0, 0, 0, 0) url(../img/CareerGuidance.jpg)  no-repeat center top;
 	float:left;
 	padding: 60px 0 40px;
 	position: relative;
@@ -1837,7 +1837,7 @@ div.title {
 }
 
 .breadcromb-wrapperCalendar {
-	background: rgba(0, 0, 0, 0) url(../img/Calendar.jpg)  no-repeat fixed center top / cover;
+	background: rgba(0, 0, 0, 0) url(../img/Calendar.jpg)  no-repeat center top;
 	float:left;
 	padding: 60px 0 40px;
 	position: relative;
@@ -1848,7 +1848,7 @@ div.title {
 }
 
 .breadcromb-wrapperCollegeCourseTypes {
-	background: rgba(0, 0, 0, 0) url(../img/CollegeCourses.jpg)  no-repeat fixed center top / cover;
+	background: rgba(0, 0, 0, 0) url(../img/CollegeCourses.jpg)  no-repeat center top;
 	float:left;
 	padding: 60px 0 40px;
 	position: relative;
@@ -1860,16 +1860,136 @@ div.title {
 
 .breadcromb-wrapperExaminationResources {
 	background: rgba(0, 0, 0, 0) url(../img/ExaminationResources.jpg)  no-repeat center top;
-	background-size: contain;
-	
 	float:left;
 	padding: 60px 0 40px;
 	position: relative;
 	width: 100%;
 	height: 100%;
 	margin-top: -35px;
-	text-align: center;	
+	text-align: center;
 }
+
+.breadcromb-wrapperAboutTVET {
+	background: rgba(0, 0, 0, 0) url(../img/AboutTVET.jpg)  no-repeat center top;
+	float:left;
+	padding: 60px 0 40px;
+	position: relative;
+	width: 100%;
+	height: 100%;
+	margin-top: -35px;
+	text-align: center;
+}
+
+.breadcromb-wrapperCollegeAndSETATimes {
+	background: rgba(0, 0, 0, 0) url(../img/CollegeAndSETATimes.jpg)  no-repeat center top;
+	float:left;
+	padding: 60px 0 40px;
+	position: relative;
+	width: 100%;
+	height: 100%;
+	margin-top: -35px;
+	text-align: center;
+}
+
+.breadcromb-wrapperCommunityEducationAndTrainingCollege {
+	background: rgba(0, 0, 0, 0) url(../img/CommunityEducationAndTrainingCollege.jpg)  no-repeat center top;
+	float:left;
+	padding: 60px 0 40px;
+	position: relative;
+	width: 100%;
+	height: 100%;
+	margin-top: -35px;
+	text-align: center;
+}
+
+.breadcromb-wrapperExamanitionsTrainingVideos {
+	background: rgba(0, 0, 0, 0) url(../img/ExamanitionsTrainingVideos.jpg)  no-repeat center top;
+	float:left;
+	padding: 60px 0 40px;
+	position: relative;
+	width: 100%;
+	height: 100%;
+	margin-top: -35px;
+	text-align: center;
+}
+
+.breadcromb-wrapperFAQ {
+	background: rgba(0, 0, 0, 0) url(../img/FAQ.jpg)  no-repeat center top;
+	float:left;
+	padding: 60px 0 40px;
+	position: relative;
+	width: 100%;
+	height: 100%;
+	margin-top: -35px;
+	text-align: center;
+}
+
+.breadcromb-wrapperGetInTouch {
+	background: rgba(0, 0, 0, 0) url(../img/GetInTouch.jpg)  no-repeat center top;
+	float:left;
+	padding: 60px 0 40px;
+	position: relative;
+	width: 100%;
+	height: 100%;
+	margin-top: -35px;
+	text-align: center;
+}
+
+.breadcromb-wrapperICASSTrainingVideos {
+	background: rgba(0, 0, 0, 0) url(../img/ICASSTrainingVideos.jpg)  no-repeat center top;
+	float:left;
+	padding: 60px 0 40px;
+	position: relative;
+	width: 100%;
+	height: 100%;
+	margin-top: -35px;
+	text-align: center;
+}
+
+.breadcromb-wrapperNewsletter {
+	background: rgba(0, 0, 0, 0) url(../img/Newsletter.jpg)  no-repeat center top;
+	float:left;
+	padding: 60px 0 40px;
+	position: relative;
+	width: 100%;
+	height: 100%;
+	margin-top: -35px;
+	text-align: center;
+}
+
+.breadcromb-wrapperOurAddress {
+	background: rgba(0, 0, 0, 0) url(../img/OurAddress.jpg)  no-repeat center top;
+	float:left;
+	padding: 60px 0 40px;
+	position: relative;
+	width: 100%;
+	height: 100%;
+	margin-top: -35px;
+	text-align: center;
+}
+
+.breadcromb-wrapperSETAs {
+	background: rgba(0, 0, 0, 0) url(../img/SETAs.jpg)  no-repeat center top;
+	float:left;
+	padding: 60px 0 40px;
+	position: relative;
+	width: 100%;
+	height: 100%;
+	margin-top: -35px;
+	text-align: center;
+}
+
+.breadcromb-wrapperSuccessStories {
+	background: rgba(0, 0, 0, 0) url(../img/SuccessStories.jpg)  no-repeat center top;
+	float:left;
+	padding: 60px 0 40px;
+	position: relative;
+	width: 100%;
+	height: 100%;
+	margin-top: -35px;
+	text-align: center;
+}
+
 
 .breadcromb-overlay {
 	background: rgba(0, 33, 71, 0.65);
