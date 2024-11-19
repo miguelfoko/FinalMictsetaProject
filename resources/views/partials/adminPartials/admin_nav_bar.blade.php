@@ -85,9 +85,9 @@
                     <li>
                         <a href="/admintvetcollegetimes"><span class="glyphicon glyphicon-time"></span> <span class="xn-text">Manage TVET College Time</span></a>
                     </li>
-                    <li>
+                    <!--<li>
                         <a href="/subscription"><span class="fa fa-users"></span> <span class="xn-text">View Subscriptions</span></a>
-                    </li>
+                    </li>-->
                 </ul>
                 <!-- END X-NAVIGATION -->
             </div>
