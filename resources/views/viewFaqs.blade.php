@@ -34,7 +34,7 @@
      </div>
     <div class="row">
     
-      <div class="col-lg-6">
+      <div class="col-lg-12">
             <div class="accordion" id="accordion">
               @foreach ($faqs as $faq)
                 @if($k%2)
@@ -59,7 +59,7 @@
 
           
       </div>
-      <div class="col-lg-6">
+      <div class="col-lg-12">
         <div class="no">
           {{$k=$j-1}}
         </div>
