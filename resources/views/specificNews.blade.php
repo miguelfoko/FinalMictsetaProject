@@ -36,6 +36,10 @@
             <div class="couress_overview_content">
               <p>{!! $news->content !!} </p>
             </div>
+            <div class="courses_overview">
+              Youtube link:  <a href="{!! $news->link !!}" target=”_blank”>{!! $news->title !!}</a>
+            </div>
+             
           </div>
         </div>
   </div>
