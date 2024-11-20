@@ -52,6 +52,7 @@ class NewsController extends Controller
         $request->validate([
             'title' => 'required',
             'subtitle' => 'required',
+            'publicationDate' => 'required',
             'content' => 'required',
             'picture' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:10240',
         ]);
@@ -110,16 +111,14 @@ class NewsController extends Controller
         $request->validate([
             'title' => 'required',
             'subtitle' => 'required',
-            'publicationMonth' => 'required',
-            'publicationYear' => 'required',
+            'publicationDate' => 'required',
             'content' => 'required',
-            'picture' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:9000',
+            'picture' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:10240',
         ]); 
         $imageName=$news->picture;
         $file_path = "images/$imageName";
         unlink(public_path($file_path)); 
-
-        
+ 
         $imageName = time().'.'.$request->picture->extension();
         $request->picture->move(public_path('images'), $imageName);
 
@@ -132,8 +131,6 @@ class NewsController extends Controller
         $news->publicationDate=$request->input('publicationDate');
         $news->picture=$imageName;
         $news->save();
-
-
         
         $news->fill($request->post())->save();
 
