@@ -45,13 +45,12 @@ class CareerGuidanceController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
-    {
+    public function store(Request $request)    {
         $request->validate([
             'title' => 'required',
-            'file' => 'required|file|mimes:pdf',
-            'coverPage' => 'required|image',
-        ]);
+            'file' => 'required|file|mimes:pdf|max:30240',
+            'coverPage' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:10240',
+        ]); 
 
         
         $careerguidance = new CareerGuidance;
@@ -110,16 +109,14 @@ class CareerGuidanceController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
-    {
+    public function update(Request $request, $id)    {
         $careerguidance = CareerGuidance::find($id);
         $request->validate([
             'title' => 'required',
-            'file' => 'required|file|mimes:pdf',
-            'coverPage' => 'required|image',
+            'file' => 'required|file|mimes:pdf|max:30240',
+            'coverPage' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:10240',
         ]);
 
-        
         $careerguidance->title=$request->input('title');
 
         if (request()->hasFile('file')){
@@ -140,10 +137,11 @@ class CareerGuidanceController extends Controller
             unlink(public_path($file_path));
 
             $photo = $request->file('coverPage');
-            $filename = 'Career_Guidance_' . '-' . time() . '.' . $photo->getClientOriginalExtension();
+            $fileName = 'Career_Guidance_' . '-' . time() . '.' . $photo->getClientOriginalExtension();
             $location = public_path('images/');
-            $request->file('coverPage')->move($location, $filename);
             $careerguidance->coverPage=$fileName;
+            $request->file('coverPage')->move($location, $fileName);
+
         }
        
 
@@ -161,10 +159,10 @@ class CareerGuidanceController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
-    {
+    public function destroy($id)    {
         $careerguidance = CareerGuidance::find($id);
         $fileName=$careerguidance->file;
+
         $file_path = "files/$fileName"; 
         unlink(public_path($file_path));
 
