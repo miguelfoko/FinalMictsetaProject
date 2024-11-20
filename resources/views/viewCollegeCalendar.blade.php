@@ -21,15 +21,28 @@
   </div>
 </div>
 
-<?php $Events=[]; ?>
+<?php $Events=[]; ?> 
     @foreach ($collegecalendar as $ccalendar) 
       <?php
+        //echo 'Before: '.$ccalendar->enddate;
+        $start = strtotime($ccalendar->startdate);
+        $stop=strtotime($ccalendar->enddate);
+
+        //echo 'Start: '.date('Y-M-d', $start);
+
+        $dd=new DateTime($ccalendar->startdate);
+        $dd->modify('+1 day');
+
+        $dd2=new DateTime($ccalendar->enddate);
+        $dd2->modify('+2 day');
+
+        //echo '<br> Stop: '.$dd->format('Y-M-d');
         $a=array("title"=>$ccalendar->eventtitle,
-              "start"=>$ccalendar->startdate,
-              "end"=>$ccalendar->enddate);
+              "start"=>$dd->format('Y-M-d'),
+              "end"=>$dd2->format('Y-M-d'));
         array_push($Events,$a);
       ?>
-@endforeach
+    @endforeach
  
 <script>
   $(document).ready(function() {
