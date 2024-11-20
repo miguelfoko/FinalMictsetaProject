@@ -21,19 +21,19 @@
 
 <div class="inner-page-wrapper course-wrapper course-details">
       <div class="container">
-       
+      @foreach ($communitycolleges as $communitycollege)
           <div class="row">
-            <!-- Courses Details Thumb Area End --> 
+            <!-- Courses Details Thumb Area End -->  
             <!-- Courses Overview -->
             <div class="courses_overview">
-              <h5>Community Education and Training Colleges Title</h5>
+              <h5>Community Education and Training Colleges</h5>
             </div>
             <!-- Courses Overview Content -->
             <div class="couress_overview_content">
-              <p>Community Education and Training Colleges Content </p>
+              <p>{!! $communitycollege->content !!} </p>
             </div>
           </div>
-          
+        @endforeach 
       </div>
     </div>
 
