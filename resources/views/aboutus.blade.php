@@ -71,7 +71,7 @@
             <a href="viewsetas"><img src="{{ asset('/img/setas.png') }}" alt="..."></a>
             </span>
               
-            <div class="post-tittle">
+            <div class="post-tittle"> 
               <h4><a href="viewsetas">SETAs</a></h4>
             </div>
             <div class="caption">
