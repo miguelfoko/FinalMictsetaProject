@@ -6,7 +6,7 @@
 <div class="breadcromb-wrapperNewsletter">
   <div class="breadcromb-overlay"></div>
   <div class="container">
-    <h1>Newsletter</h1>
+    <h1>News</h1>
   </div>
 </div>
 
@@ -14,7 +14,7 @@
   <div class="container">
     <ul>
       <li><a href="/">Home</a></li>
-      <li>Newsletter</li>
+      <li>News</li>
     </ul>
   </div>
 </div> 

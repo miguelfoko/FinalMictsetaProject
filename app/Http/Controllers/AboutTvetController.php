@@ -110,7 +110,7 @@ class AboutTvetController extends Controller
         $abouttvet->publicTvetColleges=nl2br($request->input('publicTvetColleges'));
         $abouttvet->tvetCollegeAdministration=nl2br($request->input('tvetCollegeAdministration'));
         $abouttvet->privateTvetColleges=nl2br($request->input('privateTvetColleges'));
-        $abouttvet->save();
+        $abouttvet->save(); 
 
         $abouttvet->fill($request->post())->save();
 
