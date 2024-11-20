@@ -110,7 +110,7 @@ class NewsController extends Controller
         $news = News::find($id);
         $request->validate([
             'title' => 'required',
-            'subtitle' => 'required',
+            'subtitle' => 'required', 
             'publicationDate' => 'required',
             'content' => 'required',
             'picture' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:10240',
@@ -144,8 +144,7 @@ class NewsController extends Controller
     * @param  \App\News  $news
     * @return \Illuminate\Http\Response
     */
-    public function destroy(News $news)
-    {
+    public function destroy(News $news) {
         $imageName=$news->picture;
         $file_path = "images/$imageName"; 
         unlink(public_path($file_path));
