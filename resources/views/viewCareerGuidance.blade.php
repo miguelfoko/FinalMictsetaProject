@@ -29,7 +29,7 @@
     @foreach ($careerguidance as $cguidance) 
           <div class="col-sm-12 col-lg-4">
             <div class="single-blog">
-              <figure class="single-blog-img green"> <embed alt="" src="{{url('files')}}/{{$cguidance->file}}#page=1" type="application/pdf" height="250">
+              <figure class="single-blog-img green"> <embed alt="" src="{{url('images')}}/{{$cguidance->coverPage}}" height="250">
                 <div><i class="fa fa-plus"></i></div>
                 <a href="{{url('files')}}/{{$cguidance->file}}"></a> </figure>
               <div class="post-tittle">

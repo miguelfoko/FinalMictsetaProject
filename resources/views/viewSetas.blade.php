@@ -25,7 +25,7 @@
                      
             <!-- Courses Overview Content -->
             <div class="couress_overview_content">
-              <p>{!! $seta->content !!} </p>
+              {!! $seta->content !!}
             </div>
           </div>
           @endforeach 

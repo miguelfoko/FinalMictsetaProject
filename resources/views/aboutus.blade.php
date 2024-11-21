@@ -36,7 +36,7 @@
               <h4><a href="abouttvet">TVET Colleges</a></h4>
             </div>
             <div class="caption">
-                  <p>This text should be updated based on TVET Colleges comments...  </p>
+                  <p>{{Str::of('This text should be updated based on TVET Colleges comments...')->words(15,'...');}}  </p>
             </div>
 
             <a class="btn small"  href="abouttvet"> View more</a>
@@ -56,7 +56,7 @@
               <h4><a href="viewcommunitycolleges">Community Colleges</a></h4>
             </div>
             <div class="caption">
-              <p>This text should be updated based on Community Colleges comments...</p>
+              <p>{{Str::of('This text should be updated based on Community Colleges comments...')->words(15,'...');}}</p>
             </div>
             <a class="btn small" href="viewcommunitycolleges">View more</a>
           </div>
@@ -71,11 +71,11 @@
             <a href="viewsetas"><img src="{{ asset('/img/setas.png') }}" alt="..."></a>
             </span>
               
-            <div class="post-tittle">
+            <div class="post-tittle"> 
               <h4><a href="viewsetas">SETAs</a></h4>
             </div>
             <div class="caption">
-              <p>This text should be updated based on SETAs comments... </p>
+              <p>{{Str::of('This text should be updated based on SETAs comments...')->words(15,'...');}} </p>
             </div>
             <a class="btn small" href="viewsetas">View more</a>
           </div>

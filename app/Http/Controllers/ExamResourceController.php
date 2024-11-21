@@ -52,7 +52,7 @@ class ExamResourceController extends Controller
         $request->validate([
             'category' => 'required',
             'name' => 'required',
-            'file' => 'required|file|mimes:pdf',
+            'file' => 'required|file|mimes:pdf|max:30600', 
         ]);
 
         
@@ -110,7 +110,7 @@ class ExamResourceController extends Controller
         $request->validate([
             'category' => 'required',
             'name' => 'required',
-            'file' => 'required'
+            'file' => 'required|file|mimes:pdf|max:30600', 
         ]);
 
         $examinformationresources->category=$request->input('category');

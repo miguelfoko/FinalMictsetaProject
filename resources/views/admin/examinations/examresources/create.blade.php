@@ -53,7 +53,7 @@
 
                         <div class="col-xs-12 col-sm-12 col-md-12">
                             <div class="form-group">
-                            <strong>File:</strong>
+                            <strong>File (Should be PDF format):</strong>
                                 <input type="file" name="file" class="form-control" >
                                 @error('file')
                                 <div class="alert alert-danger mt-1 mb-1">{{ $message }}</div>

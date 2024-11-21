@@ -35,13 +35,13 @@
                         
                         <div class="col-xs-12 col-sm-12 col-md-12">
                             <div class="form-group">
-                                <strong>Cover page:</strong>
+                                <strong>Cover page:</strong> <span class="help-block">(The cover page must be an image)</span>
                                 <input type="file" name="coverPage" class="form-control" >
                                 @error('coverPage')
                                 <div class="alert alert-danger mt-1 mb-1">{{ $message }}</div>
                                 @enderror
                             </div>
-                            <span class="help-block"><p>The cover page must be an image.</p></span>
+                            
                         </div>
                         <div class="col-xs-12 col-sm-12 col-md-12">
                             <div class="form-group">
