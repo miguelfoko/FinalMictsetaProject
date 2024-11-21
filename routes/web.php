@@ -54,6 +54,7 @@ use Illuminate\Support\Facades\Auth;
 use App\Http\Controllers\UsersController;
 use App\Http\Controllers\ViewTermsAndConditionsController;
 use App\Http\Controllers\ViewPrivacyPolicyController;
+use App\Http\Controllers\ViewSuccesfulTvetGraduateController;
 use App\Http\Controllers\EmailController;
 use Illuminate\Support\Facades\Mail;
 use App\Mail\WelcomeMail;
@@ -85,6 +86,8 @@ Route::resource('/subscription',SubscribeController::class);
 Route::resource('/email',EmailController::class);
 Route::resource('/succesfulTvetGraduates',SuccesfullTvetGraduatesController::class);
 Route::get('/viewsuccesfultvetgraduates', function(){ return view('admin.succesfulTvetGraduates.create');});
+Route::resource('/specificSuccesfulTvetGraduates', ViewSuccesfulTvetGraduateController::class);
+
 
 //Contact Us pages---------------------------------------------------------------------------
 Route::get('/contactus', function(){return view('contact');});
@@ -146,7 +149,7 @@ Route::resource('/communitycolleges',CommunityCollegesController::class);
 Route::resource('/setas',SetasController::class);
 Route::resource('/viewsetas',ViewSetasController::class);
 Route::get('/aboutus', function(){ return view('aboutus');}); 
-
+ 
 
 //News Pages---------------------------------------------------------------------------------
 Route::resource('/viewNews', ViewNewsController::class);

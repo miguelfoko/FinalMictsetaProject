@@ -99,11 +99,11 @@
               <div class="post-tittle">
                 <h4><a href="#">{{ $succesfulTvetGraduate->name }}</a></h4>
               </div>
-              <span>{{ $succesfulTvetGraduate->title }}</span>
+              <span>{{Str::of($succesfulTvetGraduate->title)->limit(40);}}</span>
                     <p class="fst-italic">
-                      "{!! $succesfulTvetGraduate->content !!}" 
+                      "{{$truncated = Str::of(strip_tags($succesfulTvetGraduate->content))->limit(50);}}"
                     </p>
-              <a class="btn small" href="javascript:void(0)">Read More</a>
+              <a class="btn small" href="{{route('specificSuccesfulTvetGraduates.show',$succesfulTvetGraduate->id)}}">Read More</a>
             </div>
           </div>
       @endforeach
@@ -139,8 +139,10 @@
                   <p>{{ $new->subtitle }}</p>
                   <p class="name">{{ $new->title }}</p>
                   <p class="fst-italic">
-                          <a href="{{route('viewNews.show',$new->id)}}" style="color:#F7931E;">Read more</a>
-                      </p>
+                      <a href="{{route('viewNews.show',$new->id)}}" style="color:#F7931E;">Read more</a>
+                      
+                  </p>
+
                 </div>
                 <div class="col-sm-3 offset-sm-0 col-4 offset-4 order-sm-0 order-1">
                   <div class="testimoni-img">
@@ -157,6 +159,16 @@
   </div>
 </div>
 
+<script>
+export default {
+    data(){
+        return {
+                text: `your text ....`,
+                showAll : false,
+        }
+    }
+}
+</script>
 <!-- Latest news end --> 
 <main id="main">
 
