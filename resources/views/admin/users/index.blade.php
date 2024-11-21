@@ -76,7 +76,7 @@
                                                 <td><font color="green">{{$user->user_status}}</font></td>        
                                             @endif
                                             <td>
-                                                <form action="{{ route('users.destroy',$user->id) }}" method="Post">
+                                                <form action="{{ route('users.destroy',Crypt::encrypt($user->id)) }}" method="Post">
                                                     <a class="btn btn-primary" href="{{ route('users.edit',Crypt::encrypt($user->id)) }}">Edit</a>
                                                     @if($user->user_status =='Disabled' && Auth::user()->is_admin ==true) 
                                                         <a class="btn btn-success" href="/validateUser/{{Crypt::encrypt($user->id)}}">Validate</a>
