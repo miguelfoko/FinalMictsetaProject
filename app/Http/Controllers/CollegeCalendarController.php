@@ -53,7 +53,7 @@ class CollegeCalendarController extends Controller
             'startdate' => 'required'
 
         ]);
-
+ 
 
         $collegecalendar = new CollegeCalendar;
         $collegecalendar->eventtitle=$request->input('eventtitle');

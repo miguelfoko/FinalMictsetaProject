@@ -65,13 +65,7 @@
                                             <td>Module {{ $icasstrainingvideo->module }}</td>
                                             <td>Session {{ $icasstrainingvideo->session }}</td>
                                             <td>{!! $icasstrainingvideo->title !!}</td>
-                                            <td>
-                                                <a href="{{url('videos')}}/{{$icasstrainingvideo->video}}" target="_blank">View File</a>
-                                                <!--<video width="320" height="240" controls>
-                                                    <source src="{{url('videos')}}/{{$icasstrainingvideo->video}}" type="video/mp4">
-                                                    Your browser does not support the video tag
-                                                </video>  -->  
-                                            </td>
+                                            <td><a href="{{$icasstrainingvideo->video}}" target="_blank">Watch the video</a></td>
                                             <td>
                                                 <form action="{{ route('icasstrainingvideos.destroy',$icasstrainingvideo->id) }}" method="Post">
                                                     <a class="btn btn-primary" href="{{ route('icasstrainingvideos.edit',$icasstrainingvideo->id) }}">Edit</a>

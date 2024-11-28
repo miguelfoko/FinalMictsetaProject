@@ -81,7 +81,7 @@
                         <div class="col-xs-12 col-sm-12 col-md-12">
                             <div class="form-group">
                                 <strong>Video:</strong>
-                                <input type="file" name="video" class="form-control" >
+                                <input type="url" name="video" class="form-control" value="{{ $examtrainingvideos->video }}">
                                 @error('video')
                                 <div class="alert alert-danger mt-1 mb-1">{{ $message }}</div>
                                 @enderror

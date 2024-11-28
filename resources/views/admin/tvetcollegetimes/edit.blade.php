@@ -36,22 +36,14 @@
                         </div>
                         <div class="col-xs-12 col-sm-12 col-md-12">
                             <div class="form-group">
-                                <strong>Publication Year:</strong>
-
-                                <select id="year" name="publicationYear" class="form-control ">
-                                    {{ $last= date('Y')-120 }}
-                                    {{ $now = date('Y') }}
-
-                                    @for ($i = $now; $i >= $last; $i--)
-                                        <option value="{{ $i }}">{{ $i }}</option>
-                                    @endfor
-                                </select>
+                                <strong>Publication date:</strong>
+                                <input type="date" name="publicationYear" class="form-control" value="{{ $tvetcollegetimes->publicationDate }}">
                                 @error('publicationYear')
                                 <div class="alert alert-danger mt-1 mb-1">{{ $message }}</div>
                                 @enderror
                             </div>
                         </div>
-                        <div class="col-xs-12 col-sm-12 col-md-12">
+                      <!--  <div class="col-xs-12 col-sm-12 col-md-12">
                             <div class="form-group">
                                 <strong>Publication Month:</strong>
 
@@ -74,7 +66,7 @@
                                 <div class="alert alert-danger mt-1 mb-1">{{ $message }}</div>
                                 @enderror
                             </div>
-                        </div>
+                        </div>-->
                         <div class="col-xs-12 col-sm-12 col-md-12">
                             <div class="form-group">
                                 <strong>Volume:</strong>

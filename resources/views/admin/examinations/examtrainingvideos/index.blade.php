@@ -63,13 +63,7 @@
                                             <td>Module {{ $examtrainingvideo->module }}</td>
                                             <td>Session {{ $examtrainingvideo->session }}</td>
                                             <td>{!! $examtrainingvideo->title !!}</td>
-                                            <td>
-                                                <a href="{{url('videos')}}/{{$examtrainingvideo->video}}" target="_blank">View File</a>
-                                                <!--<video width="320" height="240" controls>
-                                                    <source src="{{url('videos')}}/{{$examtrainingvideo->video}}" type="video/mp4">
-                                                    Your browser does not support the video tag
-                                                </video> -->   
-                                            </td>
+                                            <td><a href="{{$examtrainingvideo->video}}" target="_blank">Watch Video</a></td>
                                             <td width="10%">
                                                 <form action="{{ route('examtrainingvideos.destroy',$examtrainingvideo->id) }}" method="Post">
                                                     <a class="btn btn-primary" href="{{ route('examtrainingvideos.edit',$examtrainingvideo->id) }}">Edit</a>

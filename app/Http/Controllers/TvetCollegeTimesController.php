@@ -51,7 +51,7 @@ class TvetCollegeTimesController extends Controller
     {
         $request->validate([
             'volume' => 'required',
-            'publicationMonth' => 'required',
+            //'publicationMonth' => 'required',
             'publicationYear' => 'required',
             'title' => 'required',
             'coverPage' => 'required|image',
@@ -59,7 +59,8 @@ class TvetCollegeTimesController extends Controller
         ]);
 
         
-        $publicationDate=$request->input('publicationMonth').' '.$request->input('publicationYear');
+        $publicationDate=$request->input('publicationYear'); 
+        
         $tvetcollegetimes = new TvetCollegeTimes;
         $tvetcollegetimes->volume="Vol. ".$request->input('volume');
         $tvetcollegetimes->title=$request->input('title');
@@ -124,14 +125,14 @@ class TvetCollegeTimesController extends Controller
 
         $request->validate([
             'volume' => 'required',
-            'publicationMonth' => 'required',
+            //'publicationMonth' => 'required',
             'publicationYear' => 'required',
             'title' => 'required',
             'coverPage' => 'required|image',
             'file' => 'required|file|mimes:pdf',
         ]); 
-        
-        $publicationDate=$request->input('publicationMonth').' '.$request->input('publicationYear');
+        $publicationDate=$request->input('publicationYear'); 
+        //$publicationDate=$request->input('publicationMonth').' '.$request->input('publicationYear');
         $tvetcollegetimes->volume="Vol. ".$request->input('volume');
         $tvetcollegetimes->title=$request->input('title');
         $tvetcollegetimes->publicationDate=$publicationDate;

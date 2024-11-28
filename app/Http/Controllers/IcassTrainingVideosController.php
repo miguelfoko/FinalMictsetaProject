@@ -48,21 +48,23 @@ class IcassTrainingVideosController extends Controller
     {
         $request->validate([
             'session' => 'required',
-            'module' => 'required',
-            'title' => 'required',
-            'video' => 'required|file|mimetypes:video/mp4,video/3gpp,video/quicktime,video/x-msvideo,video/x-ms-wmv',
+            'module' => 'required', 
+            'title' => 'required', 
+            'video' => 'required',
         ]);
 
         
         $module=$request->input('module');
         $session=$request->input('session');
         $title=$request->input("title");
+        $video=$request->input('video');
 
         $icasstrainingvideos = new IcassTrainingVideos;
         $icasstrainingvideos->module=$module;
         $icasstrainingvideos->session=$session;
         $icasstrainingvideos->title=$title;
-
+        $icasstrainingvideos->video=$video;
+/*
         if ($request->hasFile('video')) {
             $video = $request->file('video');
             $filename = 'Icass_Video_'. time() . '.' . $video->getClientOriginalExtension();
@@ -71,7 +73,7 @@ class IcassTrainingVideosController extends Controller
             $request->file('video')->move($location, $filename);
            
         }
-
+*/
         $icasstrainingvideos->user_id=Auth::user()->id;
         $icasstrainingvideos->save();
         return redirect()->route('icasstrainingvideos.index')->with('success','ICASS Training Video has been created successfully.');
@@ -117,14 +119,15 @@ class IcassTrainingVideosController extends Controller
             'session' => 'required',
             'module' => 'required',
             'title' => 'required',
-            'video' => 'required|file|mimetypes:video/mp4,video/3gpp,video/quicktime,video/x-msvideo,video/x-ms-wmv',
+            'video' => 'required',
         ]); 
         
  
         $icasstrainingvideos->module=$request->input('module');
         $icasstrainingvideos->session=$request->input('session');
         $icasstrainingvideos->title=$request->input("title");
-
+        $icasstrainingvideos->video=$request->input("video");
+/*
         if ($request->hasFile('video')) {
             $fileName=$icasstrainingvideos->video;
             $file_path = "videos/$fileName";
@@ -137,7 +140,7 @@ class IcassTrainingVideosController extends Controller
             $request->file('video')->move($location, $filename);
            
         }
-
+*/
         $icasstrainingvideos->user_id=Auth::user()->id;
         $icasstrainingvideos->save();
         
@@ -155,9 +158,9 @@ class IcassTrainingVideosController extends Controller
     public function destroy($id)
     {
         $icasstrainingvideos = IcassTrainingVideos::find($id);
-        $fileName=$icasstrainingvideos->video;
-        $file_path = "videos/$fileName"; 
-        unlink(public_path($file_path));
+        //$fileName=$icasstrainingvideos->video;
+        //$file_path = "videos/$fileName"; 
+        //unlink(public_path($file_path));
 
         $icasstrainingvideos->delete();
         return redirect()->route('icasstrainingvideos.index')->with('success','ICASS Training Video has been deleted successfully');

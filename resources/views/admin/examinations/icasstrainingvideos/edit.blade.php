@@ -21,7 +21,7 @@
             @method('PUT')
             <div class="panel panel-default">
                 <div class="panel-heading">
-                    <h3 class="panel-title"><strong>Add ICASS Training Video</strong></h3>
+                    <h3 class="panel-title"><strong>Edit ICASS Training Video</strong></h3>
                     <ul class="panel-controls">
                         <li><a href="/news" class="panel-remove"><span class="fa fa-times"></span></a></li>
                     </ul>
@@ -81,7 +81,7 @@
                         <div class="col-xs-12 col-sm-12 col-md-12">
                             <div class="form-group">
                                 <strong>Video:</strong>
-                                <input type="file" name="video" class="form-control" >
+                                <input type="url" name="video" class="form-control" value="{{ $icasstrainingvideos->video }}">
                                 @error('video')
                                 <div class="alert alert-danger mt-1 mb-1">{{ $message }}</div>
                                 @enderror

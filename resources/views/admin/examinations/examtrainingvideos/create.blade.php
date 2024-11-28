@@ -26,7 +26,7 @@
                         <div class="col-xs-12 col-sm-12 col-md-12">
                             <div class="form-group"> 
                                 <strong>Title:</strong>
-                                <input type="text" name="title" class="form-control" placeholder="TVET College Times Title">
+                                <input type="text" name="title" class="form-control" placeholder="Exam Training Video Title">
                                 @error('title')
                                 <div class="alert alert-danger mt-1 mb-1">{{ $message }}</div>
                                 @enderror
@@ -73,7 +73,7 @@
                         <div class="col-xs-12 col-sm-12 col-md-12">
                             <div class="form-group">
                                 <strong>Video:</strong>
-                                <input type="file" name="video" class="form-control" >
+                                <input type="url" name="video" class="form-control" placeholder="Paste the Youtube link of the video here">
                                 @error('video')
                                 <div class="alert alert-danger mt-1 mb-1">{{ $message }}</div>
                                 @enderror

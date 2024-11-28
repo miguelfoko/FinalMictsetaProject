@@ -51,19 +51,21 @@ class ExamTrainingVideosController extends Controller
             'session' => 'required',
             'module' => 'required',
             'title' => 'required',
-            'video' => 'required|file|mimetypes:video/mp4,video/3gpp,video/quicktime,video/x-msvideo,video/x-ms-wmv',
+            'video' => 'required',
         ]);
 
         
         $module=$request->input('module');
         $session=$request->input('session');
         $title=$request->input("title");
+        $video=$request->input("video");
 
         $examtrainingvideos = new ExamTrainingVideos;
         $examtrainingvideos->module=$module;
         $examtrainingvideos->session=$session;
         $examtrainingvideos->title=$title;
-
+        $examtrainingvideos->video=$video;
+/*
         if ($request->hasFile('video')) {
             $video = $request->file('video');
             $filename = 'Exam_Video_'. time() . '.' . $video->getClientOriginalExtension();
@@ -72,7 +74,7 @@ class ExamTrainingVideosController extends Controller
             $request->file('video')->move($location, $filename);
            
         }
-
+*/
         $examtrainingvideos->user_id=Auth::user()->id;
         $examtrainingvideos->save();
         return redirect()->route('examtrainingvideos.index')->with('success','Exam Training Video has been created successfully.');
@@ -118,14 +120,15 @@ class ExamTrainingVideosController extends Controller
             'session' => 'required',
             'module' => 'required',
             'title' => 'required',
-            'video' => 'required|file|mimetypes:video/mp4,video/3gpp,video/quicktime,video/x-msvideo,video/x-ms-wmv',
+            'video' => 'required',
         ]); 
         
  
         $examtrainingvideos->module=$request->input('module');
         $examtrainingvideos->session=$request->input('session');
         $examtrainingvideos->title=$request->input("title");
-
+        $examtrainingvideos->video=$request->input("video");
+/*
         if ($request->hasFile('video')) {
             $fileName=$examtrainingvideos->video;
             $file_path = "videos/$fileName";
@@ -138,7 +141,7 @@ class ExamTrainingVideosController extends Controller
             $request->file('video')->move($location, $filename);
            
         }
-
+*/
         $examtrainingvideos->user_id=Auth::user()->id;
         $examtrainingvideos->save();
         
@@ -156,9 +159,9 @@ class ExamTrainingVideosController extends Controller
     public function destroy($id)
     {
         $examtrainingvideos = ExamTrainingVideos::find($id);
-        $fileName=$examtrainingvideos->video;
-        $file_path = "videos/$fileName"; 
-        unlink(public_path($file_path));
+        //$fileName=$examtrainingvideos->video;
+        //$file_path = "videos/$fileName"; 
+        //unlink(public_path($file_path));
 
         $examtrainingvideos->delete();
         return redirect()->route('examtrainingvideos.index')->with('success','Exam Training Video has been deleted successfully');

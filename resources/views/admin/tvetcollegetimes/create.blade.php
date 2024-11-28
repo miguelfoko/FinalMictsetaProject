@@ -8,7 +8,7 @@
         <div class="alert alert-success mb-1 mt-1">
             {{ session('status') }}
         </div> 
-        @endif
+        @endif 
         <form action="{{ route('admintvetcollegetimes.store') }}" method="POST" enctype="multipart/form-data">
             @csrf
             <div class="panel panel-default">
@@ -34,22 +34,22 @@
                         </div>
                         <div class="col-xs-12 col-sm-12 col-md-12">
                             <div class="form-group">
-                                <strong>Publication Year:</strong>
-
-                                <select name="publicationYear" class="form-control ">
+                                <strong>Publication Date:</strong>
+                                <input type="date" name="publicationYear" class="form-control" placeholder="Start Date">
+                               <!-- <select name="publicationYear" class="form-control ">
                                     {{ $last= date('Y')-120 }}
                                     {{ $now = date('Y') }}
 
                                     @for ($i = $now; $i >= $last; $i--)
                                         <option value="{{ $i }}">{{ $i }}</option>
                                     @endfor
-                                </select>
+                                </select>-->
                                 @error('publicationYear')
                                 <div class="alert alert-danger mt-1 mb-1">{{ $message }}</div>
                                 @enderror
                             </div>
                         </div>
-                        <div class="col-xs-12 col-sm-12 col-md-12">
+                       <!-- <div class="col-xs-12 col-sm-12 col-md-12">
                             <div class="form-group">
                                 <strong>Publication Month:</strong>
 
@@ -72,11 +72,11 @@
                                 <div class="alert alert-danger mt-1 mb-1">{{ $message }}</div>
                                 @enderror
                             </div>
-                        </div>
+                        </div>-->
                         <div class="col-xs-12 col-sm-12 col-md-12">
                             <div class="form-group">
                                 <strong>Volume:</strong>
-
+ 
                                 <select  name="volume" class="form-control ">
                                     {{ $last= 1 }}
                                     {{ $now = 100 }}
