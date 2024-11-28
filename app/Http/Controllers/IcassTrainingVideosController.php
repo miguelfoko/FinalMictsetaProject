@@ -126,7 +126,7 @@ class IcassTrainingVideosController extends Controller
         $icasstrainingvideos->module=$request->input('module');
         $icasstrainingvideos->session=$request->input('session');
         $icasstrainingvideos->title=$request->input("title");
-        $icasstrainingvideos->video=$request->input("video");
+        $icasstrainingvideos->video=$request->input("video"); 
 /*
         if ($request->hasFile('video')) {
             $fileName=$icasstrainingvideos->video;

@@ -48,8 +48,8 @@ class SuccessStoriesController extends Controller
     {
         $request->validate([
             'title' => 'required',
-            'file' => 'required|file|mimes:pdf',
-            'coverPage' => 'required|image',
+            'file' => 'required|file|mimes:pdf|max:300240',
+            'coverPage' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:100240',
         ]);
 
         
@@ -115,8 +115,8 @@ class SuccessStoriesController extends Controller
         $successstories = SuccessStories::find($id);
         $request->validate([
             'title' => 'required',
-            'file' => 'required|file|mimes:pdf',
-            'coverPage' => 'required|image',
+            'file' => 'required|file|mimes:pdf|max:300240',
+            'coverPage' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:100240',
         ]);
 
         

@@ -48,8 +48,8 @@ class CareerGuidanceController extends Controller
     public function store(Request $request)    {
         $request->validate([
             'title' => 'required',
-            'file' => 'required|file|mimes:pdf|max:30240',
-            'coverPage' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:10240',
+            'file' => 'required|file|mimes:pdf|max:300240',
+            'coverPage' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:100240',
         ]); 
 
         
@@ -113,8 +113,8 @@ class CareerGuidanceController extends Controller
         $careerguidance = CareerGuidance::find($id);
         $request->validate([
             'title' => 'required',
-            'file' => 'required|file|mimes:pdf|max:30240',
-            'coverPage' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:10240',
+            'file' => 'required|file|mimes:pdf|max:300240',
+            'coverPage' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:100240',
         ]);
 
         $careerguidance->title=$request->input('title');

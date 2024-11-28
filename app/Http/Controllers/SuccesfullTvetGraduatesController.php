@@ -50,7 +50,7 @@ class SuccesfullTvetGraduatesController extends Controller
             'title' => 'required',
             'name' => 'required',
             'content' => 'required',
-            'picture' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:10240',
+            'picture' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:100240',
         ]);
 
         $imageName = time().'.'.$request->picture->extension();  
@@ -105,7 +105,7 @@ class SuccesfullTvetGraduatesController extends Controller
             'title' => 'required',
             'name' => 'required',
             'content' => 'required',
-            'picture' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:10240',
+            'picture' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:100240',
         ]);
         $imageName=$succesfulTvetGraduates->picture;
         $file_path = "images/$imageName";
