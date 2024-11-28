@@ -141,7 +141,8 @@ class RegisterController extends Controller
         }
         catch (\Exception $e) {
             //return $e->getMessage();
-            return redirect()->route('register')->with('error',$e->getMessage());
+            //return redirect()->route('register')->with('error',$e->getMessage());
+            return redirect()->route('register')->with('error','Please check if you don\'t already have an account with this email.');
         }
     }
 

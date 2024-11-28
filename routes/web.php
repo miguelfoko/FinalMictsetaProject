@@ -58,6 +58,7 @@ use App\Http\Controllers\ViewSuccesfulTvetGraduateController;
 use App\Http\Controllers\EmailController;
 use Illuminate\Support\Facades\Mail;
 use App\Mail\WelcomeMail;
+use Illuminate\Support\Facades\Crypt;
 
 
 
@@ -216,8 +217,9 @@ Route::get('/viewCreateCollege', function(){$programs = Program::all(); $regiona
 //users pages----------------------------------------------------------------
 Route::get('/viewCreateUser', function(){ return view('admin.users.create');});
 Route::resource('/users', UsersController::class);
-Route::get('/validateUser/{id}', function(int $id){
-    $oneUser = User::find($id);
+Route::get('/validateUser/{id}', function(string $id){
+    $decryptedId = Crypt::decrypt($id);
+    $oneUser = User::find($decryptedId);
     if ($oneUser != null) {
         if ($oneUser->email_verified_at != null) {
             $oneUser->user_status = 'Enabled';

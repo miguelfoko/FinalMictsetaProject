@@ -28,15 +28,6 @@
                         <h3 class="panel-title">Users</h3>
                         <div class="btn-group pull-right">
                             <!--<a class="btn btn-success" href="/viewCreateUser"><i class="fa fa-plus"></i> Add User</a>-->
-                            <button class="btn btn-danger dropdown-toggle" data-toggle="dropdown"><i class="fa fa-bars"></i> Export Data</button>
-                            <ul class="dropdown-menu">
-                                <li><a href="#" onClick ="$('#tableElements').tableExport({type:'sql'});"><img src='adminResources/img/icons/sql.png' width="24"/> SQL</a></li>
-                                <li class="divider"></li>
-                                <li><a href="#" onClick ="$('#tableElements').tableExport({type:'csv',escape:'false'});"><img src='adminResources/img/icons/csv.png' width="24"/> CSV</a></li>
-                                <li><a href="#" onClick ="$('#tableElements').tableExport({type:'txt',escape:'false'});"><img src='adminResources/img/icons/txt.png' width="24"/> TXT</a></li>
-                                <li class="divider"></li>
-                                <li><a href="#" onClick ="$('#tableElements').tableExport({type:'excel',escape:'false'});"><img src='adminResources/img/icons/xls.png' width="24"/> XLS</a></li>
-                            </ul>
                         </div>                                    
                         
                     </div>
@@ -76,10 +67,10 @@
                                                 <td><font color="green">{{$user->user_status}}</font></td>        
                                             @endif
                                             <td>
-                                                <form action="{{ route('users.destroy',$user->id) }}" method="Post">
-                                                    <a class="btn btn-primary" href="{{ route('users.edit',$user->id) }}">Edit</a>
+                                                <form action="{{ route('users.destroy',Crypt::encrypt($user->id)) }}" method="Post">
+                                                    <a class="btn btn-primary" href="{{ route('users.edit',Crypt::encrypt($user->id)) }}">Edit</a>
                                                     @if($user->user_status =='Disabled' && Auth::user()->is_admin ==true) 
-                                                        <a class="btn btn-success" href="/validateUser/{{$user->id}}">Validate</a>
+                                                        <a class="btn btn-success" href="/validateUser/{{Crypt::encrypt($user->id)}}">Validate</a>
                                                     @endif
                                                     @csrf
                                                     @method('DELETE')

@@ -28,15 +28,7 @@
                         <h3 class="panel-title">About Tvet</h3>
                         <div class="btn-group pull-right">
                             <a class="btn btn-success" href="/viewAboutTvet"><i class="fa fa-plus"></i>Create About TVET</a>
-                            <button class="btn btn-danger dropdown-toggle" data-toggle="dropdown"><i class="fa fa-bars"></i> Export Data</button>
-                            <ul class="dropdown-menu">
-                                <li><a href="#" onClick ="$('#tableElements').tableExport({type:'sql'});"><img src='adminResources/img/icons/sql.png' width="24"/> SQL</a></li>
-                                <li class="divider"></li>
-                                <li><a href="#" onClick ="$('#tableElements').tableExport({type:'csv',escape:'false'});"><img src='adminResources/img/icons/csv.png' width="24"/> CSV</a></li>
-                                <li><a href="#" onClick ="$('#tableElements').tableExport({type:'txt',escape:'false'});"><img src='adminResources/img/icons/txt.png' width="24"/> TXT</a></li>
-                                <li class="divider"></li>
-                                <li><a href="#" onClick ="$('#tableElements').tableExport({type:'excel',escape:'false'});"><img src='adminResources/img/icons/xls.png' width="24"/> XLS</a></li>
-                            </ul>
+                            
                         </div>                                    
                         
                     </div>
