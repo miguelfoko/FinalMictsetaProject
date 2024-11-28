@@ -141,7 +141,7 @@
         <script type='text/javascript' src='/adminResources/js/plugins/icheck/icheck.min.js'></script>
         <!--<script type="text/javascript" src="/js/plugins/mcustomscrollbar/jquery.mCustomScrollbar.min.js"></script>-->
         
-        <script type="text/javascript" src="/adminResources/js/plugins/datatables/jquery.dataTables.min.js"></script>
+        <!--<script type="text/javascript" src="/adminResources/js/plugins/datatables/jquery.dataTables.min.js"></script>-->
         <script type="text/javascript" src="/adminResources/js/plugins/tableexport/tableExport.js"></script>
         <script type="text/javascript" src="/adminResources/js/plugins/tableexport/jquery.base64.js"></script>
         <script type="text/javascript" src="/adminResources/js/plugins/tableexport/html2canvas.js"></script>
