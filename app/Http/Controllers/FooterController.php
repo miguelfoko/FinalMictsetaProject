@@ -27,7 +27,7 @@ class FooterController extends Controller
      */
     public function index()
     {
-        $footer = Footer::orderby('id', 'desc')->paginate(10);
+        $footer = Footer::orderby('id', 'desc')->paginate(1);
         return view('admin.footer.index', compact('footer'));
     }
 
@@ -47,8 +47,7 @@ class FooterController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
-    {
+    public function store(Request $request){
         $this->validate($request, array(
             'purpose'=>'required',
             'content'=>'required',

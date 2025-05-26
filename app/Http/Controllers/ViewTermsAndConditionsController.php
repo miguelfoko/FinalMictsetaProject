@@ -12,7 +12,7 @@ class ViewTermsAndConditionsController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function index()    {
-        $footerElements = Footer::orderby('id', 'desc')->paginate(10);
+        $footerElements = Footer::orderby('id', 'desc')->paginate(1);
         return view('viewTermsAndConditions',compact('footerElements'));
     }
 
