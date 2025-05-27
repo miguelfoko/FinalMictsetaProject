@@ -6,7 +6,7 @@
      
     </div>
   </div>
-</footer>
+</footer> 
 <!-- Footer Wrapper End --> 
 <!-- Copyright Wrapper End -->
 

@@ -1,4 +1,4 @@
-
+<meta http-eqiv="Content-Security-Policy" content="upgrade-insecure-requests">
 <div class="page-sidebar">
                 <!-- START X-NAVIGATION -->
                 <ul class="x-navigation">

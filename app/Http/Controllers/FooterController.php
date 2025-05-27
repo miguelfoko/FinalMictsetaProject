@@ -66,7 +66,7 @@ class FooterController extends Controller
           $footer->disclaimer = nl2br($request->input('disclaimer')); 
           $footer->user_id=Auth::user()->id;
           $footer->save();
-          return redirect()->route('footer.index');
+          return redirect()->route('footer.index')->with('success','Footer Has Been updated successfully');
     }
 
     /**
@@ -123,9 +123,7 @@ class FooterController extends Controller
 
       $footer->save();
 
-      return redirect()->route('footer.index',
-          $footer->id)->with('success',
-          'Footer, '. $footer->title.' updated');
+      return redirect()->route('footer.index',$footer->id)->with('success','Footer Has Been updated successfully');
     }
 
     /**
@@ -140,9 +138,7 @@ class FooterController extends Controller
 
         $footer->delete();
 
-        return redirect()->route('footer.index')
-                ->with('success',
-                'Footer successfully deleted');
+        return redirect()->route('footer.index')->with('success','Footer successfully deleted');
     }
 
 }
