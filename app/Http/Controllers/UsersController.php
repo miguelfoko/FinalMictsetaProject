@@ -152,13 +152,23 @@ class UsersController extends Controller
         //$decryptedId = Crypt::decrypt($id);
         $users = User::findOrFail($id);
 
-        $request->validate([
-            'name' => ['required', 'string', 'max:255'],
-            'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
-        ]);
+        $rules = [
+            'name' => 'required', 'string', 'max:255'];
 
+        //Vérifie si l'email a été modifiée
+        if ($request->input('email') !== $users->email) {
+            $rules['email'] = 'required|email|unique:users,email';
+        }
+
+        $validated =  $request->validate($rules);
+
+        //Mise à jour des champs
         $users->name=$request->input('name');
-        $users->email=$request->input('email');
+
+        if ($request->input('email') !== $users->email) {
+            $users->email=$request->input('email');
+        }
+
         $users->save();
         $users->fill($request->post())->save();
 
