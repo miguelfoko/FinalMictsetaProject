@@ -49,7 +49,7 @@
               </div>
             <a class="btn small" href="{{$examtrainingvideo->video}}" download>Download</a>
           </div>
-       
+        
     </div>
     @endforeach
     </div>
