@@ -26,9 +26,9 @@
                 <div class="panel panel-default">
                     <div class="panel-heading">
                         <h3 class="panel-title">Users</h3>
-                        <div class="btn-group pull-right">
-                            <!--<a class="btn btn-success" href="/viewCreateUser"><i class="fa fa-plus"></i> Add User</a>-->
-                        </div>                                    
+                       <!-- <div class="btn-group pull-right">
+                            <a class="btn btn-success" href="/viewCreateUser"><i class="fa fa-plus"></i> Add User</a>
+                        </div>  -->                                  
                         
                     </div>
                     <div class="panel-body">
