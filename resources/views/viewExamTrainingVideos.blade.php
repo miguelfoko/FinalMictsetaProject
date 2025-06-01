@@ -31,16 +31,23 @@
           <div class="col-sm-12 col-lg-4">
             <div class="single-blog">
               <figure class="single-blog-img green"> 
-                            <video width="320" height="240" controls>
-                                <source src="{{url('videos')}}/{{$examtrainingvideo->video}}" type="video/mp4">
-                                Your browser does not support the video tag 
-                            </video> 
+                  <iframe width="320" height="240" 
+                          src="{{$examtrainingvideo->video}}" title="{{$examtrainingvideo->title}}" frameborder="1" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
+                      </iframe> 
+                  <!--
+                      <iframe width="560" height="315" src="https://www.youtube.com/embed/aFBbybv-YLI?si=HJsmyPmpeXMicHne" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>   
+                   
+                      <video width="320" height="240" controls>
+                        <source src="{{url('videos')}}/{{$examtrainingvideo->video}}" type="video/mp4/mov/AVI/WMV/FLV/MPEG/3GPP/WebM/MPEG PS/DNxHR/ProRes/CineForm/HEVC (h265)">
+                        Your browser does not support the video tag 
+                    </video> 
+                    -->
               </figure>
               <div class="post-tittle">
                 <h4>Module {{$examtrainingvideo->module}}-Session {{$examtrainingvideo->session}}</h4>
                 <p>{{$examtrainingvideo->title}}</p>
               </div>
-            <a class="btn small" href="{{url('videos')}}/{{$examtrainingvideo->video}}" download>Download</a>
+            <a class="btn small" href="{{$examtrainingvideo->video}}" download>Download</a>
           </div>
        
     </div>

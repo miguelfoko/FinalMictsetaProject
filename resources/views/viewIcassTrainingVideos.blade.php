@@ -32,16 +32,15 @@
           <div class="col-sm-12 col-lg-4">
             <div class="single-blog">
               <figure class="single-blog-img green"> 
-                            <video width="320" height="240" controls>
-                              <source src="{{url('videos')}}/{{$icasstrainingvideo->video}}" type="video/mp4">
-                                Your browser does not support the video tag
-                            </video> 
+                <iframe width="320" height="240" 
+                    src="{{$icasstrainingvideo->video}}" title="{{$icasstrainingvideo->title}}" frameborder="1" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
+                </iframe> 
               </figure>
               <div class="post-tittle">
                 <h4>Module {{$icasstrainingvideo->module}}-Session {{$icasstrainingvideo->session}}</h4>
                 <p>{{$icasstrainingvideo->title}}</p>
               </div>
-            <a class="btn small" href="{{url('videos')}}/{{$icasstrainingvideo->video}}" download>Download</a>
+            <a class="btn small" href="{{$icasstrainingvideo->video}}" download>Download</a>
           </div>
       
     </div>

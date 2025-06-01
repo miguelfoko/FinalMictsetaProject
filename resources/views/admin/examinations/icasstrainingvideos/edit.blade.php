@@ -80,7 +80,7 @@
 
                         <div class="col-xs-12 col-sm-12 col-md-12">
                             <div class="form-group">
-                                <strong>Video:</strong>
+                                <strong>Video link (Youtube):</strong>
                                 <input type="url" name="video" class="form-control" value="{{ $icasstrainingvideos->video }}">
                                 @error('video')
                                 <div class="alert alert-danger mt-1 mb-1">{{ $message }}</div>
@@ -96,6 +96,21 @@
                 </div>
             </div>
         </form>
+        
+        <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h3 class="panel-title"><strong>How to obtain the video Youtube Link above?</strong></h3>
+                    <br><br>
+                    <ol class="panel-controls">
+                        <li> On a computer, go to the YouTube video that you want to embed.</li>
+                        <li> Under the video, click Share .</li>
+                        <li> Click Embed.</li>
+                        <li> From the box that appears, copy the url link that appears in the "src" field.</li>
+                        <li> Paste the copied url in the "Video link (Youtube)" field of the above form</li>
+                    </ol>
+                
+                </div>
+        </div>
     </div>
 
 @endsection
