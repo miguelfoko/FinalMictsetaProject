@@ -28,12 +28,12 @@ class AppServiceProvider extends ServiceProvider
         //if (APP::environment('production')){
         //    URL::forceScheme('https');
         //}
-        $sliders = Slider::orderby('id', 'desc')->paginate(100);
+        /*$sliders = Slider::orderby('id', 'desc')->paginate(100);
         View::share('sliders', $sliders);
         $news = News::orderBy('id','desc')->paginate(3);
         View::share('news', $news);
         $succesfulTvetGraduates = SuccesfulTvetGraduates::orderBy('id','desc')->paginate(3);
-        View::share('succesfulTvetGraduates', $succesfulTvetGraduates);
+        View::share('succesfulTvetGraduates', $succesfulTvetGraduates);*/
         
     }
 }
