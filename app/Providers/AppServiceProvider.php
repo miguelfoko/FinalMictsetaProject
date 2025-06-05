@@ -25,15 +25,17 @@ class AppServiceProvider extends ServiceProvider
      * @return void 
      */
     public function boot(){
-        //if (APP::environment('production')){
-        //    URL::forceScheme('https');
-        //}
-        /*$sliders = Slider::orderby('id', 'desc')->paginate(100);
+        //A mettre sur le serveur pour acceptation des requêtes https et http
+        if (APP::environment('production')){
+            URL::forceScheme('https');
+        }
+        //Fin
+        $sliders = Slider::orderby('id', 'desc')->paginate(100);
         View::share('sliders', $sliders);
         $news = News::orderBy('id','desc')->paginate(3);
         View::share('news', $news);
         $succesfulTvetGraduates = SuccesfulTvetGraduates::orderBy('id','desc')->paginate(3);
-        View::share('succesfulTvetGraduates', $succesfulTvetGraduates);*/
+        View::share('succesfulTvetGraduates', $succesfulTvetGraduates);
         
     }
 }
