@@ -26,9 +26,9 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot(){
         //A mettre sur le serveur pour acceptation des requêtes https et http
-        if (APP::environment('production')){
-            URL::forceScheme('https');
-        }
+        //if (APP::environment('production')){
+        //    URL::forceScheme('https');
+        //}
         //Fin
         $sliders = Slider::orderby('id', 'desc')->paginate(100);
         View::share('sliders', $sliders);
